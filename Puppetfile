@@ -1,6 +1,7 @@
 forge 'https://forge.puppet.com'
 
-mod 'danieldreier/autosign', :latest
+mod 'danieldreier/autosign'
+mod 'puppetlabs/stdlib'
 
 # Modules from the Puppet Forge
 # Versions should be updated to be the latest at the time you start
