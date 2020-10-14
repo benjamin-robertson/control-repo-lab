@@ -1,4 +1,4 @@
-class groups {
+class profile::groups {
 
   group { 'bensgroup':
     ensure => 'present',
