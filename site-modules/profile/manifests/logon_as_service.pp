@@ -1,4 +1,4 @@
-class profile::login_as_service {
+class profile::logon_as_service {
 
   local_security_policy { 'Log on as a service':
     ensure => 'present',
