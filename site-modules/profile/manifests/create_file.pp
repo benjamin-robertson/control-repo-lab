@@ -4,10 +4,10 @@ class profile::create_file {
     'windows': {
       file { 'c:\temp':
         ensure => 'directory',
+      }
+    }
+  default: {
+    fail('Not a windows hosts'),
     }
   }
-  default: {
-    fail('Not a windows hosts')
-  }
-
 }
