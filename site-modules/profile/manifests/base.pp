@@ -4,4 +4,5 @@ class profile::base {
   include profile::groups
   include profile::logon_as_service
   include profile::create_file
+  include profile::registry
 }
