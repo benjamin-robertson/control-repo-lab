@@ -15,7 +15,7 @@ $regpath = ['HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Intern
 
 $regpath.each |String $regpathuse| {
   notify {"${$regpathuse}\AutoDetect":}
-  registry_value { "${$regpathuse}\AutoDetect":
+  /*registry_value { "${$regpathuse}\AutoDetect":
     ensure => 'present',
     type => 'dword',
     data => '0',
@@ -43,6 +43,6 @@ $regpath.each |String $regpathuse| {
     ensure => 'present',
     type => 'dword',
     data => '1',
-  }
+  }*/
 }
 }
