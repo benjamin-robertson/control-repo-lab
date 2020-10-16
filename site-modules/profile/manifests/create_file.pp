@@ -4,6 +4,7 @@ class profile::create_file {
     file { 'c:\temp':
       ensure => 'directory',
       owner => 'ben',
+      group => 'bensgroup',
     }
   }
 }
