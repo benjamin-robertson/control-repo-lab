@@ -48,5 +48,9 @@ $regpath.each |String $regpathuse| {
     type => 'dword',
     data => '1',
   }
-
+  registry_value { 'HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Reliability\ShutdownReasonOn':
+    ensure => 'present',
+    type => 'dword',
+    data => '1',
+  }
 }
