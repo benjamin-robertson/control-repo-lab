@@ -10,7 +10,7 @@ class profile::create_file {
     acl { 'c:\temp':
       permissions => [
         { identity => 'ben', rights => ['full'] },
-        { identity => 'bensgroup', rights => ['read','list']},
+        { identity => 'bensgroup', rights => ['read']},
       ],
     }
   }
