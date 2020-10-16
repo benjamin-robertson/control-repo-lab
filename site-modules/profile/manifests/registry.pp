@@ -14,6 +14,7 @@ class profile::registry {
 $regpath = ['HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings\ZoneMap','HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Internet Settings\ZoneMap']
 
 $regpath.each |String $regpathuse| {
+  notify {"${$regpathuse}\AutoDetect"}
   registry_value { "${$regpathuse}\AutoDetect":
     ensure => 'present',
     type => 'dword',
