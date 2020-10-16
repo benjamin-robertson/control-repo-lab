@@ -6,5 +6,11 @@ class profile::create_file {
       owner => 'ben',
       group => 'bensgroup',
     }
+    #set the ACL on the file
+    acl { 'c:\temp':
+      permissions => [
+        { identity => 'ben', rights => ['full'] },
+      ],
+    }
   }
 }
