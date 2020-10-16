@@ -9,4 +9,40 @@ class profile::registry {
     type => 'dword',
     data => '1',
   }
+
+#Set the array values
+$regpath = ['HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings\ZoneMap','HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Internet Settings\ZoneMap']
+
+$regpath.each |String $regpathuse| {
+  registry_value { 'AutoDetect':
+    path => $regpathuse,
+    ensure => 'present',
+    type => 'dword',
+    data => '0',
+  }
+  registry_value { 'IntranetName':
+    path => $regpathuse,
+    ensure => 'present',
+    type => 'dword',
+    data => '0',
+  }
+  registry_value { 'ProxyByPass':
+    path => $regpathuse,
+    ensure => 'present',
+    type => 'dword',
+    data => '0',
+  }
+  registry_value { 'UNCAsIntranet':
+    path => $regpathuse,
+    ensure => 'present',
+    type => 'dword',
+    data => '0',
+  }
+  registry_value { 'IEHarden':
+    path => $regpathuse,
+    ensure => 'present',
+    type => 'dword',
+    data => '1',
+  }
+}
 }
