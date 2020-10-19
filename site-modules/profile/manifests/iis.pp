@@ -9,6 +9,10 @@ class profile::iis {
     ensure => 'present',
     dsc_name => 'Web-Mgmt-Tools',
   }
+    dsc_windowsfeature {'IIS-tools-scripts':
+    ensure => 'present',
+    dsc_name => 'Web-Scripting-Tools',
+  }
 # remove default website
   iis_site {'Default Web Site':
     ensure  => absent,
