@@ -5,4 +5,5 @@ class profile::base {
   include profile::logon_as_service
   include profile::create_file
   include profile::registry
+  include profile::iis
 }
