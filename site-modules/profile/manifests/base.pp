@@ -6,4 +6,5 @@ class profile::base {
   include profile::create_file
   include profile::registry
   include profile::iis
+  include profile::install_archive
 }
