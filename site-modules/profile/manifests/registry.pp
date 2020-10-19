@@ -53,4 +53,13 @@ $regpath.each |String $regpathuse| {
     type => 'dword',
     data => '1',
   }
+  exec { 'rundllie':
+    command => 'Rundll32 iesetup.dll,IEHardenUser',
+  }
+  exec { 'rundllie2':
+    command => 'Rundll32 iesetup.dll,IEHardenAdmin',
+  }
+  exec { 'rundllie3':
+    command => 'Rundll32 iesetup.dll,IEHardenMachineNow',
+  }
 }
