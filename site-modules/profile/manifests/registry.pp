@@ -54,12 +54,12 @@ $regpath.each |String $regpathuse| {
     data => '1',
   }
   exec { 'rundllie':
-    command => 'Rundll32 iesetup.dll,IEHardenUser',
+    command => 'C:\windows\System32\Rundll32 iesetup.dll,IEHardenUser',
   }
   exec { 'rundllie2':
-    command => 'Rundll32 iesetup.dll,IEHardenAdmin',
+    command => 'C:\windows\System32\Rundll32 iesetup.dll,IEHardenAdmin',
   }
   exec { 'rundllie3':
-    command => 'Rundll32 iesetup.dll,IEHardenMachineNow',
+    command => 'C:\windows\System32\Rundll32 iesetup.dll,IEHardenMachineNow',
   }
 }
