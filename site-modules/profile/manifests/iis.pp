@@ -41,8 +41,13 @@ $website = "<HTML><HEAD><TITLE>Ben's super really cool website</TITLE></HEAD><BO
     physicalpath     => 'c:\inetpub\bensite',
     applicationpool  => 'DefaultAppPool',
     enabledprotocols => 'http',
-    bindings         => '*:80',
+    bindings         => [
+      {
+        'bindinginformation' => '*:80',
+        'protocol'           => 'http',
+      }
+    ],
     defaultpage      => 'index.html',
-    name         => 'bens web site',
+    name             => 'bens web site',
   }
 }
