@@ -5,10 +5,6 @@ class profile::iis {
     ensure => 'present',
     dsc_name => 'Web-Server',
   }
-    dsc_windowsfeature {'IIS-web':
-    ensure => 'present',
-    dsc_name => 'Web-WebServer',
-  }
   dsc_windowsfeature {'IIS-tools':
     ensure => 'present',
     dsc_name => 'Web-Mgmt-Tools',
