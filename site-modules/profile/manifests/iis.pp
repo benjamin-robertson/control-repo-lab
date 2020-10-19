@@ -43,7 +43,7 @@ $website = "<HTML><HEAD><TITLE>Ben's super really cool website</TITLE></HEAD><BO
     enabledprotocols => 'http',
     bindings         => [
       {
-        'bindinginformation' => '*:80',
+        'bindinginformation' => '*:80:',
         'protocol'           => 'http',
       }
     ],
