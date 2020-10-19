@@ -43,6 +43,6 @@ $website = "<HTML><HEAD><TITLE>Ben's super really cool website</TITLE></HEAD><BO
     enabledprotocols => 'http',
     bindings         => '*:80',
     defaultpage      => 'index.html',
-    sitename         => 'bens web site',
+    name         => 'bens web site',
   }
 }
