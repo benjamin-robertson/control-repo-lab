@@ -12,7 +12,7 @@ class profile::iis {
 # remove default website
   iis_site {'Default Web Site':
     ensure  => absent,
-    require => Iis_feature['Web-WebServer'],
+    require => Iis_feature['Web-Server'],
   }
 
 }
