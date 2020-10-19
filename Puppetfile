@@ -5,6 +5,9 @@ mod 'puppetlabs/stdlib'
 mod 'ayohrling-local_security_policy', '0.7.2'
 mod 'puppetlabs-acl', '3.2.0'
 mod 'puppetlabs-registry', '3.1.1'
+mod 'puppetlabs-reboot', '3.0.0'
+mod 'puppetlabs-dsc', '1.9.4'
+mod 'puppetlabs-reboot', '3.0.0'
 
 # Modules from the Puppet Forge
 # Versions should be updated to be the latest at the time you start

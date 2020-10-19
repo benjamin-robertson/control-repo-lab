@@ -16,27 +16,27 @@ class profile::registry {
 $regpath = ['HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings\ZoneMap','HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Internet Settings\ZoneMap']
 
 $regpath.each |String $regpathuse| {
-  registry_value { "${$regpathuse}\AutoDetect":
+  registry_value { "${regpathuse}\AutoDetect":
     ensure => 'present',
     type => 'dword',
     data => '0',
   }
-  registry_value { "${$regpathuse}\IntranetName":
+  registry_value { "${regpathuse}\IntranetName":
     ensure => 'present',
     type => 'dword',
     data => '0',
   }
-  registry_value { "${$regpathuse}\ProxyByPass":
+  registry_value { "${regpathuse}\ProxyByPass":
     ensure => 'present',
     type => 'dword',
     data => '0',
   }
-  registry_value { "${$regpathuse}\UNCAsIntranet":
+  registry_value { "${regpathuse}\UNCAsIntranet":
     ensure => 'present',
     type => 'dword',
     data => '0',
   }
-  registry_value { "${$regpathuse}\IEHarden":
+  registry_value { "${regpathuse}\IEHarden":
     ensure => 'present',
     type => 'dword',
     data => '1',
