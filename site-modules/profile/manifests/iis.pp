@@ -29,9 +29,20 @@ $website = "<HTML><HEAD><TITLE>Ben's super really cool website</TITLE></HEAD><BO
     ensure  => 'file',
     content => $website,
   }
+  #Set permissions on the folder so IIS service acccount can read the file
   acl { 'c:\inetpub\bensite':
-      permissions => [
-        { identity => 'IIS_IUSRS', rights => ['read','execute'] },
-      ],
-    }
+    permissions => [
+      { identity => 'IIS_IUSRS', rights => ['read','execute'] },
+    ],
+  }
+  # Configure IIS site
+  iis_site { 'bensite':
+    ensure           => 'started',
+    physicalpath     => 'c:\inetpub\bensite',
+    applicationpool  => 'DefaultAppPool',
+    enabledprotocols => 'http',
+    bindings         => '*:80',
+    defaultpage      => 'index.html',
+    sitename         => 'bens web site',
+  }
 }
