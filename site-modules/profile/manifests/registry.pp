@@ -43,12 +43,12 @@ $regpath.each |String $regpathuse| {
   }
 }
   #Windows Shutdown Event Tracker set
-  registry_value { 'HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Reliability\ShutdownReasonUI':
+  registry_value { 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows NT\Reliability\ShutdownReasonOn':
     ensure => 'present',
     type => 'dword',
     data => '1',
   }
-  registry_value { 'HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Reliability\ShutdownReasonOn':
+  registry_value { 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows NT\Reliability\ShutdownReasonUI':
     ensure => 'present',
     type => 'dword',
     data => '1',
