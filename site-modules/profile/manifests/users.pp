@@ -1,5 +1,6 @@
 class profile::users {
 
+  # TODO: Alignment
   user { 'ben':
     ensure => 'present',
     comment => 'bens user account lol',
