@@ -7,4 +7,5 @@ class profile::base {
   include profile::registry
   include profile::iis
   #include profile::install_archive
+  include profile::choco
 }
