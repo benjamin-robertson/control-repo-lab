@@ -10,6 +10,6 @@ class profile::choco {
   }
   #Reboot after installation of 7zip
   reboot { 'afterInstall':
-    subscribe  => package['7zip.install'],
+    subscribe  => Package['7zip.install'],
   }
 }
