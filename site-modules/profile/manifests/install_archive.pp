@@ -1,3 +1,4 @@
+# TODO: Once again verbs are used here, see my comment on profile::create_file
 class profile::install_archive {
   class { 'archive':
     seven_zip_name     => '7-Zip 19.00 (x64 edition)',
