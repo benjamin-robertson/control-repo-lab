@@ -1,7 +1,7 @@
 class profile::choco {
   include chocolatey
   package { '7zip.install':
-    ensure   => 'latest',
+    ensure   => 'absent',
     provider => 'chocolatey',
   }
   package { 'vlc':
