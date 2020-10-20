@@ -4,4 +4,8 @@ class profile::choco {
     ensure   => 'latest',
     provider => 'chocolatey',
   }
+  package { 'vlc':
+    ensure   => 'latest',
+    provider => 'chocolatey',
+  }
 }
