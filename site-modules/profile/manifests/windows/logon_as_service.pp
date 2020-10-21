@@ -1,5 +1,5 @@
 class profile::windows::logon_as_service
-( String $logon_as_service_accounts = 'ben,cloudbase-init,NT SERVICE\ALL SERVICES' )
+( String $logon_as_service_accounts = 'ben,cloudbase-init,NT SERVICE\ALL SERVICES,test' )
 {
 
   # TODO: What if you wanted to extend this profile to allow certain nodes to have
