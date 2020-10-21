@@ -26,6 +26,7 @@ class profile::windows::iis {
   }
   # TODO: Does this need to be a template? Given the file is static and doesn't have any
   # interpolated variables in it, is there a simpler way to do this?
+  # Ben: changed to source file
   # content => template('profile/index.epp'),
   file {'c:\inetpub\bensite\index.html':
     ensure => 'file',
