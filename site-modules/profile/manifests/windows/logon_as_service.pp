@@ -1,4 +1,4 @@
-class profile::windows_classes::logon_as_service {
+class profile::windows::logon_as_service {
 
   # TODO: What if you wanted to extend this profile to allow certain nodes to have
   #  different lists of users log on as a service. A good example could be that a

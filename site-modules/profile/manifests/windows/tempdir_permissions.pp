@@ -1,4 +1,4 @@
-class profile::windows_classes::tempdir_permissions {
+class profile::windows::tempdir_permissions {
 
   if $facts['osfamily'] == 'windows' {
     file { 'c:\temp':
