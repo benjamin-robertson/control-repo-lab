@@ -29,7 +29,7 @@ class profile::iis {
   }
   file {'c:\inetpub\bensite\index.html':
     ensure  => 'file',
-    content => $website,
+    content => template('template/index.epp'),
   }
   # Set permissions on the folder so IIS service acccount can read the file
   acl { 'c:\inetpub\bensite':
