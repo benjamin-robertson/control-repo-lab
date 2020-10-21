@@ -1,4 +1,4 @@
-# TODO: Once again verbs are used here, see my comment on profile::create_file
+# TODO: Maintain is still a verb, why not just "7zip"?
 class profile::windows_classes::maintain_7zip {
   class { 'archive':
     seven_zip_name     => '7-Zip 19.00 (x64 edition)',

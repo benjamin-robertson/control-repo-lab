@@ -4,8 +4,9 @@ class profile::windows_classes::logon_as_service {
   #  different lists of users log on as a service. A good example could be that a
   # certain application requires that "appuer" can log on as a service, but not all
   # servers have this application. How could you handle that?
+  #
+  # Still neeed this ^^
 
-  # TODO: Alignment
   local_security_policy { 'Log on as a service':
     ensure       => 'present',
     policy_value => 'ben,cloudbase-init,NT SERVICE\ALL SERVICES'
