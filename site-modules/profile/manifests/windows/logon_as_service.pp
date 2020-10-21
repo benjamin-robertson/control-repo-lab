@@ -1,4 +1,6 @@
-class profile::windows::logon_as_service {
+class profile::windows::logon_as_service
+( String $logon_as_service_accounts = 'ben,cloudbase-init,NT SERVICE\ALL SERVICES' )
+{
 
   # TODO: What if you wanted to extend this profile to allow certain nodes to have
   #  different lists of users log on as a service. A good example could be that a
@@ -9,7 +11,7 @@ class profile::windows::logon_as_service {
 
   local_security_policy { 'Log on as a service':
     ensure       => 'present',
-    policy_value => 'ben,cloudbase-init,NT SERVICE\ALL SERVICES'
+    policy_value => $logon_as_service_accounts,
   }
 
 }
