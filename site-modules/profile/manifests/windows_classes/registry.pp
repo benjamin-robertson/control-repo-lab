@@ -1,5 +1,4 @@
 class profile::windows_classes::registry {
-  # TODO: Alignment
   #IE ESC values required
   registry_value { 'HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Active Setup\Installed Components\{A509B1A7-37EF-4b3f-8CFC-4F3A74704073}\IsInstalled':
     ensure => 'present',
@@ -12,12 +11,23 @@ class profile::windows_classes::registry {
     data   => '1',
   }
 
-  # TODO: Indentation is inconsistent
-
   # Set the array values for IE ESC
   $regpath = ['HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings\ZoneMap','HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Internet Settings\ZoneMap']
 
   $regpath.each |String $regpathuse| {
+    # TODO: Indentation should be increased here since it's inside a set of braces, each
+    # time you open a brace (,[ or { without closing it, all lines afterward should be
+    # indented by 2 more spaces. Opposite gooes for when you close a brace. e.g.
+    #
+    # $test = [
+    #   {
+    #     'user'   => 'dylan',
+    #     'gruops' => [
+    #       'admins',
+    #       'users',
+    #     ]
+    #   }
+    # ]
   registry_value { "${regpathuse}\AutoDetect":
     ensure => 'present',
     type   => 'dword',

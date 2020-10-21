@@ -1,8 +1,5 @@
 class profile::windows_classes::iis {
 
-  # TODO: Indentation is inconsistent
-
-  # TODO: Can this massive string be stpred in some better way so that it is easy to read and edit in say a HTML editor?
   #$website = "<HTML><HEAD><TITLE>Ben's super really cool website</TITLE></HEAD><BODY><h1>Welcome to ben's pretty cool website</h1><br/><p>This website is hosted on IIS, pretty basic, however its been configured and all setup via Puppet. No manual intervention required, repeatable and automated :) </p></BODY></HTML>"
 
   # install IIS feature
@@ -27,6 +24,8 @@ class profile::windows_classes::iis {
     ensure => 'directory',
     owner  => 'system',
   }
+  # TODO: Does this need to be a template? Given the file is static and doesn't have any
+  # interpolated variables in it, is there a simpler way to do this?
   file {'c:\inetpub\bensite\index.html':
     ensure  => 'file',
     content => template('profile/index.epp'),
