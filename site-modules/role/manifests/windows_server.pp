@@ -1,5 +1,5 @@
 class role::windows_server {
 
-include profile::base
+include profile::base_windows
 
 }
