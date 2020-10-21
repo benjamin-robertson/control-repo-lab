@@ -29,7 +29,7 @@ class profile::windows::iis {
   # content => template('profile/index.epp'),
   file {'c:\inetpub\bensite\index.html':
     ensure => 'file',
-    source => 'puppet:///modules/profile/files/index.html',
+    source => 'puppet:///site-modules/profile/files/index.html',
   }
   # Set permissions on the folder so IIS service acccount can read the file
   acl { 'c:\inetpub\bensite':
