@@ -28,32 +28,33 @@ class profile::windows::registry {
     #     ]
     #   }
     # ]
-  registry_value { "${regpathuse}\AutoDetect":
-    ensure => 'present',
-    type   => 'dword',
-    data   => '0',
+    # Ben: fixed indentation. 
+    registry_value { "${regpathuse}\AutoDetect":
+      ensure => 'present',
+      type   => 'dword',
+      data   => '0',
+    }
+    registry_value { "${regpathuse}\IntranetName":
+      ensure => 'present',
+      type   => 'dword',
+      data   => '0',
+    }
+    registry_value { "${regpathuse}\ProxyByPass":
+      ensure => 'present',
+      type   => 'dword',
+      data   => '0',
+    }
+    registry_value { "${regpathuse}\UNCAsIntranet":
+      ensure => 'present',
+      type   => 'dword',
+      data   => '0',
+    }
+    registry_value { "${regpathuse}\IEHarden":
+      ensure => 'present',
+      type   => 'dword',
+      data   => '1',
+    }
   }
-  registry_value { "${regpathuse}\IntranetName":
-    ensure => 'present',
-    type   => 'dword',
-    data   => '0',
-  }
-  registry_value { "${regpathuse}\ProxyByPass":
-    ensure => 'present',
-    type   => 'dword',
-    data   => '0',
-  }
-  registry_value { "${regpathuse}\UNCAsIntranet":
-    ensure => 'present',
-    type   => 'dword',
-    data   => '0',
-  }
-  registry_value { "${regpathuse}\IEHarden":
-    ensure => 'present',
-    type   => 'dword',
-    data   => '1',
-  }
-}
   # Windows Shutdown Event Tracker set
   registry_value { 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows NT\Reliability\ShutdownReasonOn':
     ensure => 'present',
