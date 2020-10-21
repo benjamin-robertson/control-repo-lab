@@ -57,7 +57,7 @@ class profile::windows_classes::registry {
   }
 
   # TODO: These would run evey time Puppet is run right? Need to find some way to make them idempotent
-  # Ben: Yeah it does, I was being lazy and very excited I go the IE ESC working.
+  # Fixed!!! now tracks the event of the registry key being updated. 
   exec { 'rundllie':
     command     => 'C:\windows\System32\rundll32.exe iesetup.dll,IEHardenUser',
     subscribe   => Registry_value['HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Active Setup\Installed Components\{A509B1A7-37EF-4b3f-8CFC-4F3A74704073}\IsInstalled'],
