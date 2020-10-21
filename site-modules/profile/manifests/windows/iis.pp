@@ -26,9 +26,10 @@ class profile::windows::iis {
   }
   # TODO: Does this need to be a template? Given the file is static and doesn't have any
   # interpolated variables in it, is there a simpler way to do this?
+  # content => template('profile/index.epp'),
   file {'c:\inetpub\bensite\index.html':
-    ensure  => 'file',
-    content => template('profile/index.epp'),
+    ensure => 'file',
+    source => 'puppet:///modules/profile/files/index.html',
   }
   # Set permissions on the folder so IIS service acccount can read the file
   acl { 'c:\inetpub\bensite':
