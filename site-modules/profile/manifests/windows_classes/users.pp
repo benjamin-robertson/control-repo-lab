@@ -1,4 +1,4 @@
-class profile::users {
+class profile::windows_classes::users {
 
   # TODO: Alignment
   user { 'ben':

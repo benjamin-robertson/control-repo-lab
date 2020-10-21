@@ -1,4 +1,4 @@
-class profile::registry {
+class profile::windows_classes::registry {
   # TODO: Alignment
 
   #IE ESC values required

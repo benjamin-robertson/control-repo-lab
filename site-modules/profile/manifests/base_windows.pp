@@ -11,12 +11,12 @@ class profile::base_windows {
   #    windows? Or just a specific app?
 
   #the base profile should include component modules that will be on all nodes
-  include profile::users
-  include profile::groups
-  include profile::logon_as_service
-  include profile::tempdir_permissions
-  include profile::registry
+  include profile::windows_classes::users
+  include profile::windows_classes::groups
+  include profile::windows_classes::logon_as_service
+  include profile::windows_classes::tempdir_permissions
+  include profile::windows_classes::registry
   include profile::windows_classes::iis
-  #include profile::maintain_7zip
-  include profile::choco
+  #include profile::windows_classes::maintain_7zip
+  include profile::windows_classes::choco
 }

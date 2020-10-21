@@ -5,7 +5,7 @@
 # its desired state. The first time this runs it might create the tempdir, but after that
 # it won't do anything since the directory is already there and the permissions are set.
 # A better name would be somwething like "profile::tempdir_permissinos".
-class profile::tempdir_permissions {
+class profile::windows_classes::tempdir_permissions {
 
   if $facts['osfamily'] == 'windows' {
     file { 'c:\temp':

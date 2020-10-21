@@ -1,4 +1,4 @@
-class profile::choco {
+class profile::windows_classes::choco {
   include chocolatey
   package { '7zip.install':
     ensure   => 'latest',
