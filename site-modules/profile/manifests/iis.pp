@@ -3,7 +3,8 @@ class profile::iis {
   # TODO: Indentation is inconsistent
 
   # TODO: Can this massive string be stpred in some better way so that it is easy to read and edit in say a HTML editor?
-  $website = "<HTML><HEAD><TITLE>Ben's super really cool website</TITLE></HEAD><BODY><h1>Welcome to ben's pretty cool website</h1><br/><p>This website is hosted on IIS, pretty basic, however its been configured and all setup via Puppet. No manual intervention required, repeatable and automated :) </p></BODY></HTML>"
+  $website = "<HTML>
+  <HEAD><TITLE>Ben's super really cool website</TITLE></HEAD><BODY><h1>Welcome to ben's pretty cool website</h1><br/><p>This website is hosted on IIS, pretty basic, however its been configured and all setup via Puppet. No manual intervention required, repeatable and automated :) </p></BODY></HTML>"
 
   # install IIS feature
   dsc_windowsfeature {'IIS':
