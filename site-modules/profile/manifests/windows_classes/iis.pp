@@ -1,4 +1,4 @@
-class profile::iis {
+class profile::windows_classes::iis {
 
   # TODO: Indentation is inconsistent
 
