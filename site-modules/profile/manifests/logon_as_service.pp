@@ -7,7 +7,7 @@ class profile::logon_as_service {
 
   # TODO: Alignment
   local_security_policy { 'Log on as a service':
-    ensure => 'present',
+    ensure       => 'present',
     policy_value => 'ben,cloudbase-init,NT SERVICE\ALL SERVICES'
   }
 

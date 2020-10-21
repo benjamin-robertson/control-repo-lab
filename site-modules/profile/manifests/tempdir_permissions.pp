@@ -5,13 +5,13 @@
 # its desired state. The first time this runs it might create the tempdir, but after that
 # it won't do anything since the directory is already there and the permissions are set.
 # A better name would be somwething like "profile::tempdir_permissinos".
-class profile::create_file {
+class profile::tempdir_permissions {
 
   if $facts['osfamily'] == 'windows' {
     file { 'c:\temp':
       ensure => 'directory',
-      owner => 'ben',
-      group => 'bensgroup',
+      owner  => 'ben',
+      group  => 'bensgroup',
     }
     #set the ACL on the file
     acl { 'c:\temp':

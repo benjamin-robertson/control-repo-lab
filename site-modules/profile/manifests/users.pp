@@ -2,9 +2,9 @@ class profile::users {
 
   # TODO: Alignment
   user { 'ben':
-    ensure => 'present',
+    ensure  => 'present',
     comment => 'bens user account lol',
-    groups => 'Administrators'
+    groups  => 'Administrators'
   }
 
 }

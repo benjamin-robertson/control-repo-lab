@@ -14,9 +14,9 @@ class profile::base {
   include profile::users
   include profile::groups
   include profile::logon_as_service
-  include profile::create_file
+  include profile::tempdir_permissions
   include profile::registry
   include profile::iis
-  #include profile::install_archive
+  #include profile::maintain_7zip
   include profile::choco
 }

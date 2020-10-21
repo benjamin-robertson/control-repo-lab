@@ -1,7 +1,7 @@
 class profile::groups {
   # TODO: Alignment
   group { 'bensgroup':
-    ensure => 'present',
+    ensure  => 'present',
     members => ['ben']
   }
 }
