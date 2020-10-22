@@ -11,15 +11,7 @@ class profile::pe_master::node_classify {
     environment => 'production',
     #rule        => ['and', ['=', ['fact', 'osfamily'], 'RedHat']],
     #rule        => ['and', ['=', ['fact', 'osfamily'], 'RedHat'],['!~', ['fact', 'pe_major_version'], '']],
-    rule        => ['and',
-  ['not',
-    ['~',
-      ['fact', 'pe_major_version'],
-      '']],
-  ['=',
-    ['fact', 'osfamily'],
-    'RedHat']],
-    parent      => 'All Nodes',
+    rule        => ['and', ['=', ['fact', 'osfamily'], 'RedHat'],['~', ['fact', 'pe_major_version'], '.+']],
     #classes     => {'role::windows_server' => {}},
   }
 }
