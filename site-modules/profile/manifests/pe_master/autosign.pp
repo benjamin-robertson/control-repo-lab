@@ -1,5 +1,5 @@
-class profile::pe_master::autosign{
-  autosign { 'manage_autosign':
+class profile::pe_master::autosign {
+  class { ::autosign:
     ensure => 'latest',
     config => {
       'general' => {
