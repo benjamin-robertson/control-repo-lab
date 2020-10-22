@@ -9,7 +9,7 @@ class profile::pe_master::node_classify {
   node_group { 'Linux host - auto':
     ensure      => 'present',
     environment => 'production',
-    rule        => ['and', ['=', ['fact', 'osfamily'], 'RedHat']['!~', ['fact', 'pe_major_version'], '']],
+    rule        => ['and', ['=', ['fact', 'osfamily'], 'RedHat'],['!~', ['fact', 'pe_major_version'], '']],
     parent      => 'All Nodes',
     #classes     => {'role::windows_server' => {}},
   }
