@@ -20,4 +20,5 @@ class profile::base_windows {
   include profile::windows::iis
   #include profile::windows::7zip
   include profile::windows::choco
+  include profile::windows::scope_test
 }
