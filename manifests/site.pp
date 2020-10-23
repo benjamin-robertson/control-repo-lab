@@ -31,7 +31,7 @@ node default {
   # Example:
   #   class { 'my_class': }
   $ben = 'set in site.pp'
-  #File {
-  #  content => 'Set in site.pp under node scope',
-  #}
+  File {
+    content => 'Set in site.pp under node scope',
+  }
 }
