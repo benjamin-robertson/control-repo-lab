@@ -1,3 +1,3 @@
 class profile::windows::scope_test {
-  notice{'testing hello!!':}
+  notify{'testing hello!!':}
 }
