@@ -11,7 +11,10 @@
 
 # Disable filebucket by default for all File resources:
 # https://github.com/puppetlabs/docs-archive/blob/master/pe/2015.3/release_notes.markdown#filebucket-resource-no-longer-created-by-default
-File { backup => false }
+File {
+  backup  => false,
+  content => 'From site.pp at top scope',
+}
 ## Node Definitions ##
 
 # The default node definition matches any node lacking a more specific node
