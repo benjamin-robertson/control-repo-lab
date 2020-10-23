@@ -28,10 +28,10 @@ class profile::windows::iis {
   # interpolated variables in it, is there a simpler way to do this?
   # Ben: changed to source file
   # content => template('profile/index.epp'),
-  file {'c:\inetpub\bensite\index.html':
-    ensure => 'file',
-    source => 'puppet:///modules/profile/index.html',
-  }
+  #file {'c:\inetpub\bensite\index.html':
+  #  ensure => 'file',
+  #  source => 'puppet:///modules/profile/index.html',
+  #}
   # Set permissions on the folder so IIS service acccount can read the file
   acl { 'c:\inetpub\bensite':
     permissions => [
