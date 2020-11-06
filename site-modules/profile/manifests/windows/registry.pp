@@ -56,6 +56,11 @@ class profile::windows::registry {
     }
   }
   # Windows Shutdown Event Tracker set
+  # Create the key as sometimes its not present on clean builds
+  registry_key { 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows NT\Reliability':
+    ensure       => 'present',
+    purge_values => false,
+  }
   registry_value { 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows NT\Reliability\ShutdownReasonOn':
     ensure => 'present',
     type   => 'dword',
