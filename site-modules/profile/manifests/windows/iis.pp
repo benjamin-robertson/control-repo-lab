@@ -32,7 +32,7 @@ class profile::windows::iis {
     ensure => 'file',
     source => 'puppet:///modules/profile/index.html',
   }
-  # Set permissions on the folder so IIS service acccount can read the file.
+  # Set permissions on the folder so IIS service acccount can read the file
   acl { 'c:\inetpub\bensite':
     permissions => [
       { identity => 'IIS_IUSRS', rights => ['read','execute'] },
