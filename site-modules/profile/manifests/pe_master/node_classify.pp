@@ -17,7 +17,7 @@ class profile::pe_master::node_classify {
     ensure               => 'present',
     environment          => 'development',
     rule                 => ['and', ['~', 'name', 'dev']],
-    parent               => 'All Nodes',
+    parent               => 'All Environments',
     override_environment => 'true',
   }
 }
