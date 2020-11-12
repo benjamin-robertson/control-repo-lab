@@ -12,4 +12,11 @@ class profile::pe_master::node_classify {
     rule        => ['and', ['=', ['fact', 'osfamily'], 'RedHat'],['not',['~', ['fact', 'pe_major_version'], '']]],
     #classes     => {'role::windows_server' => {}},
   }
+  node_group { 'Windows Hosts - dev':
+    ensure                => 'present',
+    environment           => 'Development',
+    rule                  => ['~', ['=', ['fact', 'name'], 'dev']],
+    parent                => 'Windows Hosts - auto',
+    #override_environment => 'true',
+  }
 }
