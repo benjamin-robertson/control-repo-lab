@@ -17,7 +17,7 @@ class profile::pe_master::node_classify {
     ensure                => 'present',
     environment           => 'production',
     rule                  => ['and', ['~', 'name', 'dev']],
-    #parent                => 'Windows Hosts - auto',
+    parent                => 'Windows Hosts - auto',
     #override_environment => 'true',
   }
 }
