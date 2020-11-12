@@ -18,6 +18,6 @@ class profile::pe_master::node_classify {
     environment          => 'development',
     rule                 => ['and', ['~', 'name', 'dev']],
     parent               => 'All Nodes',
-    override_environment => 'true',
+    override_environment => 'false',
   }
 }
