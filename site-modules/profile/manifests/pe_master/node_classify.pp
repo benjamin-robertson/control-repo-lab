@@ -10,13 +10,14 @@ class profile::pe_master::node_classify {
     ensure      => 'present',
     environment => 'production',
     rule        => ['and', ['=', ['fact', 'osfamily'], 'RedHat'],['not',['~', ['fact', 'pe_major_version'], '']]],
+    parent      => 'All Nodes',
     #classes     => {'role::windows_server' => {}},
   }
   node_group { 'Windows Hosts - dev':
     ensure                => 'present',
     environment           => 'production',
     rule                  => ['~', ['=', ['fact', 'name'], 'dev']],
-    parent                => 'Windows Hosts - auto',
+    #parent                => 'Windows Hosts - auto',
     #override_environment => 'true',
   }
 }
