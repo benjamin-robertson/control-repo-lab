@@ -14,10 +14,10 @@ class profile::pe_master::node_classify {
     #classes     => {'role::windows_server' => {}},
   }
   node_group { 'Windows Hosts - dev':
-    ensure                => 'present',
-    environment           => 'development',
-    rule                  => ['and', ['~', 'name', 'dev']],
-    parent                => 'Windows Hosts - auto',
-    #override_environment => 'true',
+    ensure               => 'present',
+    environment          => 'development',
+    rule                 => ['and', ['~', 'name', 'dev']],
+    parent               => 'Windows Hosts - auto',
+    override_environment => 'true',
   }
 }
