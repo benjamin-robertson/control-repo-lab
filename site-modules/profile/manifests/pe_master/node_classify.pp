@@ -19,5 +19,6 @@ class profile::pe_master::node_classify {
     rule                 => ['and', ['~', 'name', 'dev']],
     parent               => 'All Environments',
     override_environment => 'true',
+    classes              => {'role::windows_server' => {}},
   }
 }
