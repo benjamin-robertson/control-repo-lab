@@ -8,7 +8,7 @@ class profile::windows::choco {
     ensure   => 'latest',
     provider => 'chocolatey',
   }
-    package { 'notepadplusplus.install':
+  package { 'notepadplusplus.install':
     ensure   => 'latest',
     provider => 'chocolatey',
   }
