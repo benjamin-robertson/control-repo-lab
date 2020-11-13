@@ -4,7 +4,7 @@ class profile::pe_master::node_classify {
     environment => 'production',
     rule        => ['and', ['=', ['fact', 'osfamily'], 'windows'],['not',['~', 'name', 'dev']]],
     parent      => 'All Nodes',
-    classes     => {'role::windows_server' => {}},
+    classes     => {'role::windows_server' => { }},
   }
   node_group { 'Linux host - auto':
     ensure      => 'present',
@@ -19,6 +19,6 @@ class profile::pe_master::node_classify {
     rule                 => ['and', ['~', 'name', 'dev']],
     parent               => 'All Environments',
     override_environment => 'true',
-    classes              => {'role::windows_server' => {}},
+    classes              => {'role::windows_server' => { }},
   }
 }
