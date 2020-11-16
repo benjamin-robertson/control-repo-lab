@@ -63,7 +63,7 @@ class profile::windows::iis {
   # Install html site
   file {'c:\inetpub\catsite\cats.html':
     ensure  => 'file',
-    content => epp('modules/profile/cats.epp'),
+    content => epp('profile/cats.epp'),
   }
   # Set ACL
   acl { 'c:\inetpub\catsite':
