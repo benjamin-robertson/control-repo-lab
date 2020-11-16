@@ -3,7 +3,7 @@ class profile::windows::hosts {
 
   concat { $hosts:
     ensure  => present,
-    replace => false,
+    replace => true,
     order   => 'numeric',
   }
 
