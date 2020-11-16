@@ -14,6 +14,7 @@ mod 'puppetlabs-chocolatey', '5.1.1'
 mod 'puppetlabs-powershell', '4.0.0'
 mod 'puppetlabs-inifile', '4.3.0'
 mod 'WhatsARanjit-node_manager', '0.7.3'
+mod 'puppetlabs-concat', '6.2.0'
 
 
 # Modules from the Puppet Forge
