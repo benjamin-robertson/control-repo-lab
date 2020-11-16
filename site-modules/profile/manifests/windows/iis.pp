@@ -53,4 +53,31 @@ class profile::windows::iis {
     defaultpage      => 'index.html',
     name             => 'bens web site',
   }
+
+  # cat website
+  # Create folder
+  file {'c:\inetpub\catsite':
+    ensure => 'directory',
+    owner  => 'system',
+  }
+  # Install html site
+  file {'c:\inetpub\catsite\cats.html':
+    ensure => 'file',
+    source => 'template:///modules/profile/cats.epp',
+  }
+  # Configure Cat site
+    iis_site { 'cats':
+    ensure           => 'started',
+    physicalpath     => 'c:\inetpub\catsite',
+    applicationpool  => 'DefaultAppPool',
+    enabledprotocols => 'http',
+    bindings         => [
+      {
+        'bindinginformation' => '*:80:cats',
+        'protocol'           => 'http',
+      }
+    ],
+    defaultpage      => 'cats.html',
+    name             => 'cat web site',
+  }
 }
