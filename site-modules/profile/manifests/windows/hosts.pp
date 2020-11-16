@@ -4,6 +4,7 @@ class profile::windows::hosts {
   concat { $hosts:
     ensure  => present,
     replace => true,
+    group   => 'Administrators',
     order   => 'numeric',
   }
 
