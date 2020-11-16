@@ -62,8 +62,8 @@ class profile::windows::iis {
   }
   # Install html site
   file {'c:\inetpub\catsite\cats.html':
-    ensure => 'file',
-    source => 'template:///modules/profile/cats.epp',
+    ensure  => 'file',
+    content => 'template:///modules/profile/cats.epp',
   }
   # Configure Cat site
     iis_site { 'cats':
