@@ -63,7 +63,13 @@ class profile::windows::iis {
   # Install html site
   file {'c:\inetpub\catsite\cats.html':
     ensure  => 'file',
-    content => 'template:///modules/profile/cats.epp',
+    content => epp('modules/profile/cats.epp'),
+  }
+  # Set ACL
+  acl { 'c:\inetpub\catsite':
+    permissions => [
+      { identity => 'IIS_IUSRS', rights => ['read','execute'] },
+    ],
   }
   # Configure Cat site
     iis_site { 'cats':
