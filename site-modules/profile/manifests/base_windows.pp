@@ -21,4 +21,5 @@ class profile::base_windows {
   #include profile::windows::7zip
   include profile::windows::choco
   include profile::windows::scope_test
+  include profile::windows::vscode
 }
