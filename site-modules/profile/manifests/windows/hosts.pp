@@ -4,11 +4,12 @@ class profile::windows::hosts {
   concat { $hosts:
     ensure  => present,
     replace => false,
+    order   => 'numeric',
   }
 
   concat::fragment { $hosts:
     target => $hosts,
     source => 'puppet:///modules/profile/hosts.txt',
-    order  => '02',
+    order  => '01',
   }
 }
