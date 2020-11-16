@@ -1,4 +1,7 @@
-class profile::windows::iis {
+class profile::windows::iis (
+  String $testing = 'Set as class default',
+)
+{
 
   #$website = "<HTML><HEAD><TITLE>Ben's super really cool website</TITLE></HEAD><BODY><h1>Welcome to ben's pretty cool website</h1><br/><p>This website is hosted on IIS, pretty basic, however its been configured and all setup via Puppet. No manual intervention required, repeatable and automated :) </p></BODY></HTML>"
 
