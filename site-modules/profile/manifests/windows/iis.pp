@@ -1,4 +1,7 @@
-class profile::windows::iis {
+class profile::windows::iis (
+  String $testing = 'Set as class default',
+)
+{
 
   #$website = "<HTML><HEAD><TITLE>Ben's super really cool website</TITLE></HEAD><BODY><h1>Welcome to ben's pretty cool website</h1><br/><p>This website is hosted on IIS, pretty basic, however its been configured and all setup via Puppet. No manual intervention required, repeatable and automated :) </p></BODY></HTML>"
 
@@ -52,5 +55,38 @@ class profile::windows::iis {
     ],
     #defaultpage      => 'index.html',
     name             => 'bens web site',
+  }
+
+  # cat website
+  # Create folder
+  file {'c:\inetpub\catsite':
+    ensure => 'directory',
+    owner  => 'system',
+  }
+  # Install html site
+  file {'c:\inetpub\catsite\cats.html':
+    ensure  => 'file',
+    content => epp('profile/cats.epp', {'testing' => $testing,}),
+  }
+  # Set ACL
+  acl { 'c:\inetpub\catsite':
+    permissions => [
+      { identity => 'IIS_IUSRS', rights => ['read','execute'] },
+    ],
+  }
+  # Configure Cat site
+    iis_site { 'cats':
+    ensure           => 'started',
+    physicalpath     => 'c:\inetpub\catsite',
+    applicationpool  => 'DefaultAppPool',
+    enabledprotocols => 'http',
+    bindings         => [
+      {
+        'bindinginformation' => '*:80:cats',
+        'protocol'           => 'http',
+      }
+    ],
+    defaultpage      => 'cats.html',
+    name             => 'cat web site',
   }
 }
