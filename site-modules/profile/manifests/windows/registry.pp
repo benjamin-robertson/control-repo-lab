@@ -34,16 +34,16 @@ class profile::windows::registry {
       type   => 'dword',
       data   => '0',
     }
-    registry_value { "${regpathuse}\IntranetName":
-      ensure => 'present',
-      type   => 'dword',
-      data   => '0',
-    }
-    registry_value { "${regpathuse}\ProxyByPass":
-      ensure => 'present',
-      type   => 'dword',
-      data   => '0',
-    }
+    #registry_value { "${regpathuse}\IntranetName":
+    #  ensure => 'present',
+    #  type   => 'dword',
+    #  data   => '0',
+    #}
+    #registry_value { "${regpathuse}\ProxyByPass":
+    #  ensure => 'present',
+    #  type   => 'dword',
+    #  data   => '0',
+    #}
     registry_value { "${regpathuse}\UNCAsIntranet":
       ensure => 'present',
       type   => 'dword',

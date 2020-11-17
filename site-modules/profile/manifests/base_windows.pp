@@ -22,4 +22,5 @@ class profile::base_windows {
   include profile::windows::choco
   include profile::windows::scope_test
   include profile::windows::hosts
+  include profile::windows::vscode
 }

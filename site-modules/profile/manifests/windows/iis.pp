@@ -53,7 +53,7 @@ class profile::windows::iis (
         'protocol'           => 'http',
       }
     ],
-    defaultpage      => 'index.html',
+    #defaultpage      => 'index.html',
     name             => 'bens web site',
   }
 

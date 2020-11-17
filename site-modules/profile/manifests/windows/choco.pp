@@ -8,6 +8,10 @@ class profile::windows::choco {
     ensure   => 'latest',
     provider => 'chocolatey',
   }
+  package { 'notepadplusplus.install':
+    ensure   => 'latest',
+    provider => 'chocolatey',
+  }
   #Reboot after installation of 7zip
   reboot { 'afterInstall':
     subscribe  => Package['7zip.install'],
