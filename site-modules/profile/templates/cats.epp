@@ -8,6 +8,8 @@
 <h1>Welcome to cats pretty cool website - now in a template, hosted on <%= $fqdn %></h1>
 <br/><p>This website is hosted on IIS, pretty basic, however its been configured and all setup via Puppet. No manual intervention required, repeatable and automated :) </p>
 <p>This value has been set as a class default <b><%= $testing %></b></p>
+<p>Plaintext yaml key: <b><%= $notencrypted%></b></p>
+<p>Encrypted yaml key: <b><%= $encrypted%></b></p>
 <br/>
 <h3>Cat 100</h3>
 <img src="https://http.cat/100" alt="cat 100">
