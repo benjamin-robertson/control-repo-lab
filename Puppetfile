@@ -34,3 +34,9 @@ mod 'puppetlabs-translate', '2.2.0'
 #mod 'apache',
 #  git:    'https://github.com/puppetlabs/puppetlabs-apache',
 #  branch: 'docs_experiment'
+
+# module puppetlab-motd direct from git. 
+mod 'motd'
+  git:      'https://github.com/puppetlabs/puppetlabs-motd.git',
+  branch:   'main',
+  tag:      'v4.2.0'
