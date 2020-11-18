@@ -12,3 +12,4 @@ profile::windows::iis::encrypted: >
     cRSEqjBMBgkqhkiG9w0BBwEwHQYJYIZIAWUDBAEqBBCpBXcQZXSHaVnP8TsL
     2TfDgCBur3ejwH2eXxTZuT/qlitiiGCcYYJN/n3Jm4j9Z+o5+A==]
 motd::content: "Welcome to Windows!!!"
+modules::motd::content: "Welcom to windows???
