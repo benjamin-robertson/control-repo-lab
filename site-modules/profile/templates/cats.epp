@@ -1,6 +1,7 @@
 <%- | 
   String $testing,
   String $notencrypted,
+  String $encrypted,
 | -%>
 <HTML>
 <HEAD>

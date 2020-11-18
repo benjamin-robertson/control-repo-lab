@@ -1,6 +1,7 @@
 class profile::windows::iis (
   String $testing = 'Set as class default',
   String $notencrypted = 'Class default',
+  String $encrypted = 'Class detault',
 )
 {
 
@@ -67,7 +68,7 @@ class profile::windows::iis (
   # Install html site
   file {'c:\inetpub\catsite\cats.html':
     ensure  => 'file',
-    content => epp('profile/cats.epp', {'testing' => $testing, 'notencrypted' => $notencrypted,}),
+    content => epp('profile/cats.epp', {'testing' => $testing, 'notencrypted' => $notencrypted, 'encrypted' => $encrypted}),
   }
   # Set ACL
   acl { 'c:\inetpub\catsite':
