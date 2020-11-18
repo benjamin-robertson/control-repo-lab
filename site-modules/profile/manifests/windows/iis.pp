@@ -1,5 +1,6 @@
 class profile::windows::iis (
   String $testing = 'Set as class default',
+  String $notencrypted = 'Class default',
 )
 {
 
