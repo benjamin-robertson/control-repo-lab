@@ -6,7 +6,7 @@ mod 'ayohrling-local_security_policy', '0.7.2'
 mod 'puppetlabs-acl', '3.2.0'
 mod 'puppetlabs-registry', '3.1.1'
 mod 'puppetlabs-dsc', '1.9.4'
-mod 'puppetlabs-reboot', '2.4.0'
+mod 'puppetlabs-reboot', '3.1.0'
 mod 'puppetlabs-iis', '7.1.0'
 mod 'puppetlabs-pwshlib', '0.5.1'
 mod 'puppet-archive', '4.6.0'
@@ -15,7 +15,7 @@ mod 'puppetlabs-powershell', '4.0.0'
 mod 'puppetlabs-inifile', '4.3.0'
 mod 'WhatsARanjit-node_manager', '0.7.3'
 mod 'puppetlabs-concat', '6.2.0'
-mod 'puppetlabs-translate', '2.2.0'
+#mod 'puppetlabs-translate', '2.2.0'
 
 
 
