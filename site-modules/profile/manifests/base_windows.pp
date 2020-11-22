@@ -14,7 +14,7 @@ class profile::base_windows {
   #the base profile should include component modules that will be on all nodes
   include profile::windows::users
   include profile::windows::groups
-  include profile::windows::logon_as_service
+  #include profile::windows::logon_as_service
   include profile::windows::tempdir_permissions
   include profile::windows::registry
   include profile::windows::iis
@@ -23,5 +23,5 @@ class profile::base_windows {
   include profile::windows::scope_test
   include profile::windows::hosts
   include profile::windows::vscode
-  include profile::windows::motdwindows
+  #include profile::windows::motdwindows
 }
