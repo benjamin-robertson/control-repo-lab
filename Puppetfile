@@ -15,7 +15,7 @@ mod 'puppetlabs-powershell', '4.0.0'
 mod 'puppetlabs-inifile', '4.3.0'
 mod 'WhatsARanjit-node_manager', '0.7.3'
 mod 'puppetlabs-concat', '6.2.0'
-#mod 'puppetlabs-translate', '2.2.0'
+mod 'puppetlabs-translate', '2.2.0'
 
 
 
@@ -36,7 +36,7 @@ mod 'puppetlabs-concat', '6.2.0'
 #  branch: 'docs_experiment'
 
 # module puppetlab-motd direct from git. 
-#mod 'motd',
-#  git:      'https://github.com/puppetlabs/puppetlabs-motd.git',
-#  branch:   'main',
-#  tag:      'v4.2.0'
+mod 'motd',
+  git:      'https://github.com/puppetlabs/puppetlabs-motd.git',
+  branch:   'main',
+  tag:      'v4.2.0'
