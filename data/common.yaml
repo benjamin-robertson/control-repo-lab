@@ -1,4 +1,4 @@
----
+--- {
 message: "This node is using common data"
 motd::params::content: "Welcome to Windows!!!"
 modules::motd::params::content: "Welcome to windows???"
@@ -8,3 +8,4 @@ modules::chocolatey::adobereader::ensure: "latest"
 modules::chocolatey::adobereader::provider: "chocolatey"
 modules::chocolatey::choco_install_location: "c:\\choco\\"
 #profile::windows::iis::testing: "From environment hiera"
+}
