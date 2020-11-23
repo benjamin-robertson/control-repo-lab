@@ -13,3 +13,5 @@ profile::windows::iis::encrypted: >
     2TfDgCBur3ejwH2eXxTZuT/qlitiiGCcYYJN/n3Jm4j9Z+o5+A==]
 motd::content: "Welcome to Windows!!!"
 modules::motd::content: "Welcome to windows???"
+profile::windows::motdwindows::content: "Welcome to windows2019"
+profile::windows::motd::content: "Welcome to windows2019"
