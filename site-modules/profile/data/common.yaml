@@ -14,3 +14,7 @@ profile::windows::iis::encrypted: >
 motd::params::content: "Welcome to Windows!!!"
 modules::motd::params::content: "Welcome to windows???"
 profile::windows::motdwindows::content: "Welcome to windows2019 Module data"
+#profile::windows::installstuff:
+#  - adobereader
+#  - firefox
+#  - python3
