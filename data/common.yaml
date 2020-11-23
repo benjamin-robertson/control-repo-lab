@@ -1,3 +1,10 @@
 ---
 message: "This node is using common data"
+motd::params::content: "Welcome to Windows!!!"
+modules::motd::params::content: "Welcome to windows???"
+profile::windows::motdwindows::content: "Welcome to windows2019"
+profile::windows::motd::content: "Welcome to windows2019"
+modules::chocolatey::adobereader::ensure: "latest"
+modules::chocolatey::adobereader::provider: "chocolatey"
+modules::chocolatey::choco_install_location: "c:\\choco\\"
 #profile::windows::iis::testing: "From environment hiera"
