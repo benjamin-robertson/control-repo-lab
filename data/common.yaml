@@ -1,4 +1,4 @@
---- {}
+---
 message: "This node is using common data"
 motd::params::content: "Welcome to Windows!!!"
 modules::motd::params::content: "Welcome to windows???"
