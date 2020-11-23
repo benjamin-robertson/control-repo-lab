@@ -1,5 +1,5 @@
 class profile::windows::installstuff (
-  Array $stuff= []
+  Array $stuff = []
 ) {
   package { $stuff:
     ensure   => 'latest',
