@@ -3,6 +3,6 @@ class profile::windows::installstuff (
 ) {
   package { $stuff:
     ensure   => 'latest',
-    provider => 'chocolatey',
+    provider => 'chocolatey'
   }
 }

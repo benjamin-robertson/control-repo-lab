@@ -16,7 +16,7 @@ mod 'puppetlabs-inifile', '4.3.0'
 mod 'WhatsARanjit-node_manager', '0.7.3'
 mod 'puppetlabs-concat', '6.2.0'
 mod 'puppetlabs-translate', '2.2.0'
-
+mod 'puppetlabs-motd', '4.2.0'
 
 
 # Modules from the Puppet Forge
