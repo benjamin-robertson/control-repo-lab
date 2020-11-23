@@ -2,7 +2,7 @@
 message: "This node is using common data"
 motd::params::content: "Welcome to Windows!!!"
 modules::motd::params::content: "Welcome to windows???"
-profile::windows::motdwindows::content: "Welcome to windows2019 Environemnt data!!!"
+#profile::windows::motdwindows::content: "Welcome to windows2019 Environemnt data!!!"
 modules::chocolatey::adobereader::ensure: "latest"
 modules::chocolatey::adobereader::provider: "chocolatey"
 modules::chocolatey::choco_install_location: "c:\\choco\\"
