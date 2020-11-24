@@ -18,3 +18,4 @@ profile::windows::installstuff::stuff:
   - adobereader
   - firefox
   - python3
+  - putty
