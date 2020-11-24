@@ -11,3 +11,10 @@ profile::windows::iis::encrypted: >
     sddTfrRxrKl/FghTzC9FSLWFRS89Dlqvpc9BHDFbutSgGDeyz2LxSZCdpvWv
     cRSEqjBMBgkqhkiG9w0BBwEwHQYJYIZIAWUDBAEqBBCpBXcQZXSHaVnP8TsL
     2TfDgCBur3ejwH2eXxTZuT/qlitiiGCcYYJN/n3Jm4j9Z+o5+A==]
+motd::params::content: "Welcome to Windows!!!"
+modules::motd::params::content: "Welcome to windows???"
+profile::windows::motdwindows::content: "Welcome to windows2019 Module data"
+profile::windows::installstuff::stuff:
+  - adobereader
+  - firefox
+  - python3
