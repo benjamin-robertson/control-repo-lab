@@ -40,7 +40,7 @@ mod 'motd',
   branch:   'main',
   tag:      'v4.2.0'
 
-mod 'rsyslog'
+mod 'rsyslog',
   git:      'https://github.com/voxpupuli/puppet/rsyslog.git',
   branch:   'master',
   tag:      'v5.1.0'
