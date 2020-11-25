@@ -17,7 +17,7 @@ class profile::pe_master::node_classify {
     ensure               => 'present',
     environment          => 'development',
     rule                 => ['and', ['~', 'name', 'dev']],
-    parent               => 'All Environments',
+    parent               => 'All nodes',
     override_environment => 'true',
     classes              => {'role::windows_server' => { }},
   }
