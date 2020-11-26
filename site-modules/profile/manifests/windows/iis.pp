@@ -9,7 +9,7 @@ class profile::windows::iis (
 
   # install IIS feature
   dsc_windowsfeature {'IIS':
-    ensure   => 'present',
+    ensure   => 'present'
     dsc_name => 'Web-Server',
   }
   dsc_windowsfeature {'IIS-tools':
