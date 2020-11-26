@@ -1,0 +1,251 @@
+{
+  "name": "windows2019-gue.platform9.puppet.net",
+  "values": {
+    "aio_agent_build": "6.17.0",
+    "aio_agent_version": "6.17.0",
+    "architecture": "x64",
+    "archive_windir": "C:\\ProgramData\\staging",
+    "choco_install_path": "c:\\choco\\",
+    "choco_temp_dir": "C:\\Users\\Admin\\AppData\\Local\\Temp",
+    "chocolateyversion": "0.10.15",
+    "common_appdata": "C:\\ProgramData",
+    "dhcp_servers": {
+      "system": "192.168.0.3",
+      "tap53905c6b-ae": "192.168.0.3"
+    },
+    "dmi": {
+      "manufacturer": "SeaBIOS",
+      "product": {
+        "name": "OpenStack Nova",
+        "serial_number": "3c2513f4-b791-4ce7-9b2f-558c71093ec7",
+        "uuid": "ADDF977D-8F59-48F2-8A38-1649917362FC"
+      }
+    },
+    "domain": "platform9.puppet.net",
+    "env_windows_installdir": "C:\\Program Files\\Puppet Labs\\Puppet",
+    "facterversion": "3.14.12",
+    "fips_enabled": false,
+    "fqdn": "windows2019-gue.platform9.puppet.net",
+    "hardwareisa": "x64",
+    "hardwaremodel": "x86_64",
+    "hostname": "windows2019-gue",
+    "hypervisors": {
+      "kvm": {
+        "openstack": true
+      }
+    },
+    "id": "WINDOWS2019-GUE\\Admin",
+    "identity": {
+      "privileged": true,
+      "user": "WINDOWS2019-GUE\\Admin"
+    },
+    "iis_version": "10.0",
+    "interfaces": "tap53905c6b-ae",
+    "ipaddress": "192.168.0.20",
+    "ipaddress6": "fe80::4872:bd7a:7061:aa47",
+    "ipaddress6_tap53905c6b-ae": "fe80::4872:bd7a:7061:aa47",
+    "ipaddress_tap53905c6b-ae": "192.168.0.20",
+    "is_pe": false,
+    "is_virtual": true,
+    "kernel": "windows",
+    "kernelmajversion": "10.0",
+    "kernelrelease": "10.0.17763",
+    "kernelversion": "10.0.17763",
+    "macaddress": "FA:16:3E:B8:E9:8A",
+    "macaddress_tap53905c6b-ae": "FA:16:3E:B8:E9:8A",
+    "manufacturer": "SeaBIOS",
+    "memory": {
+      "system": {
+        "available": "6.32 GiB",
+        "available_bytes": 6791176192,
+        "capacity": "20.94%",
+        "total": "8.00 GiB",
+        "total_bytes": 8589381632,
+        "used": "1.67 GiB",
+        "used_bytes": 1798205440
+      }
+    },
+    "memoryfree": "6.32 GiB",
+    "memoryfree_mb": 6476.5703125,
+    "memorysize": "8.00 GiB",
+    "memorysize_mb": 8191.47265625,
+    "mtu_tap53905c6b-ae": 1500,
+    "netmask": "255.255.255.0",
+    "netmask6": "ffff:ffff:ffff:ffff::",
+    "netmask6_tap53905c6b-ae": "ffff:ffff:ffff:ffff::",
+    "netmask_tap53905c6b-ae": "255.255.255.0",
+    "network": "192.168.0.0",
+    "network6": "fe80::",
+    "network6_tap53905c6b-ae": "fe80::",
+    "network_tap53905c6b-ae": "192.168.0.0",
+    "networking": {
+      "dhcp": "192.168.0.3",
+      "domain": "platform9.puppet.net",
+      "fqdn": "windows2019-gue.platform9.puppet.net",
+      "hostname": "windows2019-gue",
+      "interfaces": {
+        "tap53905c6b-ae": {
+          "bindings": [
+            {
+              "address": "192.168.0.20",
+              "netmask": "255.255.255.0",
+              "network": "192.168.0.0"
+            }
+          ],
+          "bindings6": [
+            {
+              "address": "fe80::4872:bd7a:7061:aa47",
+              "netmask": "ffff:ffff:ffff:ffff::",
+              "network": "fe80::"
+            }
+          ],
+          "dhcp": "192.168.0.3",
+          "ip": "192.168.0.20",
+          "ip6": "fe80::4872:bd7a:7061:aa47",
+          "mac": "FA:16:3E:B8:E9:8A",
+          "mtu": 1500,
+          "netmask": "255.255.255.0",
+          "netmask6": "ffff:ffff:ffff:ffff::",
+          "network": "192.168.0.0",
+          "network6": "fe80::",
+          "scope6": "link"
+        }
+      },
+      "ip": "192.168.0.20",
+      "ip6": "fe80::4872:bd7a:7061:aa47",
+      "mac": "FA:16:3E:B8:E9:8A",
+      "mtu": 1500,
+      "netmask": "255.255.255.0",
+      "netmask6": "ffff:ffff:ffff:ffff::",
+      "network": "192.168.0.0",
+      "network6": "fe80::",
+      "primary": "tap53905c6b-ae",
+      "scope6": "link"
+    },
+    "operatingsystem": "windows",
+    "operatingsystemmajrelease": "2019",
+    "operatingsystemrelease": "2019",
+    "os": {
+      "architecture": "x64",
+      "family": "windows",
+      "hardware": "x86_64",
+      "name": "windows",
+      "release": {
+        "full": "2019",
+        "major": "2019"
+      },
+      "windows": {
+        "edition_id": "ServerStandard",
+        "installation_type": "Server",
+        "product_name": "Windows Server 2019 Standard",
+        "release_id": "1809",
+        "system32": "C:\\Windows\\system32"
+      }
+    },
+    "osfamily": "windows",
+    "package_provider": "windows",
+    "path": "C:/Program Files/Puppet Labs/Puppet/puppet/lib/ruby/vendor_ruby/../../../bin;C:/Program Files/Puppet Labs/Puppet/puppet/lib/ruby/vendor_ruby/../../../../puppet/bin;C:\\Program Files\\Puppet Labs\\Puppet\\puppet\\bin;C:\\Program Files\\Puppet Labs\\Puppet\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Packer\\SysInternals;C:\\Program Files\\Git\\cmd;C:\\Program Files\\PowerShell\\7\\;C:\\Program Files\\Puppet Labs\\Puppet\\bin;C:\\ProgramData\\chocolatey\\bin;;C:\\Program Files\\Microsoft VS Code\\bin;c:\\choco\\bin;C:\\Users\\Admin\\AppData\\Local\\Microsoft\\WindowsApps;",
+    "pe_concat_basedir": "C:/ProgramData/PuppetLabs/puppet/cache/pe_concat",
+    "pe_patch": {
+      "package_updates": [
+
+      ],
+      "package_update_count": 0,
+      "missing_update_kbs": [
+
+      ],
+      "security_package_updates": [
+
+      ],
+      "security_package_update_count": 0,
+      "blackouts": {
+      },
+      "pinned_packages": [
+
+      ],
+      "last_run": {
+      },
+      "patch_group": "",
+      "reboot_override": "default",
+      "reboots": {
+        "reboot_required": "unknown"
+      },
+      "block_patching_on_warnings": "false",
+      "warnings": {
+        "update_file": "Update file not found, update information invalid",
+        "security_update_file": "Security update file not found, update information invalid"
+      },
+      "blocked": false,
+      "blocked_reasons": [
+
+      ]
+    },
+    "physicalprocessorcount": 4,
+    "platform_symlink_writable": false,
+    "powershell_version": "5.1.17763.1",
+    "processor0": "Intel Core Processor (Haswell, no TSX, IBRS)",
+    "processor1": "Intel Core Processor (Haswell, no TSX, IBRS)",
+    "processor2": "Intel Core Processor (Haswell, no TSX, IBRS)",
+    "processor3": "Intel Core Processor (Haswell, no TSX, IBRS)",
+    "processorcount": 4,
+    "processors": {
+      "count": 4,
+      "isa": "x64",
+      "models": [
+        "Intel Core Processor (Haswell, no TSX, IBRS)",
+        "Intel Core Processor (Haswell, no TSX, IBRS)",
+        "Intel Core Processor (Haswell, no TSX, IBRS)",
+        "Intel Core Processor (Haswell, no TSX, IBRS)"
+      ],
+      "physicalcount": 4
+    },
+    "productname": "OpenStack Nova",
+    "puppet_environmentpath": "C:/ProgramData/PuppetLabs/code/environments",
+    "puppet_files_dir_present": false,
+    "puppet_inventory_metadata": {
+      "packages": {
+        "collection_enabled": false,
+        "last_collection_time": "0.0s"
+      }
+    },
+    "puppet_server": "puppet-master.platform9.puppet.net",
+    "puppet_vardir": "C:/ProgramData/PuppetLabs/puppet/cache",
+    "puppetversion": "6.17.0",
+    "ruby": {
+      "platform": "x64-mingw32",
+      "sitedir": "C:/Program Files/Puppet Labs/Puppet/puppet/lib/ruby/site_ruby/2.5.0",
+      "version": "2.5.8"
+    },
+    "rubyplatform": "x64-mingw32",
+    "rubysitedir": "C:/Program Files/Puppet Labs/Puppet/puppet/lib/ruby/site_ruby/2.5.0",
+    "rubyversion": "2.5.8",
+    "scope6": "link",
+    "scope6_tap53905c6b-ae": "link",
+    "serialnumber": "3c2513f4-b791-4ce7-9b2f-558c71093ec7",
+    "service_provider": "windows",
+    "staging_http_get": "curl",
+    "system32": "C:\\Windows\\system32",
+    "system_uptime": {
+      "days": 1,
+      "hours": 44,
+      "seconds": 159353,
+      "uptime": "1 day"
+    },
+    "timezone": "Coordinated Universal Time",
+    "uptime": "1 day",
+    "uptime_days": 1,
+    "uptime_hours": 44,
+    "uptime_seconds": 159353,
+    "uuid": "ADDF977D-8F59-48F2-8A38-1649917362FC",
+    "virtual": "openstack",
+    "windows_edition_id": "ServerStandard",
+    "windows_installation_type": "Server",
+    "windows_product_name": "Windows Server 2019 Standard",
+    "windows_release_id": "1809",
+    "clientcert": "windows2019-gue.platform9.puppet.net",
+    "clientversion": "6.17.0",
+    "clientnoop": false
+  },
+  "timestamp": "2020-11-26T00:06:25.863769000+00:00",
+  "expiration": "2020-11-26T00:36:25.864130000+00:00"
+}
