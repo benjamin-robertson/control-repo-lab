@@ -1,6 +1,7 @@
 # Classes to be tested
 classes:
   - role::windows_server
+  - role::pe_master
 
 # Nodes to tests classes on, this refers to a 'factset' or 'nodeset'
 # depending on whether you are running 'spec' or 'acceptance' tests
@@ -9,9 +10,28 @@ nodes:
   - Windows_Server-2008r2-64
   - Windows_Server-2012r2-64
   - windows-10-64
+  - CentOS-7.0-64
+  - RHEL-7.4
+
+# Example node group
+#node_groups:
+#  windows_servers:
+#    - fact_set_windows2019-gui
+#    - Windows_Server-2008r2-64
+#    - Windows_Server-2012r2-64
+#    - windows-10-64
+#  linux_servers:
+#    - CentOS-7.0-64
+#    - RHEL-7.4
+
 
 # You can group classes here to save typing
 class_groups:
+  windows_roles:
+    - role::windows_server
+  non_windows_roles:
+    include: 'all_classes'
+    exclude: 'windows_roles'
 
 # You can group nodes here to save typing
 # We have created a 'non_windows_nodes' group because we can't
@@ -28,9 +48,9 @@ node_groups:
     exclude: 'windows_nodes'
 
 test_matrix:
-  - all_nodes:
-      classes: 'all_classes'
-      tests: 'spec'
+  - windows_nodes:
+     classes: 'role::windows_server'
+     tests: 'spec'
   - non_windows_nodes: 
-      classes: 'all_classes'
-      tests: 'acceptance'
+     classes: 'non_windows_roles'
+     tests: 'spec'
