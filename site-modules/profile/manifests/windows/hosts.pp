@@ -1,7 +1,7 @@
 class profile::windows::hosts {
   $hosts = 'C:\Windows\System32\drivers\etc\hosts'
 
-  condcat { $hosts:
+  concat { $hosts:
     ensure  => present,
     replace => true,
     group   => 'Administrators',
