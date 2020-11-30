@@ -1,0 +1,619 @@
+{
+    "name": "ip-172-31-28-3.ap-southeast-2.compute.internal",
+    "values": {
+      "aio_agent_build": "6.19.1",
+      "aio_agent_version": "6.19.1",
+      "architecture": "x86_64",
+      "augeas": {
+        "version": "1.12.0"
+      },
+      "augeasversion": "1.12.0",
+      "bios_release_date": "10/16/2017",
+      "bios_vendor": "Amazon EC2",
+      "bios_version": "1.0",
+      "blockdevice_nvme0n1_model": "Amazon Elastic Block Store",
+      "blockdevice_nvme0n1_size": 107374182400,
+      "blockdevices": "nvme0n1",
+      "boardassettag": "i-028f087d3b69450b1",
+      "boardmanufacturer": "Amazon EC2",
+      "chassisassettag": "Amazon EC2",
+      "chassistype": "Other",
+      "disks": {
+        "nvme0n1": {
+          "model": "Amazon Elastic Block Store",
+          "size": "100.00 GiB",
+          "size_bytes": 107374182400
+        }
+      },
+      "dmi": {
+        "bios": {
+          "release_date": "10/16/2017",
+          "vendor": "Amazon EC2",
+          "version": "1.0"
+        },
+        "board": {
+          "asset_tag": "i-028f087d3b69450b1",
+          "manufacturer": "Amazon EC2"
+        },
+        "chassis": {
+          "asset_tag": "Amazon EC2",
+          "type": "Other"
+        },
+        "manufacturer": "Amazon EC2",
+        "product": {
+          "name": "c5.xlarge",
+          "serial_number": "ec226fb8-0e99-52da-d645-0e4c6ddb9ee5",
+          "uuid": "ec226fb8-0e99-52da-d645-0e4c6ddb9ee5"
+        }
+      },
+      "domain": "ap-southeast-2.compute.internal",
+      "ec2_metadata": {
+        "ami-id": "ami-06ff0ae25b8f3005d",
+        "ami-launch-index": "0",
+        "ami-manifest-path": "(unknown)",
+        "block-device-mapping": {
+          "ami": "sda1",
+          "root": "/dev/sda1"
+        },
+        "events": {
+          "maintenance": {
+            "history": "[]",
+            "scheduled": "[]"
+          }
+        },
+        "hibernation": {
+          "configured": "false"
+        },
+        "hostname": "ip-172-31-28-3.ap-southeast-2.compute.internal",
+        "identity-credentials": {
+          "ec2": {
+            "info": "{\n  \"Code\" : \"Success\",\n  \"LastUpdated\" : \"2020-11-30T04:54:36Z\",\n  \"AccountId\" : \"221643363539\"\n}"
+          }
+        },
+        "instance-action": "none",
+        "instance-id": "i-028f087d3b69450b1",
+        "instance-life-cycle": "on-demand",
+        "instance-type": "c5.xlarge",
+        "local-hostname": "ip-172-31-28-3.ap-southeast-2.compute.internal",
+        "local-ipv4": "172.31.28.3",
+        "mac": "02:6b:8b:36:36:5c",
+        "metrics": {
+          "vhostmd": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>"
+        },
+        "network": {
+          "interfaces": {
+            "macs": {
+              "02:6b:8b:36:36:5c": {
+                "device-number": "0",
+                "interface-id": "eni-033f060533dd50d86",
+                "ipv4-associations": {
+                  "54.66.64.91": "172.31.28.3"
+                },
+                "local-hostname": "ip-172-31-28-3.ap-southeast-2.compute.internal",
+                "local-ipv4s": "172.31.28.3",
+                "mac": "02:6b:8b:36:36:5c",
+                "owner-id": "221643363539",
+                "public-hostname": "ec2-54-66-64-91.ap-southeast-2.compute.amazonaws.com",
+                "public-ipv4s": "54.66.64.91",
+                "security-group-ids": "sg-096faa1ed13a8ca23",
+                "security-groups": "CD4PE security group",
+                "subnet-id": "subnet-f6ba6992",
+                "subnet-ipv4-cidr-block": "172.31.16.0/20",
+                "vpc-id": "vpc-47b8ad22",
+                "vpc-ipv4-cidr-block": "172.31.0.0/16",
+                "vpc-ipv4-cidr-blocks": "172.31.0.0/16"
+              }
+            }
+          }
+        },
+        "placement": {
+          "availability-zone": "ap-southeast-2b",
+          "availability-zone-id": "apse2-az1",
+          "region": "ap-southeast-2"
+        },
+        "product-codes": "csjy4acdudiie6s0a2nvv01ul",
+        "profile": "default-hvm",
+        "public-hostname": "ec2-54-66-64-91.ap-southeast-2.compute.amazonaws.com",
+        "public-ipv4": "54.66.64.91",
+        "public-keys": {
+          "0": {
+            "openssh-key": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCvEWdzGA04TExc2KNxNuMXaa2Ir6qhQYYyTGgNXtGuwW+4wOk2apwAM561xYedZhmlpuCCFbjqD2G4Vv4hUGAINpMauO+bfxitUrNlRxwA/AJGa0rbK+Pqfb+NdG1qwVYtijuWx3zQnepCBmQTQjRyXcq8i7nCZniyWgr6iHotTqY+GehBRyjIkO3ESn/TBywRIFkoV7BjBJYcYAIMCP+lr5OsnsX2Z7+JRWzo69tuB0XGbqgub/sDGG7PF2JJ0cWTBWCKNkz0K1pm4NOyqRODIYiBuTUHTAT3lb4OmszgNPC5DdVVHHY9r7WdFypGsOersfY8TUfYFnk54APQW8KJ benrobertson-aws"
+          }
+        },
+        "reservation-id": "r-03d7f0a874a73b30a",
+        "security-groups": "CD4PE security group",
+        "services": {
+          "domain": "amazonaws.com",
+          "partition": "aws"
+        }
+      },
+      "ec2_userdata": "#!/bin/bash\nyum -y update",
+      "facterversion": "3.14.14",
+      "filesystems": "xfs",
+      "fips_enabled": false,
+      "fqdn": "ip-172-31-28-3.ap-southeast-2.compute.internal",
+      "gid": "root",
+      "hardwareisa": "x86_64",
+      "hardwaremodel": "x86_64",
+      "hostname": "ip-172-31-28-3",
+      "hypervisors": {
+        "kvm": {
+        }
+      },
+      "id": "root",
+      "identity": {
+        "gid": 0,
+        "group": "root",
+        "privileged": true,
+        "uid": 0,
+        "user": "root"
+      },
+      "interfaces": "eth0,lo",
+      "ipaddress": "172.31.28.3",
+      "ipaddress6": "fe80::6b:8bff:fe36:365c",
+      "ipaddress6_eth0": "fe80::6b:8bff:fe36:365c",
+      "ipaddress6_lo": "::1",
+      "ipaddress_eth0": "172.31.28.3",
+      "ipaddress_lo": "127.0.0.1",
+      "is_pe": false,
+      "is_virtual": true,
+      "kernel": "Linux",
+      "kernelmajversion": "4.18",
+      "kernelrelease": "4.18.0-193.28.1.el8_2.x86_64",
+      "kernelversion": "4.18.0",
+      "load_averages": {
+        "15m": 0.0,
+        "1m": 0.0,
+        "5m": 0.0
+      },
+      "macaddress": "02:6b:8b:36:36:5c",
+      "macaddress_eth0": "02:6b:8b:36:36:5c",
+      "manufacturer": "Amazon EC2",
+      "memory": {
+        "system": {
+          "available": "6.89 GiB",
+          "available_bytes": 7397773312,
+          "capacity": "5.40%",
+          "total": "7.28 GiB",
+          "total_bytes": 7820161024,
+          "used": "402.82 MiB",
+          "used_bytes": 422387712
+        }
+      },
+      "memoryfree": "6.89 GiB",
+      "memoryfree_mb": 7055.06640625,
+      "memorysize": "7.28 GiB",
+      "memorysize_mb": 7457.88671875,
+      "mountpoints": {
+        "/": {
+          "available": "97.55 GiB",
+          "available_bytes": 104741281792,
+          "capacity": "2.44%",
+          "device": "/dev/nvme0n1p2",
+          "filesystem": "xfs",
+          "options": [
+            "rw",
+            "seclabel",
+            "noatime",
+            "nodiratime",
+            "attr2",
+            "inode64",
+            "noquota"
+          ],
+          "size": "99.99 GiB",
+          "size_bytes": 107361579008,
+          "used": "2.44 GiB",
+          "used_bytes": 2620297216
+        },
+        "/dev": {
+          "available": "3.63 GiB",
+          "available_bytes": 3894501376,
+          "capacity": "0%",
+          "device": "devtmpfs",
+          "filesystem": "devtmpfs",
+          "options": [
+            "rw",
+            "seclabel",
+            "nosuid",
+            "size=3803224k",
+            "nr_inodes=950806",
+            "mode=755"
+          ],
+          "size": "3.63 GiB",
+          "size_bytes": 3894501376,
+          "used": "0 bytes",
+          "used_bytes": 0
+        },
+        "/dev/hugepages": {
+          "available": "0 bytes",
+          "available_bytes": 0,
+          "capacity": "100%",
+          "device": "hugetlbfs",
+          "filesystem": "hugetlbfs",
+          "options": [
+            "rw",
+            "seclabel",
+            "relatime",
+            "pagesize=2M"
+          ],
+          "size": "0 bytes",
+          "size_bytes": 0,
+          "used": "0 bytes",
+          "used_bytes": 0
+        },
+        "/dev/mqueue": {
+          "available": "0 bytes",
+          "available_bytes": 0,
+          "capacity": "100%",
+          "device": "mqueue",
+          "filesystem": "mqueue",
+          "options": [
+            "rw",
+            "seclabel",
+            "relatime"
+          ],
+          "size": "0 bytes",
+          "size_bytes": 0,
+          "used": "0 bytes",
+          "used_bytes": 0
+        },
+        "/dev/pts": {
+          "available": "0 bytes",
+          "available_bytes": 0,
+          "capacity": "100%",
+          "device": "devpts",
+          "filesystem": "devpts",
+          "options": [
+            "rw",
+            "seclabel",
+            "nosuid",
+            "noexec",
+            "relatime",
+            "gid=5",
+            "mode=620",
+            "ptmxmode=000"
+          ],
+          "size": "0 bytes",
+          "size_bytes": 0,
+          "used": "0 bytes",
+          "used_bytes": 0
+        },
+        "/dev/shm": {
+          "available": "3.64 GiB",
+          "available_bytes": 3910078464,
+          "capacity": "0%",
+          "device": "tmpfs",
+          "filesystem": "tmpfs",
+          "options": [
+            "rw",
+            "seclabel",
+            "nosuid",
+            "nodev"
+          ],
+          "size": "3.64 GiB",
+          "size_bytes": 3910078464,
+          "used": "0 bytes",
+          "used_bytes": 0
+        },
+        "/run": {
+          "available": "3.63 GiB",
+          "available_bytes": 3892916224,
+          "capacity": "0.44%",
+          "device": "tmpfs",
+          "filesystem": "tmpfs",
+          "options": [
+            "rw",
+            "seclabel",
+            "nosuid",
+            "nodev",
+            "mode=755"
+          ],
+          "size": "3.64 GiB",
+          "size_bytes": 3910078464,
+          "used": "16.37 MiB",
+          "used_bytes": 17162240
+        },
+        "/run/user/1000": {
+          "available": "745.79 MiB",
+          "available_bytes": 782012416,
+          "capacity": "0%",
+          "device": "tmpfs",
+          "filesystem": "tmpfs",
+          "options": [
+            "rw",
+            "seclabel",
+            "nosuid",
+            "nodev",
+            "relatime",
+            "size=763684k",
+            "mode=700",
+            "uid=1000",
+            "gid=1000"
+          ],
+          "size": "745.79 MiB",
+          "size_bytes": 782012416,
+          "used": "0 bytes",
+          "used_bytes": 0
+        },
+        "/sys/fs/cgroup": {
+          "available": "3.64 GiB",
+          "available_bytes": 3910078464,
+          "capacity": "0%",
+          "device": "tmpfs",
+          "filesystem": "tmpfs",
+          "options": [
+            "ro",
+            "seclabel",
+            "nosuid",
+            "nodev",
+            "noexec",
+            "mode=755"
+          ],
+          "size": "3.64 GiB",
+          "size_bytes": 3910078464,
+          "used": "0 bytes",
+          "used_bytes": 0
+        }
+      },
+      "mtu_eth0": 9001,
+      "mtu_lo": 65536,
+      "netmask": "255.255.240.0",
+      "netmask6": "ffff:ffff:ffff:ffff::",
+      "netmask6_eth0": "ffff:ffff:ffff:ffff::",
+      "netmask6_lo": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
+      "netmask_eth0": "255.255.240.0",
+      "netmask_lo": "255.0.0.0",
+      "network": "172.31.16.0",
+      "network6": "fe80::",
+      "network6_eth0": "fe80::",
+      "network6_lo": "::1",
+      "network_eth0": "172.31.16.0",
+      "network_lo": "127.0.0.0",
+      "networking": {
+        "domain": "ap-southeast-2.compute.internal",
+        "fqdn": "ip-172-31-28-3.ap-southeast-2.compute.internal",
+        "hostname": "ip-172-31-28-3",
+        "interfaces": {
+          "eth0": {
+            "bindings": [
+              {
+                "address": "172.31.28.3",
+                "netmask": "255.255.240.0",
+                "network": "172.31.16.0"
+              }
+            ],
+            "bindings6": [
+              {
+                "address": "fe80::6b:8bff:fe36:365c",
+                "netmask": "ffff:ffff:ffff:ffff::",
+                "network": "fe80::"
+              }
+            ],
+            "ip": "172.31.28.3",
+            "ip6": "fe80::6b:8bff:fe36:365c",
+            "mac": "02:6b:8b:36:36:5c",
+            "mtu": 9001,
+            "netmask": "255.255.240.0",
+            "netmask6": "ffff:ffff:ffff:ffff::",
+            "network": "172.31.16.0",
+            "network6": "fe80::",
+            "scope6": "link"
+          },
+          "lo": {
+            "bindings": [
+              {
+                "address": "127.0.0.1",
+                "netmask": "255.0.0.0",
+                "network": "127.0.0.0"
+              }
+            ],
+            "bindings6": [
+              {
+                "address": "::1",
+                "netmask": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
+                "network": "::1"
+              }
+            ],
+            "ip": "127.0.0.1",
+            "ip6": "::1",
+            "mtu": 65536,
+            "netmask": "255.0.0.0",
+            "netmask6": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
+            "network": "127.0.0.0",
+            "network6": "::1",
+            "scope6": "host"
+          }
+        },
+        "ip": "172.31.28.3",
+        "ip6": "fe80::6b:8bff:fe36:365c",
+        "mac": "02:6b:8b:36:36:5c",
+        "mtu": 9001,
+        "netmask": "255.255.240.0",
+        "netmask6": "ffff:ffff:ffff:ffff::",
+        "network": "172.31.16.0",
+        "network6": "fe80::",
+        "primary": "eth0",
+        "scope6": "link"
+      },
+      "operatingsystem": "CentOS",
+      "operatingsystemmajrelease": "8",
+      "operatingsystemrelease": "8.2.2004",
+      "os": {
+        "architecture": "x86_64",
+        "family": "RedHat",
+        "hardware": "x86_64",
+        "name": "CentOS",
+        "release": {
+          "full": "8.2.2004",
+          "major": "8",
+          "minor": "2"
+        },
+        "selinux": {
+          "config_mode": "enforcing",
+          "config_policy": "targeted",
+          "current_mode": "enforcing",
+          "enabled": true,
+          "enforced": true,
+          "policy_version": "31"
+        }
+      },
+      "osfamily": "RedHat",
+      "package_provider": "dnf",
+      "partitions": {
+        "/dev/nvme0n1p1": {
+          "partlabel": "primary",
+          "partuuid": "aa1b7c4b-e9e1-4201-833a-62c40055600a",
+          "size": "1.00 MiB",
+          "size_bytes": 1048576
+        },
+        "/dev/nvme0n1p2": {
+          "filesystem": "xfs",
+          "label": "centos_root",
+          "mount": "/",
+          "partlabel": "primary",
+          "partuuid": "1a782c57-5a78-4c4b-b988-eb7ebfc139c8",
+          "size": "100.00 GiB",
+          "size_bytes": 107372068352,
+          "uuid": "935ebc4e-90b8-432b-a8f6-8a9934a94892"
+        }
+      },
+      "path": "/sbin:/bin:/usr/sbin:/usr/bin:/usr/local/sbin:/usr/local/bin:/opt/puppetlabs/bin",
+      "pe_patch": {
+        "package_updates": [
+  
+        ],
+        "package_update_count": 0,
+        "missing_update_kbs": [
+  
+        ],
+        "security_package_updates": [
+  
+        ],
+        "security_package_update_count": 0,
+        "blackouts": {
+        },
+        "pinned_packages": [
+  
+        ],
+        "last_run": {
+        },
+        "patch_group": "",
+        "reboot_override": "default",
+        "reboots": {
+          "reboot_required": "unknown"
+        },
+        "block_patching_on_warnings": "false",
+        "warnings": {
+          "update_file": "Update file not found, update information invalid",
+          "security_update_file": "Security update file not found, update information invalid"
+        },
+        "blocked": false,
+        "blocked_reasons": [
+  
+        ]
+      },
+      "physicalprocessorcount": 1,
+      "platform_symlink_writable": true,
+      "platform_tag": "el-8-x86_64",
+      "powershell_version": 0,
+      "processor0": "Intel(R) Xeon(R) Platinum 8124M CPU @ 3.00GHz",
+      "processor1": "Intel(R) Xeon(R) Platinum 8124M CPU @ 3.00GHz",
+      "processor2": "Intel(R) Xeon(R) Platinum 8124M CPU @ 3.00GHz",
+      "processor3": "Intel(R) Xeon(R) Platinum 8124M CPU @ 3.00GHz",
+      "processorcount": 4,
+      "processors": {
+        "count": 4,
+        "isa": "x86_64",
+        "models": [
+          "Intel(R) Xeon(R) Platinum 8124M CPU @ 3.00GHz",
+          "Intel(R) Xeon(R) Platinum 8124M CPU @ 3.00GHz",
+          "Intel(R) Xeon(R) Platinum 8124M CPU @ 3.00GHz",
+          "Intel(R) Xeon(R) Platinum 8124M CPU @ 3.00GHz"
+        ],
+        "physicalcount": 1
+      },
+      "productname": "c5.xlarge",
+      "puppet_environmentpath": "/etc/puppetlabs/code/environments",
+      "puppet_files_dir_present": false,
+      "puppet_inventory_metadata": {
+        "packages": {
+          "collection_enabled": false,
+          "last_collection_time": "0.0s"
+        }
+      },
+      "puppet_server": "ip-172-31-42-255.ap-southeast-2.compute.internal",
+      "puppet_vardir": "/opt/puppetlabs/puppet/cache",
+      "puppetversion": "6.19.1",
+      "root_home": "/root",
+      "ruby": {
+        "platform": "x86_64-linux",
+        "sitedir": "/opt/puppetlabs/puppet/lib/ruby/site_ruby/2.5.0",
+        "version": "2.5.8"
+      },
+      "rubyplatform": "x86_64-linux",
+      "rubysitedir": "/opt/puppetlabs/puppet/lib/ruby/site_ruby/2.5.0",
+      "rubyversion": "2.5.8",
+      "scope6": "link",
+      "scope6_eth0": "link",
+      "scope6_lo": "host",
+      "selinux": true,
+      "selinux_config_mode": "enforcing",
+      "selinux_config_policy": "targeted",
+      "selinux_current_mode": "enforcing",
+      "selinux_enforced": true,
+      "selinux_policyversion": "31",
+      "serialnumber": "ec226fb8-0e99-52da-d645-0e4c6ddb9ee5",
+      "service_provider": "systemd",
+      "ssh": {
+        "ecdsa": {
+          "fingerprints": {
+            "sha1": "SSHFP 3 1 c54ef635400113c320bde7a77f09b412d1cc8fad",
+            "sha256": "SSHFP 3 2 8eb9ac341386f9cf6c129abbd59b30a01a4e4312695713d8af1202051ecfc8ed"
+          },
+          "key": "AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBJM8uTZmgf2YzpM+k4szwRGqds9WAsATRTEYws6rd2dPtIg1wVBUfB+eLMBspLBOriydBUqmYZtMhuyI5M0TIvQ=",
+          "type": "ecdsa-sha2-nistp256"
+        },
+        "ed25519": {
+          "fingerprints": {
+            "sha1": "SSHFP 4 1 eefa81e59f10596ce5e31092effbb21b4c3d3421",
+            "sha256": "SSHFP 4 2 59cfe2e49d63d3e92caa42ee6841bf6fea7a0024faaeeefe3f46aaf715e71294"
+          },
+          "key": "AAAAC3NzaC1lZDI1NTE5AAAAIIkX9AMlggz2F5hY1GqhrDkml7NKpL0AbqwEtCS6Klmq",
+          "type": "ssh-ed25519"
+        },
+        "rsa": {
+          "fingerprints": {
+            "sha1": "SSHFP 1 1 b9c1106d22b3340a9209294c72b825338d131062",
+            "sha256": "SSHFP 1 2 54f079cf0cfef683492a2f7ba63d7206b487788032fe15aaa4d225705acb5062"
+          },
+          "key": "AAAAB3NzaC1yc2EAAAADAQABAAABgQDF6I81b4OKpsAoofKX13fEsb67zJ9j/86lGjm/oLiZLLGAHPQ6pf07yvEctSbkLWrNxFhzS7GXX/ST/NRRo8iREfR/WiQgx1xUXjKtUXILwPhXjB0vCneSCLpe8wvYqObP1Jhoy3qYWmDYRjusjVjTEcIwwBZNlDDOiIBDht2gD+ZW+guDQCHFggJm2fKKrC+aBFDguOyH6Bdh2yxYR6rD08FmAvWuwLwZIXPqYAQ9NKXYy2umszzuVuBbLS1YDmkU8d6Dc3DuCYGeiRNlcd41//N1eFInU0NtHX1bQCv8xWyjmkC2VF1JfxVacKPkYXipGdoN7RhjRy15J72Y+JgjRIHjUvbMjRGXLai9vkNzVXQ0FN1FtHy6xO4ErLHBEyA4Tmo3eKNOVccN7Af8MDuCSEsvXQQBFh35kl+ZIx/OxPXb6KMqMK8MHxEq8exPgoZBpq9XcZ9FrsnRiGnZdEUEBfBL0UzsMHN4apZUB5UXAwJZj7pZB92tbkquzwSrSc0=",
+          "type": "ssh-rsa"
+        }
+      },
+      "sshecdsakey": "AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBJM8uTZmgf2YzpM+k4szwRGqds9WAsATRTEYws6rd2dPtIg1wVBUfB+eLMBspLBOriydBUqmYZtMhuyI5M0TIvQ=",
+      "sshed25519key": "AAAAC3NzaC1lZDI1NTE5AAAAIIkX9AMlggz2F5hY1GqhrDkml7NKpL0AbqwEtCS6Klmq",
+      "sshfp_ecdsa": "SSHFP 3 1 c54ef635400113c320bde7a77f09b412d1cc8fad\nSSHFP 3 2 8eb9ac341386f9cf6c129abbd59b30a01a4e4312695713d8af1202051ecfc8ed",
+      "sshfp_ed25519": "SSHFP 4 1 eefa81e59f10596ce5e31092effbb21b4c3d3421\nSSHFP 4 2 59cfe2e49d63d3e92caa42ee6841bf6fea7a0024faaeeefe3f46aaf715e71294",
+      "sshfp_rsa": "SSHFP 1 1 b9c1106d22b3340a9209294c72b825338d131062\nSSHFP 1 2 54f079cf0cfef683492a2f7ba63d7206b487788032fe15aaa4d225705acb5062",
+      "sshrsakey": "AAAAB3NzaC1yc2EAAAADAQABAAABgQDF6I81b4OKpsAoofKX13fEsb67zJ9j/86lGjm/oLiZLLGAHPQ6pf07yvEctSbkLWrNxFhzS7GXX/ST/NRRo8iREfR/WiQgx1xUXjKtUXILwPhXjB0vCneSCLpe8wvYqObP1Jhoy3qYWmDYRjusjVjTEcIwwBZNlDDOiIBDht2gD+ZW+guDQCHFggJm2fKKrC+aBFDguOyH6Bdh2yxYR6rD08FmAvWuwLwZIXPqYAQ9NKXYy2umszzuVuBbLS1YDmkU8d6Dc3DuCYGeiRNlcd41//N1eFInU0NtHX1bQCv8xWyjmkC2VF1JfxVacKPkYXipGdoN7RhjRy15J72Y+JgjRIHjUvbMjRGXLai9vkNzVXQ0FN1FtHy6xO4ErLHBEyA4Tmo3eKNOVccN7Af8MDuCSEsvXQQBFh35kl+ZIx/OxPXb6KMqMK8MHxEq8exPgoZBpq9XcZ9FrsnRiGnZdEUEBfBL0UzsMHN4apZUB5UXAwJZj7pZB92tbkquzwSrSc0=",
+      "staging_http_get": "curl",
+      "system_uptime": {
+        "days": 0,
+        "hours": 1,
+        "seconds": 7016,
+        "uptime": "1:56 hours"
+      },
+      "timezone": "UTC",
+      "uptime": "1:56 hours",
+      "uptime_days": 0,
+      "uptime_hours": 1,
+      "uptime_seconds": 7016,
+      "uuid": "ec226fb8-0e99-52da-d645-0e4c6ddb9ee5",
+      "virtual": "kvm",
+      "clientcert": "ip-172-31-28-3.ap-southeast-2.compute.internal",
+      "clientversion": "6.19.1",
+      "clientnoop": false
+    },
+    "timestamp": "2020-11-30T05:13:21.881119571+00:00",
+    "expiration": "2020-11-30T05:43:21.881450059+00:00"
+  }

@@ -2,11 +2,13 @@
 classes:
   - role::windows_server
   - role::pe_master
+  - role::cd4pe
 
 # Nodes to tests classes on, this refers to a 'factset' or 'nodeset'
 # depending on whether you are running 'spec' or 'acceptance' tests
 nodes:
   - fact_set_windows2019-gui
+  - fact_set_centos8
   - Windows_Server-2008r2-64
   - Windows_Server-2012r2-64
   - windows-10-64
