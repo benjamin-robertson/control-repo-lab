@@ -2,7 +2,6 @@
 classes:
   - role::windows_server
   - role::pe_master
-  - role::cd4pe
 
 # Nodes to tests classes on, this refers to a 'factset' or 'nodeset'
 # depending on whether you are running 'spec' or 'acceptance' tests
