@@ -68,7 +68,7 @@ class profile::windows::iis (
   # Install html site
   file {'c:\inetpub\catsite\cats.html':
     ensure  => 'file',
-    content => epp('profile/cats.epp', {'testing' => $testing, 'notencrypted' => $notencrypted, 'encrypted' => $encrypted, fqdn => $facts['os']['product_name']}),
+    content => epp('profile/cats.epp', {'testing' => $testing, 'notencrypted' => $notencrypted, 'encrypted' => $encrypted, fqdn => $facts['os']['windows']['product_name']}),
   }
   # Set ACL
   acl { 'c:\inetpub\catsite':
