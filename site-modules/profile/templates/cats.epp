@@ -6,10 +6,10 @@
 | -%>
 <HTML>
 <HEAD>
-<TITLE>HTTP cats, with many cat pics hosted on <%= $facts[network] %></TITLE>
+<TITLE>HTTP cats, with many cat pics hosted on <%= $fqdn %></TITLE>
 </HEAD>
 <BODY>
-<h1>Welcome to cats pretty cool website - now in a template, hosted on <%= $fqdn %></h1>
+<h1>Welcome to cats pretty cool website - now in a template, hosted on <%= $network %></h1>
 <h2>UPDATE!!!! I have added some more cat pictures :O Or have i???????</h2>
 <br/><p>This website is hosted on IIS, pretty basic, however its been configured and all setup via Puppet. No manual intervention required, repeatable and automated :) </p>
 <p>This value has been set as a class default <b><%= $testing %></b></p>
