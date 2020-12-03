@@ -2,6 +2,7 @@
   String $testing,
   String $notencrypted,
   String $encrypted,
+  String $fqdn,
 | -%>
 <HTML>
 <HEAD>
