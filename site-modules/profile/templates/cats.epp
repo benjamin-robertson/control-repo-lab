@@ -6,7 +6,7 @@
 | -%>
 <HTML>
 <HEAD>
-<TITLE>HTTP cats, with many cat pics hosted on <%= $os %></TITLE>
+<TITLE>HTTP cats, with many cat pics hosted on <%= $network %></TITLE>
 </HEAD>
 <BODY>
 <h1>Welcome to cats pretty cool website - now in a template, hosted on <%= $fqdn %></h1>
