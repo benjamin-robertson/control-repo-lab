@@ -2,6 +2,7 @@ forge 'https://forge.puppet.com'
 
 mod 'ayohrling-local_security_policy', '0.7.2'
 mod 'danieldreier/autosign'
+mod 'ghoneycutt-rsyslog', '0.26.0'
 mod 'puppet-archive', '4.6.0'
 mod 'puppetlabs-acl', '3.2.0'
 mod 'puppetlabs-apt', '7.6.0'
