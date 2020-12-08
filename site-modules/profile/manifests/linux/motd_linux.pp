@@ -7,6 +7,7 @@ class profile::linux::motd_linux {
     This is been placed over many lines
     Lines are good
     It's easier to read :)
+    Adding extra stuff to test compiler
     | EOT
   }
 }
