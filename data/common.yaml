@@ -26,7 +26,7 @@ profile::windows::installstuff::stuff:
   - firefox
   - python3
   - putty
-motd_linux: >
+motd_linux: |
   Ok this new motd is using hiera\n
   I think think will work\n
   It will use lookup to lookup the hiera value.\n
