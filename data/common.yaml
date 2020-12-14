@@ -27,7 +27,7 @@ profile::windows::installstuff::stuff:
   - python3
   - putty
 motd_linux: >
-  Ok this new motd is using hiera
-  I think think will work
-  It will use lookup to lookup the hiera value.
+  Ok this new motd is using hiera\n
+  I think think will work\n
+  It will use lookup to lookup the hiera value.\n
   It will also test code deploy with this 2018.1.0 I have restored from backup.
