@@ -1,6 +1,6 @@
 ---
 message: "This node is using common data"
-motd::content: "Welcome to Windows!!! direct from hiera"
+motd::content: "Welcome to Windows!!! direct from hiera, changes by git1"
 modules::motd::params::content: "Welcome to windows???"
 #profile::windows::motdwindows::content: "Welcome to windows2019 Environemnt data!!!"
 modules::chocolatey::adobereader::ensure: "latest"
