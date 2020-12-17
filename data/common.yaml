@@ -1,12 +1,12 @@
 ---
 message: "This node is using common data"
-motd::content: "Welcome to Windows!!! direct from hiera"
+motd::content: "Welcome to Windows!!! direct from hiera, changes by git1"
 modules::motd::params::content: "Welcome to windows???"
 #profile::windows::motdwindows::content: "Welcome to windows2019 Environemnt data!!!"
 modules::chocolatey::adobereader::ensure: "latest"
 modules::chocolatey::adobereader::provider: "chocolatey"
 chocolatey::choco_install_location: "c:\\choco\\"
-profile::windows::iis::testing: "From profile module"
+profile::windows::iis::testing: "From profile module, changed by git1"
 profile::windows::iis::notencrypted: "This is in plaintext"
 profile::windows::iis::encrypted: >
     ENC[PKCS7,MIIBqQYJKoZIhvcNAQcDoIIBmjCCAZYCAQAxggEhMIIBHQIBADAFMAACAQEw
