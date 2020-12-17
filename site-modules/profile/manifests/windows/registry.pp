@@ -29,7 +29,7 @@ class profile::windows::registry {
     #   }
     # ]
     # Ben: fixed indentation. 
-    registry_value { "${regpathuse}\AutoDetect":
+    registry_value { "${regpathuse}\\AutoDetect":
       ensure => 'present',
       type   => 'dword',
       data   => '0',
@@ -44,12 +44,12 @@ class profile::windows::registry {
     #  type   => 'dword',
     #  data   => '0',
     #}
-    registry_value { "${regpathuse}\UNCAsIntranet":
+    registry_value { "${regpathuse}\\UNCAsIntranet":
       ensure => 'present',
       type   => 'dword',
       data   => '0',
     }
-    registry_value { "${regpathuse}\IEHarden":
+    registry_value { "${regpathuse}\\IEHarden":
       ensure => 'present',
       type   => 'dword',
       data   => '1',

@@ -2,13 +2,14 @@
   String $testing,
   String $notencrypted,
   String $encrypted,
+  String $servertype,
 | -%>
 <HTML>
 <HEAD>
 <TITLE>HTTP cats, with many cat pics hosted on <%= $fqdn %></TITLE>
 </HEAD>
 <BODY>
-<h1>Welcome to cats pretty cool website - now in a template, hosted on <%= $fqdn %></h1>
+<h1>Welcome to cats pretty cool website - now in a template, hosted on <%= $servertype %></h1>
 <h2>UPDATE!!!! I have added some more cat pictures :O Or have i???????</h2>
 <h3>We have now updated to 2019.8.4</h3>
 <br/><p>This website is hosted on IIS, pretty basic, however its been configured and all setup via Puppet. No manual intervention required, repeatable and automated :) </p>
