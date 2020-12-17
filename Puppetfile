@@ -2,6 +2,9 @@ forge 'https://forge.puppet.com'
 
 mod 'ayohrling-local_security_policy', '0.7.2'
 mod 'danieldreier/autosign'
+mod 'ghoneycutt-common', '1.10.0'
+mod 'ghoneycutt-rsyslog', '0.26.0'
+mod 'ghoneycutt-sysklogd', '1.2.0'
 mod 'puppet-archive', '4.6.0'
 mod 'puppetlabs-acl', '3.2.0'
 mod 'puppetlabs-apt', '7.6.0'
@@ -16,10 +19,12 @@ mod 'puppetlabs-iis', '7.1.0'
 mod 'puppetlabs-inifile', '4.3.0'
 mod 'puppetlabs-pipelines', '1.0.1'
 mod 'puppetlabs-powershell', '4.0.0'
+mod 'puppetlabs-puppet_agent', '4.2.0'
 mod 'puppetlabs-puppet_authorization', '0.5.1'
 mod 'puppetlabs-pwshlib', '0.5.1'
 mod 'puppetlabs-reboot', '3.1.0'
 mod 'puppetlabs-registry', '3.1.1'
+mod 'puppetlabs-sshkeys_core', '2.2.0'
 mod 'puppetlabs-stdlib', '6.5.0'
 mod 'puppetlabs-translate', '2.2.0'
 mod 'WhatsARanjit-node_manager', '0.7.3'
@@ -46,8 +51,3 @@ mod 'motd',
   git:      'https://github.com/puppetlabs/puppetlabs-motd.git',
   branch:   'main',
   tag:      'v4.2.0'
-
-mod 'rsyslog',
-  git:      'https://github.com/voxpupuli/puppet-rsyslog.git',
-  branch:   'master',
-  tag:      'v5.1.0'
