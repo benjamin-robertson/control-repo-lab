@@ -30,4 +30,4 @@ profile::windows::installstuff::stuff:
 motd_linux: |
   This new motd has its own feature branch.
   I will merge it back with development using
-  git merge
+  git merge. It will be a good test of merging.
