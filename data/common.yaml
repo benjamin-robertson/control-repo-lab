@@ -31,3 +31,4 @@ motd_linux: |
   This new motd has its own feature branch.
   I will merge it back with development using
   git merge. It will be a good test of merging.
+  Upgrade again side by side 18-12-2020
