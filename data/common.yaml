@@ -7,7 +7,7 @@ modules::chocolatey::adobereader::ensure: "latest"
 modules::chocolatey::adobereader::provider: "chocolatey"
 chocolatey::choco_install_location: "c:\\choco\\"
 profile::windows::iis::testing: "From profile module"
-profile::windows::iis::notencrypted: "This is in plaintext"
+profile::windows::iis::notencrypted: "This is in plaintext, change 18/12 for upgrade"
 profile::windows::iis::encrypted: >
     ENC[PKCS7,MIIBqQYJKoZIhvcNAQcDoIIBmjCCAZYCAQAxggEhMIIBHQIBADAFMAACAQEw
     DQYJKoZIhvcNAQEBBQAEggEALmJTvIsXlqI0Dc/+kc9+4XdfkUx3DLZOj38Q
@@ -32,5 +32,6 @@ motd_linux: |
   I think think will work
   It will use lookup to lookup the hiera value.
   Change to test side by side 15-12-2020 15:39
+  change 18/12 for upgrade
   It will also test code deploy with this 2018.1.0 I have restored from backup.
 
