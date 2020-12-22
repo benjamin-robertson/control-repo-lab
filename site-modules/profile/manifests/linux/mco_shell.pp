@@ -9,7 +9,6 @@ class profile::linux::mco_shell (
   $mco_files.each | String $files| {
     if $files =~ /^\w*\/\w*\.\w*$/ {
       $folder_to_create = split($files, '/')
-      notify{"Creating directory for ${folder_to_create[0]}":}
       file {"${mco_location}${folder_to_create[0]}":
         ensure => directory,
       }
