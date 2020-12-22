@@ -11,7 +11,7 @@ class profile::linux::mco_shell (
       $folder_to_create = split($files, '/')
       notify{"Creating directory for ${folder_to_create[0]}":}
       file {"${mco_location}${folder_to_create[0]}":
-        ensure => direcotry,
+        ensure => directory,
       }
     }
   }
