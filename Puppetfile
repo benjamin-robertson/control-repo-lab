@@ -55,4 +55,4 @@ mod 'motd',
 mod 'mco_plugin',
   git:              'https://github.com/benjamin-robertson/mco_plugin.git',
   branch:           :control_branch,
-  default_branch:   'main',
+  default_branch:   'main'
