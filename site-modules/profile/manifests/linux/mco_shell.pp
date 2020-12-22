@@ -27,9 +27,4 @@ class profile::linux::mco_shell (
       notify => Service['mcollective'],
     }
   }
-  # Restart mcollective if files change
-  service { 'mcollective':
-    ensure => running,
-    enable => true,
-  }
 }
