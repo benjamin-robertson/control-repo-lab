@@ -1,7 +1,7 @@
 # Class: mco_shell
 #
 #
-class mco_shell (
+class profile::linux::mco_shell (
   String $mco_location = "/opt/puppetlabs/mcollective/plugins/mcollective/agent/",
   Array $mco_files = ['shell.rb','shell.ddl','/shell/job.rb'],
 ) {
