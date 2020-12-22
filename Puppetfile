@@ -29,6 +29,8 @@ mod 'puppetlabs-stdlib', '6.5.0'
 mod 'puppetlabs-translate', '2.2.0'
 mod 'WhatsARanjit-node_manager', '0.7.3'
 
+mod 'choria-mcollective_agent_shell', '1.0.4'
+
 
 # Modules from the Puppet Forge
 # Versions should be updated to be the latest at the time you start
