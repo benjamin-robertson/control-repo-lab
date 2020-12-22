@@ -30,6 +30,7 @@ mod 'puppetlabs-translate', '2.2.0'
 mod 'WhatsARanjit-node_manager', '0.7.3'
 
 mod 'choria-mcollective_agent_shell', '1.0.4'
+mod 'choria-mcollective', '0.12.0'
 
 
 # Modules from the Puppet Forge
