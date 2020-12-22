@@ -24,6 +24,12 @@ class profile::linux::mco_shell (
       owner  => 'root',
       group  => 'root',
       source => "puppet:///modules/profile/${files}",
+      notify => Service['mcollective'],
     }
+  }
+  # Restart mcollective if files change
+  service { 'mcollective':
+    ensure => running,
+    enable => true,
   }
 }
