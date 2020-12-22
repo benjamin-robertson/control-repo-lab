@@ -3,7 +3,7 @@
 #
 class profile::linux::mco_shell (
   String $mco_location = "/opt/puppetlabs/mcollective/plugins/mcollective/agent/",
-  Array $mco_files = ['shell.rb','shell.ddl','/shell/job.rb'],
+  Array $mco_files = ['shell.rb','shell.ddl','shell/job.rb'],
 ) {
   # iterate over the array of files to manage
   $mco_files.each | String $files| {
