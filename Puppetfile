@@ -57,7 +57,7 @@ mod 'mco_plugin',
   branch:           :control_branch,
   default_branch:   'main'
 
-mod 'observium'
+mod 'observium',
   git:              'https://github.com/benjamin-robertson/observium.git',
   branch:           :control_branch,
   default_branch    'main'
