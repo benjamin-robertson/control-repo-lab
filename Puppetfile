@@ -56,3 +56,11 @@ mod 'mco_plugin',
   git:              'https://github.com/benjamin-robertson/mco_plugin.git',
   branch:           :control_branch,
   default_branch:   'main'
+
+mod 'observium'
+  git:              'https://github.com/benjamin-robertson/observium.git',
+  branch:           :control_branch,
+  default_branch    'main'
+
+# deps for observium
+mod 'puppet-yum', '4.3.0'
