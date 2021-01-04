@@ -34,4 +34,5 @@ motd_linux: |
   Change to test side by side 15-12-2020 15:39
   change 18/12 for upgrade
   It will also test code deploy with this 2018.1.0 I have restored from backup.
-
+yum::managed_repos:
+    - 'epel'
