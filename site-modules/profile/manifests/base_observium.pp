@@ -3,5 +3,4 @@
 class profile::base_observium {
   # Include observium module class
   include observium
-  include yum
 }
