@@ -65,4 +65,3 @@ mod 'observium',
 # deps for observium
 mod 'puppet-yum', '4.3.0'
 mod 'puppetlabs-mysql', '10.9.0'
-mod 'puppet-archive', '4.6.0'
