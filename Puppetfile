@@ -63,7 +63,7 @@ mod 'observium',
   default_branch:    'main'
 
 # deps for observium
-mod 'puppet-yum', '4.3.0'
+mod 'puppetlabs-yumrepo_core', '1.0.7'
 mod 'puppetlabs-mysql', '10.9.0'
 mod 'puppet-cron', '2.0.0'
 mod 'puppet-selinux', '3.2.0'
