@@ -66,3 +66,4 @@ mod 'observium',
 mod 'puppet-yum', '4.3.0'
 mod 'puppetlabs-mysql', '10.9.0'
 mod 'puppet-cron', '2.0.0'
+mod 'puppet-selinux', '3.2.0'
