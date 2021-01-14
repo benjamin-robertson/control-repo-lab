@@ -73,4 +73,4 @@ mod 'puppet-snmp', '5.1.1'
 mod 'puppet-firewalld', '4.4.0'
 mod 'puppetlabs-resource_api', '1.1.0'
 # For Debain only
-mod 'puppetlabs-firewall', '2.8.0'
+mod 'domkrm-ufw', '1.1.4'
