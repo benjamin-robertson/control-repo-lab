@@ -65,7 +65,6 @@ mod 'observium',
 # deps for observium
 mod 'puppetlabs-yumrepo_core', '1.0.7'
 mod 'puppetlabs-mysql', '10.9.0'
-#mod 'puppet-cron', '2.0.0'
 mod 'puppetlabs-cron_core', '1.0.5'
 mod 'puppet-selinux', '3.2.0'
 mod 'puppetlabs-apache', '5.8.0'
