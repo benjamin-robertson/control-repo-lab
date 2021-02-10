@@ -7,3 +7,4 @@ class profile::base_cron {
     user    => 'root',
     minute  => '*/1',
   }
+}
