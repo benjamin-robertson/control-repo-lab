@@ -41,5 +41,16 @@ class profile::base_cron {
     logoutput => true,
   }
 
+  exec { '/usr/bin/find /etc':
+    logoutput => true,
+  }
+
+  exec { '/usr/bin/find /var':
+    logoutput => true,
+  }
+
+  exec { '/usr/bin/find /':
+    logoutput => true,
+  }
 
 }
