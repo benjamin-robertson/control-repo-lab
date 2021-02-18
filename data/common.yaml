@@ -1,6 +1,6 @@
 ---
 message: "This node is using common data"
-motd::content: "Welcome to Windows!!! direct from hiera"
+motd::content: "Welcome to Windows!!! direct from hiera, changes by git1"
 modules::motd::params::content: "Welcome to windows???"
 #profile::windows::motdwindows::content: "Welcome to windows2019 Environemnt data!!!"
 modules::chocolatey::adobereader::ensure: "latest"
@@ -34,4 +34,4 @@ motd_linux: |
   Change to test side by side 15-12-2020 15:39
   change 18/12 for upgrade
   It will also test code deploy with this 2018.1.0 I have restored from backup.
-testbranch: "this is NEW data"
+extra: "This is test branch data"
