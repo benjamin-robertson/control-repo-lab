@@ -16,6 +16,7 @@
 <p>This value has been set as a class default <b><%= $testing %></b></p>
 <p>Plaintext yaml key: <b><%= $notencrypted%></b></p>
 <p>Encrypted yaml key: <b><%= $encrypted%></b></p>
+<p>Added by git user1 before merge with new_motd</b></p>
 <br/>
 <h3>Cat 100</h3>
 <img src="https://http.cat/100" alt="cat 100">
