@@ -51,3 +51,26 @@ mod 'motd',
   git:      'https://github.com/puppetlabs/puppetlabs-motd.git',
   branch:   'main',
   tag:      'v4.2.0'
+
+mod 'mco_plugin',
+  git:              'https://github.com/benjamin-robertson/mco_plugin.git',
+  branch:           :control_branch,
+  default_branch:   'main'
+
+#mod 'observium',
+#  git:              'https://github.com/benjamin-robertson/observium.git',
+#  branch:           :control_branch,
+#  default_branch:    'main'
+
+# deps for observium
+mod 'puppetlabs-yumrepo_core', '1.0.7'
+mod 'puppetlabs-mysql', '10.9.0'
+mod 'puppetlabs-cron_core', '1.0.5'
+mod 'puppet-selinux', '3.2.0'
+mod 'puppetlabs-apache', '5.8.0'
+mod 'puppet-snmp', '5.1.1'
+mod 'puppet-firewalld', '4.4.0'
+mod 'puppetlabs-resource_api', '1.1.0'
+# For Debain only
+mod 'domkrm-ufw', '1.1.4'
+mod 'benjaminrobertson-observium', '0.1.2'
