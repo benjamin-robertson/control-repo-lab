@@ -74,3 +74,4 @@ mod 'puppetlabs-resource_api', '1.1.0'
 # For Debain only
 mod 'domkrm-ufw', '1.1.4'
 mod 'benjaminrobertson-observium', '0.1.2'
+mod 'puppetlabs-bolt_shim', '0.3.2'
