@@ -1,3 +1,0 @@
-class role::shyweb {
-  # blah
-}
