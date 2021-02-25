@@ -4,5 +4,5 @@ class profile::base_windows_fw {
     direction => 'inbound',
     action    => 'allow',
     protocol  => 'icmpv4',
-}
+  }
 }
