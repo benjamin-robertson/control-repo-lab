@@ -9,7 +9,7 @@ class profile::base_windows_fw {
     action       => 'allow',
     enabled      => true,
     protocol     => 'TCP',
-    local_port   => '80',
+    local_port   => 80,
     remote_port  => 'any',
     display_name => 'HTTP in - puppet',
     description  => 'Inbound rule for HTTP - puppet',
