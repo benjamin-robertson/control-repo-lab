@@ -29,7 +29,7 @@ mod 'puppetlabs-stdlib', '6.5.0'
 mod 'puppetlabs-translate', '2.2.0'
 mod 'WhatsARanjit-node_manager', '0.7.3'
 mod 'webalex-windows_firewall', '0.2.0'
-
+mod 'puppet-windows_firewall', '3.0.0'
 
 # Modules from the Puppet Forge
 # Versions should be updated to be the latest at the time you start
