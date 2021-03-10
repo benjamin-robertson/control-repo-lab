@@ -78,8 +78,6 @@ mod 'domkrm-ufw', '1.1.4'
 #Observium from git
 mod 'observium',
   git:              'https://github.com/benjamin-robertson/observium.git',
-  branch:           'main',
-
-
+  branch:           'main'
 
 mod 'puppetlabs-bolt_shim', '0.3.2'
