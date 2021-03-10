@@ -74,5 +74,12 @@ mod 'puppet-firewalld', '4.4.0'
 mod 'puppetlabs-resource_api', '1.1.0'
 # For Debain only
 mod 'domkrm-ufw', '1.1.4'
-mod 'benjaminrobertson-observium', '0.1.2'
+#mod 'benjaminrobertson-observium', '0.1.2'
+#Observium from git
+mod 'observium',
+  git:              'https://github.com/benjamin-robertson/observium.git',
+  bra nch:           'main',
+
+
+
 mod 'puppetlabs-bolt_shim', '0.3.2'
