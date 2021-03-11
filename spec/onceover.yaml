@@ -29,6 +29,7 @@ nodes:
 class_groups:
   windows_roles:
     - role::windows_server
+    - role::windows_fw
   rhel7_roles:
     - role::generic_linux
   non_windows_roles:
