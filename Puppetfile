@@ -31,11 +31,6 @@ mod 'WhatsARanjit-node_manager', '0.7.3'
 #mod 'webalex-windows_firewall', '0.2.0'
 mod 'puppet-windows_firewall', '3.0.0'
 
-# Modules from the Puppet Forge
-# Versions should be updated to be the latest at the time you start
-#mod 'puppetlabs/inifile', '3.0.0'
-#mod 'puppetlabs/stdlib',  '6.0.0'
-#mod 'puppetlabs/concat',  '6.0.0'
 
 # Modules from Git
 # Examples: https://github.com/puppetlabs/r10k/blob/master/doc/puppetfile.mkd#examples
@@ -76,3 +71,4 @@ mod 'puppetlabs-resource_api', '1.1.0'
 mod 'domkrm-ufw', '1.1.4'
 mod 'benjaminrobertson-observium', '0.1.3'
 mod 'puppetlabs-bolt_shim', '0.3.2'
+mod 'puppetlabs-augeas_core', '1.1.2'
