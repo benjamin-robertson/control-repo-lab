@@ -1,5 +1,5 @@
 class profile::windows::groups {
-  grou p { 'bensgroup':
+  group { 'bensgroup':
     ensure  => 'present',
     members => ['ben']
   }
