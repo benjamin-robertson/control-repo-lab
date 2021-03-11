@@ -51,13 +51,15 @@ node_groups:
     - windows-10-64
   rhel8_nodes:
     - fact_set_centos8
-  non_windows_nodes:
+  other_rhel_nodes:
     include: 'all_nodes'
-    exclude: 'windows_nodes'
+    exclude: 
+      - windows_nodes
+      - rhel8_nodes
 
 test_matrix:
   - windows_nodes:
-     classes: 'role::windows_server'
+     classes: 'windows_roles'
      tests: 'spec'
   - non_windows_nodes: 
      classes: 'non_windows_roles'
