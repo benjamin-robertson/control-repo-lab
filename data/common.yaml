@@ -32,4 +32,4 @@ motd_linux: |
   I think think will work
   It will use lookup to lookup the hiera value.
   Change to test side by side 15-12-2020 15:39
-  I now have CD4PE
+  I now have CD4PE We are using the main branch
