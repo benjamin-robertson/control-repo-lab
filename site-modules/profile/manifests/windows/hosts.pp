@@ -1,4 +1,4 @@
-class profile::windows::hosts {
+cla1ss profile::windows::hosts {
   $hosts = 'C:\Windows\System32\drivers\etc\hosts'
 
   concat { $hosts:
