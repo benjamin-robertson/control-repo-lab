@@ -62,6 +62,6 @@ test_matrix:
   - non_windows_nodes: 
      classes: 'non_windows_roles'
      tests: 'spec'
-  - rhel8_tests:
+  - rhel8_nodes:
      classes: 'rhel8_roles'
      tests: 'spec'
