@@ -77,3 +77,19 @@ mod 'puppetlabs-augeas_core', '1.1.2'
 mod 'puppetlabs-comply', '1.0.2'
 mod 'puppetlabs-java', '6.5.0'
 mod 'puppetlabs-ruby_task_helper', '0.6.0'
+
+# Abide and not already included dependices.
+#mod 'abide',
+#  git:      'git@github.com:puppetlabs/puppetlabs-abide.git'.
+#  branch:   'main',
+#  tag:      'v0.1.1'
+
+mod 'puppetlabs-firewall', '3.0.0'
+mod 'puppetlabs-mount_providers', '2.0.1'
+mod 'herculesteam-augeasproviders_core', '2.6.0'
+mod 'herculesteam-augeasproviders_sysctl', '2.6.0'
+mod 'herculesteam-augeasproviders_grub', '3.2.0'
+mod 'herculesteam-augeasproviders_mounttab', '2.1.1'
+mod 'herculesteam-augeasproviders_pam', '2.2.1'
+mod 'herculesteam-augeasproviders_shellvar', '4.0.0'
+mod 'herculesteam-augeasproviders_ssh', '4.0.0'
