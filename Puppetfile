@@ -80,7 +80,7 @@ mod 'puppetlabs-ruby_task_helper', '0.6.0'
 
 # Abide and not already included dependices.
 mod 'abide',
-  git:      'git@github.com:puppetlabs/puppetlabs-abide.git'.
+  git:      'git@github.com:puppetlabs/puppetlabs-abide.git',
   branch:   'main',
   tag:      'v0.1.1'
 
