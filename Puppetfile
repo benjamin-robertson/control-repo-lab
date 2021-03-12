@@ -83,7 +83,7 @@ mod 'abide',
   git:      'git@github.com:puppetlabs/puppetlabs-abide.git',
   branch:   'main',
   tag:      'v0.1.1'
-
+mod 'camptocamp-systemd', '2.12.0'
 mod 'puppetlabs-firewall', '3.0.0'
 mod 'puppetlabs-mount_providers', '2.0.1'
 mod 'herculesteam-augeasproviders_core', '2.6.0'
