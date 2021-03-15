@@ -42,3 +42,4 @@ abide::config:
   level: '1'
   only:
     - ensure_permissions_on_etcpasswd_are_configured
+    - ensure_permissions_on_etcshadow_are_configured
