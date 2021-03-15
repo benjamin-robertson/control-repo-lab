@@ -43,6 +43,8 @@ abide::config:
   control_configs:
     abide::utils::logindefs:
       pass_min_days: 0
+    abide::utils::motd:
+      content: 'I am a motd'
 
 #  ignore:
 #    - ensure_permissions_on_etcpasswd_are_configured
