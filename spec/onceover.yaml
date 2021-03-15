@@ -29,6 +29,7 @@ class_groups:
     - role::windows_fw
   rhel7_roles:
     - role::generic_linux
+    - role::hardened_linux
   non_windows_roles:
     include: 'all_classes'
     exclude: 'windows_roles'
