@@ -45,7 +45,7 @@ abide::config:
       config:
         pass_min_days: 0
     abide::benchmarks::cis::controls::ensure_message_of_the_day_is_configured_properly:
-      options:
+      config:
         content: "I am a motd"
 
 #  ignore:
