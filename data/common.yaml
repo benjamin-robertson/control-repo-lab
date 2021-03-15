@@ -33,3 +33,10 @@ motd_linux: |
   It will use lookup to lookup the hiera value.
   Change to test side by side 15-12-2020 15:39
   I now have CD4PE We are using the main branch
+
+
+# Abide config
+abide::benchmark: 'cis'
+abide::config:
+  profile: 'server'
+  level: '1'
