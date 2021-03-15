@@ -40,8 +40,6 @@ abide::benchmark: 'cis'
 abide::config:
   profile: 'server'
   level: '1'
-#  only:
-#    - abide::benchmarks::cis::controls::ensure_permissions_on_etcpasswd_are_configured
-#    - abide::benchmarks::cis::controls::ensure_permissions_on_etcpasswd__are_configured
-#    - abide::benchmarks::cis::controls::ensure_permissions_on_etcshadow__are_configured
-#    - abide::benchmarks::cis::controls::ensure_permissions_on_etcshadow_are_configured
+  ignore:
+    - abide::benchmarks::cis::controls::ensure_permissions_on_etcpasswd_are_configured
+    - abide::benchmarks::cis::controls::ensure_permissions_on_etcpasswd__are_configured
