@@ -41,7 +41,7 @@ abide::config:
   profile: 'server'
   level: '1'
   control_configs:
-    abide::utils::logindefs:
+    abide::benchmarks::cis::controls::ensure_password_expiration_is_365_days_or_less:
       config:
         pass_min_days: 0
     abide::utils::motd:
