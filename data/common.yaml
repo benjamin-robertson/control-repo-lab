@@ -40,6 +40,10 @@ abide::benchmark: 'cis'
 abide::config:
   profile: 'server'
   level: '1'
-  ignore:
-    - ensure_permissions_on_etcpasswd_are_configured
-    - ensure_permissions_on_etcshadow_are_configured
+  control_configs:
+    abide::utils::logindefs:
+      pass_min_days: 0
+
+#  ignore:
+#    - ensure_permissions_on_etcpasswd_are_configured
+#    - ensure_permissions_on_etcshadow_are_configured
