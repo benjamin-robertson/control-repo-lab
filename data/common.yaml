@@ -36,10 +36,10 @@ motd_linux: |
 
 
 # Abide config
-#abide::benchmark: 'cis'
+abide::benchmark: 'cis'
 abide::config:
   profile: 'server'
   level: '1'
-  ignore:
+  only:
     - abide::benchmarks::cis::controls::ensure_permissions_on_etcpasswd_are_configured
     - abide::benchmarks::cis::controls::ensure_permissions_on_etcpasswd__are_configured
