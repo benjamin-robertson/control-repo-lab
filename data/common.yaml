@@ -40,3 +40,4 @@ abide::benchmark: 'cis'
 abide::config:
   profile: 'server'
   level: '1'
+  only: 'true'
