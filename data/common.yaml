@@ -41,10 +41,10 @@ abide::config:
   profile: 'server'
   level: '1'
   control_configs:
-    abide::benchmarks::cis::controls::ensure_password_expiration_is_365_days_or_less:
+    ensure_password_expiration_is_365_days_or_less:
       config:
         pass_min_days: 0
-    abide::benchmarks::cis::controls::ensure_message_of_the_day_is_configured_properly:
+    ensure_message_of_the_day_is_configured_properly:
       config:
         content: "I am a motd"
 
