@@ -47,6 +47,13 @@ abide::config:
     ensure_message_of_the_day_is_configured_properly:
       config:
         content: "I am a motd"
+    ensure_password_creation_requirements_are_configured:
+      config:
+        minlen: 7
+        lcredit: 0
+        ucredit: 0
+        dcredit: 0
+        ocredit: 0
 
 #  ignore:
 #    - ensure_permissions_on_etcpasswd_are_configured
