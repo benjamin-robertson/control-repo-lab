@@ -4,7 +4,7 @@
 class profile::base_mssql {
   sqlserver_instance{ 'BenSQL':
     features              => ['SQL'],
-    source                => 'C:/',
+    source                => 'C:/iso/',
     sql_sysadmin_accounts => ['myuser'],
   }
 }
