@@ -81,7 +81,7 @@ mod 'puppetlabs-ruby_task_helper', '0.6.0'
 
 # Abide and not already included dependices.
 mod 'abide',
-  git:      'git@github.com:puppetlabs/puppetlabs-abide.git',
+  git:      'git@github.com:puppetlabs/puppetlabs-abide_linux.git',
   branch:   'main',
   tag:      'v0.2.0'
 mod 'camptocamp-systemd', '2.12.0'
