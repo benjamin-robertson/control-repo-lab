@@ -1,6 +1,5 @@
 # Classes to be tested
 classes:
-  - /!role::hardened_linux/
   - /role::*/
 
 # Nodes to tests classes on, this refers to a 'factset' or 'nodeset'
