@@ -6,7 +6,7 @@ defaults:
 
 hierarchy:
   - name: "Yaml backend"
-    lookup_key: eyaml_lookup_key
+    #lookup_key: eyaml_lookup_key
     paths:
       - "nodes/%{trusted.certname}.yaml"
       - "common.yaml"
