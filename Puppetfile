@@ -6,7 +6,7 @@ mod 'hieradata',
   branch:        'main',
   install_path:  '.'
 
-mod 'dogsite',
+mod 'dog_site',
   git:          'git@github.com:benjamin-robertson/dog-site.git',
   branch:       :control_branch
 
