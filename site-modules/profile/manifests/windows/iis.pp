@@ -92,4 +92,10 @@ class profile::windows::iis (
     defaultpage      => 'cats.html',
     name             => 'cat web site',
   }
+
+  #random file
+  file { 'c:\test.txt':
+    ensure  => file,
+    content => 'Hello I am a file',
+  }
 }
