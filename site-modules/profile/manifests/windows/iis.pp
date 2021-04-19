@@ -96,6 +96,6 @@ class profile::windows::iis (
   #random file
   file { 'c:\test.txt':
     ensure  => file,
-    content => 'Hello I am a file',
+    content => 'This is a file',
   }
 }
