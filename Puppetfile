@@ -8,7 +8,8 @@ mod 'hieradata',
 
 mod 'dog_site',
   git:          'git@github.com:benjamin-robertson/dog-site.git',
-  branch:       :control_branch
+  branch:       :control_branch,
+  default_branch:   'main'
 
 
 mod 'ayohrling-local_security_policy', '0.7.2'
