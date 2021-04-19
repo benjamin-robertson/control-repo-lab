@@ -1,5 +1,12 @@
 forge 'https://forge.puppet.com'
 
+# Hiera data
+mod 'hieradata',
+  git:           'https://github.com/benjamin-robertson/hieradata.git',
+  branch:        'main',
+  install_path:  '.'
+
+
 mod 'ayohrling-local_security_policy', '0.7.2'
 mod 'danieldreier/autosign'
 mod 'ghoneycutt-common', '1.10.0'
