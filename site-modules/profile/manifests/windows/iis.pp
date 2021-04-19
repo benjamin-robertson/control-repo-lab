@@ -69,7 +69,7 @@ class profile::windows::iis (
   $extradata = 'This is directly from code'
   file {'c:\inetpub\catsite\cats.html':
     ensure  => 'file',
-    content => epp('profile/cats.epp', {'testing' => $testing, 'notencrypted' => $extradata, 'encrypted' => $encrypted, 'servertype' => $facts['os']['windows']['product_name']}),
+    content => epp('profile/cats.epp', {'testing' => $testing, 'notencrypted' => $notencrypted, 'encrypted' => $encrypted, 'servertype' => $facts['os']['windows']['product_name']}),
   }
   # Set ACL
   acl { 'c:\inetpub\catsite':
