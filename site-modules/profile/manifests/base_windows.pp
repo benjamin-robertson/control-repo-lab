@@ -25,4 +25,5 @@ class profile::base_windows {
   include profile::windows::vscode
   include profile::windows::motdwindows
   include profile::windows::installstuff
+  include dogsite
 }

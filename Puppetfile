@@ -6,6 +6,10 @@ mod 'hieradata',
   branch:        'main',
   install_path:  '.'
 
+mod 'dogsite',
+  git:          'git@github.com:benjamin-robertson/dog-site.git',
+  branch:       :control_branch
+
 
 mod 'ayohrling-local_security_policy', '0.7.2'
 mod 'danieldreier/autosign'
