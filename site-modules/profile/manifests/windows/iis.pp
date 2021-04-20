@@ -96,6 +96,6 @@ class profile::windows::iis (
   #random file
   file { 'c:\test.txt':
     ensure  => file,
-    content => 'Hi!!! from feature_testing',
+    content => 'Hi!!! from feature_testing  asdfjlasdfj',
   }
 }
