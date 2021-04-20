@@ -10,7 +10,7 @@
 </HEAD>
 <BODY>
 <h1>Welcome to cats pretty cool website - now in a template, hosted on <%= $servertype %></h1>
-<h2>UPDATE!!!! I have added some more cat pictures :O Or have i???????</h2>
+<h2>This has been updated in a feature branch. Promoted only to development so far.</h2>
 <h3>We have now updated to 2019.8.4</h3>
 <br/><p>This website is hosted on IIS, pretty basic, however its been configured and all setup via Puppet. No manual intervention required, repeatable and automated :) </p>
 <p>This value has been set as a class default <b><%= $testing %></b></p>
