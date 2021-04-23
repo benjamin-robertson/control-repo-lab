@@ -1,0 +1,2 @@
+---
+puppet_enterprise::pcp_broker_host: "test.com"
