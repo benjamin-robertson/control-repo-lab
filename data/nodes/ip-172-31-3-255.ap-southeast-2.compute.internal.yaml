@@ -1,2 +1,3 @@
 ---
-puppet_enterprise::pcp_broker_host: "test.com"
+puppet_enterprise::profile::agent::pcp_broker_list:
+  - test.com:8142
