@@ -8,7 +8,7 @@ plan bolt::first_patch (
   #$patch_results = run_task('pe_patch::last_boot_time_nix', $nodes_to_patch)
 
   return({
-    'patch_results'  => $patch_results,
+    #'patch_results'  => $patch_results,
     'nodes_to_patch' => $nodes_to_patch,
   })
 }
