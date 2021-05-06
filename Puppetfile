@@ -11,6 +11,11 @@ mod 'dog_site',
   branch:       :control_branch,
   default_branch:   'main'
 
+mod 'initial_patch',
+  git:          'https://github.com/benjamin-robertson/initial_patch.git',
+  branch:       :control_branch,
+  default_branch:   'main'
+
 
 mod 'ayohrling-local_security_policy', '0.7.2'
 mod 'danieldreier/autosign'
