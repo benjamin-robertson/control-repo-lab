@@ -1,5 +1,7 @@
 #!/bin/bash
 
+export
+
 factfile=$PT_factfile
 factname=$PT_factname
 echo poodle $PT_factfile
