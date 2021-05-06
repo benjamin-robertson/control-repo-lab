@@ -11,7 +11,7 @@ plan bolt::first_patch (
   $patch_results = run_task('pe_patch::last_boot_time_nix', $targets)
 
   return({
-    #'patch_results'  => $patch_results,
+    'patch_results'  => $patch_results,
     'nodes_to_patch' => $nodes_to_patch,
     'filtered_nodes' => $filtered_nodes,
     'targets'        => $targets,
