@@ -8,7 +8,12 @@ plan bolt::first_patch (
   $filtered_nodes = $nodes_to_patch.map | $i | { $i['certname']}
   $targets = get_targets($filtered_nodes)
 
-  $patch_results = run_task('pe_patch::last_boot_time_nix', $targets)
+  $patch_results = run_task('bolt::unset_patch_fact',
+                            $targets,
+                            $factfile => '/opt/puppetlabs/facter/facts.d/patchme.txt',
+                            $factname => 'patchme',
+                  )
+
 
   return({
     'patch_results'  => $patch_results,
