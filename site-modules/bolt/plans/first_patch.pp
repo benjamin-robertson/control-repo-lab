@@ -10,8 +10,8 @@ plan bolt::first_patch (
 
   $patch_results = run_task('bolt::unset_patch_fact',
                             $targets,
-                            $factfile => '/opt/puppetlabs/facter/facts.d/patchme.txt',
-                            $factname => 'patchme',
+                            factfile => '/opt/puppetlabs/facter/facts.d/patchme.txt',
+                            factname => 'patchme',
                   )
 
 
