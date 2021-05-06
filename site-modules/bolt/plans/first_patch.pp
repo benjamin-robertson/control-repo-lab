@@ -8,7 +8,7 @@ plan bolt::first_patch (
   $filtered_nodes = $nodes_to_patch.map | $i | { $i['certname']}
   $targets = get_targets($filtered_nodes)
 
-  #$patch_results = run_task('pe_patch::last_boot_time_nix', $nodes_to_patch)
+  $patch_results = run_task('pe_patch::last_boot_time_nix', $targets)
 
   return({
     #'patch_results'  => $patch_results,
