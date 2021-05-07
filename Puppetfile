@@ -48,6 +48,7 @@ mod 'WhatsARanjit-node_manager', '0.7.3'
 #mod 'webalex-windows_firewall', '0.2.0'
 mod 'puppet-windows_firewall', '3.0.0'
 mod 'puppetlabs-sqlserver', '3.0.0'
+mod 'puppetlabs-wsus_client', '4.0.0'
 
 
 # Modules from Git
