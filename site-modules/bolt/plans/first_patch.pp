@@ -15,7 +15,7 @@ plan bolt::first_patch (
                   )
 
   # Run the patch job
-  $to_patch = un_task('pe_patch::patch_server',
+  $to_patch = run_task('pe_patch::patch_server',
                               $targets,
                               reboot          => 'patched',
                               security_only   => 'false',
