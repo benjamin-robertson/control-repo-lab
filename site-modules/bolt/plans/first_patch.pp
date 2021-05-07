@@ -8,7 +8,7 @@ plan bolt::first_patch (
   $filtered_nodes = $nodes_to_patch.map | $i | { $i['certname']}
   $targets = get_targets($filtered_nodes)
 
-  $patch_results = run_task('bolt::unset_patch_fact',
+  $patch_results = run_task('initial_patch::unset_patch_fact',
                             $targets,
                             factfile => '/opt/puppetlabs/facter/facts.d/patchme.txt',
                             factname => 'patchme',
