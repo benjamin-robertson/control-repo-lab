@@ -23,10 +23,10 @@ plan bolt::first_patch (
                     )
 
   return({
-    'patch_results'  => $patch_results,
-    'nodes_to_patch' => $nodes_to_patch,
-    'filtered_nodes' => $filtered_nodes,
-    'targets'        => $targets,
-    'to_patch'       => $to_patch,
+    'unset_fact_result'  => $unset_fact_result,
+    'nodes_to_patch'     => $nodes_to_patch,
+    'filtered_nodes'     => $filtered_nodes,
+    'targets'            => $targets,
+    'to_patch'           => $to_patch,
   })
 }
