@@ -18,7 +18,7 @@ plan bolt::first_patch (
   $to_patch = run_task('pe_patch::patch_server',
                               $targets,
                               reboot          => 'patched',
-                              security_only   => 'false',
+                              security_only   => false,
                               '_catch_errors' => true
                     )
 
