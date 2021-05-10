@@ -52,7 +52,7 @@ plan bolt::first_patch (
 #      }
 #    }
 
-  $nodes_to_unset_fact = $to_patch.map | $d | { $d[target] }
+  $nodes_to_unset_fact = $to_patch.map | $d | { $d[end_time] }
 
   out::message("resullts from to_patch : ${nodes_to_unset_fact}")
 
