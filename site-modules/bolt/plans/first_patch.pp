@@ -8,10 +8,22 @@ plan bolt::first_patch (
   $filtered_nodes = $nodes_to_patch.map | $i | { $i['certname']}
   $targets = get_targets($filtered_nodes)
 
+  case $facts['os']['family'] {
+    'windows': {
+      $factfile = 'C:\ProgramData\PuppetLabs\facter\facts.d\patchme.yaml'
+      $factname = 'patchme'
+    }
+    'RedHat': {
+      $factfile = '/opt/puppetlabs/facter/facts.d/patchme.txt'
+      $factname = 'patchme'
+    }
+    default: { fail('Unsupported operating system, bailing out!!') }
+  }
+
   $unset_fact_result = run_task('initial_patch::unset_patch_fact',
                             $targets,
-                            factfile => '/opt/puppetlabs/facter/facts.d/patchme.txt',
-                            factname => 'patchme',
+                            factfile => $factfile,
+                            factname => $factname,
                   )
 
   # Run the patch job
