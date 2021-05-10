@@ -46,7 +46,7 @@ plan bolt::first_patch (
                     )
 
 
-  out::message("resullts from to_patch : ${to_patch}")
+  out::message("resullts from to_patch : ${to_patch[value][message]}")
 
   #if $to_patch['message'] == 'No patches to apply' {
   #  out::message('Patching complete, unsetting patch fact')
