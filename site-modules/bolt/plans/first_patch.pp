@@ -18,7 +18,7 @@ plan bolt::first_patch (
   #    $factname = 'patchme'
   #  }
   #  default: { fail('Unsupported operating system, bailing out!!') }
-  }
+  #}
 
   $unset_fact_result = run_task('initial_patch::unset_patch_fact',
                             $targets,
