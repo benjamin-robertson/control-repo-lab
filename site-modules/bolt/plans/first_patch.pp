@@ -7,7 +7,7 @@ plan bolt::first_patch (
   $nodes_to_check_targets = get_targets($filtered_nodes_to_check)
 
   #Peform health check
-  $health_checks = run_task('puppet_health_check::agent_health',
+  $health_checks = run_task('pe_patch::agent_health',
                           $filtered_nodes_to_check,
                           '_catch_errors'        => true,
   )
