@@ -2,7 +2,7 @@ plan bolt::first_patch (
   String $patch_fact,
 ) {
 
-  $nodes_to_patch = puppetdb_query("inventory[certname] { facts.patchme = \"true\" }")
+  $nodes_to_patch = puppetdb_query('inventory[certname] { facts.patchme = true }')
 
   #turn into targetspec
   $filtered_nodes = $nodes_to_patch.map | $i | { $i['certname']}
