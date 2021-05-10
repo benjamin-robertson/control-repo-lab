@@ -47,11 +47,12 @@ plan bolt::first_patch (
 
   $nodes_to_unset_fact = $to_patch.map | $d | {
       if $d['message'] == 'No patches to apply'{
-        out::message('I was true')
+        $d[target]
+        #out::message('I was true')
       }
     }
 
-  #out::message("resullts from to_patch : ${nodes_to_unset_fact}")
+  out::message("resullts from to_patch : ${nodes_to_unset_fact}")
 
   #$unset_fact_result = run_task('initial_patch::unset_patch_fact',
   #                          $nodes_to_unset_fact,
