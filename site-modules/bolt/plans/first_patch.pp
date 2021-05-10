@@ -58,7 +58,7 @@ plan bolt::first_patch (
   }
 
   return({
-    'unset_fact_result'  => $unset_fact_result,
+    #'unset_fact_result'  => $unset_fact_result,
     'nodes_to_patch'     => $nodes_to_patch,
     'filtered_nodes'     => $filtered_nodes_to_patch,
     'targets'            => $nodes_to_patch_targets,
