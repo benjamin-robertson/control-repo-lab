@@ -2,7 +2,19 @@ plan bolt::first_patch (
   String $patch_fact,
 ) {
 
-  $nodes_to_patch = puppetdb_query('inventory[certname] { facts.patchme = true }')
+  $nodes = puppetdb_query('inventory[certname] { facts.patchme = true }')
+
+  #Peform health check
+  $health_checks = run_task('puppet_health_check::agent_health',
+                          $nodes,
+                          '_catch_errors'        => true,
+  )
+
+  $nodes_to_patch = $health_checks.filter | $items | { $items.value['state'] == 'clean' }
+  $nodes_skipped  = $health_checks.filter | $items | { $items.value['state'] != 'clean' }
+
+  $skipped_targets = $nodes_skipped.map | $value | { $value['certname'] }
+  out::message("Skipping the following nodes due to health check failures : ${nodes_skipped}")
 
   #turn into targetspec
   $filtered_nodes = $nodes_to_patch.map | $i | { $i['certname']}
