@@ -46,7 +46,7 @@ plan bolt::first_patch (
                     )
 
 
-  $to_patch.to_data.each | $result_hash | { $patch_message = $result_hash[value][message]}
+  $to_patch.to_data.each | $result_hash | { notice($result_hash[value][message])}
 
   out::message("resullts from to_patch : ${patch_message}")
 
