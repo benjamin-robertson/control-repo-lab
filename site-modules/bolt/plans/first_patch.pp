@@ -32,11 +32,7 @@ plan bolt::first_patch (
   #  default: { fail('Unsupported operating system, bailing out!!') }
   #}
 
-  $unset_fact_result = run_task('initial_patch::unset_patch_fact',
-                            $targets,
-                            factfile => $factfile,
-                            factname => $factname,
-                  )
+
 
   # Run the patch job
   $to_patch = run_task('pe_patch::patch_server',
@@ -45,6 +41,16 @@ plan bolt::first_patch (
                               security_only   => false,
                               '_catch_errors' => true
                     )
+
+
+  if $to_patch['message'] == 'No patches to apply' {
+    out::message('Patching complete, unsetting patch fact')
+    $unset_fact_result = run_task('initial_patch::unset_patch_fact',
+                              $targets,
+                              factfile => $factfile,
+                              factname => $factname,
+                    )
+  }
 
   return({
     'unset_fact_result'  => $unset_fact_result,
