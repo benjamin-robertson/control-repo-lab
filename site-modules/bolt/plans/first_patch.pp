@@ -46,9 +46,9 @@ plan bolt::first_patch (
                     )
 
 
-  $iam = $to_patch[value][message]
+  $to_patch.to_data.each | $result_hash | { $patch_message = $result_hash[value][message]}
 
-  out::message("resullts from to_patch : ${iam}")
+  out::message("resullts from to_patch : ${patch_message}")
 
   #if $to_patch['message'] == 'No patches to apply' {
   #  out::message('Patching complete, unsetting patch fact')
