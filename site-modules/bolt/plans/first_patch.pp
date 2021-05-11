@@ -55,7 +55,8 @@ plan bolt::first_patch (
   out::message("to_patch : ${to_patch}")
 
   $filtered_nodes_to_unset_fact = $to_patch.filter | $d | { $d[message] == 'No patches to apply' }
-  $filtered_nodes_to_unset_fact.each | $c | { out::message($c.dig('value')) }
+  $filtered_nodes_to_unset_fact.each | Hash $c | { out::message("c equals ${c}" }
+  #$filtered_nodes_to_unset_fact.each | Hash $c | { out::message($c.dig('value')) }
   #$nodes_to_unset_fact = get_targets($filtered_nodes_to_unset_fact)
 
 
