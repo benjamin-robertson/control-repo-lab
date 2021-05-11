@@ -52,13 +52,12 @@ plan bolt::first_patch (
 #      }
 #    }
 
-
-
-
   $filtered_nodes_to_unset_fact = $to_patch.filter | $d | { $d[message] == 'No patches to apply' }
+  $nodes_to_unset_fact = $filtered_nodes_to_unset_fact.map | $c | { $c['target'] }
 
 
-  out::message("Node to unset : ${filtered_nodes_to_unset_fact}")
+
+  out::message("Node to unset : ${nodes_to_unset_fact}")
 
   #$to_patch.map | $da | { $da.each | $in | { out::message("resultssss: ${in}") } }
   #$to_patch.map | $da | { out::message("resultssss: ${da}") }
