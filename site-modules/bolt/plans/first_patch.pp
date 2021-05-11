@@ -74,5 +74,6 @@ plan bolt::first_patch (
     'filtered_nodes'     => $filtered_nodes_to_patch,
     'targets'            => $nodes_to_patch_targets,
     'to_patch'           => $to_patch,
+    'puppet_run'         => $puppet_run,
   })
 }
