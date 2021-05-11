@@ -63,7 +63,8 @@ plan bolt::first_patch (
                   )
 
   # Run Puppet agent on nodes which have had the fact unset.
-  $puppet_run = run_task('enterprise_tasks::run_puppet', $unset_fact_result,
+  $puppet_run = run_task('enterprise_tasks::run_puppet',
+                    $unset_fact_targets,
                     max_timeout     => 256,
                     '_catch_errors' => true,
                   )
