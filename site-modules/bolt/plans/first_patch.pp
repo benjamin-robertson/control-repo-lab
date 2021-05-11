@@ -56,7 +56,7 @@ plan bolt::first_patch (
 
   out::message("resullts from to_patch : ${nodes_to_unset_fact}")
 
-  $to_patch.each | $da | { $da.each | $in | { out::message("results: ${in}") } }
+  $to_patch.each | $da | { $da.each | $in | { out::message("resultssss: ${in}") } }
 
   #$unset_fact_result = run_task('initial_patch::unset_patch_fact',
   #                          $nodes_to_unset_fact,
