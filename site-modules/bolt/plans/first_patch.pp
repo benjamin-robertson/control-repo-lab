@@ -45,34 +45,25 @@ plan bolt::first_patch (
                               '_catch_errors' => true
                     )
 
-#  $nodes_to_unset_fact = $to_patch.map | $d | {
-#      if $d['message'] == 'No patches to apply'{
-#        dig($d, ['target'])
-#        #out::message("What is in d ${d[target]}")
-#      }
-#    }
-
   out::message("to_patch : ${to_patch}")
 
+  # check which nodes have completed patching
   $filtered_nodes_to_unset_fact = $to_patch.filter | $d | { $d[message] == 'No patches to apply' }
-
   $nodes_to_unset_fact = $filtered_nodes_to_unset_fact.map | $result | { $result.target }
   $unset_fact_targets = get_targets($nodes_to_unset_fact)
 
   out::message("nodes_to_unset_fact : ${nodes_to_unset_fact}")
   out::message("unset_fact_targets : ${unset_fact_targets}")
 
-
-
-
-  #$unset_fact_result = run_task('initial_patch::unset_patch_fact',
-  #                          $nodes_to_unset_fact,
-  #                          factfile => $factfile,
-  #                          factname => $factname,
-  #                )
+  # Unset the patchme fact on nodes which have been patched. 
+  $unset_fact_result = run_task('initial_patch::unset_patch_fact',
+                            $unset_fact_targets,
+                            factfile => $factfile,
+                            factname => $factname,
+                  )
 
   return({
-    #'unset_fact_result'  => $unset_fact_result,
+    'unset_fact_result'  => $unset_fact_result,
     'nodes_to_patch'     => $nodes_to_patch,
     'filtered_nodes'     => $filtered_nodes_to_patch,
     'targets'            => $nodes_to_patch_targets,
