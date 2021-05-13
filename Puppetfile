@@ -113,7 +113,7 @@ mod 'herculesteam-augeasproviders_shellvar', '4.0.0'
 mod 'herculesteam-augeasproviders_ssh', '4.0.0'
 mod 'puppet-logrotate', '5.0.0'
 # Windows abide
-mod 'abide-windows',
+mod 'abide_windows',
   git:      'git@github.com:puppetlabs/puppetlabs-abide_windows.git',
   branch:   'main',
   tag:      'v0.1.0'
