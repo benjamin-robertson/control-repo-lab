@@ -16,7 +16,6 @@ mod 'initial_patch',
   branch:       :control_branch,
   default_branch:   'main'
 
-
 mod 'ayohrling-local_security_policy', '0.7.2'
 mod 'danieldreier/autosign'
 mod 'ghoneycutt-common', '1.10.0'
@@ -35,12 +34,12 @@ mod 'puppetlabs-hocon', '1.1.0'
 mod 'puppetlabs-iis', '7.1.0'
 mod 'puppetlabs-inifile', '4.3.0'
 mod 'puppetlabs-pipelines', '1.0.1'
-mod 'puppetlabs-powershell', '4.0.0'
+mod 'puppetlabs-powershell', '5.0.0'
 mod 'puppetlabs-puppet_agent', '4.2.0'
 mod 'puppetlabs-puppet_authorization', '0.5.1'
-mod 'puppetlabs-pwshlib', '0.5.1'
+mod 'puppetlabs-pwshlib', '0.8.0'
 mod 'puppetlabs-reboot', '3.1.0'
-mod 'puppetlabs-registry', '3.1.1'
+mod 'puppetlabs-registry', '3.2.0'
 mod 'puppetlabs-sshkeys_core', '2.2.0'
 mod 'puppetlabs-stdlib', '7.0.0'
 mod 'puppetlabs-translate', '2.2.0'
@@ -113,3 +112,12 @@ mod 'herculesteam-augeasproviders_pam', '2.2.1'
 mod 'herculesteam-augeasproviders_shellvar', '4.0.0'
 mod 'herculesteam-augeasproviders_ssh', '4.0.0'
 mod 'puppet-logrotate', '5.0.0'
+# Windows abide
+mod 'abide-windows',
+  git:      'git@github.com:puppetlabs/puppetlabs-abide_windows.git',
+  branch:   'main',
+  tag:      'v0.1.0'
+#extra for windows abide
+mod 'dsc-networkingdsc', '8.2.0-0-1'
+mod 'dsc-auditpolicydsc', '1.4.0-0-2'
+mod 'dsc-securitypolicydsc', '2.10.0-0-2'
