@@ -7,7 +7,7 @@ class profile::base_hardened_windows {
     benchmark => 'cis',
     config    => {
       'level'   => '1',
-      'profile' => 'server',
+      'profile' => 'member_server',
     }
   }
 }
