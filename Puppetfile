@@ -114,9 +114,8 @@ mod 'herculesteam-augeasproviders_ssh', '4.0.0'
 mod 'puppet-logrotate', '5.0.0'
 # Windows abide
 mod 'abide_windows',
-  git:      'git@github.com:puppetlabs/puppetlabs-abide_windows.git',
-  branch:   'main',
-  tag:      'v0.1.0'
+  git:      'git@github.com:benjamin-robertson/puppetlabs-abide_windows.git',
+  branch:   'main'
 #extra for windows abide
 mod 'dsc-networkingdsc', '8.2.0-0-1'
 mod 'dsc-auditpolicydsc', '1.4.0-0-2'
