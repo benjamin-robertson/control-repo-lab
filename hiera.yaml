@@ -10,7 +10,7 @@ hierarchy:
     #lookup_key: eyaml_lookup_key
     paths:
       - "nodes/%{trusted.certname}.yaml"
-      - "os/%{os.family}.yaml"
+      - "os/%{os.name}.yaml"
       - "common.yaml"
     #options:
       #pkcs7_private_key: "/etc/puppetlabs/puppet/eyaml/private_key.pkcs7.pem"
