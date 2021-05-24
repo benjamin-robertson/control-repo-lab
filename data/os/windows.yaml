@@ -6,3 +6,14 @@ abide_windows::config:
   ignore:
     - 'c18_9_97_1_1'
     - 'c18_9_97_1_2'
+
+
+# Bill's CIS module modifications
+cis_win2019::rules::cis_2::cis_2_3::cis_2_3_9::cis_2_3_9_5_server_spn_target_name_validation_level::enforced: false
+cis_win2019::rules::cis_2::cis_2_3::cis_2_3_7::cis_2_3_7_4_message_text_for_logon::value: 'This is a logon message. Welcome!!'
+cis_win2019::rules::cis_2::cis_2_2::cis_2_2_21_deny_access_from_network::users:
+  - 'Builtin\Guests'
+cis_win2019::rules::cis_2::cis_2_2::cis_2_2_26_deny_log_on_through_remote_desktop_services::users:
+  - 'Builtin\Guests'
+cis_win2019::rules::cis_2::cis_2_3::cis_2_3_7::cis_2_3_7_3_machine_inactivity_limit::enforced: true
+cis_win2019::rules::cis_2::cis_2_3::cis_2_3_7::cis_2_3_7_3_machine_inactivity_limit::value: '28800'

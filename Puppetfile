@@ -120,3 +120,6 @@ mod 'abide_windows',
 mod 'dsc-networkingdsc', '8.2.0-0-1'
 mod 'dsc-auditpolicydsc', '1.4.0-0-2'
 mod 'dsc-securitypolicydsc', '2.10.0-0-2'
+mod 'cis_win2019',
+  git:      'git@github.com:benjamin-robertson/cis_2019.git',
+  branch:   'main'
