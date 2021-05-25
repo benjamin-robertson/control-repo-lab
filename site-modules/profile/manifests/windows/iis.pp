@@ -8,17 +8,17 @@ class profile::windows::iis (
   #$website = "<HTML><HEAD><TITLE>Ben's super really cool website</TITLE></HEAD><BODY><h1>Welcome to ben's pretty cool website</h1><br/><p>This website is hosted on IIS, pretty basic, however its been configured and all setup via Puppet. No manual intervention required, repeatable and automated :) </p></BODY></HTML>"
 
   # install IIS feature
-  dsc_windowsfeature {'IIS':
-    ensure   => 'present',
-    dsc_name => 'Web-Server',
+  dsc_xwindowsfeature {'IIS':
+    dsc_ensure      => 'present',
+    dsc_displayname => 'Web-Server',
   }
-  dsc_windowsfeature {'IIS-tools':
-    ensure   => 'present',
-    dsc_name => 'Web-Mgmt-Tools',
+  dsc_xwindowsfeature {'IIS-tools':
+    dsc_ensure      => 'present',
+    dsc_displayname => 'Web-Mgmt-Tools',
   }
-    dsc_windowsfeature {'IIS-tools-scripts':
-    ensure   => 'present',
-    dsc_name => 'Web-Scripting-Tools',
+  dsc_xwindowsfeature {'IIS-tools-scripts':
+    dsc_ensure      => 'present',
+    dsc_displayname => 'Web-Scripting-Tools',
   }
   # remove default website
   iis_site {'Default Web Site':
