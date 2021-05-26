@@ -7,6 +7,9 @@ abide_windows::config:
     c2_2_26:
       users: 
         - 'Builtin\Guests'
+    c2_2_21:
+      users:
+        - 'Builtin\Guests'
 
 
 # Bill's CIS module modifications
