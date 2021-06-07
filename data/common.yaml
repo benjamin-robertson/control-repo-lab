@@ -27,7 +27,7 @@ profile::windows::installstuff::stuff:
   - firefox
   - python3
   - putty
-profile::windows::base_setup_dsc::packages:
+profile::base_setup_dsc::packages:
   - firefox
   - python3
   - putty
