@@ -29,8 +29,8 @@ mod 'puppetlabs-cd4pe_jobs', '1.5.0'
 mod 'puppetlabs-chocolatey', '5.1.1'
 mod 'puppetlabs-concat', '6.2.0'
 mod 'puppetlabs-docker', '3.12.1'
-#mod 'puppetlabs-dsc', '1.9.4'
-mod 'dsc-xpsdesiredstateconfiguration', '9.1.0-0-1'
+mod 'puppetlabs-dsc', '1.9.4'
+#mod 'dsc-xpsdesiredstateconfiguration', '9.1.0-0-1'
 mod 'puppetlabs-hocon', '1.1.0'
 mod 'puppetlabs-iis', '8.0.2'
 mod 'puppetlabs-inifile', '4.3.0'
@@ -119,9 +119,9 @@ mod 'abide_windows',
   tag:      'v0.1.1',
   branch:   'main'
 #extra for windows abide
-mod 'dsc-networkingdsc', '8.2.0-0-1'
-mod 'dsc-auditpolicydsc', '1.4.0-0-2'
-mod 'dsc-securitypolicydsc', '2.10.0-0-1'
+#mod 'dsc-networkingdsc', '8.2.0-0-1'
+#mod 'dsc-auditpolicydsc', '1.4.0-0-2'
+#mod 'dsc-securitypolicydsc', '2.10.0-0-1'
 #mod 'dsc-securitypolicydsc',
 #  git:      'git@github.com:dsccommunity/SecurityPolicyDsc.git',
 #  branch:   'master',
