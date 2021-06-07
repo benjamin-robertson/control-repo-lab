@@ -28,6 +28,7 @@ class_groups:
     - role::windows_server
     - role::windows_fw
     - role::hardened_windows
+    - role::setup_dsc
   rhel7_roles:
     - role::generic_linux
     - role::hardened_linux
