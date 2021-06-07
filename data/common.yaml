@@ -27,6 +27,11 @@ profile::windows::installstuff::stuff:
   - firefox
   - python3
   - putty
+profile::windows::base_setup_dsc::packages:
+  - firefox
+  - python3
+  - putty
+  - pdk
 motd_linux: |
   Ok this new motd is using hiera
   I think think will work
