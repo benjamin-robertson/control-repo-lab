@@ -32,6 +32,7 @@ profile::base_setup_dsc::packages:
   - python3
   - putty
   - pdk
+  - notepadplusplus
 motd_linux: |
   Ok this new motd is using hiera
   I think think will work
