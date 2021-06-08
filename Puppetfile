@@ -72,10 +72,10 @@ mod 'mco_plugin',
   branch:           :control_branch,
   default_branch:   'main'
 
-#mod 'observium',
-#  git:              'https://github.com/benjamin-robertson/observium.git',
-#  branch:           :control_branch,
-#  default_branch:    'main'
+mod 'observium',
+  git:              'https://github.com/benjamin-robertson/observium.git',
+  branch:           :control_branch,
+  default_branch:    'main'
 
 # deps for observium
 mod 'puppetlabs-yumrepo_core', '1.0.7'
@@ -88,7 +88,7 @@ mod 'puppet-firewalld', '4.4.0'
 mod 'puppetlabs-resource_api', '1.1.0'
 # For Debain only
 mod 'domkrm-ufw', '1.1.4'
-mod 'benjaminrobertson-observium', '0.1.3'
+#mod 'benjaminrobertson-observium', '0.1.3'
 mod 'puppetlabs-bolt_shim', '0.3.2'
 mod 'puppetlabs-augeas_core', '1.1.2'
 
