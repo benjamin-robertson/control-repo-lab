@@ -74,8 +74,8 @@ mod 'mco_plugin',
 
 mod 'observium',
   git:              'https://github.com/benjamin-robertson/observium.git',
-  branch:           :control_branch,
-  default_branch:    'main'
+  branch:           'main',
+  tag:              '1.0.0'
 
 # deps for observium
 mod 'puppetlabs-yumrepo_core', '1.0.7'
