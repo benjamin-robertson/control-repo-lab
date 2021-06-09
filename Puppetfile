@@ -71,7 +71,7 @@ mod 'mco_plugin',
   branch:           :control_branch,
   default_branch:   'main'
 
-mod 'benjaminrobertson-observium', '0.1.3'
+mod 'benjaminrobertson-observium', '1.0.0'
 # deps for observium
 mod 'puppetlabs-yumrepo_core', '1.0.7'
 mod 'puppetlabs-mysql', '11.0.2'
