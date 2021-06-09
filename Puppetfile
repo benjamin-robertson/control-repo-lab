@@ -43,7 +43,6 @@ mod 'puppetlabs-reboot', '3.1.0'
 mod 'puppetlabs-registry', '3.2.0'
 mod 'puppetlabs-sshkeys_core', '2.2.0'
 mod 'puppetlabs-stdlib', '7.1.0'
-#mod 'puppetlabs-translate', '2.2.0'
 mod 'WhatsARanjit-node_manager', '0.7.3'
 #mod 'webalex-windows_firewall', '0.2.0'
 mod 'puppet-windows_firewall', '3.0.0'
@@ -72,11 +71,7 @@ mod 'mco_plugin',
   branch:           :control_branch,
   default_branch:   'main'
 
-mod 'observium',
-  git:              'https://github.com/benjamin-robertson/observium.git',
-  branch:           'main',
-  tag:              '1.0.0'
-
+mod 'benjaminrobertson-observium', '0.1.3'
 # deps for observium
 mod 'puppetlabs-yumrepo_core', '1.0.7'
 mod 'puppetlabs-mysql', '11.0.2'
@@ -85,10 +80,8 @@ mod 'puppet-selinux', '3.4.0'
 mod 'puppetlabs-apache', '6.2.0'
 mod 'puppet-snmp', '5.1.1'
 mod 'puppet-firewalld', '4.4.0'
-#mod 'puppetlabs-resource_api', '1.1.0'
 # For Debain only
 mod 'domkrm-ufw', '1.1.4'
-#mod 'benjaminrobertson-observium', '0.1.3'
 mod 'puppetlabs-bolt_shim', '0.3.2'
 mod 'puppetlabs-augeas_core', '1.1.2'
 
