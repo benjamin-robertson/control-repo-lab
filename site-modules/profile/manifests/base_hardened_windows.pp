@@ -22,6 +22,7 @@ class profile::base_hardened_windows {
 
   # Rename ethernet to public 1
   dsc_netadaptername { 'Ethernet':
+    dsc_name    => 'Ethernet',
     dsc_newname => 'public 1',
   }
 
