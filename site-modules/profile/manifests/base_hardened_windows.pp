@@ -21,7 +21,7 @@ class profile::base_hardened_windows {
   }
 
   # Rename ethernet to public 1
-  keys($facts['networking']['interfaces'].each) | Integer $index, String $interface | {
+  keys($facts['networking']['interfaces']).each | Integer $index, String $interface | {
     dsc_netadaptername { $interface:
       dsc_name    => $interface,
       dsc_newname => "hello ${index}",
