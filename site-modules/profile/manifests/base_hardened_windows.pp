@@ -20,6 +20,11 @@ class profile::base_hardened_windows {
     data  => 0,
   }
 
+  # Rename ethernet to public 1
+  dsc_netadaptername { 'Ethernet':
+    dsc_newname => 'public 1',
+  }
+
   #registry::value {'HKU\.DEFAULT\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced\LaunchTo':
   #  key   => 'HKU\.DEFAULT\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced',
   #  value => 'LaunchTo',
