@@ -22,9 +22,10 @@ class profile::base_hardened_windows {
 
   # Rename ethernet to public 1
   keys($facts['networking']['interfaces']).each | Integer $index, String $interface | {
+    $finalindex = $index + 1
     dsc_netadaptername { $interface:
       dsc_name    => $interface,
-      dsc_newname => "hello ${index}",
+      dsc_newname => "hello ${finalindex}",
     }
   }
 
