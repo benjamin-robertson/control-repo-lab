@@ -2,7 +2,7 @@
 #
 #
 class profile::base_hardened_windows {
-  include abide_windows
+  #include abide_windows
 
   # launch to pc not quick access
   registry::value {'HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced\LaunchTo':
@@ -21,9 +21,11 @@ class profile::base_hardened_windows {
   }
 
   # Rename ethernet to public 1
-  dsc_netadaptername { 'Ethernet':
-    dsc_name    => 'Ethernet',
-    dsc_newname => 'public 1',
+  keys($facts['networking']['interfaces'].each) | Integer $index, String $interface | {
+    dsc_netadaptername { $interface:
+      dsc_name    => $interface,
+      dsc_newname => "hello ${index}",
+    }
   }
 
   #registry::value {'HKU\.DEFAULT\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced\LaunchTo':
