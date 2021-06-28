@@ -124,3 +124,4 @@ mod 'dsc-storagedsc', '5.0.1-0-2'
 #  git:      'git@github.com:benjamin-robertson/cis_2019.git',
 #  branch:   'main'
 
+mod 'beergeek-disable_noop', '0.1.1'
