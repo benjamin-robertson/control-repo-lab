@@ -9,5 +9,6 @@ class profile::base_dsc_test {
   dsc_accountpolicy { 'enforce password history':
     dsc_name                     => 'enforce password history',
     dsc_enforce_password_history => 6,
+    validation_mode              => 'resource',
   }
 }
