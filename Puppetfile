@@ -109,7 +109,7 @@ mod 'puppet-logrotate', '5.0.0'
 # Windows abide
 mod 'abide_windows',
   git:      'git@github.com:puppetlabs/puppetlabs-abide_windows.git',
-  tag:      'v0.1.1',
+  #tag:      'v0.1.1',
   branch:   'main'
 #extra for windows abide
 mod 'dsc-networkingdsc', '8.2.0-0-1'
