@@ -110,7 +110,7 @@ mod 'puppet-logrotate', '5.0.0'
 mod 'abide_windows',
   git:      'git@github.com:benjamin-robertson/puppetlabs-abide_windows.git',
   #tag:      'v0.1.1',
-  branch:   'main'
+  branch:   'validation_mode'
 #extra for windows abide
 mod 'dsc-networkingdsc', '8.2.0-0-1'
 mod 'dsc-auditpolicydsc', '1.4.0-0-2'
