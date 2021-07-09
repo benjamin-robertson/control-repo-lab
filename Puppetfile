@@ -125,3 +125,9 @@ mod 'dsc-storagedsc', '5.0.1-0-2'
 #  branch:   'main'
 
 mod 'beergeek-disable_noop', '0.1.1'
+
+# report module
+mod 'syslog_reports',
+  git:              'git@github.com:benjamin-robertson/syslog_reports.git',
+  branch:           :control_branch,
+  default_branch:   'main'
