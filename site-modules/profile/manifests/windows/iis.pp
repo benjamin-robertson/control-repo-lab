@@ -9,15 +9,15 @@ class profile::windows::iis (
 
   # install IIS feature
   dsc_xwindowsfeature {'IIS':
-    dsc_ensure      => 'present',
+    dsc_ensure      => 'Present',
     dsc_displayname => 'Web-Server',
   }
   dsc_xwindowsfeature {'IIS-tools':
-    dsc_ensure      => 'present',
+    dsc_ensure      => 'Present',
     dsc_displayname => 'Web-Mgmt-Tools',
   }
   dsc_xwindowsfeature {'IIS-tools-scripts':
-    dsc_ensure      => 'present',
+    dsc_ensure      => 'Present',
     dsc_displayname => 'Web-Scripting-Tools',
   }
   # remove default website
