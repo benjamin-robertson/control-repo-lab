@@ -17,7 +17,7 @@ class profile::base_windows {
   include profile::windows::logon_as_service
   include profile::windows::tempdir_permissions
   include profile::windows::registry
-  include profile::windows::iis
+  #include profile::windows::iis
   #include profile::windows::7zip
   include profile::windows::choco
   include profile::windows::scope_test
