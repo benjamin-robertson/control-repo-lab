@@ -6,7 +6,7 @@ defaults:
 
 hierarchy:
   - name: "Yaml backend"
-    data_hash: yaml_data
+    #data_hash: yaml_data
     lookup_key: eyaml_lookup_key
     paths:
       - "nodes/%{trusted.certname}.yaml"
