@@ -130,3 +130,4 @@ mod 'syslog_reports',
   git:              'git@github.com:benjamin-robertson/syslog_reports.git',
   branch:           :control_branch,
   default_branch:   'main'
+mod 'beersy-hiera_eyaml_setup', '0.1.2'
