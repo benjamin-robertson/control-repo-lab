@@ -85,7 +85,7 @@ mod 'puppetlabs-bolt_shim', '0.3.2'
 mod 'puppetlabs-augeas_core', '1.1.2'
 
 # Comply module and dependcies
-augeasproviders_sshmod 'puppetlabs-comply', '1.0.5'
+mod 'puppetlabs-comply', '1.0.5'
 mod 'puppetlabs-java', '6.5.0'
 mod 'puppetlabs-ruby_task_helper', '0.6.0'
 
