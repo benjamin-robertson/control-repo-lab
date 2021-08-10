@@ -27,15 +27,15 @@ mod 'puppetlabs-apt', '7.6.0'
 mod 'puppetlabs-cd4pe', '3.0.1'
 mod 'puppetlabs-cd4pe_jobs', '1.5.0'
 mod 'puppetlabs-chocolatey', '6.0.1'
-mod 'puppetlabs-concat', '6.2.0'
+mod 'puppetlabs-concat', '7.0.2'
 mod 'puppetlabs-docker', '3.12.1'
 #mod 'dsc-xpsdesiredstateconfiguration', '9.1.0-0-2'
 mod 'puppetlabs-hocon', '1.1.0'
 mod 'puppetlabs-iis', '8.0.2'
-mod 'puppetlabs-inifile', '5.0.1'
+mod 'puppetlabs-inifile', '5.1.0'
 mod 'puppetlabs-pipelines', '1.0.1'
 mod 'puppetlabs-powershell', '5.0.0'
-mod 'puppetlabs-puppet_agent', '4.2.0'
+mod 'puppetlabs-puppet_agent', '4.8.0'
 mod 'puppetlabs-puppet_authorization', '0.5.1'
 mod 'puppetlabs-pwshlib', '0.10.0'
 mod 'puppetlabs-reboot', '3.1.0'
@@ -85,19 +85,19 @@ mod 'puppetlabs-bolt_shim', '0.3.2'
 mod 'puppetlabs-augeas_core', '1.1.2'
 
 # Comply module and dependcies
-mod 'puppetlabs-comply', '1.0.5'
+augeasproviders_sshmod 'puppetlabs-comply', '1.0.5'
 mod 'puppetlabs-java', '6.5.0'
 mod 'puppetlabs-ruby_task_helper', '0.6.0'
 
 # Abide and not already included dependices.
-mod 'abide',
-  git:      'git@github.com:puppetlabs/puppetlabs-abide_linux.git',
+mod 'cem_linux',
+  git:      'git@github.com:puppetlabs/puppetlabs-cem_linux.git',
   branch:   'main',
-  tag:      'v0.2.0'
-mod 'camptocamp-systemd', '2.12.0'
-mod 'puppetlabs-firewall', '3.0.0'
+  commit:   'b421b24e05486d8745f2f07333b1b51b0bf3845b'
+mod 'camptocamp-systemd', '3.0.0'
+mod 'puppetlabs-firewall', '3.1.0'
 mod 'puppetlabs-mount_providers', '2.0.1'
-mod 'herculesteam-augeasproviders_core', '2.6.0'
+mod 'herculesteam-augeasproviders_core', '3.0.0'
 mod 'herculesteam-augeasproviders_sysctl', '2.6.0'
 mod 'herculesteam-augeasproviders_grub', '3.2.0'
 mod 'herculesteam-augeasproviders_mounttab', '2.1.1'

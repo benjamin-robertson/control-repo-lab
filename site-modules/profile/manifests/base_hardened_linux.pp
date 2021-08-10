@@ -2,5 +2,5 @@
 #
 #
 class profile::base_hardened_linux {
-  include abide
+  include cem_linux
 }
