@@ -131,3 +131,17 @@ mod 'syslog_reports',
   branch:           :control_branch,
   default_branch:   'main'
 mod 'beersy-hiera_eyaml_setup', '0.1.2'
+
+# Add fervid and dependendies
+mod 'fervid-secure_linux_cis', '3.0.0'
+mod 'puppet-chrony', '2.0.0'
+mod 'camptocamp-augeas', '1.9.0'
+mod 'puppet-kmod', '3.0.0'
+mod 'camptocamp-postfix', '1.12.0'
+mod 'kemra102-auditd', '2.2.0'
+mod 'puppet-alternatives', '3.0.0'
+mod 'puppet-cron', '2.0.0'
+mod 'puppetlabs-mailalias_core', '1.0.6'
+mod 'puppetlabs-mount_core', '1.0.4'
+mod 'puppet-nftables', '2.0.0'
+mod 'puppetlabs-ntp', '9.0.1'
