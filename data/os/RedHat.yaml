@@ -2,4 +2,4 @@
 cem_linux::benchmark: 'cis'
 cem_linux::config:
   profile: 'server'
-  level: '1'
+  level: '2'
