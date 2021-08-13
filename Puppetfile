@@ -91,9 +91,8 @@ mod 'puppetlabs-ruby_task_helper', '0.6.0'
 
 # Abide and not already included dependices.
 mod 'cem_linux',
-  git:      'git@github.com:puppetlabs/puppetlabs-cem_linux.git',
-  branch:   'main',
-  commit:   'b421b24e05486d8745f2f07333b1b51b0bf3845b'
+  git:      'git@github.com:benjamin-robertson/puppetlabs-cem_linux.git',
+  branch:   'cis_level_2'
 mod 'camptocamp-systemd', '3.0.0'
 mod 'puppetlabs-firewall', '3.1.0'
 mod 'puppetlabs-mount_providers', '2.0.1'
@@ -133,15 +132,15 @@ mod 'syslog_reports',
 mod 'beersy-hiera_eyaml_setup', '0.1.2'
 
 # Add fervid and dependendies
-mod 'fervid-secure_linux_cis', '2.1.18'
-mod 'puppet-chrony', '2.0.0'
-mod 'camptocamp-augeas', '1.9.0'
-mod 'puppet-kmod', '3.0.0'
-mod 'camptocamp-postfix', '1.12.0'
-mod 'kemra102-auditd', '2.2.0'
-mod 'puppet-alternatives', '3.0.0'
-mod 'puppet-cron', '2.0.0'
-mod 'puppetlabs-mailalias_core', '1.0.6'
-mod 'puppetlabs-mount_core', '1.0.4'
-mod 'puppet-nftables', '2.0.0'
-mod 'puppetlabs-ntp', '9.0.1'
+#mod 'fervid-secure_linux_cis', '2.1.18'
+#mod 'puppet-chrony', '2.0.0'
+#mod 'camptocamp-augeas', '1.9.0'
+#mod 'puppet-kmod', '3.0.0'
+#mod 'camptocamp-postfix', '1.12.0'
+#mod 'kemra102-auditd', '2.2.0'
+#mod 'puppet-alternatives', '3.0.0'
+#mod 'puppet-cron', '2.0.0'
+#mod 'puppetlabs-mailalias_core', '1.0.6'
+#mod 'puppetlabs-mount_core', '1.0.4'
+#mod 'puppet-nftables', '2.0.0'
+#mod 'puppetlabs-ntp', '9.0.1'
