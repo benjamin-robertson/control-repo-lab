@@ -2,7 +2,7 @@
 cem_linux::benchmark: 'cis'
 cem_linux::config:
   profile: 'server'
-  level: '1'
+  level: '2'
 
 secure_linux_cis::rules::ensure_bootloader_password_is_set::grub_username: 'root'
 secure_linux_cis::rules::ensure_bootloader_password_is_set::grub_pbkdf2_password_hash: 'lkQIani5W0vHEGrMccnoH5MUYzMAZX4+XsJ2/pVx6fw='
