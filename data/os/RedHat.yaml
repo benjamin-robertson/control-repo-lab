@@ -2,7 +2,7 @@
 cem_linux::benchmark: 'cis'
 cem_linux::config:
   profile: 'server'
-  level: '2'
+  level: '1'
   control_configs:
     ensure_time_synchronization_is_in_use:
       timeservers:
