@@ -17,7 +17,7 @@ class profile::base_hardened_linux {
     }
 
     augeas {"more s123tuff":
-      changes => 'touch server[1]/minpoll'
+      changes => 'touch server[1]/minpoll=4'
     }
 
     #$_parts = split($timeservers[0], /\s+/)
