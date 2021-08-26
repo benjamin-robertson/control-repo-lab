@@ -2,27 +2,27 @@
 #
 #
 class profile::base_hardened_linux {
-  #include cem_linux
-    $timeservers = { 'server 1.1.1.1' => 'iburst minpoll 4 maxpoll 4'}
-    Augeas {
-      context => '/files/etc/chrony.conf'
-    }
+  include cem_linux
+    #$timeservers = { 'server 1.1.1.1' => 'iburst minpoll 4 maxpoll 4'}
+    #Augeas {
+    #  context => '/files/etc/chrony.conf'
+    #}
 
-    augeas { "chrony_d_agues":
-      changes => 'set server[1] 1.1.1.1',
-    }
+    #augeas { "chrony_d_agues":
+    #  changes => 'set server[1] 1.1.1.1',
+    #}
 
-    augeas {"more stuff":
-      changes => 'touch server[1]/prefer'
-    }
+    #augeas {"more stuff":
+    #  changes => 'touch server[1]/prefer'
+    #}
 
-    augeas {"more s123tuff":
-      changes => 'touch server[1]/iburst'
-    }
+    #augeas {"more s123tuff":
+    #  changes => 'touch server[1]/iburst'
+    #}
 
-    augeas {"more s1df23tuff":
-      changes => 'touch server[1]/minpoll/=/4'
-    }
+    #augeas {"more s1df23tuff":
+    #  changes => 'touch server[1]/minpoll/=/4'
+    #}
 
     #$_parts = split($timeservers[0], /\s+/)
     #augeas { "chrony_${_parts[0]}_${_parts[1]}":
