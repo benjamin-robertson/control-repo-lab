@@ -4,19 +4,20 @@
 class profile::base_hardened_linux {
   #include cem_linux
     $timeservers = { 'server 1.1.1.1' => 'iburst minpoll 4 maxpoll 4'}
-    Augeas {
-      context => '/files/etc/chrony.conf'
-    }
+
 
     augeas { "chrony_d_agues":
+      context => '/files/etc/chrony.conf',
       changes => 'set server[1] 1.1.1.1 iburst minpoll 4 maxpoll 4',
     }
 
     augeas {"more stuff":
+      context => '/files/etc/chrony.conf',
       changes => 'touch server[1]/minpoll=4'
     }
 
     augeas {"more s123tuff":
+      context => '/files/etc/chrony.conf',
       changes => 'touch server[1]/iburst'
     }
 
