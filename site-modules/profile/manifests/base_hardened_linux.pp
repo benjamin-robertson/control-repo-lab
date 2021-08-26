@@ -17,14 +17,14 @@ class profile::base_hardened_linux {
       context => '/files/etc/chrony.conf',
       incl    => '/etc/chrony.conf',
       lens    => 'chrony.lns',
-      changes => 'ins server[1]/minpoll=4'
+      changes => 'ins after server[1]/minpoll=4'
     }
 
     augeas {"more s123tuff":
       context => '/files/etc/chrony.conf',
       incl    => '/etc/chrony.conf',
       lens    => 'chrony.lns',
-      changes => 'ins server[1]/iburst'
+      changes => 'ins after server[1]/iburst'
     }
 
     #$_parts = split($timeservers[0], /\s+/)
