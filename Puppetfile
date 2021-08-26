@@ -92,7 +92,7 @@ mod 'puppetlabs-ruby_task_helper', '0.6.0'
 # Abide and not already included dependices.
 mod 'cem_linux',
   git:      'git@github.com:benjamin-robertson/puppetlabs-cem_linux.git',
-  branch:   'main'
+  branch:   'feature_chrony_fix'
 mod 'camptocamp-systemd', '3.0.0'
 mod 'puppetlabs-firewall', '3.1.0'
 mod 'puppetlabs-mount_providers', '2.0.1'
@@ -108,7 +108,7 @@ mod 'puppet-logrotate', '5.0.0'
 mod 'abide_windows',
   git:      'git@github.com:benjamin-robertson/puppetlabs-abide_windows.git',
   #tag:      'v0.1.1',
-  branch:   'feature_chrony_fix'
+  branch:   'main'
 #extra for windows abide
 mod 'dsc-networkingdsc', '8.2.0-0-1'
 mod 'dsc-auditpolicydsc', '1.4.0-0-2'
