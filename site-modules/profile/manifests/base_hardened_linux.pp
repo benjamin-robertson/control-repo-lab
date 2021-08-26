@@ -12,7 +12,7 @@ class profile::base_hardened_linux {
       changes => 'set server[1] 1.1.1.1 iburst minpoll 4 maxpoll 4',
     }
 
-    augest {"more stuff":
+    augeas {"more stuff":
       changes => 'touch server[1]/iburst'
     }
 
