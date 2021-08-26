@@ -12,6 +12,10 @@ class profile::base_hardened_linux {
       changes => 'set server[1] 1.1.1.1 iburst minpoll 4 maxpoll 4',
     }
 
+    augest {"more stuff":
+      changes => 'touch server[1]/iburst'
+    }
+
     #$_parts = split($timeservers[0], /\s+/)
     #augeas { "chrony_${_parts[0]}_${_parts[1]}":
     #  changes => "set ${_parts[0]}[1] ${_parts[1]}",
