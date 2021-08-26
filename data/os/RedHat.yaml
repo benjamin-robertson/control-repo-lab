@@ -7,7 +7,7 @@ cem_linux::config:
     ensure_time_synchronization_is_in_use:
       timeservers:
         - 'server 1.1.1.1 iburst'
-        #- 'server 2.2.2.2 iburst'
+        - 'server 2.2.2.2 iburst'
         #- 'server 3.2.2.2 iburst'
 
 secure_linux_cis::rules::ensure_bootloader_password_is_set::grub_username: 'root'
