@@ -10,7 +10,7 @@ class profile::base_hardened_linux {
       context => '/files/etc/chrony.conf',
       incl    => '/etc/chrony.conf',
       lens    => 'chrony.lns',
-      changes => 'set server[1] 1.1.1.1 iburst minpoll 4 maxpoll 4',
+      changes => 'set server[1] 1.1.1.1',
     }
 
     augeas {"more stuff":
