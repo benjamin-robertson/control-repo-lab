@@ -2,12 +2,12 @@
 cem_linux::benchmark: 'cis'
 cem_linux::config:
   profile: 'server'
-  level: '1'
+  level: '2'
   control_configs:
     ensure_time_synchronization_is_in_use:
       timeservers:
-        - '1.1.1.1 iburst'
-        - '2.2.2.2 iburst'
+        - 'server 1.1.1.1 iburst minpoll 4 maxpoll 4'
+        - 'server 2.2.2.2 iburst minpoll 4 maxpoll 4'
 
 secure_linux_cis::rules::ensure_bootloader_password_is_set::grub_username: 'root'
 secure_linux_cis::rules::ensure_bootloader_password_is_set::grub_pbkdf2_password_hash: 'lkQIani5W0vHEGrMccnoH5MUYzMAZX4+XsJ2/pVx6fw='
