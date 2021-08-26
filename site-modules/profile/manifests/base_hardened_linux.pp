@@ -20,6 +20,10 @@ class profile::base_hardened_linux {
       changes => 'touch server[1]/iburst'
     }
 
+    augeas {"more s1df23tuff":
+      changes => 'touch server[1]/minpoll/4'
+    }
+
     #$_parts = split($timeservers[0], /\s+/)
     #augeas { "chrony_${_parts[0]}_${_parts[1]}":
     #  changes => "set ${_parts[0]}[1] ${_parts[1]}",
