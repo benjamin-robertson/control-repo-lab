@@ -13,7 +13,7 @@ class profile::base_hardened_linux {
     }
 
     augeas {"more stuff":
-      changes => 'touch server[1]/minpoll =4'
+      changes => 'touch server[1]/prefer'
     }
 
     augeas {"more s123tuff":
