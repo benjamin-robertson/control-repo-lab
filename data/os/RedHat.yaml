@@ -1,5 +1,6 @@
 ---
 cem_linux::benchmark: 'cis'
+cem_linux::merge_behavior: 'hash'
 cem_linux::config:
   profile: 'server'
   level: '2'
