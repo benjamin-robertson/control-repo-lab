@@ -1,7 +1,7 @@
 ---
-cem_linux::config:
-  control_configs:
-    ensure_time_synchronization_is_in_use:
-      timeservers:
-        - 'server 1.1.1.1 iburst'
-        - 'server 8.8.8.8 iburst'
+#cem_linux::config:
+#  control_configs:
+#    ensure_time_synchronization_is_in_use:
+#      timeservers:
+#        - 'server 1.1.1.1 iburst'
+#        - 'server 8.8.8.8 iburst'
