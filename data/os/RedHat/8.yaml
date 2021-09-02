@@ -4,6 +4,8 @@ cem_linux::merge_behavior: 'deep'
 cem_linux::config:
   profile: 'server'
   level: '2'
+  ignore:
+    - ensure_system_wide_crypto_policy_is_future_or_fips
   control_configs:
     ensure_time_synchronization_is_in_use:
       timeservers:
