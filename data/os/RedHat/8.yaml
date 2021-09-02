@@ -1,0 +1,12 @@
+---
+cem_linux::benchmark: 'cis'
+cem_linux::merge_behavior: 'deep'
+cem_linux::config:
+  profile: 'server'
+  level: '2'
+  control_configs:
+    ensure_time_synchronization_is_in_use:
+      timeservers:
+        - 'server 1.1.1.1 iburst'
+        - 'server 2.2.2.2 iburst'
+        - 'server 3.2.2.2 iburst'

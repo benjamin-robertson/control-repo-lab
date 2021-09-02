@@ -10,6 +10,7 @@ hierarchy:
     lookup_key: eyaml_lookup_key
     paths:
       - "nodes/%{trusted.certname}.yaml"
+      - "os/%{os.name}/%{os.release.major}.yaml"
       - "os/%{os.name}.yaml"
       - "ben.eyaml"
       - "common.yaml"
