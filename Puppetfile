@@ -108,7 +108,7 @@ mod 'puppet-logrotate', '5.0.0'
 mod 'cem_windows',
   git:      'git@github.com:puppetlabs/puppetlabs-cem_windows.git',
   #tag:      'v0.1.1',
-  branch:   'cis_level_2'
+  branch:   'feature_corrective_changes'
 #extra for windows abide
 mod 'dsc-networkingdsc', '8.2.0-0-1'
 mod 'dsc-auditpolicydsc', '1.4.0-0-2'
