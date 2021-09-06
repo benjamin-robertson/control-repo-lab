@@ -106,7 +106,7 @@ mod 'herculesteam-augeasproviders_ssh', '4.0.0'
 mod 'puppet-logrotate', '5.0.0'
 # Windows abide
 mod 'cem_windows',
-  git:      'git@github.com:puppetlabs/puppetlabs-cem_windows.git',
+  git:      'git@github.com:benjamin-robertson/puppetlabs-cem_windows.git',
   #tag:      'v0.1.1',
   branch:   'feature_corrective_changes'
 #extra for windows abide
