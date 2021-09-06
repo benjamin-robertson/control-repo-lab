@@ -92,7 +92,7 @@ mod 'puppetlabs-ruby_task_helper', '0.6.0'
 # Abide and not already included dependices.
 mod 'cem_linux',
   git:      'git@github.com:benjamin-robertson/puppetlabs-cem_linux.git',
-  branch:   'fix_c1_5_3'
+  branch:   'main'
 mod 'camptocamp-systemd', '3.0.0'
 mod 'puppetlabs-firewall', '3.1.0'
 mod 'puppetlabs-mount_providers', '2.0.1'
