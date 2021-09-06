@@ -2,5 +2,5 @@
 #
 #
 class profile::base_hardened_windows {
-  include abide_windows
+  include cem_windows
 }
