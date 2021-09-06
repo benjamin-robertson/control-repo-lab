@@ -1,6 +1,6 @@
 ---
-abide_windows::benchmark: 'cis'
-abide_windows::config:
+cem_windows::benchmark: 'cis'
+cem_windows::config:
   profile: 'member_server'
   level: '2'
   control_configs:
