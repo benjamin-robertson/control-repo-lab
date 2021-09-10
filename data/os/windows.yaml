@@ -12,6 +12,8 @@ cem_windows::config:
         - 'Builtin\Guests'
     c18_9_26_3_2: # set setup log size
       maxsize: 196608
+    c18_4_9:
+      screensavergraceperiod: '5'
 
 
 # Bill's CIS module modifications
