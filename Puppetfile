@@ -144,3 +144,9 @@ mod 'beersy-hiera_eyaml_setup', '0.1.2'
 #mod 'puppetlabs-mount_core', '1.0.4'
 #mod 'puppet-nftables', '2.0.0'
 #mod 'puppetlabs-ntp', '9.0.1'
+
+
+mod 'puppet_applocker',
+  git:             'git@github.com:benjamin-robertson/puppet_applocker.git',
+  branch:          :control_branch,
+  default_branch:  'main'
