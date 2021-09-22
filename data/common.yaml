@@ -34,7 +34,8 @@ profile::base_setup_dsc::packages:
   - putty
   - pdk
   - notepadplusplus
-motd_linux: |
+motd_lin
+ux: |
   Ok this new motd is using hiera
   I know this will work, becuase i tested it
   It will use lookup to lookup the hiera value.
