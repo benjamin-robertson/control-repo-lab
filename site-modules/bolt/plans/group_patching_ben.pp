@@ -1,4 +1,4 @@
-plan pe_patch::group_patching_ben (
+plan bolt::group_patching_ben (
   String $patch_group,
   Optional[Enum['always', 'never', 'patched', 'smart']] $reboot = 'patched',
   Optional[String] $yum_params = undef,
