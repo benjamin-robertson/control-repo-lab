@@ -150,3 +150,5 @@ mod 'puppet_applocker',
   git:             'git@github.com:benjamin-robertson/puppet_applocker.git',
   branch:          :control_branch,
   default_branch:  'main'
+# add ca_extend
+mod 'puppetlabs-ca_extend', '3.0.0'
