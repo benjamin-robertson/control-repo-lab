@@ -108,10 +108,12 @@ mod 'herculesteam-augeasproviders_shellvar', '4.0.0'
 mod 'herculesteam-augeasproviders_ssh', '4.0.0'
 mod 'puppet-logrotate', '5.0.0'
 # Windows abide
+#mod 'cem_windows',
+#  git:      'git@github.com:benjamin-robertson/puppetlabs-cem_windows.git',
+#  branch:   'cis_level_2'
 mod 'cem_windows',
-  git:      'git@github.com:benjamin-robertson/puppetlabs-cem_windows.git',
-  #tag:      'v0.1.1',
-  branch:   'cis_level_2'
+  git:      'git@github.com:puppetlabs/puppetlabs-cem_windows.git',
+  tag:      'v1.0.0'
 #extra for windows abide
 mod 'dsc-networkingdsc', '8.2.0-0-1'
 mod 'dsc-auditpolicydsc', '1.4.0-0-2'
