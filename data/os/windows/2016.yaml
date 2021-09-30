@@ -10,5 +10,5 @@ cem_windows::config:
     c2_2_21:
       users:
         - 'Builtin\Guests'
-    c18_9_26_3_2: # set setup log size
+    c18_9_26_3_2: # set setup log size.
       maxsize: 196608
