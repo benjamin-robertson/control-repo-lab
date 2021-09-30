@@ -2,7 +2,7 @@
 cem_windows::benchmark: 'cis'
 cem_windows::config:
   profile: 'member_server'
-  level: '1'
+  level: '2'
   control_configs:
     c2_2_26:
       users: 
