@@ -1,0 +1,14 @@
+---
+cem_windows::benchmark: 'cis'
+cem_windows::config:
+  profile: 'member_server'
+  level: '2'
+  control_configs:
+    c2_2_26:
+      users: 
+        - 'Builtin\Guests'
+    c2_2_21:
+      users:
+        - 'Builtin\Guests'
+    c18_9_26_3_2: # set setup log size.
+      maxsize: 196608
