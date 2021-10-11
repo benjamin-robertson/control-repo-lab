@@ -18,7 +18,4 @@ cem_windows::config:
       value: 1
     c9_3_1:
       value: 1
-lookup_options:
-  cem_windows::config:
-    merge: hash
     

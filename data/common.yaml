@@ -69,3 +69,6 @@ abide::config:
 # This was put into main only
 
 
+lookup_options:
+  cem_windows::config:
+    merge: hash
