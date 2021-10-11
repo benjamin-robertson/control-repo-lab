@@ -12,3 +12,9 @@ cem_windows::config:
         - 'Builtin\Guests'
     c18_9_26_3_2: # set setup log size.
       maxsize: 196608
+    c9_1_1:
+      value: 1
+    c9_2_1:
+      value: 1
+    c9_3_1:
+      value: 1
