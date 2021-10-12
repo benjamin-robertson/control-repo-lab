@@ -10,8 +10,13 @@ class profile::base_chocolatey (
     chocolatey_download_url => $chocolatey_download_url,
   }
 
-  chocolateysource {'sourcename':
+  chocolateysource {'internal':
     ensure   => present,
     location => $chocolately_package_source,
-}
+    priority => 1,
+  }
+
+  chocolateysource {'chocolatey':
+    ensure   => disabled,
+  }
 }
