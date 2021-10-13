@@ -22,11 +22,16 @@ class profile::base_chocolatey (
     ensure   => disabled,
   }
 
+  file { '':
+    ensure => directory,
+  }
+
   $packges_to_sync.each | String $package | {
     file { $package:
-      ensure => file,
-      source => "${choco_http_source}${package}",
-      path   => $chocolately_package_source,
+      ensure  => file,
+      source  => "${choco_http_source}${package}",
+      path    => $chocolately_package_source,
+      require => File['choco_packages_dir'],
     }
   }
 }
