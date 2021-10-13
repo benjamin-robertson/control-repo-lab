@@ -48,7 +48,7 @@ class profile::comply_offline (
   }
 
   # Install java
-  package { 'Install java jre':
+  package { 'AdoptOpenJDK JRE with Hotspot 8u292-b10 (x64)':
     ensure   => 'present',
     provider => 'windows',
     source   => "${chocolately_package_dest}\\${java_msi_name}",
