@@ -42,7 +42,7 @@ class profile::comply_offline (
   # Sync java msi locally
   file { $java_msi_name:
     ensure   => file,
-    checksum => '4365EA6D753CE61CE809FCD94E6CDA1723673B3A79B4CA71A01599EB0AECEF0I',
+    checksum => '4365EA6D753CE61CE809FCD94E6CDA1723673B3A79B4CA71A01599EB0AECEF0A',
     source   => "${choco_http_source}${java_msi_name}",
     path     => "${chocolately_package_dest}\\${java_msi_name}",
     require  => File['choco_packages_dir'],
