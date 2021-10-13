@@ -24,6 +24,7 @@ class profile::base_chocolatey (
 
   file { 'choco_packages_dir':
     ensure => directory,
+    path   => $chocolately_package_source,
   }
 
   $packges_to_sync.each | String $package | {
