@@ -2,6 +2,7 @@
 #
 #
 class profile::comply_offline (
+  String $scanner_source,
   String $chocolately_package_dest = 'c:\\choco_packages\\',
   String $chocolatey_download_url = 'http://ip-172-31-4-194.ap-southeast-2.compute.internal/chocolatey.0.11.2.nupkg',
   String $choco_http_source = 'http://ip-172-31-4-194.ap-southeast-2.compute.internal/choco/',
@@ -48,6 +49,16 @@ class profile::comply_offline (
 
   # Install java
   package { 'Install java jre':
+    ensure   => 'present',
     provider => 'windows',
+    source   => "${chocolately_package_dest}\\${java_msi_name}",
+    require  => File[$java_msi_name]
+  }
+
+  # Install comply scanner
+  class {'comply':
+    manage_chocolatey => false,
+    manage_java       => false,
+    scanner_source    => $scanner_source,
   }
 }
