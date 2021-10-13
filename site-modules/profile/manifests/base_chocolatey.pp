@@ -30,7 +30,7 @@ class profile::base_chocolatey (
     file { $package:
       ensure  => file,
       source  => "${choco_http_source}${package}",
-      path    => $chocolately_package_source,
+      path    => "${chocolately_package_source}\\${package}",
       require => File['choco_packages_dir'],
     }
   }
