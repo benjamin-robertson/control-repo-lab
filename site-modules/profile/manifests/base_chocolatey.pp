@@ -22,7 +22,7 @@ class profile::base_chocolatey (
     ensure   => disabled,
   }
 
-  file { '':
+  file { 'choco_packages_dir':
     ensure => directory,
   }
 
