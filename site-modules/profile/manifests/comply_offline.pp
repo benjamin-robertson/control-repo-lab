@@ -6,7 +6,7 @@ class profile::comply_offline (
   String $chocolately_package_dest = 'c:\\choco_packages\\',
   String $chocolatey_download_url = 'http://ip-172-31-4-194.ap-southeast-2.compute.internal/chocolatey.0.11.2.nupkg',
   String $choco_http_source = 'http://ip-172-31-4-194.ap-southeast-2.compute.internal/choco/',
-  String $java_msi_name = 'adoptopenjdk8jre.8.292.10.nupkg',
+  String $java_msi_name = 'OpenJDK8U-jre_x64_windows_hotspot_8u292b10.msi',
   Array $packges_to_sync = ['Wget.1.21.2.nupkg','adoptopenjdk8jre.8.292.10.nupkg'],
 ) {
   # Setup chocolatey
