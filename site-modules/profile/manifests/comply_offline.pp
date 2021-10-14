@@ -7,6 +7,7 @@ class profile::comply_offline (
   String $chocolatey_download_url = 'http://ip-172-31-4-194.ap-southeast-2.compute.internal/chocolatey.0.11.2.nupkg',
   String $choco_http_source = 'http://ip-172-31-4-194.ap-southeast-2.compute.internal/choco/',
   String $java_msi_name = 'OpenJDK8U-jre_x64_windows_hotspot_8u292b10.msi',
+  String $java_package_ensure = 'present', # can specify version number or latest, see https://puppet.com/docs/puppet/7/types/package.html#package-attribute-ensure
   Array $packges_to_sync = ['Wget.1.21.2.nupkg','adoptopenjdk8jre.8.292.10.nupkg'],
   Boolean $install_java = true,
 ) {
@@ -55,7 +56,7 @@ class profile::comply_offline (
 
     # Install java
     package { 'AdoptOpenJDK JRE with Hotspot 8u292-b10 (x64)':
-      ensure   => 'present',
+      ensure   => $java_package_ensure,
       provider => 'windows',
       source   => "${chocolately_package_dest}\\${java_msi_name}",
       require  => File[$java_msi_name]
