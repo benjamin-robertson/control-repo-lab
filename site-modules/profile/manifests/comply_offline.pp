@@ -58,7 +58,6 @@ class profile::comply_offline (
     }
   }
 
-
   # Install comply scanner
   class {'comply':
     manage_chocolatey => false,
