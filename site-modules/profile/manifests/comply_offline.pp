@@ -8,6 +8,7 @@ class profile::comply_offline (
   String $choco_http_source = 'http://ip-172-31-4-194.ap-southeast-2.compute.internal/choco/',
   String $java_msi_name = 'OpenJDK8U-jre_x64_windows_hotspot_8u292b10.msi',
   Array $packges_to_sync = ['Wget.1.21.2.nupkg','adoptopenjdk8jre.8.292.10.nupkg'],
+  Boolean $install_java = true,
 ) {
   # Setup chocolatey
   class { 'chocolatey':
@@ -40,21 +41,23 @@ class profile::comply_offline (
   }
 
   # Sync java msi locally
-  file { $java_msi_name:
-    ensure   => file,
-    checksum => '4365EA6D753CE61CE809FCD94E6CDA1723673B3A79B4CA71A01599EB0AECEF0A',
-    source   => "${choco_http_source}${java_msi_name}",
-    path     => "${chocolately_package_dest}\\${java_msi_name}",
-    require  => File['choco_packages_dir'],
+  if $install_java {
+    file { $java_msi_name:
+      ensure  => file,
+      source  => "${choco_http_source}${java_msi_name}",
+      path    => "${chocolately_package_dest}\\${java_msi_name}",
+      require => File['choco_packages_dir'],
+    }
+
+    # Install java
+    package { 'AdoptOpenJDK JRE with Hotspot 8u292-b10 (x64)':
+      ensure   => 'present',
+      provider => 'windows',
+      source   => "${chocolately_package_dest}\\${java_msi_name}",
+      require  => File[$java_msi_name]
+    }
   }
 
-  # Install java
-  package { 'AdoptOpenJDK JRE with Hotspot 8u292-b10 (x64)':
-    ensure   => 'present',
-    provider => 'windows',
-    source   => "${chocolately_package_dest}\\${java_msi_name}",
-    require  => File[$java_msi_name]
-  }
 
   # Install comply scanner
   class {'comply':
