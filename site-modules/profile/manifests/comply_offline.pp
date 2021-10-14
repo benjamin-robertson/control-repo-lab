@@ -19,16 +19,19 @@ class profile::comply_offline (
     ensure   => present,
     location => $chocolately_package_dest,
     priority => 1,
+    require  => Class['chocolatey'],
   }
 
   chocolateysource {'chocolatey':
-    ensure   => disabled,
+    ensure  => disabled,
+    require => Chocolateysource['internal'],
   }
 
   # Sync chocolatey packages locally
   file { 'choco_packages_dir':
-    ensure => directory,
-    path   => $chocolately_package_dest,
+    ensure  => directory,
+    path    => $chocolately_package_dest,
+    require => Chocolateysource['chocolatey'],
   }
 
   $packges_to_sync.each | String $package | {
@@ -37,6 +40,7 @@ class profile::comply_offline (
       source  => "${choco_http_source}${package}",
       path    => "${chocolately_package_dest}\\${package}",
       require => File['choco_packages_dir'],
+      before  => Class['comply'],
     }
   }
 
