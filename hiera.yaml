@@ -12,7 +12,7 @@ hierarchy:
       - "nodes/%{trusted.certname}.yaml"
       - "os/%{os.name}/%{os.release.major}.yaml"
       - "os/%{os.name}.yaml"
-      - "%{poodle}/common.yaml"
+      - "%{facts.poodle}/common.yaml"
       - "ben.eyaml"
       - "common.yaml"
     options:
