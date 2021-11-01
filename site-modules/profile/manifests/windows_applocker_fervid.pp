@@ -4,7 +4,7 @@
 class profile::windows_applocker_fervid {
   #include puppet_applocker_fervid
   class { 'puppet_applocker_fervid':
-    executable_rules   => 'Audit',
+    executable_rules   => 'Enabled',
     msi_rules          => 'Enabled',
     dll_rules          => 'Enabled',
     script_rules       => 'Enabled',
