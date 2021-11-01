@@ -159,4 +159,7 @@ mod 'puppet_applocker_fervid',
   git:             'git@github.com:benjamin-robertson/puppet_applocker_fervid.git',
   branch:          :control_branch,
   default_branch:  'main'
-mod 'fervid-applocker', '1.0.0'
+#mod 'fervid-applocker', '1.0.0'
+mod 'fervid-applocker',
+  git:     'git@github.com:benjamin-robertson/applocker.git',
+  branch:  'master'
