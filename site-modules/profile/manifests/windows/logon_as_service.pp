@@ -10,9 +10,10 @@ class profile::windows::logon_as_service
   # 
   # Ben: Are you after something like this? using a paramater which can be changed when the class is called?
 
-  local_security_policy { 'Log on as a service':
-    ensure       => 'present',
-    policy_value => $logon_as_service_accounts,
+  dsc_userrightsassignment { 'Log on as a service':
+    dsc_ensure   => 'present',
+    dsc_identity => $logon_as_service_accounts,
+    dsc_policy   => 'Log_on_as_a_service',
   }
 
 }

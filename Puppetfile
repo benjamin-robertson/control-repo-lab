@@ -16,7 +16,6 @@ mod 'initial_patch',
   branch:       :control_branch,
   default_branch:   'main'
 
-mod 'ayohrling-local_security_policy', '0.7.2'
 mod 'danieldreier/autosign'
 mod 'ghoneycutt-common', '1.10.0'
 mod 'ghoneycutt-rsyslog', '0.26.0'
@@ -119,13 +118,6 @@ mod 'dsc-networkingdsc', '8.2.0-0-1'
 mod 'dsc-auditpolicydsc', '1.4.0-0-2'
 mod 'dsc-securitypolicydsc', '2.10.0-0-3'
 mod 'dsc-storagedsc', '5.0.1-0-2'
-#mod 'dsc-securitypolicydsc',
-#  git:      'git@github.com:dsccommunity/SecurityPolicyDsc.git',
-#  branch:   'master',
-#  tag:      'v3.0.0-preview0006'
-#mod 'cis_win2019',
-#  git:      'git@github.com:benjamin-robertson/cis_2019.git',
-#  branch:   'main'
 
 mod 'beergeek-disable_noop', '0.1.1'
 
