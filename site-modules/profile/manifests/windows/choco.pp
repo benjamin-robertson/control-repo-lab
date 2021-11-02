@@ -1,6 +1,6 @@
 class profile::windows::choco {
   require chocolatey
-  package { '7zip.install':
+  package { '7zip':
     ensure   => 'latest',
     provider => 'chocolatey',
   }
