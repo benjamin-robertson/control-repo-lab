@@ -1,5 +1,5 @@
 class profile::windows::logon_as_service
-( String $logon_as_service_accounts = 'ben,cloudbase-init,NT SERVICE\ALL SERVICES' )
+( Array $logon_as_service_accounts = ['ben','cloudbase-init','NT SERVICE\ALL SERVICES'] )
 {
   # TODO: What if you wanted to extend this profile to allow certain nodes to have
   #  different lists of users log on as a service. A good example could be that a
