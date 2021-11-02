@@ -3,5 +3,5 @@ class profile::base_pe_master {
   # node groups and classifciations
   include profile::pe_master::puppet_settings
   include profile::pe_master::autosign
-  include profile::pe_master::node_classify
+  #include profile::pe_master::node_classify
 }
