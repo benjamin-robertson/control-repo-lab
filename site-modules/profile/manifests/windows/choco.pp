@@ -14,6 +14,6 @@ class profile::windows::choco {
   }
   #Reboot after installation of 7zip
   reboot { 'afterInstall':
-    subscribe  => Package['7zip.install'],
+    subscribe  => Package['7zip'],
   }
 }
