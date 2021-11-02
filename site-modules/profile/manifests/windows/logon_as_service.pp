@@ -12,7 +12,7 @@ class profile::windows::logon_as_service
 
   dsc_userrightsassignment { 'Log on as a service':
     dsc_ensure   => 'Present',
-    dsc_identity => $logon_as_service_accounts,
+    dsc_identity => ["${facts['hostname']}\\ben"],
     dsc_policy   => 'Log_on_as_a_service',
   }
 
