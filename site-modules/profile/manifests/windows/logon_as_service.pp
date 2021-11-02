@@ -11,7 +11,7 @@ class profile::windows::logon_as_service
   # Ben: Are you after something like this? using a paramater which can be changed when the class is called?
 
   dsc_userrightsassignment { 'Log on as a service':
-    dsc_ensure   => 'present',
+    dsc_ensure   => 'Present',
     dsc_identity => $logon_as_service_accounts,
     dsc_policy   => 'Log_on_as_a_service',
   }
