@@ -143,15 +143,11 @@ mod 'beersy-hiera_eyaml_setup', '0.1.2'
 #mod 'puppetlabs-ntp', '9.0.1'
 
 # Applockler work
-mod 'puppet_applocker',
-  git:             'git@github.com:benjamin-robertson/puppet_applocker.git',
+mod 'acsc_e8_application_control',
+  git:             'git@github.com:benjamin-robertson/acsc_e8_application_control.git',
   branch:          :control_branch,
   default_branch:  'main'
-mod 'puppet_applocker_fervid',
-  git:             'git@github.com:benjamin-robertson/puppet_applocker_fervid.git',
-  branch:          :control_branch,
-  default_branch:  'main'
-#mod 'fervid-applocker', '1.0.0'
-mod 'fervid-applocker',
-  git:     'git@github.com:benjamin-robertson/applocker.git',
-  branch:  'master'
+mod 'fervid-applocker', '1.0.0'
+#mod 'fervid-applocker',
+#  git:     'git@github.com:benjamin-robertson/applocker.git',
+#  branch:  'master'
