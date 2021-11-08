@@ -4,10 +4,10 @@
 class profile::windows_applocker_fervid {
   #include puppet_applocker_fervid
   class { 'acsc_e8_application_control':
-    executable_rules   => 'Enabled',
-    msi_rules          => 'Enabled',
-    dll_rules          => 'Enabled',
-    script_rules       => 'Enabled',
-    packaged_app_rules => 'Enabled',
+    executable_rules   => 'Audit',
+    msi_rules          => 'Audit',
+    dll_rules          => 'Audit',
+    script_rules       => 'Audit',
+    packaged_app_rules => 'Audit',
   }
 }
