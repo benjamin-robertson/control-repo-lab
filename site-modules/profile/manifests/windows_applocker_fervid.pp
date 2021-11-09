@@ -2,7 +2,7 @@
 #
 #
 class profile::windows_applocker_fervid {
-  include puppet_applocker_fervid
+  include acsc_e8_application_control
 #class { 'acsc_e8_application_control':
 #  additional_exec_applocker_rules => {
 #    'Exec c:\\temp' => {
