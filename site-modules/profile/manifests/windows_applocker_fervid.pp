@@ -6,7 +6,7 @@ class profile::windows_applocker_fervid {
 class { 'acsc_e8_application_control':
   additional_exec_applocker_rules => {
     'Exec c:\\temp' => {
-        'ensure'            => 'present',
+        'ensure'            => 'absent',
         'action'            => 'Allow',
       'conditions' => {
         'path'              => '%OSDRIVE%\\temp\\*',
