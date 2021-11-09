@@ -2,7 +2,7 @@
 #
 #
 class profile::windows_applocker_fervid {
-  include acsc_e8_application_control
+  #include acsc_e8_application_control
 #class { 'acsc_e8_application_control':
 #  additional_exec_applocker_rules => {
 #    'Exec c:\\temp' => {
@@ -24,4 +24,14 @@ class profile::windows_applocker_fervid {
 #    packaged_app_rules => 'Enabled',
 #    start_service      => true,
 #  }
+
+class { 'acsc_e8_application_control':
+    executable_rules   => 'Audit',
+    msi_rules          => 'Audit',
+    dll_rules          => 'Audit',
+    script_rules       => 'Audit',
+    packaged_app_rules => 'Audit',
+    start_service      => true,
+  }
+
 }
