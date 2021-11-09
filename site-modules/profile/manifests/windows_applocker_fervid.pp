@@ -9,7 +9,7 @@ class { 'acsc_e8_application_control':
         'ensure'            => 'present',
         'action'            => 'Allow',
       'conditions' => {
-        'path'              => 'c:\\temp',
+        'path'              => '%OSDRIVE%\\temp\\*',
       },
         'description'       => 'Allow all users to run executable from c:\\temp',
         'rule_type'         => 'path',
