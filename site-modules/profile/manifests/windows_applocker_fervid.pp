@@ -5,7 +5,7 @@ class profile::windows_applocker_fervid {
   #include puppet_applocker_fervid
 class { 'acsc_e8_application_control':
   additional_exec_applocker_rules => {
-    'Exec c:\temp' => {
+    'Exec c:\\temp' => {
         'ensure'            => 'present',
         'action'            => 'Allow',
       'conditions' => {
