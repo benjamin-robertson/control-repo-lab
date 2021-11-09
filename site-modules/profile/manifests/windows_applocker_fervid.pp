@@ -9,9 +9,9 @@ class { 'acsc_e8_application_control':
         'ensure'            => 'present',
         'action'            => 'Allow',
       'conditions' => {
-        'path'              => 'c:\temp',
+        'path'              => 'c:\\temp',
       },
-        'description'       => 'Allow all users to run executable from c:\temp',
+        'description'       => 'Allow all users to run executable from c:\\temp',
         'rule_type'         => 'path',
         'type'              => 'Exe',
         'user_or_group_sid' => 'S-1-1-0',
