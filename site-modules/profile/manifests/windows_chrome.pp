@@ -7,7 +7,7 @@ class profile::windows_chrome {
   package { 'googlechrome':
     ensure   => latest,
     provider => 'chocolatey',
-    requrie  => Class['chocolatey'],
+    require  => Class['chocolatey'],
   }
 
 }
