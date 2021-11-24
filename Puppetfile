@@ -149,3 +149,9 @@ mod 'beersy-hiera_eyaml_setup', '0.1.2'
 #  default_branch:  'main'
 mod 'benjaminrobertson-acsc_e8_application_control', '0.1.0'
 mod 'fervid-applocker', '1.0.0'
+
+# Office work
+mod 'acsc_e8_office_hardening',
+  git:              'https://github.com/benjamin-robertson/acsc_e8_office_hardening.git',
+  branch:           :control_branch,
+  default_branch:   'main'
