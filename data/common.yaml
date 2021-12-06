@@ -13,7 +13,7 @@ profile::windows::iis::encrypted: "Not really encrypted"
   
 motd::params::content: "Welcome to Windows!!!test"
 modules::motd::params::content: "Welcome to windows???"
-profile::windows::motdwindows::content: "Welcome to windows2019 This is a change"
+profile::windows::motdwindows::content: "Welcome to windows2019 This is a change."
 profile::windows::installstuff::stuff:
   - adobereader
   - firefox
