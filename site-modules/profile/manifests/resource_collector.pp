@@ -21,5 +21,6 @@ class profile::resource_collector {
     host_aliases => 'poodle',
   }
 
+  realize Host['poodle']
 
 }
