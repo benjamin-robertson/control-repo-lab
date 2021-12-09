@@ -12,4 +12,8 @@ class profile::resource_collector {
 
   # collect all exported resources and realize them on this host
   Host <<||>>
+
+  resources { 'host':
+    purge  => true,
+  }
 }
