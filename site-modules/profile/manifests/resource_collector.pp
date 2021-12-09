@@ -3,7 +3,6 @@
 # Collect all the resources
 #
 class profile::resource_collector {
-  notify { 'Collect all the resources':}
 
   @@host { $facts['fqdn']:
     ip           => $facts['ipaddress'],
@@ -16,4 +15,11 @@ class profile::resource_collector {
   resources { 'host':
     purge  => true,
   }
+
+  @host { 'poodle':
+    ip           => '1.2.3.4',
+    host_aliases => 'poodle',
+  }
+
+
 }
