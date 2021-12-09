@@ -3,5 +3,5 @@
 # Collect all the resources
 #
 class profile::resource_collector {
-  $hi = dog
+  notify { 'Collect all the resources':}
 }
