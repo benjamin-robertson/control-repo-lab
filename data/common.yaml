@@ -63,3 +63,17 @@ abide::config:
 lookup_options:
   cem_windows::config:
     merge: hash
+
+
+# Trusted locations 4 acsc_office_macros
+profile::office_hardening::trusted_locations:
+  location1:
+    path: 'c:\\temp'
+    date: '12/12/2021 12:00 PM'
+    description: 'Temp on c for macros'
+    allowsub: true
+  location2:
+    path: 'c:\\temp123'
+    date: '10/12/2021 12:00 PM'
+    description: 'Temp123 on c for macros'
+    allowsub: false
