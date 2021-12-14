@@ -81,3 +81,7 @@ profile::office_hardening::trusted_locations:
     path: 'c:\\temp12'
   location7:
     path: 'c:\\louie'
+  location8:
+    path: 'c:\\louie1'
+  location9:
+    path: 'c:\\louie2'
