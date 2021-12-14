@@ -77,7 +77,7 @@ profile::office_hardening::trusted_locations:
     date: '10/12/2021 12:00 PM'
     description: 'Temp123 on c for macros'
     allowsub: false
-  location3:
-    path: 'c:\\temp12'
-  location4:
-    path: 'c:\\louie'
+#  location3:
+#    path: 'c:\\temp12'
+#  location4:
+#    path: 'c:\\louie'
