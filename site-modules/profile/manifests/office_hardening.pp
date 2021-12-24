@@ -6,7 +6,8 @@ class profile::office_hardening (
   Hash $trusted_locations = {}
 ){
   class {'acsc_e8_office_hardening':
-    macro_setting     => $macro_setting,
-    trusted_locations => $trusted_locations,
+    macro_setting       => $macro_setting,
+    trusted_locations   => $trusted_locations,
+    set_ntuser_interval => 1,
   }
 }
