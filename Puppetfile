@@ -110,9 +110,9 @@ mod 'puppet-logrotate', '5.0.0'
 #mod 'cem_windows',
 #  git:      'git@github.com:benjamin-robertson/puppetlabs-cem_windows.git',
 #  branch:   'cis_level_2'
-#mod 'cem_windows',
-#  git:      'git@github.com:puppetlabs/puppetlabs-cem_windows.git',
-#  tag:      'v1.0.0'
+mod 'cem_windows',
+  git:      'git@github.com:puppetlabs/puppetlabs-cem_windows.git',
+  tag:      'v1.0.7'
 #extra for windows abide
 mod 'dsc-networkingdsc', '8.2.0-0-1'
 mod 'dsc-auditpolicydsc', '1.4.0-0-2'
@@ -151,7 +151,8 @@ mod 'benjaminrobertson-acsc_e8_application_control', '0.1.0'
 mod 'fervid-applocker', '1.0.0'
 
 # Office work
-mod 'acsc_e8_office_hardening',
-  git:              'https://github.com/benjamin-robertson/acsc_e8_office_hardening.git',
-  branch:           :control_branch,
-  default_branch:   'main'
+#mod 'acsc_e8_office_hardening',
+#  git:              'https://github.com/benjamin-robertson/acsc_e8_office_hardening.git',
+#  branch:           :control_branch,
+#  default_branch:   'main'
+mod 'benjaminrobertson-acsc_e8_office_hardening', '0.1.0'
