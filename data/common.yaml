@@ -26,10 +26,10 @@ profile::base_setup_dsc::packages:
   - pdk
   - notepadplusplus
 motd_linux: |
-  Ok this new motd is using hiera
+  Ok this new motd is using hiera123
   I know this will work, becuase i tested it
   It will use lookup to lookup the hiera value.
-  Change to test side by side 15-12-2020 15:39
+  Change to test side by side 17-01-2022 15:39
   I now have CD4PE We are using the main branch test
 
 
