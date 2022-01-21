@@ -85,3 +85,11 @@ profile::office_hardening::trusted_locations:
 #    path: 'c:\\louie1'
 #  location9:
 #    path: 'c:\\louie2'
+
+
+
+
+
+
+#### Fervid rules
+secure_linux_cis::rules::ensure_imap_and_pop3_server_are_not_installed::enforced: false
