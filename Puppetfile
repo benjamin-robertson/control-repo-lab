@@ -8,9 +8,9 @@ forge 'https://forge.puppet.com'
 
 mod 'dog_site',
   git:          'git@github.com:benjamin-robertson/dog-site.git',
-  branch:       'main'
-#  branch:       :control_branch,
-#  default_branch:   'main'
+#  branch:       'main'
+  branch:       :control_branch,
+  default_branch:   'main'
 
 mod 'initial_patch',
   git:          'https://github.com/benjamin-robertson/initial_patch.git',
