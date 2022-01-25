@@ -1,10 +1,10 @@
 forge 'https://forge.puppet.com'
 
 # Hiera data
-#mod 'hieradata',
-#  git:           'https://github.com/benjamin-robertson/hieradata.git',
-#  branch:        'main',
-#  install_path:  '.'
+mod 'hieradata',
+  git:           'https://github.com/benjamin-robertson/hieradata.git',
+  branch:        'main',
+  install_path:  '.'
 
 mod 'dog_site',
   git:          'git@github.com:benjamin-robertson/dog-site.git',
