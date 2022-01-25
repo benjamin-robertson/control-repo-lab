@@ -7,7 +7,7 @@ modules::motd::params::content: "Welcome to windows???"
 modules::chocolatey::adobereader::ensure: "latest"
 modules::chocolatey::adobereader::provider: "chocolatey"
 chocolatey::choco_install_location: "c:\\choco\\"
-profile::windows::iis::testing: "From profile module"
+profile::windows::iis::testing: "From profile module."
 profile::windows::iis::notencrypted: "Update the plaintext hiera data"
 profile::windows::iis::encrypted: "Not really encrypted"
   
