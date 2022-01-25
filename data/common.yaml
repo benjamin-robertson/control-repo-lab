@@ -11,9 +11,9 @@ profile::windows::iis::testing: "From profile module"
 profile::windows::iis::notencrypted: "Update the plaintext hiera data"
 profile::windows::iis::encrypted: "Not really encrypted"
   
-motd::params::content: "Welcome to Windows!!!test"
+motd::params::content: "Welcome to Windows!!! Testing impact "
 modules::motd::params::content: "Welcome to windows???"
-profile::windows::motdwindows::content: "Welcome to windows2019 This is a change.!!!"
+profile::windows::motdwindows::content: "Welcome to windows2019 This is a change Testing impact anaylsis"
 profile::windows::installstuff::stuff:
   - adobereader
   - firefox
