@@ -3,9 +3,9 @@ forge 'https://forge.puppet.com'
 # Hiera data
 mod 'hieradata',
   git:           'https://github.com/benjamin-robertson/hieradata.git',
-  branch:        'main',
-#  branch:       :control_branch,
-#  default_branch:   'main',
+#  branch:        'main',
+  branch:       :control_branch,
+  default_branch:   'main',
   install_path:  '.'
 
 mod 'dog_site',
