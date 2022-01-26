@@ -1,0 +1,99 @@
+config:
+  enable_pull_requests_from_forks: false
+  deployment_policy_branch: "production"
+  enable_pe_plans: true
+pipelines:
+  /feature_.*/:
+    triggers:
+    - "COMMIT"
+    - "PULL_REQUEST"
+    stages:
+    - name: "Code Validation stage"
+      steps:
+      - type: "JOB"
+        name: "control-repo-manifest-validate"
+        concurrent_compilations: 0
+        all_deployments: false
+      - type: "JOB"
+        name: "control-repo-hiera-syntax-validate"
+        concurrent_compilations: 0
+        all_deployments: false
+      - type: "JOB"
+        name: "control-repo-template-syntax-validate"
+        concurrent_compilations: 0
+        all_deployments: false
+      - type: "JOB"
+        name: "control-repo-puppetfile-syntax-validate"
+        concurrent_compilations: 0
+        all_deployments: false
+      auto_promote: "all_succeeded"
+    - name: "Deployment stage"
+      steps:
+      - type: "DEPLOYMENT"
+        name: "Deployment on lab"
+        policy:
+          name: "cd4pe_deployments::feature_branch"
+        timeout: 3600000
+        concurrent_compilations: 0
+        all_deployments: false
+        pe_server: "lab"
+        target:
+          type: "NODE_GROUP"
+      auto_promote: false
+  main:
+    triggers:
+    - "COMMIT"
+    - "PULL_REQUEST"
+    stages:
+    - name: "Code Validation stage"
+      steps:
+      - type: "JOB"
+        name: "control-repo-manifest-validate"
+        concurrent_compilations: 0
+        all_deployments: false
+      - type: "JOB"
+        name: "control-repo-hiera-syntax-validate"
+        concurrent_compilations: 0
+        all_deployments: false
+      - type: "JOB"
+        name: "control-repo-template-syntax-validate"
+        concurrent_compilations: 0
+        all_deployments: false
+      - type: "JOB"
+        name: "control-repo-puppetfile-syntax-validate"
+        concurrent_compilations: 0
+        all_deployments: false
+      auto_promote: "all_succeeded"
+    - name: "impact"
+      steps:
+      - type: "IMPACT_ANALYSIS"
+        concurrent_compilations: 10
+        all_deployments: true
+        impact_analysis_hiera_regex: "[^.].*"
+      auto_promote: "all_succeeded"
+    - name: "Deployment stage"
+      steps:
+      - type: "DEPLOYMENT"
+        name: "Deployment to development on lab"
+        policy:
+          name: "cd4pe_deployments::eventual_consistency"
+        timeout: 3600000
+        concurrent_compilations: 0
+        all_deployments: false
+        pe_server: "lab"
+        target:
+          type: "NODE_GROUP"
+          node_group_id: "72340c21-dbf1-4f73-885c-d19bfc41f9ae"
+      - type: "DEPLOYMENT"
+        name: "Deployment to production on lab"
+        policy:
+          name: "cd4pe_deployments::eventual_consistency"
+        timeout: 3600000
+        concurrent_compilations: 0
+        all_deployments: false
+        pe_server: "lab"
+        target:
+          type: "NODE_GROUP"
+          node_group_id: "5ee6e69e-745c-42f1-ae23-acaee09e4c1b"
+      auto_promote: "all_succeeded"
+spec_version: "V1"
