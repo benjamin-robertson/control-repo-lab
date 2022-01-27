@@ -69,7 +69,6 @@ pipelines:
       - type: "IMPACT_ANALYSIS"
         concurrent_compilations: 10
         all_deployments: true
-#        impact_analysis_hiera_regex: "[^.].*"
       auto_promote: "all_succeeded"
     - name: "Deployment stage"
       steps:
