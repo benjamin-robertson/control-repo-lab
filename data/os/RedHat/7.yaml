@@ -4,6 +4,8 @@ cem_linux::benchmark: 'cis'
 cem_linux::config:
   profile: 'server'
   level: '1'
+  ignore:
+    - ensure_message_of_the_day_is_configured_properly
   control_configs:
     ensure_time_synchronization_is_in_use:
       timeservers:
