@@ -12,3 +12,6 @@ cem_linux::config:
         - 'server 1.1.1.1 iburst'
         - 'server 2.2.2.2 iburst'
         - 'server 3.2.2.2 iburst'
+
+
+secure_linux_cis::rules::ensure_permissions_on_etc_motd_are_configured::enforced: false
