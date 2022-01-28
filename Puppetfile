@@ -129,9 +129,10 @@ mod 'syslog_reports',
 mod 'beersy-hiera_eyaml_setup', '0.1.2'
 
 # Add fervid and dependendies
-mod 'fervid-secure_linux_cis',
-  git:              'https://github.com/benjamin-robertson/secure_linux_cis.git',
-  branch:           'main'
+mod 'fervid-secure_linux_cis', '2.1.18'
+#mod 'fervid-secure_linux_cis',
+#  git:              'https://github.com/benjamin-robertson/secure_linux_cis.git',
+#  branch:           'main'
 mod 'puppet-chrony', '2.0.0'
 mod 'camptocamp-augeas', '1.9.0'
 mod 'puppet-kmod', '3.0.0'
