@@ -32,11 +32,11 @@ nodes:
 # You can group classes here to save typing
 class_groups:
   windows_roles:
-    - role::windows_server
+#    - role::windows_server
     - role::windows_fw
     - role::setup_dsc
     - role::windows_wsus
-    - role::dsc_test
+#    - role::dsc_test
   rhel7_roles:
     - role::generic_linux
   non_windows_roles:
