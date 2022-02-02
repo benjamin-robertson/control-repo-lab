@@ -15,3 +15,6 @@ cem_linux::config:
     ensure_message_of_the_day_is_configured_properly:
       motd_content: 'Hello123 motd'
       issue_content: 'this is my issue'
+    ensure_permissions_on_etcsshsshd_config_are_configured:
+      x11_forwarding: 'yes'
+      permit_root_login: 'without-password'
