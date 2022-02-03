@@ -9,7 +9,7 @@ class profile::windows_domain_join (
   Array $dns_server_addresses,
 ) {
   # Setup DNS servers
-  $interfaces = $facts['networking']['interfaces']
+  $interfaces = dig($facts['networking'], ['interfaces'])
   notify { "My interfaces are ${interfaces}": }
   #dsc_dnsserveraddress { 'AD DNS':
   #  dsc_address       => $dns_server_addresses,
