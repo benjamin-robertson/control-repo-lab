@@ -23,3 +23,12 @@ cis_win2019::rules::cis_2::cis_2_2::cis_2_2_26_deny_log_on_through_remote_deskto
   - 'Builtin\Guests'
 cis_win2019::rules::cis_2::cis_2_3::cis_2_3_7::cis_2_3_7_3_machine_inactivity_limit::enforced: true
 cis_win2019::rules::cis_2::cis_2_3::cis_2_3_7::cis_2_3_7_3_machine_inactivity_limit::value: '28800'
+
+
+
+
+
+# Domain join information
+adjoin::password: ENC[PKCS7,MIIBeQYJKoZIhvcNAQcDoIIBajCCAWYCAQAxggEhMIIBHQIBADAFMAACAQEwDQYJKoZIhvcNAQEBBQAEggEAZAMUrSdFLOdB0sJq6dn1Z4G8cpca57UJlr6BMHY5sR5SUYHpKtmrDcs5bchQiefHk9l2LJxTikyd7iFFs1j/+JFsUI1U10WKl96rEcELzt5/n+8mlep+4dvooauKp4ltUQZiH59/qO/yjyzB1lhLuyY2RzCJPjrt6JwQGiOP0VFv7SgEwLIaJo77OF1tF8YNyTRKzvoRM3j5nGo35DaWp2LyBAB+QHF12R27BpuPpXZum+tb6qIkdzWQaUmEEAvfn/9xn06g6xzFZuRx3CqSiBb/MNxv1+/qUe39AOnYmXh28nStMGrpNzRXd8TCIHqu4+imK6XD62A3CXJ0Oxp+MDA8BgkqhkiG9w0BBwEwHQYJYIZIAWUDBAEqBBAUc9EyjwgjxRNdGsxy308wgBBVVYD9TGGwKQTglcLUIW8Z]
+adjoin::account: 'LDAPbind'
+adjoin::domain: 'lab.local'
