@@ -5,7 +5,6 @@
 class profile::windows_domain_join (
   String $domain_name,
   String $domain_bind_user,
-  #Sensitive $domain_bind_password,
   Array $dns_server_addresses,
 ) {
   $domain_bind_password = Sensitive(lookup('profile::windows_domain_join::domain_bind_password'))
