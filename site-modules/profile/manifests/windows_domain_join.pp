@@ -25,7 +25,7 @@ class profile::windows_domain_join (
     dsc_domainname  => $domain_name,
     dsc_description => 'Joined to domain by Puppet',
     dsc_credential  => { 'user' => $domain_bind_user, 'password' => $domain_bind_password },
-    dsc_name        => $facts['clientcert'],
+    dsc_name        => $facts['hostname'],
     validation_mode => 'resource',
   }
 }
