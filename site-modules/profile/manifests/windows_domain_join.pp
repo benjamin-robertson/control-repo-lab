@@ -28,4 +28,9 @@ class profile::windows_domain_join (
     dsc_name        => $facts['hostname'],
     validation_mode => 'resource',
   }
+
+  reboot {'reboot after join':
+    apply     => 'finished',
+    subscribe => Dsc_computer['domain join'],
+  }
 }
