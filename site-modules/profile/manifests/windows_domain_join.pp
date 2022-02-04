@@ -5,7 +5,7 @@
 class profile::windows_domain_join (
   String $domain_name,
   String $domain_bind_user,
-  Sensitive $domain_bind_password,
+  Sensitive[String] $domain_bind_password,
   Array $dns_server_addresses,
 ) {
   # Setup DNS servers
