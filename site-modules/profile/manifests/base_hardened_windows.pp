@@ -16,4 +16,10 @@ class profile::base_hardened_windows {
     display_name => 'Remote desktop',
     description  => 'Permit remote desktop',
   }
+
+  registry_value { 'HKLM\\SOFTWARE\\Puppet Labs\\Puppet\\SetInGPO':
+    ensure => present,
+    type   => string,
+    data   => 'Set in Puppet, FIGHT!!',
+  }
 }
