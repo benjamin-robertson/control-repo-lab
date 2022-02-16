@@ -8,7 +8,7 @@ modules::chocolatey::adobereader::ensure: "latest"
 modules::chocolatey::adobereader::provider: "chocolatey"
 chocolatey::choco_install_location: "c:\\choco\\"
 profile::windows::iis::testing: "From profile module. Testing cd4pe"
-profile::windows::iis::notencrypted: "Update the plaintext hiera data this is an edit"
+profile::windows::iis::notencrypted: "Update the plaintext hiera data."
 profile::windows::iis::encrypted: "Not really encrypted"
   
 motd::params::content: "Welcome to Windows!!! Testing impact testte"
