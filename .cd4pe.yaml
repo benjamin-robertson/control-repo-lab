@@ -64,9 +64,11 @@ pipelines:
         concurrent_compilations: 0
         all_deployments: false
       auto_promote: "all_succeeded"
-    - name: "impact"
+    - name: "IA"
       steps:
       - type: "IMPACT_ANALYSIS"
+        deployments:
+          - "Deployment to development on lab"
         concurrent_compilations: 10
         all_deployments: true
       auto_promote: "all_succeeded"
