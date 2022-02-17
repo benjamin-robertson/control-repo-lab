@@ -69,7 +69,7 @@ pipelines:
       - type: "IMPACT_ANALYSIS"
         deployments:
           - "Deployment to development on lab"
-        concurrent_compilations: 10
+        concurrent_compilations: 1
         all_deployments: true
       auto_promote: "all_succeeded"
     - name: "Deployment stage"
