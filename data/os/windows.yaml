@@ -4,12 +4,16 @@ cem_windows::config:
   profile: 'member_server'
   level: '1'
   control_configs:
-    c2_2_26:
+    c2_2_26: # Deny log on through Remote Desktop Services
       users: 
         - 'Builtin\Guests'
-    c2_2_21:
+    c2_2_21: # Deny access to this computer from the network'
       users:
         - 'Builtin\Guests'
+    c2_2_29: # Force shutdown from a remote system
+      users:
+        - 'Builtin\Administrators'
+        - 'Everyone'
 #    c18_9_26_3_2: # set setup log size
 #      maxsize: 196608
 #    c9_1_1: # disable domain firewall
