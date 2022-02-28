@@ -160,3 +160,9 @@ mod 'fervid-applocker', '1.0.0'
 #  branch:           :control_branch,
 #  default_branch:   'main'
 mod 'benjaminrobertson-acsc_e8_office_hardening', '0.1.0'
+
+# Run offset 
+mod 'puppet_run_offset',
+  git:            'git@github.com:benjamin-robertson/puppet_run_offset.git',
+  branch:         :control_branch,
+  default_branch: 'main'
