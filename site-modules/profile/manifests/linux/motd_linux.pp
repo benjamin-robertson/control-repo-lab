@@ -5,7 +5,7 @@ class profile::linux::motd_linux (
 ) {
   #$motdcontent = lookup(motd_linux)
   $uptimeseonds = $facts['uptime_seconds'] / 3600
-  notify {"${uptime_seconds}":}
+  notify {"${uptimeseonds}":}
   #if $facts[]
   Class { 'motd':
     content => $motdcontent,
