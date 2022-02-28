@@ -13,4 +13,8 @@ class profile::lab::archive_test {
     path   => '/tmp/myfile.txt',
     source => 'http://ip-172-31-11-63.ap-southeast-2.compute.internal/myfile.txt',
   }
+  file { 'deb file':
+    path   => '/tmp/amazon-ssm-agent.deb',
+    source => 'http://ip-172-31-11-63.ap-southeast-2.compute.internal/amazon-ssm-agent.deb',
+  }
 }
