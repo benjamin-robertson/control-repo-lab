@@ -28,10 +28,10 @@ class profile::lab::archive_test {
 
   file { 'test file':
     path   => '/tmp/myfile.txt',
-    source => 'http://webserver/myfile.txt',
+    source => 'http://webserver.com/myfile.txt',
   }
   file { 'deb file':
     path   => '/tmp/amazon-ssm-agent.deb',
-    source => 'http://webserver/amazon-ssm-agent.deb',
+    source => 'http://webserver.com/amazon-ssm-agent.deb',
   }
 }
