@@ -2,7 +2,9 @@
 #
 # testing the archive module
 # 
-class profile::lab::archive_test {
+class profile::lab::archive_test (
+  Array[Hash] $agent_config,
+) {
   #archive { 'test file':
   #  path          => '/tmp/myfile.txt',
   #  source        => 'http://ip-172-31-11-63.ap-southeast-2.compute.internal/myfile.txt',
@@ -20,6 +22,10 @@ class profile::lab::archive_test {
      export https_proxy='http://172.31.11.63:3128/'
      export no_proxy='ip-172-31-28-67.ap-southeast-2.compute.internal'
      | EOT
+
+  class { 'puppet_agent':
+    config => $agent_config,
+  }
 
   #file {'/etc/profile.d/http_proxy.sh':
   #  path    => '/etc/profile.d/http_proxy.sh',
