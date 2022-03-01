@@ -24,7 +24,7 @@ class profile::lab::archive_test (
      | EOT
 
   $agent_config.each | Integer $index, Hash $config,  | {
-    inifile { "puppet.conf${index}":
+    ini_setting { "puppet.conf${index}":
       ensure            => present,
       section           => $config['section'],
       key_val_separator => '=',
