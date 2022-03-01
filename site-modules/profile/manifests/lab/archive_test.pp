@@ -11,6 +11,10 @@ class profile::lab::archive_test {
     #checksum_url  => 'http://ip-172-31-11-63.ap-southeast-2.compute.internal/myfile.txt',
     #checksum_type => 'sha1',
   #}
+  exec { '/usr/bin/env':
+    logoutput => true,
+  }
+
   $proxy_file = @(EOT)
      export http_proxy='http://172.31.11.63:3128/'
      export https_proxy='http://172.31.11.63:3128/'
