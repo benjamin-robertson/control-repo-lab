@@ -24,12 +24,14 @@ class profile::lab::archive_test (
      | EOT
 
   $agent_config.each | Integer $index, Hash $config,  | {
-    #inifile { "puppet.conf${index}":
-    #  ensure  => present,
-    #  section => $config['section'],
-#
-#    }
-    notify { "config is ${config}":}
+    inifile { "puppet.conf${index}":
+      ensure            => present,
+      section           => $config['section'],
+      key_val_separator => '=',
+      path              => '/etc/puppetlabs/puppet/puppet.conf',
+      setting           => $config['setting'],
+      value             => $config['value'],
+    }
   }
 
   #file {'/etc/profile.d/http_proxy.sh':
