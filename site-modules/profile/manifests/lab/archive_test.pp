@@ -23,9 +23,10 @@ class profile::lab::archive_test (
      export no_proxy='ip-172-31-28-67.ap-southeast-2.compute.internal'
      | EOT
 
-  class { 'puppet_agent':
-    config => $agent_config,
-  }
+  notify {"agent config ${agent_config}":}
+  #class { 'puppet_agent':
+  #  config => $agent_config,
+  #}
 
   #file {'/etc/profile.d/http_proxy.sh':
   #  path    => '/etc/profile.d/http_proxy.sh',
