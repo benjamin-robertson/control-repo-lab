@@ -168,5 +168,6 @@ mod 'puppet_run_offset',
   default_branch: 'main'
 
 mod 'aws_ssm',
-  git:    'git@github.com:benjamin-robertson/aws_ssm.git',
-  branch: 'main'
+  git:            'git@github.com:benjamin-robertson/aws_ssm.git',
+  branch:         :control_branch,
+  default_branch: 'main'
