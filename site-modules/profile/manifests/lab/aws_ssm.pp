@@ -2,7 +2,7 @@
 #
 # Bogus testing class
 #
-class aws_ssm (
+class profile::lab::aws_ssm (
   String $activation_key,
   String $activation_is,
 ) {
