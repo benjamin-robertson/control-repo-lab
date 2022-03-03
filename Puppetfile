@@ -171,3 +171,5 @@ mod 'aws_ssm',
   git:            'git@github.com:benjamin-robertson/aws_ssm.git',
   branch:         :control_branch,
   default_branch: 'main'
+
+  mod 'puppet-gitlab_ci_runner', '4.3.0'
