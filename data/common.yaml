@@ -105,4 +105,3 @@ profile::lab::archive_test::agent_config:
   - section: main
     setting: no_proxy
     value: ip-172-31-28-67.ap-southeast-2.compute.internal
-# sed -i 's/\[mian\]//' /etc/puppetlabs/puppet/puppet.conf
