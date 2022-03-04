@@ -131,7 +131,7 @@ gitlab_ci_runner::runner_defaults:
   cache_dir: "/tmp"
 
 gitlab_ci_runner::ca_file: |
-    -----BEGIN CERTIFICATE-----
+  -----BEGIN CERTIFICATE-----
   MIIFFjCCAv6gAwIBAgIRAJErCErPDBinU/bWLiWnX1owDQYJKoZIhvcNAQELBQAw
   TzELMAkGA1UEBhMCVVMxKTAnBgNVBAoTIEludGVybmV0IFNlY3VyaXR5IFJlc2Vh
   cmNoIEdyb3VwMRUwEwYDVQQDEwxJU1JHIFJvb3QgWDEwHhcNMjAwOTA0MDAwMDAw
