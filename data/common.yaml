@@ -129,7 +129,8 @@ gitlab_ci_runner::runner_defaults:
   builds_dir: "/tmp"
   cache_dir: "/tmp"
 
-gitlab_ci_runner::ca_file: |
+gitlab_ci_runner::ca_file: "/tmp/mycertificat.crt"
+gitlab_ci_runner::ca_content: |
   -----BEGIN CERTIFICATE-----
   MIIDjTCCAnWgAwIBAgIUGQezlwqBl9+/USnOe8GIsmdPWDowDQYJKoZIhvcNAQEL
   BQAwVjELMAkGA1UEBhMCQVUxDDAKBgNVBAgMA0FDVDERMA8GA1UEBwwIQ2FuYmVy
