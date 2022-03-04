@@ -123,9 +123,18 @@ gitlab_ci_runner::runners:
     registration-token: "jQdbxszbz3xyLt3VE3zr"
     tag-list: "aws,docker"
 
+#gitlab_ci_runner::runner_defaults:
+#  executor: "docker"
+#  docker:
+#    image: "puppet/puppet-dev-tools"
+#  builds_dir: "/tmp"
+#  cache_dir: "/tmp"
+
 gitlab_ci_runner::runner_defaults:
+  url: "https://git.example.com/ci"
+  registration-token: "1234567890abcdef"
   executor: "docker"
   docker:
-    image: "puppet/puppet-dev-tools"
+    image: "ubuntu:focal"
   builds_dir: "/tmp"
   cache_dir: "/tmp"
