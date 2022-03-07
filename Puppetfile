@@ -172,7 +172,7 @@ mod 'aws_ssm',
   branch:         :control_branch,
   default_branch: 'main'
 
-#mod 'puppet-gitlab_ci_runner', '4.3.0'
-mod 'gitlab_ci_runner',
-  git:            'git@github.com:benjamin-robertson/puppet-gitlab_ci_runner.git',
-  branch:         'master'
+mod 'puppet-gitlab_ci_runner', '4.3.0'
+#mod 'gitlab_ci_runner',
+#  git:            'git@github.com:benjamin-robertson/puppet-gitlab_ci_runner.git',
+#  branch:         'master'
