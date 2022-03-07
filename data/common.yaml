@@ -160,4 +160,9 @@ profile::lab::gitlab_runner::ca_content: |
   1g==
   -----END CERTIFICATE-----
 
-
+apt::proxy:
+  ensure: present
+  host: ip-172-31-11-63.ap-southeast-2.compute.internal
+  port: 3128
+  https: true
+  
