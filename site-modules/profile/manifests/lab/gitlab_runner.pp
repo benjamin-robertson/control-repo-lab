@@ -8,6 +8,8 @@ class profile::lab::gitlab_runner (
   Array $pe_servers = ['ip-172-31-28-67.ap-southeast-2.compute.internal'],
   String $save_location = '/home/gitlab-runner',
 ) {
+  # setup proxy for test
+  include profile::lab::archive_test
   include gitlab_ci_runner
 
   file {'/etc/ssl/certs/mycoolca.pem':
