@@ -10,9 +10,9 @@ class profile::lab::gitlab_runner (
 ) {
   include gitlab_ci_runner
 
-  file {'/etc/ssl/certs/mycoolca.pem':
-    content => $ca_content,
-  }
+  #file {'/etc/ssl/certs/mycoolca.pem':
+  #  content => $ca_content,
+  #}
 
   file { "${$save_location}/pe-client-tools_19.8.11-1focal_amd64.deb":
     source => $pe_client_tools_download_location,
