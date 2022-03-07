@@ -12,15 +12,13 @@ class profile::lab::gitlab_runner (
     content => $ca_content,
   }
 
-  #file { '/tmp/pe-client-tools_19.8.11-1focal_amd64.deb':
-  #  source => $pe_client_tools_download_location,
-  #}
+  file { '/tmp/pe-client-tools_19.8.11-1focal_amd64.deb':
+    source => $pe_client_tools_download_location,
+  }
 
-  include puppet_enterprise::profile::controller
-
-  #package {'pe-client-tools':
-  #  ensure   => 'latest',
-  #  source   => '/tmp/pe-client-tools_19.8.11-1focal_amd64.deb',
-  #  provider => 'dpkg',
-  #}
+  package {'pe-client-tools':
+    ensure   => 'latest',
+    source   => '/tmp/pe-client-tools_19.8.11-1focal_amd64.deb',
+    provider => 'dpkg',
+  }
 }
