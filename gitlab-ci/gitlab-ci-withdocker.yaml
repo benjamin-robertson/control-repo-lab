@@ -1,0 +1,71 @@
+default:
+  image: puppet/puppet-dev-tools
+
+before_script:
+- date
+- pwd
+- env
+- ls -al
+
+stages:
+  - build
+  - test
+  - deploy
+
+
+# Puppet build environment, pre testing
+puppet_env:
+  stage: build
+  script:
+  - date
+  - pwd
+  - env
+  - ls -al
+  - echo "NAME ${CI_JOB_NAME} STAGE ${CI_JOB_STAGE} BRANCH ${CI_BUILD_REF_NAME} MASTER ${PUPPET_MASTER}"
+  - git branch
+  - git status
+  - facter -p
+  tags:
+  - aws
+  - docker
+
+puppet_lint:
+  stage: test
+  script:
+  - rake lint
+  tags:
+  - aws
+  - docker
+
+puppet_syntax_template:
+  stage: test
+  script:
+  - rake -f /Rakefile syntax:templates
+  tags:
+  - aws
+  - docker
+
+puppet_syntax_manifest:
+  stage: test
+  script:
+  - chmod -R 755 /tmp
+  - rake -f /Rakefile syntax:manifests
+  tags:
+  - aws
+  - docker
+
+puppet_syntax_hiera:
+  stage: test
+  script:
+  - rake -f /Rakefile syntax:hiera
+  tags:
+  - aws
+  - docker
+
+puppet_syntax_puppetfile:
+  stage: test
+  script:
+  - rake -f /Rakefile r10k:syntax
+  tags:
+  - aws
+  - docker
