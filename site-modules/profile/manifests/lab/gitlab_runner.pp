@@ -7,7 +7,7 @@ class profile::lab::gitlab_runner (
 ) {
   include gitlab_ci_runner
 
-  file {'/tmp/mycertificate.crt':
+  file {'/etc/ssl/certs/mycoolca.pem':
     content => $ca_content,
   }
 }
