@@ -34,10 +34,10 @@ class profile::lab::archive_test (
     }
   }
 
-  #file {'/etc/profile.d/http_proxy.sh':
-  #  path    => '/etc/profile.d/http_proxy.sh',
-  #  content => $proxy_file,
-  #}
+  file {'/etc/profile.d/http_proxy.sh':
+    path    => '/etc/profile.d/http_proxy.sh',
+    content => $proxy_file,
+  }
 
   #file { 'test file':
   #  path   => '/tmp/myfile.txt',
