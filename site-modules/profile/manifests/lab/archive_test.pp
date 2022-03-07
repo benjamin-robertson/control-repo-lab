@@ -39,12 +39,12 @@ class profile::lab::archive_test (
   #  content => $proxy_file,
   #}
 
-  file { 'test file':
-    path   => '/tmp/myfile.txt',
-    source => 'http://ip-172-31-11-63.ap-southeast-2.compute.internal/myfile.txt',
-  }
-  file { 'deb file':
-    path   => '/tmp/amazon-ssm-agent.deb',
-    source => 'http://ip-172-31-11-63.ap-southeast-2.compute.internal/amazon-ssm-agent.deb',
-  }
+  #file { 'test file':
+  #  path   => '/tmp/myfile.txt',
+  #  source => 'http://ip-172-31-11-63.ap-southeast-2.compute.internal/myfile.txt',
+  #}
+  #file { 'deb file':
+  #  path   => '/tmp/amazon-ssm-agent.deb',
+  #  source => 'http://ip-172-31-11-63.ap-southeast-2.compute.internal/amazon-ssm-agent.deb',
+  #}
 }
