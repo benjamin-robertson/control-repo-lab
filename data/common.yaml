@@ -164,7 +164,6 @@ apt::proxy:
   ensure: present
   host: ip-172-31-11-63.ap-southeast-2.compute.internal
   port: 3128
-  #https: true
 apt::source_key_defaults:
   options: "http-proxy=http://ip-172-31-11-63.ap-southeast-2.compute.internal:3128"
 

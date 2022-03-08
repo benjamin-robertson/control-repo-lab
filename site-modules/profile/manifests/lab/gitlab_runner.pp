@@ -12,9 +12,12 @@ class profile::lab::gitlab_runner (
   include profile::lab::archive_test
   contain gitlab_ci_runner
 
+  notify { "I am set to ${docker::params::package_ce_key_source}": }
+
   # download docker gpg
   file { 'docker pgp':
     path   => '/tmp/docker.gpg',
+    #source => $docker::params::package_ce_key_source,
     source => 'https://download.docker.com/linux/ubuntu/gpg',
   }
 
