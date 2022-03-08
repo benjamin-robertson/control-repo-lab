@@ -19,7 +19,9 @@ class profile::lab::gitlab_runner (
   # setup proxy for test
   contain gitlab_ci_runner
 
-  file { 'test gitlabgpg':
+  archive { 'test gitlabgpg':
+    ensure => present,
+    extact => false,
     source => 'https://packages.gitlab.com/runner/gitlab-runner/gpgkey',
     path   => '/tmp/gitlab.gpg'
   }
