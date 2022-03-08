@@ -46,6 +46,6 @@ class profile::lab::gitlab_runner (
     }
   }
 
-  Class['profile::lab::archive_test'] -> File['docker pgp'] -> Class['gitlab_ci_runner']
+  File['docker pgp'] -> Class['gitlab_ci_runner']
 
 }
