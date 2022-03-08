@@ -20,10 +20,10 @@ class profile::lab::gitlab_runner (
   contain gitlab_ci_runner
 
   archive { 'test gitlabgpg':
-    ensure => present,
-    extact => false,
-    source => 'https://packages.gitlab.com/runner/gitlab-runner/gpgkey',
-    path   => '/tmp/gitlab.gpg'
+    ensure  => present,
+    extract => false,
+    source  => 'https://packages.gitlab.com/runner/gitlab-runner/gpgkey',
+    path    => '/tmp/gitlab.gpg'
   }
 
   # download docker gpg
