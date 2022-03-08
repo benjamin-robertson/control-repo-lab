@@ -15,6 +15,9 @@ class profile::lab::gitlab_runner (
   class {'profile::lab::proxy_setup':
     stage => 'first',
   }
+  reboot { 'after first run stage':
+    subscribe       => Class['profile::lab::proxy_setup'],
+  }
 
   # setup proxy for test
   contain gitlab_ci_runner
@@ -55,7 +58,6 @@ class profile::lab::gitlab_runner (
     }
   }
 
-  File['docker pgp'] -> Class['gitlab_ci_runner']
-  Class['apt'] -> Class['apt::update'] -> Package <| provider == 'apt' |>
+  Class['apt'] -> Class['apt::update'] -> Package <| provider == 'apt' |> -> File['docker pgp'] -> Class['gitlab_ci_runner']
 
 }
