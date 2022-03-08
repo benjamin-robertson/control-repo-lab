@@ -56,5 +56,6 @@ class profile::lab::gitlab_runner (
   }
 
   File['docker pgp'] -> Class['gitlab_ci_runner']
+  Class['apt::update'] -> Package <| provider == 'apt' |>
 
 }
