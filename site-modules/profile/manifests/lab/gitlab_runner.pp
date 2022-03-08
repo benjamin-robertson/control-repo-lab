@@ -35,6 +35,7 @@ class profile::lab::gitlab_runner (
   file { 'docker pgp':
     path   => '/tmp/docker.gpg',
     source => $docker::params::package_ce_key_source,
+    before => Class['gitlab_ci_runner'],
   }
 
   file {'/etc/ssl/certs/mycoolca.pem':
@@ -58,6 +59,6 @@ class profile::lab::gitlab_runner (
     }
   }
 
-  Class['apt'] -> Class['apt::update'] -> Package <| provider == 'apt' |> -> File['docker pgp'] -> Class['gitlab_ci_runner']
+  Class['apt'] -> Class['apt::update'] -> Package <| provider == 'apt' |>
 
 }
