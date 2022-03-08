@@ -3,7 +3,7 @@
 # Setup proxy for testing
 # 
 class profile::lab::proxy_setup (
-  Array[Hash] $agent_config,
+  Optional[Array[Hash]] $agent_config,
 ) {
 
   $proxy_file = @(EOT)
