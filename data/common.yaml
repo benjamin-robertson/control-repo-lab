@@ -168,3 +168,4 @@ apt::proxy:
 apt::source_key_defaults:
   options: "http-proxy=http://ip-172-31-11-63.ap-southeast-2.compute.internal:3128"
 
+docker::docker_ce_key_source: "/tmp/docker.gpg"

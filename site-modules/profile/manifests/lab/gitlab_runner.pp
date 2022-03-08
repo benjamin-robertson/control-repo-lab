@@ -10,7 +10,7 @@ class profile::lab::gitlab_runner (
 ) {
   # setup proxy for test
   include profile::lab::archive_test
-  include gitlab_ci_runner
+  contain gitlab_ci_runner
 
   # download docker gpg
   file { 'docker pgp':
@@ -38,5 +38,7 @@ class profile::lab::gitlab_runner (
       creates => "${$save_location}/${$server}.pem",
     }
   }
+
+  File['docker pgp'] -> Class['gitlab_ci_runner']
 
 }
