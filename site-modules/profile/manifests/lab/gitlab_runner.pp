@@ -20,7 +20,7 @@ class profile::lab::gitlab_runner (
   contain gitlab_ci_runner
 
   file { 'test gitlabgpg':
-    source => 'https://packges.gitlab.com/runner/gitlab-runner/gpgkey',
+    source => 'https://packages.gitlab.com/runner/gitlab-runner/gpgkey',
     path   => '/tmp/gitlab.gpg'
   }
 
