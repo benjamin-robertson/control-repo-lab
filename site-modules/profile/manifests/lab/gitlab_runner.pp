@@ -20,10 +20,12 @@ class profile::lab::gitlab_runner (
   contain gitlab_ci_runner
 
   archive { 'test gitlabgpg':
-    ensure  => present,
-    extract => false,
-    source  => 'https://packages.gitlab.com/runner/gitlab-runner/gpgkey',
-    path    => '/tmp/gitlab.gpg'
+    ensure       => present,
+    extract      => false,
+    source       => 'https://packages.gitlab.com/runner/gitlab-runner/gpgkey',
+    path         => '/tmp/gitlab.gpg',
+    proxy_server => 'http://ip-172-31-11-63.ap-southeast-2.compute.internal:3128',
+    proxy_type   => 'http',
   }
 
   # download docker gpg
