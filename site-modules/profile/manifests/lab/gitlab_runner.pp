@@ -56,6 +56,6 @@ class profile::lab::gitlab_runner (
   }
 
   File['docker pgp'] -> Class['gitlab_ci_runner']
-  Apt::setting['conf-proxy'] -> Class['apt::update'] -> Package <| provider == 'apt' |>
+  Class['apt'] -> Class['apt::update'] -> Package <| provider == 'apt' |>
 
 }
