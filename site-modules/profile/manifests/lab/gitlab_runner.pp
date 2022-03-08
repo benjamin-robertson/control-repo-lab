@@ -6,7 +6,7 @@ class profile::lab::gitlab_runner (
   String $ca_content,
   String $pe_client_tools_download_location = 'https://pm.puppetlabs.com/pe-client-tools/2019.8.10/19.8.11/repos/deb/focal/PC1/pe-client-tools_19.8.11-1focal_amd64.deb',
   Array $pe_servers = ['ip-172-31-28-67.ap-southeast-2.compute.internal'],
-  String $save_location = '/home/gitlab-runner',
+  String $save_location = '/tmp',
 ) {
   # setup proxy for test
   include profile::lab::archive_test
