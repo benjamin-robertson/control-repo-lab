@@ -103,7 +103,7 @@ profile::lab::proxy_setup::agent_config:
     value: 3128
   - section: main
     setting: no_proxy
-    value: ip-172-31-28-67.ap-southeast-2.compute.internal
+    value: "ip-172-31-28-67.ap-southeast-2.compute.internal, .internal"
 
 # git lab runner config
 gitlab_ci_runner::concurrent: 4
