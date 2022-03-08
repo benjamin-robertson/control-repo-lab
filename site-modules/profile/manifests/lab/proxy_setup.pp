@@ -9,7 +9,7 @@ class profile::lab::proxy_setup (
   $proxy_file = @(EOT)
      export http_proxy='http://172.31.11.63:3128/'
      export https_proxy='http://172.31.11.63:3128/'
-     export no_proxy='ip-172-31-28-67.ap-southeast-2.compute.internal'
+     export no_proxy='ip-172-31-28-67.ap-southeast-2.compute.internal, .internal'
      | EOT
 
   $agent_config.each | Integer $index, Hash $config,  | {
