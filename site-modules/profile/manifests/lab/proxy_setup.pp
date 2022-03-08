@@ -1,21 +1,10 @@
-# Class: profile::lab::archive_test
+# Class: profile::lab::proxy_setup
 #
-# testing the archive module
+# Setup proxy for testing
 # 
-class profile::lab::archive_test (
+class profile::lab::proxy_setup (
   Array[Hash] $agent_config,
 ) {
-  #archive { 'test file':
-  #  path          => '/tmp/myfile.txt',
-  #  source        => 'http://ip-172-31-11-63.ap-southeast-2.compute.internal/myfile.txt',
-    #checksum      => 'ebccea7a808019a997af5e6eeeb4b710',
-    #checksum_type => 'md5',
-    #checksum_url  => 'http://ip-172-31-11-63.ap-southeast-2.compute.internal/myfile.txt',
-    #checksum_type => 'sha1',
-  #}
-  #exec { '/usr/bin/env':
-  #  logoutput => true,
-  #}
 
   $proxy_file = @(EOT)
      export http_proxy='http://172.31.11.63:3128/'

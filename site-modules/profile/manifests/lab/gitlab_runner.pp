@@ -8,8 +8,15 @@ class profile::lab::gitlab_runner (
   Array $pe_servers = ['ip-172-31-28-67.ap-southeast-2.compute.internal'],
   String $save_location = '/tmp',
 ) {
+  # add run stage for proxy setup
+  stage { 'first':
+    before => Stage['main'],
+  }
+  class {'profile::lab::proxy_setup':
+    stage => 'first',
+  }
+
   # setup proxy for test
-  include profile::lab::archive_test
   contain gitlab_ci_runner
 
   # download docker gpg
