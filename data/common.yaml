@@ -94,7 +94,7 @@ profile::office_hardening::trusted_locations:
 secure_linux_cis::rules::ensure_imap_and_pop3_server_are_not_installed::enforced: false
 
 # Puppet agent config
-profile::lab::archive_test::agent_config:
+profile::lab::proxy_setup::agent_config:
   - section: main
     setting: http_proxy_host
     value: 172.31.11.63
