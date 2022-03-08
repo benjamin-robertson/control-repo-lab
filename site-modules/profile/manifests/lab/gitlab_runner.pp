@@ -19,6 +19,11 @@ class profile::lab::gitlab_runner (
   # setup proxy for test
   contain gitlab_ci_runner
 
+  file { 'test gitlabgpg':
+    source => 'https://packges.gitlab.com/runner/gitlab-runner/gpgkey',
+    path   => '/tmp/gitlab.gpg'
+  }
+
   # download docker gpg
   file { 'docker pgp':
     path   => '/tmp/docker.gpg',
