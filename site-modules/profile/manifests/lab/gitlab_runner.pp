@@ -15,7 +15,7 @@ class profile::lab::gitlab_runner (
   # download docker gpg
   file { 'docker pgp':
     path   => '/tmp/docker.gpg',
-    source => $docker::docker_ce_key_source,
+    source => 'https://download.docker.com/linux/ubuntu/gpg',
   }
 
   file {'/etc/ssl/certs/mycoolca.pem':
