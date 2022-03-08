@@ -12,6 +12,12 @@ class profile::lab::gitlab_runner (
   include profile::lab::archive_test
   include gitlab_ci_runner
 
+  # download docker gpg
+  file { 'docker pgp':
+    path   => '/tmp/docker.gpg',
+    source => $docker::docker_ce_key_source,
+  }
+
   file {'/etc/ssl/certs/mycoolca.pem':
     content => $ca_content,
   }
