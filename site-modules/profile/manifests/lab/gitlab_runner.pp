@@ -22,11 +22,11 @@ class profile::lab::gitlab_runner (
   # setup proxy for test
   contain gitlab_ci_runner
 
-  class { '::realmd':
-    domain               => 'example.com',
-    domain_join_user     => 'user',
-    domain_join_password => 'password',
-  }
+  #class { '::realmd':
+  #  domain               => 'example.com',
+  #  domain_join_user     => 'user',
+  #  domain_join_password => 'password',
+  #}
 
   #contain comply
   #Exec['apt_update'] -> Class['comply']
