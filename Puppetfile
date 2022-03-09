@@ -176,3 +176,7 @@ mod 'aws_ssm',
 mod 'gitlab_ci_runner',
   git:            'git@github.com:benjamin-robertson/puppet-gitlab_ci_runner.git',
   branch:         'issue_144'
+
+mod 'realmd',
+  git:        'git@github.com:benjamin-robertson/realmd.git',
+  branch:     'ubuntu_relationships'
