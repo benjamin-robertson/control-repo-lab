@@ -21,8 +21,8 @@ class profile::lab::gitlab_runner (
 
   # setup proxy for test
   contain gitlab_ci_runner
-  contain comply
-  Exec['apt_update'] -> Class['comply']
+  #contain comply
+  #Exec['apt_update'] -> Class['comply']
   #class { 'comply':
   #  scanner_source => 'https://ec2-54-79-56-92.ap-southeast-2.compute.amazonaws.com:30303/assessor',
   #  require        => Exec['apt_update'],
