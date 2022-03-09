@@ -35,7 +35,7 @@ class profile::lab::proxy_setup (
   }
 
   exec { 'apt update 1st stage':
-    command     => '/usr/bin/apt-get update',
+    command     => '/usr/bin/apt update',
     refreshonly => true,
   }
 
