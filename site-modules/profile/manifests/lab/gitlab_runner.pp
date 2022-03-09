@@ -21,12 +21,19 @@ class profile::lab::gitlab_runner (
 
   # setup proxy for test
   contain gitlab_ci_runner
+
+  class { '::realmd':
+    domain               => 'example.com',
+    domain_join_user     => 'user',
+    domain_join_password => 'password',
+  }
+
   #contain comply
   #Exec['apt_update'] -> Class['comply']
-  class { 'comply':
-    scanner_source => 'https://ec2-54-79-56-92.ap-southeast-2.compute.amazonaws.com:30303/assessor',
+  #class { 'comply':
+  #  scanner_source => 'https://ec2-54-79-56-92.ap-southeast-2.compute.amazonaws.com:30303/assessor',
     #require        => Exec['apt_update'],
-  }
+  #}
 
   archive { 'test gitlabgpg':
     ensure       => present,

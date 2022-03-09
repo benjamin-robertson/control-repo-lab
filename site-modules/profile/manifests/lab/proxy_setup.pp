@@ -28,11 +28,11 @@ class profile::lab::proxy_setup (
     content => $proxy_file,
   }
 
-  file {'stage 1 /etc/apt/apt.conf.d/01proxy1':
-    path    => '/etc/apt/apt.conf.d/01proxy1',
-    content => 'Acquire::http::proxy "http://ip-172-31-11-63.ap-southeast-2.compute.internal:3128/";',
-    notify  => Exec['apt update 1st stage'],
-  }
+  #file {'stage 1 /etc/apt/apt.conf.d/01proxy1':
+  #  path    => '/etc/apt/apt.conf.d/01proxy1',
+  #  content => 'Acquire::http::proxy "http://ip-172-31-11-63.ap-southeast-2.compute.internal:3128/";',
+  #  notify  => Exec['apt update 1st stage'],
+  #}
 
   #exec { 'echo /etc/apt/apt.conf.d/01proxy1':
   #  command => '/usr/bin/echo "Acquire::http::proxy \"http://ip-172-31-11-63.ap-southeast-2.compute.internal:3128/\";" > /etc/apt/apt.conf.d/01proxy1',
@@ -40,10 +40,10 @@ class profile::lab::proxy_setup (
   #  notify  => Exec['apt update 1st stage'],
   #}
 
-  exec { 'apt update 1st stage':
-    command     => '/usr/bin/apt update',
-    refreshonly => true,
-  }
+  #exec { 'apt update 1st stage':
+  #  command     => '/usr/bin/apt update',
+  #  refreshonly => true,
+  #}
 
   #file { 'test file':
   #  path   => '/tmp/myfile.txt',
