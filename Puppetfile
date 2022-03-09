@@ -175,5 +175,5 @@ mod 'aws_ssm',
 #mod 'puppet-gitlab_ci_runner', '4.3.0'
 mod 'gitlab_ci_runner',
   git:            'git@github.com:benjamin-robertson/puppet-gitlab_ci_runner.git',
-  branch:         'issue_144'
+  branch:         'master'
 
