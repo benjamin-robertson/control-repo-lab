@@ -29,7 +29,7 @@ class profile::lab::proxy_setup (
   }
 
   exec { 'echo /etc/apt/apt.conf.d/01proxy1':
-    command => 'echo "Acquire::http::proxy \"http://ip-172-31-11-63.ap-southeast-2.compute.internal:3128/\"; > /etc/apt/apt.conf.d/01proxy1',
+    command => '/usr/bin/echo "Acquire::http::proxy \"http://ip-172-31-11-63.ap-southeast-2.compute.internal:3128/\"; > /etc/apt/apt.conf.d/01proxy1',
     creates => '/etc/apt/apt.conf.d/01proxy1',
     notify  => Exec['apt update 1st stage'],
   }
