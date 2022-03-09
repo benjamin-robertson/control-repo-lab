@@ -19,6 +19,11 @@ class profile::lab::gitlab_runner (
     subscribe       => Class['profile::lab::proxy_setup'],
   }
 
+  file { '/etc/apt/apt.conf.d/01proxy1':
+    ensure  => file,
+    content => 'Acquire::http::proxy "http://ip-172-31-11-63.ap-southeast-2.compute.internal:3128/";',
+  }
+
   # setup proxy for test
   contain gitlab_ci_runner
   #contain comply
