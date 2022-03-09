@@ -177,7 +177,6 @@ mod 'gitlab_ci_runner',
   git:            'git@github.com:benjamin-robertson/puppet-gitlab_ci_runner.git',
   branch:         'issue_144'
 
-#mod 'realmd',
-#  git:        'git@github.com:benjamin-robertson/realmd.git',
-#  branch:     'ubuntu_relationships'
-mod 'walkamongus-realmd', '2.4.0'
+mod 'realmd',
+  git:        'git@github.com:benjamin-robertson/realmd.git',
+  branch:     'master'
