@@ -169,3 +169,5 @@ apt::source_key_defaults:
 
 docker::docker_ce_key_source: "/tmp/docker.gpg"
 docker::proxy: "http://ip-172-31-11-63.ap-southeast-2.compute.internal:3128"
+
+comply::scanner_source: "https://ec2-54-79-56-92.ap-southeast-2.compute.amazonaws.com:30303/assessor"
