@@ -28,6 +28,17 @@ class profile::lab::proxy_setup (
     content => $proxy_file,
   }
 
+  file { '/etc/apt/apt.conf.d/01proxy1':
+    ensure  => file,
+    content => 'Acquire::http::proxy "http://ip-172-31-11-63.ap-southeast-2.compute.internal:3128/";',
+    notify  => Exec['apt update 1st stage'],
+  }
+
+  exec { 'apt update 1st stage':
+    command     => '/usr/bin/apt-get update',
+    refreshonly => true,
+  }
+
   #file { 'test file':
   #  path   => '/tmp/myfile.txt',
   #  source => 'http://ip-172-31-11-63.ap-southeast-2.compute.internal/myfile.txt',
