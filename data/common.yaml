@@ -177,3 +177,7 @@ comply::scanner_source: "https://ec2-54-79-56-92.ap-southeast-2.compute.amazonaw
 apt::purge:
   apt.conf.d: false
 
+profile::lab::snmp_v3::v3_users:
+  ben:
+    authpass: 'notreal'
+    authpriv: 'notreal'
