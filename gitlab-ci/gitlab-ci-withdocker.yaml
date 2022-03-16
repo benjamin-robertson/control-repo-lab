@@ -25,6 +25,8 @@ puppet_env:
   - git branch
   - git status
   - facter -p
+  - find / | grep tls
+  - ls -lh /etc/pki/tls
   tags:
   - aws
   - docker
@@ -69,3 +71,11 @@ puppet_syntax_puppetfile:
   tags:
   - aws
   - docker
+
+puppet_test_host_shell:
+  stage: deploy
+  script:
+  - hostname
+  tags:
+  - aws
+  - shell
