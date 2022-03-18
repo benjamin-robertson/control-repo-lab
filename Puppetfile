@@ -72,7 +72,10 @@ mod 'mco_plugin',
 mod 'benjaminrobertson-observium', '1.0.0'
 # deps for observium
 mod 'puppetlabs-yumrepo_core', '1.0.7'
-mod 'puppetlabs-mysql', '12.0.1'
+#mod 'puppetlabs-mysql', '12.0.1'
+mod 'puppetlabs-mysql',
+  git:        'git@github.com:benjamin-robertson/puppetlabs-mysql.git',
+  branch:     'issue '
 mod 'puppetlabs-cron_core', '1.0.5'
 mod 'puppet-selinux', '3.4.0'
 mod 'puppetlabs-apache', '6.2.0'
