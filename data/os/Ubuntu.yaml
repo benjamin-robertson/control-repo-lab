@@ -88,4 +88,4 @@ mysql::server::root_password: ENC[PKCS7,MIIBeQYJKoZIhvcNAQcDoIIBajCCAWYCAQAxggEh
 mysql::server::remove_default_accounts: true
 mysql::server::restart: true
 mysql::server::override_options:
-  max_allow_packet: "128m"
+  max_allowed_packet: "128m"
