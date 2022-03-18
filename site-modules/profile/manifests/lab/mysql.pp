@@ -9,6 +9,6 @@ class profile::lab::mysql {
     password => lookup('mysql::server::root_password'),
     host     => 'localhost',
     grant    => 'ALL',
-    charset  => 'latin1_swedish_ci',
+    charset  => 'latin1',
   }
 }
