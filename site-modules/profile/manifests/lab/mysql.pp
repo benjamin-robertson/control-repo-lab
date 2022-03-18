@@ -3,4 +3,11 @@
 #
 class profile::lab::mysql {
   include mysql::server
+
+  mysql::db { 'bensdb':
+    user     => ben,
+    password => lookup('mysql::server::root_password'),
+    host     => 'localhost',
+    grant    => ['SELECT', 'UPDATE'],
+  }
 }
