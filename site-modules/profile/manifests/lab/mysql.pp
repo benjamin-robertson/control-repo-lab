@@ -10,6 +10,6 @@ class profile::lab::mysql {
     host     => 'localhost',
     grant    => 'ALL',
     charset  => 'latin1',
-    #collate  => 'latin1_swedish_ci',
+    collate  => 'latin1_swedish_ci',
   }
 }
