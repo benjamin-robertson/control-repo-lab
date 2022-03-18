@@ -8,6 +8,6 @@ class profile::lab::mysql {
     user     => ben,
     password => lookup('mysql::server::root_password'),
     host     => 'localhost',
-    grant    => ['SELECT', 'UPDATE'],
+    grant    => 'ALL',
   }
 }
