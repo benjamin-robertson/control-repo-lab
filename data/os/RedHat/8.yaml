@@ -18,3 +18,11 @@ cem_linux::config:
     ensure_permissions_on_etcsshsshd_config_are_configured:
       x11_forwarding: 'yes'
       permit_root_login: 'without-password'
+
+## Mysql setup
+mysql::server::root_password: ENC[PKCS7,MIIBeQYJKoZIhvcNAQcDoIIBajCCAWYCAQAxggEhMIIBHQIBADAFMAACAQEwDQYJKoZIhvcNAQEBBQAEggEA009jBH006r/eFSyivQtVDWnNjjIaTjj9u3n0UoZvAVWah0433pMQhZ7Z4b+C2s3vQFkbec3DDI7vgSMJhKGnqU+SdYJQcxtNaDZrvLFYPEersRvAyIcqMyVuIMhP2tI4t+GhC6OwpHs7vtDhTbxQdBwwUWQooFxXuSrySWHMe9L/YCyjAjQiuENONXUfEdy6J5ImcpjG499/QqLH6JpI2PK8JwMVLK7OaFjSbVj8tOBCq6fT8SuwBfkHWwRDXqsOH9XCqzM0FczX3xKegvyqTN4cyGpzetpjDQV5A4bDKAJve1+bMZPihpinmD2uliLcvQgxy22qEYyRKOIfMnnmhDA8BgkqhkiG9w0BBwEwHQYJYIZIAWUDBAEqBBCd3rXjgT/WHHKFCwStJ9zCgBDOkqWJh41OWpmlP67NwkYN]
+mysql::server::remove_default_accounts: true
+mysql::server::restart: true
+mysql::server::override_options:
+  mysqld:
+    max_allowed_packet: "128m"
