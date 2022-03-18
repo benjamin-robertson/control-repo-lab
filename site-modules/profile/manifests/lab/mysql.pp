@@ -9,7 +9,7 @@ class profile::lab::mysql {
     password => lookup('mysql::server::root_password'),
     host     => 'localhost',
     grant    => 'ALL',
-    #charset  => 'latin1',
+    charset  => 'latin1',
     #collate  => 'latin1_swedish_ci',
   }
 }
