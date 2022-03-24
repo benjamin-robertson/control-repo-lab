@@ -14,6 +14,9 @@ plan bolt::test_apply (
                           file { $file_name:
                             content => 'This is content from puppet file resource'
                           }
+
+                          # Exec stuff in the same file
+                          exec { "echo \"This is extra crap in the file\" >> ${file_name}": }
                         }
 
   #read the file
