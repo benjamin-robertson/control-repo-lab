@@ -6,7 +6,16 @@ plan bolt::test_apply (
   # Get targets to run on
   $nodes_to_run = get_targets($node_names)
 
-  #$apply_result = apply()
+  $apply_result = apply($nodes_to_run,
+                        _catch_errors => true,
+                        _noop => false,
+                        _run_as => root ) {
+
+                          # Create the file
+                          file { $file_name:
+                            content => 'This is content from puppet file resource'
+                          }
+                        }
 
   #read the file
   $result = run_task('bolt::ls_it', $nodes_to_run, 'filename' => $file_name)
