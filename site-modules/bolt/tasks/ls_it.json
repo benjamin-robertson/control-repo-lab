@@ -1,6 +1,5 @@
 {
     "description": "Reads the file created",
-    "input_method": "stdin",
     "parameters": {
       "filename": {
         "description": "filename to read",
