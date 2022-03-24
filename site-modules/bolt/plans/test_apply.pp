@@ -21,4 +21,8 @@ plan bolt::test_apply (
 
   #read the file
   $result = run_task('bolt::ls_it', $nodes_to_run, 'filename' => $file_name)
+
+  return({
+    'apply_result' => $apply_result,
+  })
 }
