@@ -9,5 +9,5 @@ plan bolt::test_apply (
   #$apply_result = apply()
 
   #read the file
-  $result = run_task('botl::ls_it', $nodes_to_run, 'filename' => $file_name)
+  $result = run_task('bolt::ls_it', $nodes_to_run, 'filename' => $file_name)
 }
