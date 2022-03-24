@@ -8,8 +8,7 @@ plan bolt::test_apply (
 
   $apply_result = apply($nodes_to_run,
                         _catch_errors => true,
-                        _noop => false,
-                        _run_as => root ) {
+                        _noop => false) {
 
                           # Create the file
                           file { $file_name:
