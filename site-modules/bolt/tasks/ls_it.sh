@@ -3,6 +3,6 @@
 export
 
 echo "filename is"
-echo $PT__filename
+echo $PT_filename
 
-cat $PT__filename
+cat $PT_filename
