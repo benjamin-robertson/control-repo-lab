@@ -16,7 +16,7 @@ plan bolt::test_apply (
                           }
 
                           # Exec stuff in the same file
-                          exec { "echo \"This is extra crap in the file\" >> ${file_name}": }
+                          exec { "/usr/bin/echo \"This is extra crap in the file\" >> ${file_name}": }
                         }
 
   #read the file
