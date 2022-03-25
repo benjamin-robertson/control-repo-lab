@@ -151,7 +151,11 @@ mod 'puppetlabs-ntp', '9.0.1'
 #  git:             'git@github.com:benjamin-robertson/acsc_e8_application_control.git',
 #  branch:          :control_branch,
 #  default_branch:  'main'
-mod 'benjaminrobertson-acsc_e8_application_control', '0.1.0'
+#mod 'benjaminrobertson-acsc_e8_application_control', '0.1.0'
+mod 'benjaminrobertson-acsc_e8_application_control'
+  git:           'git@github.com:benjamin-robertson/acsc_e8_application_control.git',
+  branch:        :control_branch,
+  default_branch: 'main'
 #mod 'fervid-applocker', '1.0.0'
 mod 'fervid-applocker',
   git:           'git@github.com:benjamin-robertson/applocker.git',
