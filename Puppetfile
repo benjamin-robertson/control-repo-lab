@@ -159,7 +159,7 @@ mod 'benjaminrobertson-acsc_e8_application_control',
 #mod 'fervid-applocker', '1.0.0'
 mod 'fervid-applocker',
   git:           'git@github.com:benjamin-robertson/applocker.git',
-  branch:        'bens_mods'
+  branch:        'master'
 
 # Office work
 #mod 'acsc_e8_office_hardening',
