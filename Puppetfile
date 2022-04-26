@@ -76,7 +76,7 @@ mod 'puppetlabs-mysql', '12.0.1'
 mod 'puppetlabs-cron_core', '1.0.5'
 mod 'puppet-selinux', '3.4.0'
 mod 'puppetlabs-apache', '6.2.0'
-mod 'puppet-snmp', '5.1.1'
+mod 'puppet-snmp', '6.0.0'
 mod 'puppet-firewalld', '4.4.0'
 # For Debain only
 mod 'domkrm-ufw', '1.1.4'
