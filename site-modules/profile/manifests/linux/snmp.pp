@@ -6,7 +6,11 @@ class profile::linux::snmp {
     authpass => '1234auth',
     privpass => '5678priv',
   }
+  snmp::snmpv3_user { 'myuser2':
+    authpass => '1234auth',
+    privpass => '5678priv',
+  }
   class { 'snmp':
-    snmpd_config => [ 'rouser myuser authPriv' ],
+    snmpd_config => [ 'rouser myuser authPriv', 'rouser myuser2 authPriv' ],
   }
 }
