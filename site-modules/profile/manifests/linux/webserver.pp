@@ -3,5 +3,12 @@
 #
 class profile::linux::webserver {
   include apache
-  include php
+  class { 'php':
+    extensions => {
+      'mysqli' => {
+        ensure   => installed,
+        provider => apt,
+      },
+    }
+  }
 }
