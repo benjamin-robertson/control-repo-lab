@@ -5,7 +5,7 @@ class profile::linux::webserver {
   include apache
   class { 'php':
     extensions => {
-      'mysqli' => {
+      'mysql' => {
         ensure   => installed,
         provider => apt,
       },
