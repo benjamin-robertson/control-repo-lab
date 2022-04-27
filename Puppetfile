@@ -83,6 +83,7 @@ mod 'puppet-firewalld', '4.4.0'
 mod 'domkrm-ufw', '1.1.4'
 mod 'puppetlabs-bolt_shim', '0.3.2'
 mod 'puppetlabs-augeas_core', '1.1.2'
+mod 'puppetlabs-vcsrepo', '5.0.0'
 
 # Comply module and dependcies
 mod 'puppetlabs-comply', '2.4.0'
