@@ -13,4 +13,5 @@ class profile::linux::snmp {
   class { 'snmp':
     snmpd_config => [ 'rouser myuser authPriv', 'rouser myuser2 authPriv' ],
   }
+  realize User['ben']
 }
