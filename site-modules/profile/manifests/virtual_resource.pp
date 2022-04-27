@@ -4,5 +4,6 @@
 class profile::virtual_resource {
   # resources
 
-  realize User['ben']
+  #realize User['ben']
+  User <| tag == ben |>
 }
