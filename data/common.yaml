@@ -120,3 +120,5 @@ gitlab::gitlab_rails:
   gitlab_email_enabled: false
   gitlab_default_theme: 4
   gitlab_email_display_name: 'GitLab'
+gitlab::letsencrypt:
+  enable: false

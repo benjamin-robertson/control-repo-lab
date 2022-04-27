@@ -4,7 +4,7 @@
 class profile::linux::gitlab {
   # install gitlab ee
   class { 'gitlab':
-    external_url            => 'https://ec2-3-25-233-142.ap-southeast-2.compute.amazonaws.com',
+    external_url            => "https://${facts['fqdn']}",
     manage_upstream_edition => 'ee',
   }
 }
