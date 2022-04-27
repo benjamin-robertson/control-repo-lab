@@ -95,3 +95,28 @@ profile::lab::snmp_v3::v3_users:
   ben:
     authpass: 'notreal'
     authpriv: 'notreal'
+
+
+
+# Gitlab settings
+gitlab::gitlab_rails:
+  ldap_enabled: true
+  ldap_servers:
+    myldapserver:
+      label: 'Company LDAP'
+      host: 'ldap.company.tld'
+      port: 389
+      uid: 'uid'
+      method: 'plain' # "tls" or "ssl" or "plain"
+      bind_dn: 'MYBINDDN'
+      password: 'MYBINDPW'
+      active_directory: false
+      allow_username_or_email_login: false
+      block_auto_created_users: false
+      base: 'MYBASEDN'
+      group_base: 'MYGROUPBASE'
+      user_filter: ''
+  time_zone: 'UTC'
+  gitlab_email_enabled: false
+  gitlab_default_theme: 4
+  gitlab_email_display_name: 'GitLab'
