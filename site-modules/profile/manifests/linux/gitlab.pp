@@ -4,7 +4,7 @@
 class profile::linux::gitlab {
   # install gitlab ee
 
-  notify { $facts['ec2-metadata']:}
+  notify { "This is ec2 ${facts['ec2-metadata']}":}
 
   # class { 'gitlab':
   #   external_url            => "https://${facts['ec2-metadata']['public-hostname']}",
