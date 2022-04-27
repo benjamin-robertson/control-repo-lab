@@ -6,4 +6,5 @@ class profile::linux::virtual {
     uid => 2004,
     tag => ['ben'],
   }
+  notify {'I did something':}
 }
