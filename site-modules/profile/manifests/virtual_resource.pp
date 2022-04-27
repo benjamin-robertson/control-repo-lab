@@ -4,5 +4,5 @@
 class profile::virtual_resource {
   # resources
 
-  realize Host['poodle']
+  realize User['ben']
 }
