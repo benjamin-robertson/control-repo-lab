@@ -46,8 +46,8 @@ mod 'puppetlabs-sshkeys_core', '2.2.0'
 mod 'puppetlabs-stdlib', '7.1.0'
 #mod 'WhatsARanjit-node_manager', '0.7.4'
 mod 'WhatsARanjit-node_manager',
-  git:      'git@github.com:benjamin-robertson/puppet-node_manager.git',
-  branch:   'master'
+  git:      'git@github.com:bwilcox/puppet-node_manager.git',
+  branch:   'override_fix'
 mod 'puppet-windows_firewall', '4.0.0'
 mod 'puppetlabs-sqlserver', '3.0.0'
 mod 'puppetlabs-wsus_client', '4.0.0'
