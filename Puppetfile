@@ -63,7 +63,7 @@ mod 'puppetlabs-wsus_client', '4.0.0'
 #  git:    'https://github.com/puppetlabs/puppetlabs-apache',
 #  branch: 'docs_experiment'
 
-# module puppetlab-motd direct from git. 
+# module puppetlab-motd direct from git.
 mod 'puppetlabs-motd', '6.1.0'
 
 mod 'mco_plugin',
