@@ -11,7 +11,7 @@ profile::windows::iis::testing: "From profile module. Testing cd4pe again"
 profile::windows::iis::notencrypted: "Update the plaintext hiera data."
 profile::windows::iis::encrypted: "Not really encrypted"
 motd::params::content: "Welcome to Windows!!! Testing impact testte"
-profile::windows::motdwindows::content: "Welcome to windows2019 This is a change Testing impact anaylsisd"
+profile::windows::motdwindows::content: "Welcome to windows2019 This is a change Testing impact anaylsis"
 profile::windows::installstuff::stuff:
   - adobereader
   - firefox
