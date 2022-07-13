@@ -98,6 +98,7 @@ lvm::volume_groups:
   bens_vg:
     physical_volumes:
       - /dev/nvme1n1
+      - /dev/nvme2n1
     logical_volumes:
       test1:
         size: 10G
