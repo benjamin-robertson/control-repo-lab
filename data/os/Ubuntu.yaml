@@ -100,7 +100,7 @@ lvm::volume_groups:
       - /dev/nvme1n1
     logical_volumes:
       test1:
-        size: 1G
+        size: 2G
         fs_type: ext4
         mountpath: /mnt/test1
         mountpath_require: true
