@@ -105,7 +105,7 @@ lvm::volume_groups:
         mountpath: /mnt/test1
         mountpath_require: true
       test2:
-        size: 1G
+        size: 100G
         fs_type: ext4
         mountpath: /mnt/test2
         mountpath_require: true
