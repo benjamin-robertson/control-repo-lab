@@ -7,6 +7,7 @@ forge 'https://forge.puppet.com'
 #  branch:       :control_branch,
 #  default_branch:   'main',
 #  install_path:  '.'
+mod 'puppetlabs-lvm', '1.4.0'
 
 mod 'dog_site',
   git:          'git@github.com:benjamin-robertson/dog-site.git',
