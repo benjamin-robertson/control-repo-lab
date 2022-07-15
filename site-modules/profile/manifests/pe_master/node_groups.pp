@@ -8,7 +8,7 @@ class profile::pe_master::node_groups {
     override_environment => 'false',
     parent               => 'All Nodes',
     provider             => 'https',
-    purge_behavior       => 'all',
+    purge_behavior       => 'none',
     rule                 => ['or',
   ['and',
     ['=',
