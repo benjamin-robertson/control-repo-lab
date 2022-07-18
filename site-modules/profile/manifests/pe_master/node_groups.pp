@@ -16,4 +16,22 @@ class profile::pe_master::node_groups {
       'dog']],
   ['=', 'name', 'ip-172-31-28-67.ap-southeast-2.compute.internal']],
   }
+
+  node_group { 'test123':
+    ensure               => 'present',
+    environment          => 'production',
+    override_environment => 'false',
+    parent               => 'All Nodes',
+    provider             => 'https',
+    rule                 => [''],
+  }
+
+    node_group { 'test1234':
+    ensure               => 'present',
+    environment          => 'production',
+    id                   => 'f6d9e39a-ccd8-4975-b6fe-577b735f8638',
+    override_environment => 'false',
+    parent               => 'All Nodes',
+    provider             => 'https',
+  }
 }
