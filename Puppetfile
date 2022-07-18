@@ -48,7 +48,8 @@ mod 'puppetlabs-stdlib', '7.1.0'
 #mod 'WhatsARanjit-node_manager', '0.7.4'
 mod 'WhatsARanjit-node_manager',
   git:      'git@github.com:benjamin-robertson/puppet-node_manager.git',
-  commit:   '66989b6da249910a194780d77787ef7fd2087d56'
+  branch:   'role_merge'
+#  commit:   '66989b6da249910a194780d77787ef7fd2087d56'
 mod 'puppet-windows_firewall', '4.0.0'
 mod 'puppetlabs-sqlserver', '3.0.0'
 mod 'puppetlabs-wsus_client', '4.0.0'
