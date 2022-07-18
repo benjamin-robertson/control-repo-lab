@@ -29,7 +29,6 @@ class profile::pe_master::node_groups {
     node_group { 'test1234':
     ensure               => 'present',
     environment          => 'production',
-    id                   => 'f6d9e39a-ccd8-4975-b6fe-577b735f8638',
     override_environment => 'false',
     parent               => 'All Nodes',
     provider             => 'https',
