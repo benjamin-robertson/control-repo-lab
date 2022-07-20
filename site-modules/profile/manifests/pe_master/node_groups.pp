@@ -41,7 +41,7 @@ class profile::pe_master::node_groups {
     parent               => 'All Nodes',
     provider             => 'https',
     purge_behavior       => 'none',
-    rule                 => ['and',
+    rule                 => ['or',
   ['=', 'name', 'ip-172-31-4-194.ap-southeast-2.compute.internal']],
   }
 
