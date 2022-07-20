@@ -13,7 +13,7 @@ class profile::pe_master::node_groups {
   ['and',
     ['=',
       ['fact', 'aio_agent_version'],
-      'louie1']],
+      'louie']],
   ['=', 'name', 'ip-172-31-28-67.ap-southeast-2.compute.internal']],
   }
 
