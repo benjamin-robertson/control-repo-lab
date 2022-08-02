@@ -53,6 +53,7 @@ mod 'WhatsARanjit-node_manager',
 mod 'puppet-windows_firewall', '4.0.0'
 mod 'puppetlabs-sqlserver', '3.0.0'
 mod 'puppetlabs-wsus_client', '4.0.0'
+mod 'geoffwilliams-safe_roles', '1.2.3'
 
 
 # Modules from Git
