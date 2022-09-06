@@ -25,7 +25,7 @@ class profile::windows::demo (
     }
   }
 
-  dsc_timezone {'AEST':}
+  dsc_timezone {'AUS Eastern Standard Time':}
 
   include chocolatey
 
