@@ -25,6 +25,8 @@ class profile::windows::demo (
     }
   }
 
+  dsc_timezone {'AEST':}
+
   include chocolatey
 
   package {'firefox':
