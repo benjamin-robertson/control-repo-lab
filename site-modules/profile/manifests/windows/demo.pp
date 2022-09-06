@@ -6,7 +6,7 @@ class profile::windows::demo (
 ) {
   # resources
   $certs.each | Integer $index, Hash $cert | {
-    notify {"cert is ${cert}":}
+    # notify {"cert is ${cert}":}
     dsc_certificateimport { "cert ${index}":
       dsc_ensure     => 'Present',
       dsc_content    => $cert['cert'],
