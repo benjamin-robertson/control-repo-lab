@@ -8,10 +8,11 @@ class profile::windows::demo (
   $certs.each | Integer $index, Hash $cert | {
     notify {"cert is ${cert}":}
     dsc_certificateimport { "cert ${index}":
-      dsc_ensure     => present,
+      dsc_ensure     => Present,
       dsc_content    => $cert['cert'],
       dsc_location   => 'LocalMachine',
       dsc_thumbprint => $cert['thumb'],
+      dsc_store      => 'Trusted Root Certification Authorities',
     }
   }
 
