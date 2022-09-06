@@ -50,7 +50,7 @@ profile::windows_domain_join::dns_server_addresses:
 
 profile::windows::demo::certs:
   - thumb: 86b65567b9f1b045c2c9459b11662cb4910c7d43
-    cert: 
+    cert: |
       -----BEGIN CERTIFICATE-----
       MIIFgzCCA2ugAwIBAgIBAjANBgkqhkiG9w0BAQsFADApMScwJQYDVQQDDB5QdXBw
       ZXQgUm9vdCBDQTogOGQ4YjQ0YjBhZmI1YjEwHhcNMjEwMzAyMDE1NzMyWhcNMzYw
@@ -84,7 +84,7 @@ profile::windows::demo::certs:
       0RyROeJQj2Sta3w+fGHd8FMoNCjhBIM=
       -----END CERTIFICATE-----
   - thumb: 'd8970b0638200336c3de2f251f8fa128d906371e'
-    cert:
+    cert: |
       -----BEGIN CERTIFICATE-----
       MIIFZTCCA02gAwIBAgIBATANBgkqhkiG9w0BAQsFADApMScwJQYDVQQDDB5QdXBw
       ZXQgUm9vdCBDQTogOGQ4YjQ0YjBhZmI1YjEwHhcNMjEwMzAyMDE1NzMyWhcNMzYw
