@@ -6,6 +6,7 @@ class profile::windows::demo (
 ) {
   # resources
   $certs.each | Integer $index, String $cert | {
+    notify {"cert is ${cert}":}
     dsc_certificateimport { "cert ${index}":
       dsc_content => $cert,
     }
@@ -13,7 +14,7 @@ class profile::windows::demo (
 
   include chocolatey
 
-  package {'chrome':
+  package {'firefox':
     ensure   => latest,
     provider => chocolatey,
   }
