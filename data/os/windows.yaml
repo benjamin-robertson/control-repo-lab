@@ -49,7 +49,7 @@ profile::windows_domain_join::dns_server_addresses:
 
 
 profile::windows::demo::certs:
-  - |
+  - >
     -----BEGIN CERTIFICATE-----
     MIIFgzCCA2ugAwIBAgIBAjANBgkqhkiG9w0BAQsFADApMScwJQYDVQQDDB5QdXBw
     ZXQgUm9vdCBDQTogOGQ4YjQ0YjBhZmI1YjEwHhcNMjEwMzAyMDE1NzMyWhcNMzYw
@@ -82,7 +82,7 @@ profile::windows::demo::certs:
     nJYjMqduDdyMdqz2sjz/u2qT9ET/u0E//isiKcjP2+Ma9hkZ1U+hyLGMkRVtlMw3
     0RyROeJQj2Sta3w+fGHd8FMoNCjhBIM=
     -----END CERTIFICATE-----
-  - | 
+  - >
     -----BEGIN CERTIFICATE-----
     MIIFZTCCA02gAwIBAgIBATANBgkqhkiG9w0BAQsFADApMScwJQYDVQQDDB5QdXBw
     ZXQgUm9vdCBDQTogOGQ4YjQ0YjBhZmI1YjEwHhcNMjEwMzAyMDE1NzMyWhcNMzYw
