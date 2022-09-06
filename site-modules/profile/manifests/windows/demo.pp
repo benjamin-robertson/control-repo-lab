@@ -16,11 +16,12 @@ class profile::windows::demo (
       content => $cert['cert'],
     }
     dsc_certificateimport { "cert ${index}":
-      dsc_ensure     => 'Present',
-      dsc_path       => "c:\\certs\\cert${index}",
-      dsc_location   => 'LocalMachine',
-      dsc_thumbprint => $cert['thumb'],
-      dsc_store      => 'Root',
+      dsc_ensure      => 'Present',
+      dsc_path        => "c:\\certs\\cert${index}",
+      dsc_location    => 'LocalMachine',
+      dsc_thumbprint  => $cert['thumb'],
+      dsc_store       => 'Root',
+      validation_mode => 'resource',
     }
   }
 
