@@ -20,7 +20,7 @@ class profile::windows::demo (
       dsc_path       => "c:\\certs\\cert${index}",
       dsc_location   => 'LocalMachine',
       dsc_thumbprint => $cert['thumb'],
-      dsc_store      => 'CA',
+      dsc_store      => 'Root',
     }
   }
 
