@@ -8,7 +8,9 @@ class profile::windows::demo (
   $certs.each | Integer $index, String $cert | {
     notify {"cert is ${cert}":}
     dsc_certificateimport { "cert ${index}":
-      dsc_content => $cert,
+      dsc_ensure   => present,
+      dsc_content  => $cert,
+      dsc_location => LocalMachine,
     }
   }
 
