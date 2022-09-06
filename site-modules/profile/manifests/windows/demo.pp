@@ -12,7 +12,7 @@ class profile::windows::demo (
       dsc_content    => $cert['cert'],
       dsc_location   => 'LocalMachine',
       dsc_thumbprint => $cert['thumb'],
-      dsc_store      => 'Trusted Root Certification Authorities\Certificates',
+      dsc_store      => 'CA',
     }
   }
 
