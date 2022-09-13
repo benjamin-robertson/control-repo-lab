@@ -10,7 +10,6 @@ class profile::windows::demo (
   }
 
   $certs.each | Integer $index, Hash $cert | {
-    # notify {"cert is ${cert}":}
     file {"c:\\certs\\cert${index}":
       ensure  => file,
       content => $cert['cert'],

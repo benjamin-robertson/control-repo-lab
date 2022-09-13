@@ -1,0 +1,92 @@
+default:
+  image: puppet/puppet-dev-tools
+
+before_script:
+- date
+- pwd
+- env
+- ls -al
+
+stages:
+  - build
+  - test
+  - deploy
+
+
+# Puppet build environment, pre testing
+puppet_env:
+  stage: build
+  script:
+  - date
+  - pwd
+  - env
+  - ls -al
+  - echo "NAME ${CI_JOB_NAME} STAGE ${CI_JOB_STAGE} BRANCH ${CI_BUILD_REF_NAME} MASTER ${PUPPET_MASTER}"
+  - git branch
+  - git status
+  - facter -p
+  tags:
+  - Puppet
+  - Docker
+
+puppet_lint:
+  stage: test
+  script:
+  - rake lint
+  tags:
+  - Puppet
+  - Docker
+
+puppet_syntax_template:
+  stage: test
+  script:
+  - rake -f /Rakefile syntax:templates
+  tags:
+  - Puppet
+  - Docker
+
+puppet_syntax_manifest:
+  stage: test
+  script:
+  - rake -f /Rakefile syntax:manifests
+  tags:
+  - Puppet
+  - Docker
+
+puppet_syntax_hiera:
+  stage: test
+  script:
+  - rake -f /Rakefile syntax:hiera
+  tags:
+  - Puppet
+  - Docker
+
+puppet_syntax_puppetfile:
+  stage: test
+  script:
+  - rake -f /Rakefile r10k:syntax
+  tags:
+  - Puppet
+  - Docker
+
+deploy_code_to_pe_siteA:
+  stage: deploy
+  script:
+  - puppet code deploy -t /home/gitlab-runner/sitea-access --cacert=/home/gitlab-runner/ssl/sitea-ca.pem --service-url=https://ip-10-10-10-74.ap-southeast-2.compute.internal:8170/code-manager ${CI_BUILD_REF_NAME} -w
+  tags:
+  - Puppet
+  - Shell
+
+deploy_code_to_pe_siteB:
+  stage: deploy
+  script:
+  - puppet code deploy -t /home/gitlab-runner/siteb-access --cacert=/home/gitlab-runner/ssl/siteb-ca.pem --service-url=https://ip-10-10-10-60.ap-southeast-2.compute.internal:8170/code-manager ${CI_BUILD_REF_NAME} -w
+  rules: 
+    - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
+      when: never
+    - if: '$CI_BUILD_REF_NAME == "production"'
+      when: manual
+    - if: '$CI_BUILD_REF_NAME != "production"'
+  tags:
+  - Puppet
+  - Shell
