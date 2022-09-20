@@ -8,7 +8,7 @@ class profile::manage_agent (
     ensure  => present,
     path    => '/etc/puppetlabs/puppet/puppet.conf',
     section => 'main',
-    setting => 'interval',
+    setting => 'runinterval',
     value   => $interval,
     notify  => Service['puppet.service'],
   }
