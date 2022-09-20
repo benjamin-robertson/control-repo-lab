@@ -16,4 +16,11 @@ class profile::windows::audit_dsc {
     dsc_name        => 'Security System Extension',
     validation_mode => 'resource',
   }
+
+    dsc_auditpolicysubcategory { 'Logon':
+    dsc_ensure      => 'Present',
+    dsc_auditflag   => 'Success',
+    dsc_name        => 'Logon',
+    validation_mode => 'resource',
+  }
 }
