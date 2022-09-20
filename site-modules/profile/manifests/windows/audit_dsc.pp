@@ -17,7 +17,7 @@ class profile::windows::audit_dsc {
     validation_mode => 'resource',
   }
 
-  dsc_auditpolicysubcategory { 'Logon':
+  dsc_auditpolicysubcategory { 'Logon C1.2.3':
     dsc_ensure      => 'Present',
     dsc_auditflag   => 'Success',
     dsc_name        => 'Logon',
