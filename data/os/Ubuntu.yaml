@@ -111,5 +111,5 @@ lvm::volume_groups:
         mountpath: /mnt/test2
         mountpath_require: true
 
-profile::linux::motd_linux::motdcontent: |
-  Multideploy puppet code
+# profile::linux::motd_linux::motdcontent: |
+#   Multideploy puppet code

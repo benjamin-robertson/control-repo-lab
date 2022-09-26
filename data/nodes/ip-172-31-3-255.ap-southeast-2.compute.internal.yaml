@@ -1,3 +1,0 @@
----
-#puppet_enterprise::profile::agent::pcp_broker_list:
-#  - test.com:8142
