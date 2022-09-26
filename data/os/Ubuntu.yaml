@@ -112,5 +112,4 @@ lvm::volume_groups:
         mountpath_require: true
 
 profile::linux::motd_linux::motdcontent: |
-  This is a multi line
-  String coming from hiera.
+  Multideploy puppet code
