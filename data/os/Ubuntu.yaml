@@ -110,3 +110,7 @@ lvm::volume_groups:
         fs_type: ext4
         mountpath: /mnt/test2
         mountpath_require: true
+
+profile::linux::motd_linux::motdcontent: |
+  This is a multi line
+  String coming from hiera.
