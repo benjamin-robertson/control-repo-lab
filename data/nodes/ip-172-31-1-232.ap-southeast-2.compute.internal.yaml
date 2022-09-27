@@ -1,3 +1,3 @@
 ---
 profile::linux::motd_linux::motdcontent: |
-  Node based motd message yay?
+  Node based motd message yay? test commit
