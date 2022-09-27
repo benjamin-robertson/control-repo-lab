@@ -1,0 +1,3 @@
+---
+profile::linux::motd_linux::motdcontent: |
+  Node based motd message yay? am i a special node?
