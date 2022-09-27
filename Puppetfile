@@ -1,12 +1,12 @@
 forge 'https://forge.puppet.com'
 
 # Hiera data
-#mod 'hieradata',
-#  git:           'https://github.com/benjamin-robertson/hieradata.git',
-#  branch:        'main',
-#  branch:       :control_branch,
-#  default_branch:   'main',
-#  install_path:  '.'
+mod 'hieradata',
+  git:           'https://github.com/benjamin-robertson/hieradata.git',
+  branch:         :control_branch,
+  default_branch: 'prod_group_3',
+  install_path:   '.'
+
 mod 'puppetlabs-lvm', '1.4.0'
 
 mod 'dog_site',
