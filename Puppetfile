@@ -4,7 +4,7 @@ forge 'https://forge.puppet.com'
 mod 'hieradata',
   git:           'https://github.com/benjamin-robertson/hieradata.git',
   branch:         :control_branch,
-  default_branch: 'prod_group_3',
+  default_branch: 'production',
   install_path:   '.'
 
 mod 'puppetlabs-lvm', '1.4.0'
