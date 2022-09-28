@@ -10,6 +10,8 @@ plan bolt::set_external_fact (
     # supported platforms
     $supported_platforms = ['Debian', 'RedHat']
 
+    out::message("Full targets are ${full_list}")
+
     $supported_targets = get_targets($full_list).filter | $target | {
       $target.facts['os']['family'] in $supported_platforms
     }
