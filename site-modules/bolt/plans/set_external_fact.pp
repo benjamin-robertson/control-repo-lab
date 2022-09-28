@@ -6,11 +6,11 @@ plan bolt::set_external_fact (
 ) {
   $full_list = get_targets($targets)
   unless $full_list.empty {
+    # Update facts
+    without_default_logging() || { run_plan(facts, targets => $full_list) }
 
     # supported platforms
     $supported_platforms = ['Debian', 'RedHat']
-
-    out::message("Full targets are ${full_list}")
 
     $supported_targets = get_targets($full_list).filter | $target | {
       $target.facts['os']['family'] in $supported_platforms
