@@ -17,7 +17,7 @@ plan bolt::set_external_fact (
     out::message("Supported targets are ${supported_targets}")
 
     # apply the fact to hosts
-    apply_results = apply($supported_targets,
+    $apply_results = apply($supported_targets,
                           '_description'  => 'Apply block: apply fact',
                           '_catch_errors' => true,
                           '_noop'         => $noop,) {
