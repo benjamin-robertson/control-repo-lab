@@ -33,7 +33,7 @@ plan bolt::set_external_fact (
       file {'set fact':
         ensure  => present,
         mode    => '0644',
-        path    => $file_path,
+        path    => "${file_path}/${fact_name}.txt",
         content => "${fact_name}=${fact_value}",
       }
     }
