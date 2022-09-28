@@ -24,16 +24,16 @@ plan bolt::set_external_fact (
                           '_catch_errors' => true,
                           '_noop'         => $noop,) {
       if $facts['os']['family'] == 'Windows' {
-        $path = 'C:\\ProgramData\\PuppetLabs\\facter\\facts.d\\'
+        $file_path = 'C:\\ProgramData\\PuppetLabs\\facter\\facts.d\\'
       } else {
-        $path = '/opt/puppetlabs/facter/facts.d/'
+        $file_path = '/opt/puppetlabs/facter/facts.d/'
       }
 
 
       file {'set fact':
         ensure  => present,
         mode    => '0644',
-        path    => $path,
+        path    => $file_path,
         content => "${fact_name}=${fact_value}",
       }
     }
