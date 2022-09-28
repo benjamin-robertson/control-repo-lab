@@ -24,7 +24,7 @@ plan bolt::set_external_fact (
       if $facts['os']['family'] == 'Windows' {
         $path = 'C:\\ProgramData\\PuppetLabs\\facter\\facts.d\\'
       } else {
-        $path = '/etc/facter/facts.d/'
+        $path = '/opt/puppetlabs/facter/facts.d/'
       }
 
 
