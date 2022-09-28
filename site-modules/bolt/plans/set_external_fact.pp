@@ -27,7 +27,8 @@ plan bolt::set_external_fact (
         $path = '/etc/facter/facts.d/'
       }
 
-      file 'set fact': {
+
+      file {'set fact':
         ensure  => present,
         mode    => '0644',
         path    => $path,
