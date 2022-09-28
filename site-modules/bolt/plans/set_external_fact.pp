@@ -17,23 +17,23 @@ plan bolt::set_external_fact (
     out::message("Supported targets are ${supported_targets}")
 
     # apply the fact to hosts
-    # apply_results = apply($supported_targets,
-    #                       '_description'  => 'Apply block: apply fact',
-    #                       '_catch_errors' => true,
-    #                       '_noop'         => $noop,) {
-    #   if $facts['os']['family'] == 'Windows' {
-    #     $path = 'C:\\ProgramData\\PuppetLabs\\facter\\facts.d\\'
-    #   } else {
-    #     $path = '/etc/facter/facts.d/'
-    #   }
+    apply_results = apply($supported_targets,
+                          '_description'  => 'Apply block: apply fact',
+                          '_catch_errors' => true,
+                          '_noop'         => $noop,) {
+      if $facts['os']['family'] == 'Windows' {
+        $path = 'C:\\ProgramData\\PuppetLabs\\facter\\facts.d\\'
+      } else {
+        $path = '/etc/facter/facts.d/'
+      }
 
-    #   file 'set fact': {
-    #     ensure  => present,
-    #     mode    => '0644',
-    #     path    => $path,
-    #     content => "${fact_name}=${fact_value}",
-    #   }
-    # }
+      file 'set fact': {
+        ensure  => present,
+        mode    => '0644',
+        path    => $path,
+        content => "${fact_name}=${fact_value}",
+      }
+    }
 
     out::message("Apply results are ${apply_results}")
 
