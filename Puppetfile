@@ -199,3 +199,4 @@ mod 'gitlab_ci_runner',
   git:            'git@github.com:benjamin-robertson/puppet-gitlab_ci_runner.git',
   branch:         'issue_144'
 
+  mod 'puppetlabs-ca_extend', '3.2.0'
