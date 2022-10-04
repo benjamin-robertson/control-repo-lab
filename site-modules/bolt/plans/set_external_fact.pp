@@ -1,3 +1,15 @@
+# @summary PE plan to set code_release fact on nodes
+# 
+# The plan set the code_release fact on Windows and Linux nodes. Fact is set as an external fact under
+# '/opt/puppetlabs/facter/facts.d/code_release.txt' on Linux and C:\\ProgramData\\PuppetLabs\\facter\\facts.d\\code_release.txt on Windows.
+# 
+# This fact can be used to classify nodes to a release branch. 
+# 
+# @param targets comma seperated list of targets to run on. Target name must match certname used by Puppet.
+# @param fact_value Value to set the code_release fact too.
+# @param noop Whether to run the plan in noop mode. (make no changes). Default: false
+# @param run_puppet Whether to run puppet agent in noop mode after setting the fact. Default: true
+# 
 plan bolt::set_external_fact (
   TargetSpec $targets,
   String     $fact_value,
