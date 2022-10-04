@@ -1,9 +1,10 @@
 plan bolt::set_external_fact (
   TargetSpec $targets,
   String     $fact_value,
-  String     $fact_name   = 'code_release',
   Boolean    $noop        = false,
+  Boolean    $run_puppet  = true,
 ) {
+  $fact_name = 'code_release'
   $full_list = get_targets($targets)
   unless $full_list.empty {
     # Update facts
@@ -40,6 +41,55 @@ plan bolt::set_external_fact (
 
     out::message("Apply results are ${apply_results}")
 
+    $successful_hosts_fact = $apply_results.ok_set.names
+    $failed_hosts_fact = $apply_results.error_set.names
+
+    if $run_puppet {
+      $puppet_results = run_task('enterprise_tasks::run_puppet', $successful_hosts_fact, {'additional_args' => ['--noop']})
+      $successful_host_puppet = $puppet_results.ok_set.names
+      $failed_host_puppet = $puppet_results.error_set.names
+    }
+
+    $original_successful_hosts_fact = defined('successful_hosts_fact') ? {
+      true    => $successful_hosts_fact,
+      default => {},
+    }
+    $original_failed_hosts_fact = defined('failed_hosts_fact') ? {
+      true    => $failed_hosts_fact,
+      default => {},
+    }
+    $original_successful_host_puppet = defined('successful_host_puppet') ? {
+      true    => $successful_host_puppet,
+      default => {},
+    }
+    $original_failed_host_puppet = defined('failed_host_puppet') ? {
+      true    => $failed_host_puppet,
+      default => {},
+    }
+
+    if $supported_targets.empty {
+      $plan_result = 'fail'
+    } else {
+      if $supported_targets.length == $successful_hosts_fact.length {
+        $plan_result = 'success'
+      } else {
+        $plan_result = 'fail'
+      }
+    }
+
+    $summary_results = {
+      'all_nodes'                   => $full_list,
+      'successful_hosts_fact_set'   => $original_successful_hosts_fact,
+      'failed_hosts_fact_set'       => $original_failed_hosts_fact,
+      'successful_hosts_puppet_run' => $original_successful_host_puppet,
+      'failed_host_puppet_run'      => $original_failed_host_puppet,
+    }
+
+    if ( $plan_result == 'fail' ) {
+      fail_plan('Plan fail on some or all nodes', 'errors-found', {'result' => $summary_results })
+    } else {
+      return($summary_results)
+    }
   }
   else {
     fail('No valid nodes specified')
