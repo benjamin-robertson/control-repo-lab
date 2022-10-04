@@ -50,19 +50,19 @@ plan bolt::set_external_fact (
       $failed_host_puppet = $puppet_results.error_set.names
     }
 
-    $original_successful_hosts_fact = defined('successful_hosts_fact') ? {
+    $original_successful_hosts_fact = defined('$successful_hosts_fact') ? {
       true    => $successful_hosts_fact,
       default => {},
     }
-    $original_failed_hosts_fact = defined('failed_hosts_fact') ? {
+    $original_failed_hosts_fact = defined('$failed_hosts_fact') ? {
       true    => $failed_hosts_fact,
       default => {},
     }
-    $original_successful_host_puppet = defined('successful_host_puppet') ? {
+    $original_successful_host_puppet = defined('$successful_host_puppet') ? {
       true    => $successful_host_puppet,
       default => {},
     }
-    $original_failed_host_puppet = defined('failed_host_puppet') ? {
+    $original_failed_host_puppet = defined('$failed_host_puppet') ? {
       true    => $failed_host_puppet,
       default => {},
     }
