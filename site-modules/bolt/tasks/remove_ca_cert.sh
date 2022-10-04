@@ -1,7 +1,15 @@
 #!/bin/bash
 
 # check if we are running on a PE server
-rpm -qa | grep pe-puppetserver
+which rpm
+
+if [ $? -eq 0 ]
+then
+  rpm -qa | grep pe-puppetserver
+else
+  dpkg -l | grep pe-puppetserver
+fi
+
 if [ $? -ne 0 ]
 then
   echo "Bailing out: Running on PE server"
