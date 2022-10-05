@@ -20,10 +20,11 @@ plan bolt::code_release::overwrite_code_release (
   Boolean $run_puppet           = true,
 ) {
   $fact_name = 'code_release'
-  $full_list = puppetdb_query("inventory[certname] { facts.code_release = \"${existing_fact_value}\" }")
+  $puppetdb_results = puppetdb_query("inventory[certname] { facts.code_release = \"${existing_fact_value}\" }")
+  $full_list = $puppetdb_results.map | Hash $node | { $node['certname'] }
   unless $full_list.empty {
     # Update facts
-    # without_default_logging() || { run_plan(facts, targets => $full_list) }
+    without_default_logging() || { run_plan(facts, targets => $full_list) }
 
     # supported platforms
     $supported_platforms = ['Debian', 'RedHat', 'windows']
