@@ -106,7 +106,7 @@ plan bolt::code_release::overwrite_code_release (
     }
   }
   else {
-    fail("No valid nodes specified, confirm the pql query inventory[certname] { facts.code_release = ${new_fact_value} } returns matching nodes")
+    fail("No valid nodes specified, confirm the pql query inventory[certname] { facts.code_release = \"${new_fact_value}\" } returns matching nodes")
   }
 }
 # lint:endignore
