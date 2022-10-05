@@ -13,10 +13,10 @@
 # @param run_puppet Whether to run puppet agent in noop mode after setting the fact. Default: true
 # 
 plan bolt::code_release::delete_code_release (
-  TargetSpec $targets              = undef,
-  String     $existing_fact_value  = undef,
-  Boolean    $noop                 = false,
-  Boolean    $run_puppet           = true,
+  Optional[TargetSpec] $targets              = undef,
+  Optional[String]     $existing_fact_value  = undef,
+  Boolean              $noop                 = false,
+  Boolean              $run_puppet           = true,
 ) {
   # check to ensure both facts are not set. Fail plan if so.
   if $targets != undef and $existing_fact_value != undef {
