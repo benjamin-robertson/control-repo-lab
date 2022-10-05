@@ -1,0 +1,10 @@
+{
+    "description": "Reads the file created",
+    "input_method": "environment",
+    "parameters": {
+      "filename": {
+        "description": "filename to read as env",
+        "type": "String[1]"
+      }
+    }
+  }

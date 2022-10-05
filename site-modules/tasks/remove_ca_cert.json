@@ -1,0 +1,10 @@
+{
+    "description": "Removes local puppet server ca cert so a new one can be downloaded.",
+    "input_method": "environment",
+    "implementations": [
+        {"name": "remove_ca_cert.sh", "requirements": ["shell"]},
+        {"name": "remove_ca_cert.ps1", "requirements": ["powershell"]}
+      ],
+    "parameters": {
+    }
+  }
