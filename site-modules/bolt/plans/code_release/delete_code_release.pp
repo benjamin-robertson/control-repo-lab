@@ -1,21 +1,36 @@
 # @summary PE plan to delete code_release fact on nodes
 # 
+# lint:ignore:140chars
+#
 # The plan deletes the code_release fact on Windows and Linux nodes. Fact is set as an external fact under
 # '/opt/puppetlabs/facter/facts.d/code_release.txt' on Linux and C:\\ProgramData\\PuppetLabs\\facter\\facts.d\\code_release.txt on Windows.
 # 
-# This plan can be used to remove nodes from a release branch. 
+# This plan can be used to remove nodes from a release branch. You can either specifiy targets to remove fact from OR the existing fact value. 
 # 
 # @param targets comma seperated list of targets to run on. Target name must match certname used by Puppet.
+# @param existing_fact_value existing code_release fact value to clear. 
 # @param noop Whether to run the plan in noop mode. (make no changes). Default: false
 # @param run_puppet Whether to run puppet agent in noop mode after setting the fact. Default: true
 # 
 plan bolt::code_release::delete_code_release (
-  TargetSpec $targets,
-  Boolean    $noop        = false,
-  Boolean    $run_puppet  = true,
+  TargetSpec $targets              = undef,
+  String     $existing_fact_value  = undef,
+  Boolean    $noop                 = false,
+  Boolean    $run_puppet           = true,
 ) {
+  # check to ensure both facts are not set. Fail plan if so.
+  if $targets != undef and $existing_fact_value != undef {
+    fail('Cannot set both target and existing_fact_value.')
+  }
+
+  if $existing_fact_value != undef {
+    $puppetdb_results = puppetdb_query("inventory[certname] { facts.code_release = \"${existing_fact_value}\" }")
+    $full_list = $puppetdb_results.map | Hash $node | { $node['certname'] }
+  } else {
+    $full_list = get_targets($targets)
+  }
   $fact_name = 'code_release'
-  $full_list = get_targets($targets)
+
   unless $full_list.empty {
     # Update facts
     without_default_logging() || { run_plan(facts, targets => $full_list) }
@@ -102,3 +117,4 @@ plan bolt::code_release::delete_code_release (
     fail('No valid nodes specified')
   }
 }
+# lint:endignore
