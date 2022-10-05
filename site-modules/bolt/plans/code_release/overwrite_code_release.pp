@@ -28,6 +28,8 @@ plan bolt::code_release::overwrite_code_release (
     # supported platforms
     $supported_platforms = ['Debian', 'RedHat', 'windows']
 
+    out::message("full list is ${full_list}")
+
     $supported_targets = get_targets($full_list).filter | $target | {
       $target.facts['os']['family'] in $supported_platforms
     }
