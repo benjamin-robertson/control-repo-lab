@@ -94,9 +94,9 @@ plan bolt::code_release::overwrite_code_release (
 
     $summary_results = {
       'all_matching_nodes'          => $full_list,
-      'successful_hosts_fact_set'   => $original_successful_hosts_fact,
+      # 'successful_hosts_fact_set'   => $original_successful_hosts_fact,
       'failed_hosts_fact_set'       => $original_failed_hosts_fact,
-      'successful_hosts_puppet_run' => $original_successful_host_puppet,
+      # 'successful_hosts_puppet_run' => $original_successful_host_puppet,
       'failed_host_puppet_run'      => $original_failed_host_puppet,
     }
 
