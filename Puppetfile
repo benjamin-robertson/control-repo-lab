@@ -11,7 +11,6 @@ mod 'puppetlabs-lvm', '1.4.0'
 
 mod 'dog_site',
   git:          'git@github.com:benjamin-robertson/dog-site.git',
-#  branch:       'main'
   branch:       :control_branch,
   default_branch:   'main'
 
