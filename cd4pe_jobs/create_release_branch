@@ -1,0 +1,15 @@
+BRANCH=$(git branch | awk '{ print $2 }')
+git branch | grep ' release_*'
+if [ $? -ne 0 ] 
+then
+  echo "bailing out, not release branch"
+  exit 0
+fi
+echo "in release branch"
+SERVER=`cat gitserver`
+for repo in `cat gitrepos`
+do
+  curl -k --request POST --header "PRIVATE-TOKEN: $CD4PE_SECRET_GITLAB_TOKEN" ${SERVER}projects/${repo}/repository/branches?branch=${BRANCH}\&ref=production
+  echo "curl --request POST --header \"PRIVATE-TOKEN: $CD4PE_SECRET_GITLAB_TOKEN\" ${SERVER}projects/${repo}/repository/branches?branch=${BRANCH}\&ref=production"
+done
+echo $SERVER
