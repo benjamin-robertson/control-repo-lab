@@ -22,4 +22,6 @@ fi
 
 # Remove ca cert
 rm /etc/puppetlabs/puppet/ssl/certs/ca.pem
+systemctl restart puppet
+systemctl restart pxp-agent
 exit 0
