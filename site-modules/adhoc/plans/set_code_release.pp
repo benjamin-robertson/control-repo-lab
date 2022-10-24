@@ -1,4 +1,4 @@
-# @summary PE plan to set code_release fact on nodes
+# @summary PE plan to set code_release fact on nodes.
 # 
 # The plan set the code_release fact on Windows and Linux nodes. Fact is set as an external fact under
 # '/opt/puppetlabs/facter/facts.d/code_release.txt' on Linux and C:\\ProgramData\\PuppetLabs\\facter\\facts.d\\code_release.txt on Windows.
