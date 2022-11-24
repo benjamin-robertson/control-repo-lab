@@ -1,4 +1,5 @@
 BRANCH=$(git branch | awk '{ print $2 }')
+REF_BRANCH=prod_group_2
 git branch | grep ' release_*'
 if [ $? -ne 0 ] 
 then
@@ -7,9 +8,13 @@ then
 fi
 echo "in release branch"
 SERVER=`cat gitserver`
+echo $SERVER
 for repo in `cat gitrepos`
 do
-  curl -k --request POST --header "PRIVATE-TOKEN: $CD4PE_SECRET_GITLAB_TOKEN" ${SERVER}projects/${repo}/repository/branches?branch=${BRANCH}\&ref=production
-  echo "curl --request POST --header \"PRIVATE-TOKEN: $CD4PE_SECRET_GITLAB_TOKEN\" ${SERVER}projects/${repo}/repository/branches?branch=${BRANCH}\&ref=production"
+  curl -k --request POST --header "PRIVATE-TOKEN: $CD4PE_SECRET_GITLAB_TOKEN" ${SERVER}projects/${repo}/repository/branches?branch=${BRANCH}\&ref=${REF_BRANCH}
+  echo "curl --request POST --header \"PRIVATE-TOKEN: $CD4PE_SECRET_GITLAB_TOKEN\" ${SERVER}projects/${repo}/repository/branches?branch=${BRANCH}\&ref=${REF_BRANCH}"
+  curl -k --request POST --header "PRIVATE-TOKEN: $CD4PE_SECRET_GITLAB_TOKEN" ${SERVER}projects/${repo}/repository/tags?tag_name=${BRANCH}\&ref=${REF_BRANCH}
+  echo "curl -k --request POST --header "PRIVATE-TOKEN: $CD4PE_SECRET_GITLAB_TOKEN" ${SERVER}projects/${repo}/repository/tags?tag_name=${BRANCH}\&ref=${REF_BRANCH}"
+  curl -k --request POST --header "PRIVATE-TOKEN: $CD4PE_SECRET_GITLAB_TOKEN" ${SERVER}projects/${repo}/protected_branches?name=${BRANCH}
+  echo "curl -k --request POST --header "PRIVATE-TOKEN: $CD4PE_SECRET_GITLAB_TOKEN" ${SERVER}projects/${repo}/protected_branches?name=${BRANCH}"
 done
-echo $SERVER
