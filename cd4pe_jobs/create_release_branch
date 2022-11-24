@@ -7,7 +7,7 @@ then
   exit 0
 fi
 echo "in release branch"
-SERVER=`cat gitserver`
+SERVER=`git config remote.origin.url | awk -F '@' '{ print $2 }' | awk -F '/' '{ print $1 }' | awk '{ print "https://"$1"/api/v4/" }'`
 echo $SERVER
 for repo in `cat gitrepos`
 do
