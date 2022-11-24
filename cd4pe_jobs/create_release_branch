@@ -9,6 +9,14 @@ fi
 echo "in release branch"
 SERVER=`git config remote.origin.url | awk -F '@' '{ print $2 }' | awk -F '/' '{ print $1 }' | awk '{ print "https://"$1"/api/v4/" }'`
 echo $SERVER
+echo "Get control repo url"
+CONTROL_REPO=`git config remote.origin.url | awk -F '@' '{ print $2 }' | awk -F '/' '{ print $2"%2f"$3 '} | sed 's/.git//'`
+echo $CONTROL_REPO
+# create tag in control repo and protect the new branch
+curl -k --request POST --header "PRIVATE-TOKEN: $CD4PE_SECRET_GITLAB_TOKEN" ${SERVER}projects/${CONTROL_REPO}/repository/tags?tag_name=${BRANCH}\&ref=${BRANCH}
+echo "curl -k --request POST --header "PRIVATE-TOKEN: $CD4PE_SECRET_GITLAB_TOKEN" ${SERVER}projects/${CONTROL_REPO}/repository/tags?tag_name=${BRANCH}\&ref=${BRANCH}"
+curl -k --request POST --header "PRIVATE-TOKEN: $CD4PE_SECRET_GITLAB_TOKEN" ${SERVER}projects/${CONTROL_REPO}/protected_branches?name=${BRANCH}
+echo "curl -k --request POST --header "PRIVATE-TOKEN: $CD4PE_SECRET_GITLAB_TOKEN" ${SERVER}projects/${CONTROL_REPO}/protected_branches?name=${BRANCH}"
 exit 0
 for repo in `cat gitrepos`
 do
