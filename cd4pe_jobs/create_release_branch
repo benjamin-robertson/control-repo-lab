@@ -1,3 +1,19 @@
+################
+#
+# A script to use with Gitlab and CD4PE to assist with the creation of release branches within the control repo and modules.
+# 
+# Script is designed to be used as a job in CD4PE under the regex pipeline. Script requires a gitlab token with sufficient permission to 
+#  - Protect a branch (in control repo and included modules)
+#  - Create a tag (in control repo and included modules)
+#  - Create a release branch in the include modules
+#
+# All the included modules need to be hosted on the same Gitlab serer as the Puppet control repo.
+#
+# To include a module for release branch creation, create a file 'gitrepos' in the root of your control repo. Within the file list the repos you wish to protect using the following syntax
+# 
+#
+#
+################
 BRANCH=$(git branch | awk '{ print $2 }')
 REF_BRANCH=prod_group_2
 git branch | grep ' release_*'
@@ -15,15 +31,18 @@ echo $CONTROL_REPO
 # create tag in control repo and protect the new branch
 curl -k --request POST --header "PRIVATE-TOKEN: $CD4PE_SECRET_GITLAB_TOKEN" ${SERVER}projects/${CONTROL_REPO}/repository/tags?tag_name=${BRANCH}\&ref=${BRANCH}
 echo "curl -k --request POST --header "PRIVATE-TOKEN: $CD4PE_SECRET_GITLAB_TOKEN" ${SERVER}projects/${CONTROL_REPO}/repository/tags?tag_name=${BRANCH}\&ref=${BRANCH}"
-curl -k --request POST --header "PRIVATE-TOKEN: $CD4PE_SECRET_GITLAB_TOKEN" ${SERVER}projects/${CONTROL_REPO}/protected_branches?name=${BRANCH}
-echo "curl -k --request POST --header "PRIVATE-TOKEN: $CD4PE_SECRET_GITLAB_TOKEN" ${SERVER}projects/${CONTROL_REPO}/protected_branches?name=${BRANCH}"
+curl -k --request POST --header "PRIVATE-TOKEN: $CD4PE_SECRET_GITLAB_TOKEN" ${SERVER}projects/${CONTROL_REPO}/protected_branches?name=${BRANCH}&push_access_level=0&merge_access_level=0
+echo "curl -k --request POST --header "PRIVATE-TOKEN: $CD4PE_SECRET_GITLAB_TOKEN" ${SERVER}projects/${CONTROL_REPO}/protected_branches?name=${BRANCH}&push_access_level=0&merge_access_level=0"
+if [[ -f "./gitrepos"]]; then
+  echo "file exits"
+  for repo in `cat gitrepos`
+  do
+    curl -k --request POST --header "PRIVATE-TOKEN: $CD4PE_SECRET_GITLAB_TOKEN" ${SERVER}projects/${repo}/repository/branches?branch=${BRANCH}\&ref=${REF_BRANCH}
+    echo "curl --request POST --header \"PRIVATE-TOKEN: $CD4PE_SECRET_GITLAB_TOKEN\" ${SERVER}projects/${repo}/repository/branches?branch=${BRANCH}\&ref=${REF_BRANCH}"
+    curl -k --request POST --header "PRIVATE-TOKEN: $CD4PE_SECRET_GITLAB_TOKEN" ${SERVER}projects/${repo}/repository/tags?tag_name=${BRANCH}\&ref=${REF_BRANCH}
+    echo "curl -k --request POST --header "PRIVATE-TOKEN: $CD4PE_SECRET_GITLAB_TOKEN" ${SERVER}projects/${repo}/repository/tags?tag_name=${BRANCH}\&ref=${REF_BRANCH}"
+    curl -k --request POST --header "PRIVATE-TOKEN: $CD4PE_SECRET_GITLAB_TOKEN" ${SERVER}projects/${repo}/protected_branches?name=${BRANCH}&push_access_level=0&merge_access_level=0
+    echo "curl -k --request POST --header "PRIVATE-TOKEN: $CD4PE_SECRET_GITLAB_TOKEN" ${SERVER}projects/${repo}/protected_branches?name=${BRANCH}&push_access_level=0&merge_access_level=0"
+  done
+fi
 exit 0
-for repo in `cat gitrepos`
-do
-  curl -k --request POST --header "PRIVATE-TOKEN: $CD4PE_SECRET_GITLAB_TOKEN" ${SERVER}projects/${repo}/repository/branches?branch=${BRANCH}\&ref=${REF_BRANCH}
-  echo "curl --request POST --header \"PRIVATE-TOKEN: $CD4PE_SECRET_GITLAB_TOKEN\" ${SERVER}projects/${repo}/repository/branches?branch=${BRANCH}\&ref=${REF_BRANCH}"
-  curl -k --request POST --header "PRIVATE-TOKEN: $CD4PE_SECRET_GITLAB_TOKEN" ${SERVER}projects/${repo}/repository/tags?tag_name=${BRANCH}\&ref=${REF_BRANCH}
-  echo "curl -k --request POST --header "PRIVATE-TOKEN: $CD4PE_SECRET_GITLAB_TOKEN" ${SERVER}projects/${repo}/repository/tags?tag_name=${BRANCH}\&ref=${REF_BRANCH}"
-  curl -k --request POST --header "PRIVATE-TOKEN: $CD4PE_SECRET_GITLAB_TOKEN" ${SERVER}projects/${repo}/protected_branches?name=${BRANCH}
-  echo "curl -k --request POST --header "PRIVATE-TOKEN: $CD4PE_SECRET_GITLAB_TOKEN" ${SERVER}projects/${repo}/protected_branches?name=${BRANCH}"
-done
