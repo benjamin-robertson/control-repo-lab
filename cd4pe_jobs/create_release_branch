@@ -11,6 +11,12 @@
 #
 # To include a module for release branch creation, create a file 'gitrepos' in the root of your control repo. Within the file list the repos you wish to protect using the following syntax
 # 
+# <group_name>%2f<project_name>
+#
+# For example if the group is "puppet" and the repo "soe_windows" place the following line in the gitrepo file.
+# puppet%2fsoe_windows
+#
+# Each module will be specified on a new line
 #
 #
 ################
@@ -33,7 +39,7 @@ curl -k --request POST --header "PRIVATE-TOKEN: $CD4PE_SECRET_GITLAB_TOKEN" ${SE
 echo "curl -k --request POST --header "PRIVATE-TOKEN: $CD4PE_SECRET_GITLAB_TOKEN" ${SERVER}projects/${CONTROL_REPO}/repository/tags?tag_name=${BRANCH}\&ref=${BRANCH}"
 curl -k --request POST --header "PRIVATE-TOKEN: $CD4PE_SECRET_GITLAB_TOKEN" ${SERVER}projects/${CONTROL_REPO}/protected_branches?name=${BRANCH}&push_access_level=0&merge_access_level=0
 echo "curl -k --request POST --header "PRIVATE-TOKEN: $CD4PE_SECRET_GITLAB_TOKEN" ${SERVER}projects/${CONTROL_REPO}/protected_branches?name=${BRANCH}&push_access_level=0&merge_access_level=0"
-if [[ -f "./gitrepos"]]; then
+if [[ -f "./gitrepos" ]]; then
   echo "file exits"
   for repo in `cat gitrepos`
   do
