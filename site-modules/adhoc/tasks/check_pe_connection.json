@@ -1,0 +1,14 @@
+{
+    "description": "Confirms if a PE server is accessible from a node using curl",
+    "input_method": "environment",
+    "implementations": [
+        {"name": "check_pe_connection.sh", "requirements": ["shell"]},
+        {"name": "check_pe_connection.ps1", "requirements": ["powershell"]}
+      ],
+    "parameters": {
+        "target_pe_server": {
+            "description": "PE server to check connection to",
+            "type": "String[1]"
+        }
+    }
+  }

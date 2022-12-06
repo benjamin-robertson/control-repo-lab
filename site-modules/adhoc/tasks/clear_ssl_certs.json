@@ -1,0 +1,10 @@
+{
+    "description": "Clears SSL certs from Puppet agent; deletes cert and restart ",
+    "input_method": "environment",
+    "supports_noop": true,
+    "implementations": [
+        {"name": "clear_ssl_certs.sh", "requirements": ["shell"]},
+        {"name": "clear_ssl_certs.ps1", "requirements": ["powershell"]}
+      ],
+    "parameters": { }
+  }
