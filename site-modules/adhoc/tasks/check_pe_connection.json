@@ -9,6 +9,10 @@
         "target_pe_server": {
             "description": "PE server to check connection to",
             "type": "String[1]"
+        },
+        "bypass_connectivity_check": {
+            "description": "Bypass connectivity check, still checks for PE server",
+            "type": "Boolean"
         }
     }
   }

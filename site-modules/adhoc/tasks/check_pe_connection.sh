@@ -20,6 +20,13 @@ then
   exit 1
 fi
 
+# check if connectivity check is bypassed
+if [ $PT_bypass_connectivity_check == "true" ]
+then
+  echo "Connectivity check bypassed"
+  exit 0
+fi
+
 # Confirm curl is installed
 which curl
 if [ $? -eq 0 ]

@@ -10,6 +10,7 @@
 # @param origin_pe_primary_server Puppet Primary server the node is being migrated from. Must match Primary server FQDN. Use to purge migrated nodes. 
 # @param target_pe_address Target Puppet server, either compiler address or FQDN of Primary server.
 # @param noop Run the plan in noop mode. Make no changes. 
+# @param bypass_connectivity_check Do not check for connectivity to target PE server.
 #
 plan adhoc::migrate_node_to_pe (
   Optional[TargetSpec] $targets                   = undef,
@@ -18,10 +19,8 @@ plan adhoc::migrate_node_to_pe (
   String               $origin_pe_primary_server  = 'ip-172-31-0-172.ap-southeast-2.compute.internal',
   String               $target_pe_address         = 'ip-172-31-35-33.ap-southeast-2.compute.internal',
   Boolean              $noop                      = false,
+  Boolean              $bypass_connectivity_check = false,
 ) {
-  # This was offered as a parameter. I have removed it as the check PE server check was performed in this step.
-  $bypass_connectivity_check = false
-
   # check to ensure both fact value and target are not yet. Fail plan if so.
   if $targets != undef and $fact_value != undef {
     fail('Cannot set both target and existing_fact_value.')
@@ -58,7 +57,7 @@ plan adhoc::migrate_node_to_pe (
     out::message("Supported targets are ${supported_targets}")
 
     # Test connection to new PE server
-    $connection_check_results = run_task('adhoc::check_pe_connection', $supported_targets, {'target_pe_server' => $target_pe_address, '_catch_errors' => true})
+    $connection_check_results = run_task('adhoc::check_pe_connection', $supported_targets, {'target_pe_server' => $target_pe_address, 'bypass_connectivity_check' => $bypass_connectivity_check, '_catch_errors' => true})
     $successful_connection_test_targets = $connection_check_results.ok_set.names
     $failed_connection_test_targets = $connection_check_results.error_set.names
 

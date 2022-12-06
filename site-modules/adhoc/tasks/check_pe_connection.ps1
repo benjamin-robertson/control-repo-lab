@@ -1,6 +1,10 @@
 # Check connection to PE server using Powershell for windows.
 $PT_target_pe_server=$env:PT_target_pe_server
 echo $PT_target_pe_server
+if ( $env:bypass_connectivity_check -eq "true" ) {
+    echo "Connectivity check bypassed"
+    exit 0
+}
 if (Test-NetConnection -ComputerName $PT_target_pe_server -Port 8140 -InformationLevel quiet) 
 {
     echo "port 8140 successful"
