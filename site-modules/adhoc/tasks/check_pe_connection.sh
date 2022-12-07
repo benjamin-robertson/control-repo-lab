@@ -27,30 +27,20 @@ then
   exit 0
 fi
 
-# Confirm curl is installed
-which curl
-if [ $? -eq 0 ]
+# Check port 8140
+timeout 1 bash -c "cat < /dev/null > /dev/tcp/$PT_target_pe_server/8140"
+if [ $? -ne 0 ]
 then
-  # check port 8140
-  curl $PT_target_pe_server:8140 -I
-  if [ $? -ne 8 ]
-  then
-    echo "Port 8140 not open"
-    exit 1
-  fi
-
-  # Check port 8140
-  curl $PT_target_pe_server:8142 -I
-  if [ $? -ne 8 ]
-  then
-    echo "Port 8142 not open"
-    exit 1
-  fi
-
-  # both ports successful, return 0
-  echo "Port 8140 and 8142 avaliable."
-  exit 0
-else
-  echo "curl not found, failing test"
+  echo "Port 8140 not open"
   exit 1
 fi
+
+# Check port 8142
+timeout 1 bash -c "cat < /dev/null > /dev/tcp/$PT_target_pe_server/8142"
+if [ $? -ne 0 ]
+then
+  echo "Port 8142 not open"
+  exit 1
+fi
+
+exit 0
