@@ -6,5 +6,10 @@
         {"name": "clear_ssl_certs.sh", "requirements": ["shell"]},
         {"name": "clear_ssl_certs.ps1", "requirements": ["powershell"]}
       ],
-    "parameters": { }
+    "parameters": { 
+      "noop": {
+        "description": "noop workaround parameter",
+        "type": "Boolean"
+      }
+    }
   }

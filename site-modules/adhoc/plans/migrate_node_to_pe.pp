@@ -106,7 +106,7 @@ plan adhoc::migrate_node_to_pe (
     $failed_update_puppet_config = $update_puppet_config_results.error_set.names
 
     # Clear ssl certs
-    $clear_ssl_cert_results = run_task('adhoc::clear_ssl_certs', $successful_update_puppet_config, {'_catch_errors' => true, '_noop' => $noop})
+    $clear_ssl_cert_results = run_task('adhoc::clear_ssl_certs', $successful_update_puppet_config, {'_catch_errors' => true, '_noop' => $noop, 'noop' => $noop })
     $successful_clear_ssl_cert = $clear_ssl_cert_results.ok_set.names
     $failed_clear_ssl_cert = $clear_ssl_cert_results.error_set.names
 

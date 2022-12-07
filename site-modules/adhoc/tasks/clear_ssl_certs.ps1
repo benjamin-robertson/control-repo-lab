@@ -4,6 +4,11 @@ if ( $env:PT__noop -eq "true" )
     echo "Running in noop: bailing out"
     exit 0
 }
+if ( $env:PT_noop -eq "true" )
+{
+    echo "Running in noop: bailing out"
+    exit 0
+}
 
 # Remove certs
 & 'C:\Program Files\Puppet Labs\Puppet\bin\puppet' ssl clean

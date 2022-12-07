@@ -6,6 +6,12 @@ then
   exit 0
 fi
 
+if [ $PT_noop == "true" ]
+then
+  echo "Running in noop mode: bailing out"
+  exit 0
+fi
+
 # Remove certs
 /opt/puppetlabs/bin/puppet ssl clean
 
