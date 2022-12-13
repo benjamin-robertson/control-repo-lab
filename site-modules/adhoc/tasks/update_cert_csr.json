@@ -1,0 +1,15 @@
+{
+    "description": "Clears SSL certs after updating csr",
+    "input_method": "environment",
+    "supports_noop": true,
+    "implementations": [
+        {"name": "update_cert_csr.sh", "requirements": ["shell"]},
+        {"name": "update_cert_csr.ps1", "requirements": ["powershell"]}
+      ],
+    "parameters": { 
+      "noop": {
+        "description": "noop workaround parameter",
+        "type": "Boolean"
+      }
+    }
+  }
