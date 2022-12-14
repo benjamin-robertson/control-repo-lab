@@ -1,0 +1,14 @@
+{
+    "description": "Clears csr certs from Puppet agent",
+    "input_method": "environment",
+    "supports_noop": true,
+    "implementations": [
+        {"name": "clear_csr_attributes.ps1", "requirements": ["powershell"]}
+      ],
+    "parameters": { 
+      "file": {
+        "description": "noop workaround parameter",
+        "type": "String"
+      }
+    }
+  }

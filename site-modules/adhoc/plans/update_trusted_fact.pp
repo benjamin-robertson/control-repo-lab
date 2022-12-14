@@ -1,4 +1,4 @@
-# @summary PE plan to migrate nodes to a new PE server
+# @summary PE plan to update trusted pp_role to role set by VRA
 # 
 # lint:ignore:140chars
 #
