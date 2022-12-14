@@ -100,7 +100,9 @@ plan adhoc::update_trusted_fact (
         # Delete existing cert on agent
         $clear_ssl_cert_results = run_task('adhoc::update_cert_csr', $successful_apply_host, {'_catch_errors' => true, '_noop' => $noop, 'noop' => $noop })
         if $noop != true {
-          run_command("puppet node purge ${successful_apply_host[0]}", $pe_primary_server)
+          if $successful_apply_host[0] != $pe_primary_server {
+            run_command("puppet node purge ${successful_apply_host[0]}", $pe_primary_server)
+          }
         }
       }
     }
