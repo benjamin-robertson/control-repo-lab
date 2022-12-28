@@ -167,7 +167,7 @@ mod 'puppetlabs-ntp', '9.0.1'
 #  default_branch:  'main'
 #mod 'benjaminrobertson-acsc_e8_application_control', '0.1.0'
 
-mod 'applocker'
+mod 'applocker',
   git:            'git@github.com:benjamin-robertson/applocker.git',
   branch:          :control_branch,
   default_branch:  'main'
