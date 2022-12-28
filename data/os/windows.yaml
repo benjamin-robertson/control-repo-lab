@@ -116,3 +116,11 @@ profile::windows::demo::certs:
       4Lid866K6h5H8QHqfLG6y58vpG08O38rkJ8BXwAt7Yvs40twUH1nY+pu6DLeLmBE
       MdzdaiYagFJwc7yDSwW7/4kzrA15mTti6Se4HDmL9xxSLZxzJE7iUg0=
       -----END CERTIFICATE-----
+
+
+# Applocker settings
+# acsc_e8_application_control::executable_rules: Audit
+# acsc_e8_application_control::msi_rules: Audit
+# acsc_e8_application_control::dll_rules: Audit
+# acsc_e8_application_control::script_rules: Audit
+# acsc_e8_application_control::packaged_app_rules: Audit
