@@ -119,7 +119,7 @@ profile::windows::demo::certs:
 
 
 # Applocker settings
-# acsc_e8_application_control::executable_rules: Audit
+acsc_e8_application_control::executable_rules: Audit
 # acsc_e8_application_control::msi_rules: Audit
 # acsc_e8_application_control::dll_rules: Audit
 # acsc_e8_application_control::script_rules: Audit
