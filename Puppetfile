@@ -202,4 +202,4 @@ mod 'gitlab_ci_runner',
   branch:         'issue_144'
 
 mod 'puppetlabs-ca_extend', '3.2.0'
-mod 'glarizza-xmlsimple', '0.0.1'
+mod 'innogames-xmlsimple', '1.0.0'
