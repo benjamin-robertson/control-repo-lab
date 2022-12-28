@@ -1,11 +1,11 @@
 forge 'https://forge.puppet.com'
 
 # Hiera data
-mod 'hieradata',
-  git:           'https://github.com/benjamin-robertson/hieradata.git',
-  branch:         :control_branch,
-  default_branch: 'production',
-  install_path:   '.'
+# mod 'hieradata',
+#   git:           'https://github.com/benjamin-robertson/hieradata.git',
+#   branch:         :control_branch,
+#   default_branch: 'production',
+#   install_path:   '.'
 
 mod 'puppetlabs-lvm', '1.4.0'
 
@@ -165,11 +165,9 @@ mod 'puppetlabs-ntp', '9.0.1'
 #  git:             'git@github.com:benjamin-robertson/acsc_e8_application_control.git',
 #  branch:          :control_branch,
 #  default_branch:  'main'
-#mod 'benjaminrobertson-acsc_e8_application_control', '0.1.0'
-mod 'benjaminrobertson-acsc_e8_application_control',
-  git:           'git@github.com:benjamin-robertson/acsc_e8_application_control.git',
-  branch:        :control_branch,
-  default_branch: 'main'
+mod 'benjaminrobertson-acsc_e8_application_control', '0.1.0'
+
+
 mod 'fervid-applocker', '1.0.0'
 #mod 'fervid-applocker',
 #  git:           'git@github.com:benjamin-robertson/applocker.git',
@@ -181,6 +179,7 @@ mod 'fervid-applocker', '1.0.0'
 #  branch:           :control_branch,
 #  default_branch:   'main'
 mod 'benjaminrobertson-acsc_e8_office_hardening', '0.1.0'
+
 
 # Run offset 
 mod 'puppet_run_offset',
