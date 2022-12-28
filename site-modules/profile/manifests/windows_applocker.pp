@@ -2,7 +2,8 @@
 #
 #
 class profile::windows_applocker {
-  include acsc_e8_application_control
+  #include acsc_e8_application_control
+  include applocker
 
   # class { 'acsc_e8_application_control':
   #   additional_exec_applocker_rules => {
