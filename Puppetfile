@@ -161,11 +161,14 @@ mod 'puppet-nftables', '2.0.0'
 mod 'puppetlabs-ntp', '9.0.1'
 
 # Applockler work
-#mod 'acsc_e8_application_control',
+# mod 'acsc_e8_application_control',
 #  git:             'git@github.com:benjamin-robertson/acsc_e8_application_control.git',
 #  branch:          :control_branch,
 #  default_branch:  'main'
-mod 'benjaminrobertson-acsc_e8_application_control', '0.1.0'
+mod 'acsc_e8_application_control',
+ git:             'git@github.com:benjamin-robertson/acsc_e8_application_control.git',
+ branch:          'feature_pruge'
+#mod 'benjaminrobertson-acsc_e8_application_control', '0.1.0'
 
 
 #mod 'fervid-applocker', '1.0.0'
