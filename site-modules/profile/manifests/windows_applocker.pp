@@ -3,6 +3,9 @@
 #
 class profile::windows_applocker {
   include acsc_e8_application_control
+  resources { 'applocker_rule':
+    purge => true,
+  }
 
   # class { 'acsc_e8_application_control':
   #   additional_exec_applocker_rules => {
