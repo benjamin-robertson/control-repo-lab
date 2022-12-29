@@ -1,7 +1,7 @@
 # Class: profile::windows_applocker_fervid
 #
 #
-class profile::windows_applocker_fervid {
+class profile::windows_applocker {
   include acsc_e8_application_control
 
   # class { 'acsc_e8_application_control':
