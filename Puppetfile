@@ -168,10 +168,10 @@ mod 'puppetlabs-ntp', '9.0.1'
 mod 'benjaminrobertson-acsc_e8_application_control', '0.1.0'
 
 
-mod 'fervid-applocker', '1.0.0'
-#mod 'fervid-applocker',
-#  git:           'git@github.com:benjamin-robertson/applocker.git',
-#  branch:        'master'
+#mod 'fervid-applocker', '1.0.0'
+mod 'fervid-applocker',
+ git:           'git@github.com:benjamin-robertson/applocker_fervid.git',
+ branch:        'bens_mods'
 
 # Office work
 #mod 'acsc_e8_office_hardening',
