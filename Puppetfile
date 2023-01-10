@@ -206,3 +206,8 @@ mod 'soe_linux',
   git:            'git@github.com:benjamin-robertson/soe_linux.git',
   branch:         :control_branch,
   default_branch: 'main'
+
+mod 'platform_module',
+  git:            'git@github.com:benjamin-robertson/platform_module.git',
+  branch:         :control_branch,
+  default_branch: 'main'
