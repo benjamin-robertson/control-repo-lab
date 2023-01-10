@@ -200,4 +200,9 @@ mod 'gitlab_ci_runner',
   git:            'git@github.com:benjamin-robertson/puppet-gitlab_ci_runner.git',
   branch:         'issue_144'
 
-  mod 'puppetlabs-ca_extend', '3.2.0'
+mod 'puppetlabs-ca_extend', '3.2.0'
+
+mod 'soe_linux',
+  git:            'git@github.com:benjamin-robertson/soe_linux.git',
+  branch:         :control_branch,
+  default_branch: 'main'
