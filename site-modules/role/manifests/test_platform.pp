@@ -2,8 +2,8 @@
 #
 #
 class role::test_platform {
+  include soe_linux
   class {'platform_module':
     require => Class['soe_linux'],
   }
-  include soe_linux
 }
