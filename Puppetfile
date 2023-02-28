@@ -211,3 +211,8 @@ mod 'platform_module',
   git:            'git@github.com:benjamin-robertson/platform_module.git',
   branch:         :control_branch,
   default_branch: 'main'
+
+mod 'update_trusted_facts',
+  git:            'git@github.com:benjamin-robertson/update_trusted_facts.git',
+  branch:         :control_branch,
+  default_branch: 'main'
