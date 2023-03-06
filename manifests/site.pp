@@ -32,5 +32,4 @@ node default {
   # Example:
   #   class { 'my_class': }
   $ben = 'set in site.pp test'
-  fail('fail puppet')
 }
