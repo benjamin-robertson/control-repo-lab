@@ -49,7 +49,7 @@ pipelines:
           fail_if_no_nodes: true
           batch_delay: 60
           batch_size: 10
-          max_node_failure: 0
+          max_node_failure: 1000
         timeout: 3600000
         concurrent_compilations: 0
         all_deployments: false
