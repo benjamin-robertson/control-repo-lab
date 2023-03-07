@@ -31,5 +31,5 @@ node default {
   # This is where you can declare classes for all nodes.
   # Example:
   #   class { 'my_class': }
-  $ben = 'set in site.pp test fix fix lint'
+  $ben = 'set in site.pp not in tag'
 }
