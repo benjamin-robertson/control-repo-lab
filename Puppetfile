@@ -214,4 +214,5 @@ mod 'platform_module',
 
 mod 'update_trusted_facts',
   git:            'git@github.com:benjamin-robertson/update_trusted_facts.git',
-  tag:            '0.1.0'
+  branch:         :control_branch,
+  default_branch: 'main'
