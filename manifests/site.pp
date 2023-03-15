@@ -32,8 +32,4 @@ node default {
   # Example:
   #   class { 'my_class': }
   $ben = 'set in site.pp not in tag'
-  file { '/tmp/testing123':
-    ensure  => file,
-    content => 'This is from site.pp',
-  }
 }
