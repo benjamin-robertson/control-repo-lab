@@ -2,6 +2,7 @@
 classes:
 # - /role::*/
   - role::generic_linux
+  - role::job_hardware
 
 # Nodes to tests classes on, this refers to a 'factset' or 'nodeset'
 # depending on whether you are running 'spec' or 'acceptance' tests
