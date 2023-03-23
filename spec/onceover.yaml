@@ -27,7 +27,6 @@ nodes:
 class_groups:
   non_windows_roles:
     include: 'all_classes'
-    exclude: 'windows_roles'
   rhel8_roles:
     include: 'non_windows_roles'
 
