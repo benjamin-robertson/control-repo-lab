@@ -2,7 +2,7 @@
 classes:
 # - /role::*/
   - role::generic_linux
-  
+
 # Nodes to tests classes on, this refers to a 'factset' or 'nodeset'
 # depending on whether you are running 'spec' or 'acceptance' tests
 nodes:
@@ -25,38 +25,21 @@ nodes:
 
 # You can group classes here to save typing
 class_groups:
-  windows_roles:
-#    - role::windows_server
-    # - role::windows_fw
-    # - role::setup_dsc
-    # - role::windows_wsus
-#    - role::dsc_test
-  rhel7_roles:
-    - role::generic_linux
   non_windows_roles:
     include: 'all_classes'
     exclude: 'windows_roles'
   rhel8_roles:
     include: 'non_windows_roles'
-    exclude: 'rhel7_roles'
 
 # You can group nodes here to save typing
 # We have created a 'non_windows_nodes' group because we can't
 # give you Windows vagrant boxes to test with because licensing,
 # we can give you fact sets though so go crazy with spec testing!
 node_groups:
-  windows_nodes:
-    - fact_set_windows2019-gui
   rhel8_nodes:
     - fact_set_centos8
-#  other_linux_nodes:
-#    - CentOS-7.0-64
-#    - RHEL-7.4
 
 test_matrix:
-  - windows_nodes:
-     classes: 'windows_roles'
-     tests: 'spec'
 #  - other_linux_nodes: 
 #     classes: 'non_windows_roles'
 #     tests: 'spec'
