@@ -24,11 +24,9 @@ nodes:
 
 
 # You can group classes here to save typing
-class_groups:
-  non_windows_roles:
-    include: 'all_classes'
-  rhel8_roles:
-    include: 'non_windows_roles'
+# class_groups:
+#   rhel8_roles:
+#     include: 'non_windows_roles'
 
 # You can group nodes here to save typing
 # We have created a 'non_windows_nodes' group because we can't
@@ -43,5 +41,5 @@ test_matrix:
 #     classes: 'non_windows_roles'
 #     tests: 'spec'
   - rhel8_nodes:
-     classes: 'rhel8_roles'
+     classes: 'all_classes'
      tests: 'spec'
