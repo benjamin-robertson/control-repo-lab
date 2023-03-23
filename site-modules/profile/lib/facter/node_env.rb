@@ -2,11 +2,11 @@ Facter.add(:node_env) do
   setcode do
     case Facter.value('hostname')
       when /^.*-prd[0-9]{2}/
-        environment = 'production'
+        environment = "production"
       when /^.*-dev[0-9]{2}/
-        environment = 'development'
+        environment = "development"
       else
-        environment = 'none'
+        environment = "none"
     end
     environment
   end
