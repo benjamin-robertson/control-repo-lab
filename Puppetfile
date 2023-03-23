@@ -102,9 +102,9 @@ mod 'puppetlabs-ruby_task_helper', '0.6.1'
 #mod 'cem_linux',
 #  git:      'git@github.com:benjamin-robertson/puppetlabs-cem_linux.git',
 #  branch:   'main'
-mod 'cem_linux',
-  git:       'git@github.com:puppetlabs/puppetlabs-cem_linux.git',
-  tag:       'v1.1.1'
+# mod 'cem_linux',
+#   git:       'git@github.com:puppetlabs/puppetlabs-cem_linux.git',
+#   tag:       'v1.1.1'
 mod 'camptocamp-systemd', '3.0.0'
 mod 'puppetlabs-firewall', '3.1.0'
 mod 'puppetlabs-mount_providers', '2.0.1'
@@ -120,9 +120,9 @@ mod 'puppet-logrotate', '5.0.0'
 #mod 'cem_windows',
 #  git:      'git@github.com:benjamin-robertson/puppetlabs-cem_windows.git',
 #  branch:   'cis_level_2'
-mod 'cem_windows',
-  git:      'git@github.com:puppetlabs/puppetlabs-cem_windows.git',
-  tag:      'v1.0.3'
+# mod 'cem_windows',
+#   git:      'git@github.com:puppetlabs/puppetlabs-cem_windows.git',
+#   tag:      'v1.0.3'
 #extra for windows abide
 mod 'dsc-computermanagementdsc', '8.5.0-0-0'
 mod 'dsc-networkingdsc', '8.2.0-0-3'
