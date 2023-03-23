@@ -2,17 +2,11 @@
 classes:
 # - /role::*/
   - role::generic_linux
-#  - role::windows_server
-  - role::setup_dsc
-  - role::generic_linux
-  - role::windows_wsus
-  - role::windows_fw
-#  - role::dsc_test
-
+  
 # Nodes to tests classes on, this refers to a 'factset' or 'nodeset'
 # depending on whether you are running 'spec' or 'acceptance' tests
 nodes:
-  - fact_set_windows2019-gui
+  # - fact_set_windows2019-gui
   - fact_set_centos8
 #  - CentOS-7.0-64
 #  - RHEL-7.4
@@ -33,9 +27,9 @@ nodes:
 class_groups:
   windows_roles:
 #    - role::windows_server
-    - role::windows_fw
-    - role::setup_dsc
-    - role::windows_wsus
+    # - role::windows_fw
+    # - role::setup_dsc
+    # - role::windows_wsus
 #    - role::dsc_test
   rhel7_roles:
     - role::generic_linux

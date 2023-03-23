@@ -1,42 +1,50 @@
 # Classes to be tested
 classes:
-  - role::database_server
-  - role::pe_master
-  - role::webserver
-  - role::windows_server
+# - /role::*/
+  - role::generic_linux
+#  - role::windows_server
+  # - role::setup_dsc
+  # - role::generic_linux
+  # - role::windows_wsus
+  # - role::windows_fw
+#  - role::dsc_test
 
 # Nodes to tests classes on, this refers to a 'factset' or 'nodeset'
 # depending on whether you are running 'spec' or 'acceptance' tests
 nodes:
-  - AIX-6.1-powerpc
-  - AIX-7.1-powerpc
-  - Amazon-2018.03
-  - CentOS-5.11-32
-  - CentOS-5.11-64
-  - CentOS-6.6-32
-  - CentOS-6.6-64
-  - CentOS-7.0-64
-  - Debian-6.0.10-32
-  - Debian-6.0.10-64
-  - Debian-7.8-32
-  - Debian-7.8-64
-  - RHEL-6.7
-  - RHEL-7.4
-  - SLES-11.3-64
-  - SLES-12.1-64
-  - Ubuntu-12.04-32
-  - Ubuntu-12.04-64
-  - Ubuntu-14.04-32
-  - Ubuntu-14.04-64
-  - Ubuntu-18.04-64
-  - Windows_Server-2008r2-64
-  - Windows_Server-2012r2-64
-  - solaris-10_u9-sparc-64
-  - solaris-11.2-sparc-64
-  - windows-10-64
+  # - fact_set_windows2019-gui
+  - fact_set_centos8
+#  - CentOS-7.0-64
+#  - RHEL-7.4
+
+# Example node group
+#node_groups:
+#  windows_servers:
+#    - fact_set_windows2019-gui
+#    - Windows_Server-2008r2-64
+#    - Windows_Server-2012r2-64
+#    - windows-10-64
+#  linux_servers:
+#    - CentOS-7.0-64
+#    - RHEL-7.4
+
 
 # You can group classes here to save typing
 class_groups:
+  windows_roles:
+#    - role::windows_server
+    # - role::windows_fw
+    # - role::setup_dsc
+    # - role::windows_wsus
+#    - role::dsc_test
+  rhel7_roles:
+    - role::generic_linux
+  non_windows_roles:
+    include: 'all_classes'
+    exclude: 'windows_roles'
+  rhel8_roles:
+    include: 'non_windows_roles'
+    exclude: 'rhel7_roles'
 
 # You can group nodes here to save typing
 # We have created a 'non_windows_nodes' group because we can't
@@ -44,17 +52,20 @@ class_groups:
 # we can give you fact sets though so go crazy with spec testing!
 node_groups:
   windows_nodes:
-    - Windows_Server-2008r2-64
-    - Windows_Server-2012r2-64
-    - windows-10-64
-  non_windows_nodes:
-    include: 'all_nodes'
-    exclude: 'windows_nodes'
+    - fact_set_windows2019-gui
+  rhel8_nodes:
+    - fact_set_centos8
+#  other_linux_nodes:
+#    - CentOS-7.0-64
+#    - RHEL-7.4
 
 test_matrix:
-  - all_nodes:
-      classes: 'all_classes'
-      tests: 'spec'
-  - non_windows_nodes: 
-      classes: 'all_classes'
-      tests: 'acceptance'
+  - windows_nodes:
+     classes: 'windows_roles'
+     tests: 'spec'
+#  - other_linux_nodes: 
+#     classes: 'non_windows_roles'
+#     tests: 'spec'
+  - rhel8_nodes:
+     classes: 'rhel8_roles'
+     tests: 'spec'
