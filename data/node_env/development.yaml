@@ -1,0 +1,2 @@
+---
+profile::linux::motd_linux::motdcontent: 'Development motd message. This will apply to all dev hosts.'

@@ -1,0 +1,2 @@
+---
+profile::linux::motd_linux::motdcontent: 'Production motd message. This will apply to all prod hosts.'

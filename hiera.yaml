@@ -13,6 +13,7 @@ hierarchy:
       - "os/%{os.name}/%{os.release.major}.yaml"
       - "os/%{os.name}.yaml"
       - "%{facts.poodle}/common.yaml"
+      - "node_env/%{facts.node_env}.yaml"
       - "ben.eyaml"
       - "common.yaml"
     options:
