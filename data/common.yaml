@@ -122,3 +122,8 @@ gitlab::gitlab_rails:
   gitlab_email_display_name: 'GitLab'
 gitlab::letsencrypt:
   enable: false
+
+
+
+## profile stuff
+profile::linux::motd_linux::motdcontent: 'I am using some commond data. This will apply to all hosts.'
