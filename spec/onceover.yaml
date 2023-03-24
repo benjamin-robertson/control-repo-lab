@@ -37,6 +37,10 @@ nodes:
 node_groups:
   rhel8_nodes:
     - fact_set_centos8
+    - katie-dev01
+    - katie-prd01
+    - louie-dev01
+    - louie-prd01
 
 test_matrix:
 #  - other_linux_nodes: 
