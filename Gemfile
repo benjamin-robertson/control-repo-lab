@@ -11,5 +11,6 @@ gem "puppet", '7.23.0'
 #gem "thor", '1.0.1'
 #gem "multi_json", '1.14.1'
 gem "facter"
+gem 'hiera-eyaml'
 #gem "deep_merge", '1.0.1'
 #gem "gettext", '3.2.2'
