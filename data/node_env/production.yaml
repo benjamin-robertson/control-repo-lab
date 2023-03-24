@@ -1,2 +1,2 @@
 ---
-profile::linux::motd_linux::motdcontent: 'Production motd message. This will apply to all prod hosts.'
+profile::linux::motd_linux::motdcontent: 'Change PROD value. Will the catalogue diff find this'
