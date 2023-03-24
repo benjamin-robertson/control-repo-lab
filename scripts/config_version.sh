@@ -27,6 +27,11 @@ elif [ -e /opt/puppetlabs/server/pe_version ]; then
 elif type git >/dev/null; then
   # The git command is available.
   git --git-dir $1/$2/.git rev-parse HEAD
+  if [ $? -eq 0 ]; then
+    git --git-dir $1/$2/.git rev-parse HEAD
+  else
+    date +%s
+  fi
 
 else
   # Nothing else available; just use the date.
