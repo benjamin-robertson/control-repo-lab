@@ -7,7 +7,7 @@ classes:
 # Nodes to tests classes on, this refers to a 'factset' or 'nodeset'
 # depending on whether you are running 'spec' or 'acceptance' tests
 nodes:
-  - fact_set_centos8
+  # - fact_set_centos8
   - katie-dev01
   - katie-prd01
   - louie-dev01
@@ -36,7 +36,7 @@ nodes:
 # we can give you fact sets though so go crazy with spec testing!
 node_groups:
   rhel8_nodes:
-    - fact_set_centos8
+    # - fact_set_centos8
     - katie-dev01
     - katie-prd01
     - louie-dev01
