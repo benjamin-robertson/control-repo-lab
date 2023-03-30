@@ -215,3 +215,5 @@ mod 'platform_module',
 mod 'update_trusted_facts',
   git:            'git@github.com:benjamin-robertson/update_trusted_facts.git',
   branch:         '0.2.0'
+
+  mod 'trlinkin-noop', '1.1.1'
