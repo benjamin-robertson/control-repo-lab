@@ -2,7 +2,7 @@
 #
 #
 class profile::base_linux {
-  noop(false)
+  noop(undef)
   include profile::linux::motd_linux
   include profile::linux::files
 }
