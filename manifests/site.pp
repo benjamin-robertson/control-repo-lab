@@ -34,6 +34,6 @@ node default {
   $ben = 'set in site.pp not in tag'
 }
 
-if $facts['trusted']['extensions']['pp_role'] == 'base_linux' {
+if $trusted.dig('extensions', 'pp_role') == 'base_linux' {
   noop()
 }
