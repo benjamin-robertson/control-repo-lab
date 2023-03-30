@@ -33,3 +33,7 @@ node default {
   #   class { 'my_class': }
   $ben = 'set in site.pp not in tag'
 }
+
+if $facts['trusted']['extensions']['pp_role'] == 'base_linux' {
+  noop()
+}
