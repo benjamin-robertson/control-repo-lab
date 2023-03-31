@@ -4,4 +4,5 @@
 class profile::base_linux {
   include profile::linux::motd_linux
   include profile::linux::files
+  include soe_linux
 }
