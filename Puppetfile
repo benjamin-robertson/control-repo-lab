@@ -225,4 +225,4 @@ mod 'trlinkin-noop', '1.1.1'
 
 mod 'bootstrap',
   git:            'https://github.com/benjamin-robertson/puppetlabs-bootstrap.git',
-  branch:         'feature_puppet_conf'
+  branch:         'main'
