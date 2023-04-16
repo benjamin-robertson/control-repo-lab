@@ -55,7 +55,7 @@ mod 'puppetlabs-wsus_client', '4.0.0'
 #mod 'geoffwilliams-safe_roles', '1.2.3'
 mod 'geoffwilliams-safe_roles',
   git:     'https://github.com/benjamin-robertson/puppet-safe_roles.git',
-  branch:  'issue_12'
+  branch:  'master'
 
 
 # Modules from Git
