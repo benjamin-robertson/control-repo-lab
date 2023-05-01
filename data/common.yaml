@@ -127,3 +127,5 @@ gitlab::letsencrypt:
 
 ## profile stuff
 profile::linux::motd_linux::motdcontent: 'I am using some commond data. This will apply to all hosts.'
+
+profile::linux::tmp_file::louis: 'standard poodle'
