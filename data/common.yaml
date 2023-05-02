@@ -128,4 +128,4 @@ gitlab::letsencrypt:
 ## profile stuff
 profile::linux::motd_linux::motdcontent: 'I am using some commond data. This will apply to all hosts.'
 
-profile::linux::tmp_file::louis: 'standard poodle'
+profile::linux::tmp_file::louis: ENC[PKCS7,MIIBeQYJKoZIhvcNAQcDoIIBajCCAWYCAQAxggEhMIIBHQIBADAFMAACAQEwDQYJKoZIhvcNAQEBBQAEggEAASsGSA/ufzOYY1JVpvQx9KPpJ/9PhvK0yGpx42T37roSzaNLqr9gn8ui1um7iiuZYCVc3Pc1YtYySm0hnUcYqpAigeiYgHZnPlCAVbM9REROtl+IHcX849pocnkHCysgbjzH4umUPbl1iktqsQXYB3AF4yglj95gC/0AMOHHGTFuIKWm/ZuptiN9gsGTAMP/tsp6+reVTtPQemMZD4u0MvRZIP12h6QkvZLqS6kyYL/g1cjHOHu2OwHxX9wl2hp2pF/UgDZ2qItNqid1lthrL8e1cb4UNT+6sUg9YCe/AdJTNn6n8HoNZrNgnYNRfc5gevgWlr1I4dxu3BaSNgSVJjA8BgkqhkiG9w0BBwEwHQYJYIZIAWUDBAEqBBBqXfYd61xc4mr3wHAgRQvBgBDydWQMCXHFnW6+qJvHrBYw]
