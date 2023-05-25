@@ -29,7 +29,7 @@ motd_linux: |
   It will use lookup to lookup the hiera value.
   Change to test side by side 17-01-2022 15:39
   I now have CD4PE We are using the main branch test
-
+# this code will be merged
 
 # Abide config
 cem_linux::benchmark: 'cis'
