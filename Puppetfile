@@ -209,7 +209,7 @@ mod 'puppetlabs-ca_extend', '3.2.0'
 mod 'soe_linux',
   git:            'git@github.com:benjamin-robertson/soe_linux.git',
   branch:         :control_branch,
-  default_branch: 'm1ain'
+  default_branch: 'main'
 
   # mod 'soe_linux',
   # git:            'git@github.com:benjamin-robertson/soe_linux.git',
