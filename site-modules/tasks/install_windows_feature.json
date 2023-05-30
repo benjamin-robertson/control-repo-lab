@@ -1,5 +1,5 @@
 {
-    "description": "Installed a windows feature if its not currently installed.",
+    "description": "Installs a windows feature if its not currently installed.",
     "input_method": "environment",
     "implementations": [
         {"name": "install_windows_feature.ps1", "requirements": ["powershell"]}
