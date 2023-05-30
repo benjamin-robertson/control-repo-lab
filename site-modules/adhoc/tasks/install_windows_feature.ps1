@@ -8,4 +8,6 @@ echo $feature_status
 
 if ($feature_status.InstallState -ne "Installed") {
     Install-WindowsFeature -Name $PT_windows_feature
+} else {
+    echo "Feature ${PT_windows_feature} already installed"
 }
