@@ -1,6 +1,9 @@
 {
     "description": "Installed a windows feature if its not currently installed.",
     "input_method": "environment",
+    "implementations": [
+        {"name": "install_windows_feature.ps1", "requirements": ["powershell"]}
+      ],
     "parameters": {
       "windows_feature": {
         "description": "Windows feature to install. Must match short name, not display name",
