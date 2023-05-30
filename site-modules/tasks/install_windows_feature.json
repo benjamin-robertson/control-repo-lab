@@ -1,0 +1,10 @@
+{
+    "description": "Installed a windows feature if its not currently installed.",
+    "input_method": "environment",
+    "parameters": {
+      "windows_feature": {
+        "description": "Windows feature to install. Must match short name, not display name",
+        "type": "String[1]"
+      }
+    }
+  }
