@@ -230,3 +230,8 @@ mod 'trlinkin-noop', '1.1.1'
 mod 'bootstrap',
   git:            'https://github.com/benjamin-robertson/puppetlabs-bootstrap.git',
   branch:         'main'
+
+mod 'pe_patch_data',
+  git:            'git@github.com:benjamin-robertson/pe_patch_data.git',
+  branch:         'main',
+  install_path:   'pe_patch'

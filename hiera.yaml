@@ -5,6 +5,12 @@ defaults:
   datadir: "data"
 
 hierarchy:
+  - name: "pe_patch"
+    data_hash: yaml_data
+    datadir: "pe_patch"
+    paths:
+      - "nodes/%{trusted.certname}.yaml"
+      - "common.yaml"
   - name: "Yaml backend"
     #data_hash: yaml_data
     lookup_key: eyaml_lookup_key
