@@ -7,7 +7,7 @@ defaults:
 hierarchy:
   - name: "pe_patch"
     data_hash: yaml_data
-    datadir: "pe_patch"
+    datadir: "pe_patch_data"
     paths:
       - "nodes/%{trusted.certname}.yaml"
       - "common.yaml"
