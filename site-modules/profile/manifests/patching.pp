@@ -8,6 +8,7 @@ class profile::patching {
     $value.member($trusted['certname'])
   }
 
-  notify { "patch groups is ${result}": }
+  notify { "patch groups are ${patch_groups}": }
   notify { "result is ${result}": }
+  notify { "result length ${result.length}": }
 }
