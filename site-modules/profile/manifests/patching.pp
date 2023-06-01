@@ -11,14 +11,13 @@ class profile::patching {
   # notify { "patch groups are ${patch_groups}": }
   # notify { "result is ${result}": }
   # notify { "result length ${result.length}": }
-  notify { "group is ${result.keys['0']}": }
+  # notify { "group is ${result.keys['0']}": }
 
   if $result.length == 1 {
     class { 'pe_patch':
       patch_group => $result.keys['0'],
     }
   } else {
-    fail('No patch node group defined for host')
-    notify { "I have failed length is ${result.length}": }
+    notify { 'No patch group defined for host': }
   }
 }
