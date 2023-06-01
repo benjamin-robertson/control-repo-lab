@@ -8,12 +8,8 @@ class profile::patching {
     $value.member($trusted['certname'])
   }
 
-  # notify { "patch groups are ${patch_groups}": }
-  # notify { "result is ${result}": }
-  # notify { "result length ${result.length}": }
-  # notify { "group is ${result.keys['0']}": }
-
   if $result.length == 1 {
+    # node is a member of a single patch group, classify it with PE_patch
     class { 'pe_patch':
       patch_group => $result.keys['0'],
     }
