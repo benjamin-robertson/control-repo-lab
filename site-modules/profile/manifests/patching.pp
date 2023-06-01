@@ -5,7 +5,7 @@ class profile::patching {
   $patch_groups = lookup('patch_groups_as_a_hash')
 
   $result = $patch_groups.filter | $key, $value | {
-    $value.dig($trusted['certname'])
+    $value.member($trusted['certname'])
   }
 
   notify { "patch groups is ${result}": }
