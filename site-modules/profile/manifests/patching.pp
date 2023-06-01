@@ -2,8 +2,8 @@
 #
 #
 class profile::patching {
-  $patch_groups = lookup('patch_groups_as_a_hash')
-  $patch_options = lookup('patching_options_as_a_hash')
+  $patch_groups = lookup('patch_groups_as_a_hash', { 'default_value' => {} })
+  $patch_options = lookup('patching_options_as_a_hash', { 'default_value' => {} })
 
   $result = $patch_groups.filter | $key, $value | {
     $value.member($trusted['certname'])
