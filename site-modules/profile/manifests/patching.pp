@@ -17,7 +17,9 @@ class profile::patching {
     class { 'pe_patch':
       patch_group => $result.keys['0'],
     }
-  } else {
+  } elsif $result.length == 0 {
     notify { 'No patch group defined for host': }
+  } else {
+    notify { 'Host is a member of multiple patch groups; failing safely.': }
   }
 }
