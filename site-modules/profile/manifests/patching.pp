@@ -18,7 +18,7 @@ class profile::patching {
       patch_group => $result.keys['0'],
     }
   } else {
-    puppet.warning('No patch node group defined for host')
+    fail('No patch node group defined for host')
     notify { "I have failed length is ${result.length}": }
   }
 }
