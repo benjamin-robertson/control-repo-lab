@@ -3,6 +3,7 @@
 #
 class profile::patching {
   $patch_groups = lookup('patch_groups_as_a_hash')
+  $patch_options = lookup('patching_options_as_a_hash')
 
   $result = $patch_groups.filter | $key, $value | {
     $value.member($trusted['certname'])
@@ -12,6 +13,7 @@ class profile::patching {
     # node is a member of a single patch group, classify it with PE_patch
     class { 'pe_patch':
       patch_group => $result.keys['0'],
+      *           => $patch_options[$trusted['certname']],
     }
   } elsif $result.length == 0 {
     notify { 'No patch group defined for host': }
