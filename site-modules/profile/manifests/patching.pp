@@ -1,5 +1,9 @@
 # Class: profile::patching
 #
+# Wrapper class for pe_patch, reads hiera for the following hashes
+#  - patch_groups_as_a_hash
+#  - patching_options_as_a_hash
+# Feeds these hashes to pe_patch.
 #
 class profile::patching {
   $patch_groups = lookup('patch_groups_as_a_hash', { 'default_value' => {} })

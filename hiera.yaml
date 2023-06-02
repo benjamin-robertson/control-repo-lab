@@ -9,7 +9,6 @@ hierarchy:
     data_hash: yaml_data
     datadir: "pe_patch_data"
     paths:
-      - "nodes/%{trusted.certname}.yaml"
       - "common.yaml"
   - name: "Yaml backend"
     #data_hash: yaml_data
