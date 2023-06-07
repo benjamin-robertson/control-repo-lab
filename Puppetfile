@@ -83,7 +83,7 @@ mod 'benjaminrobertson-observium',
   default_branch:   'devmain'
 # deps for observium
 mod 'puppetlabs-yumrepo_core', '1.0.7'
-mod 'puppetlabs-mysql', '12.0.1'
+mod 'puppetlabs-mysql', '14.0.0'
 mod 'puppetlabs-cron_core', '1.0.5'
 mod 'puppet-selinux', '3.4.0'
 mod 'puppetlabs-apache', '7.0.0'
@@ -98,7 +98,7 @@ mod 'puppetlabs-vcsrepo', '5.0.0'
 mod 'puppet-gitlab', '8.0.0'
 
 # Comply module and dependcies
-mod 'puppetlabs-comply', '2.11.0'
+mod 'puppetlabs-comply', '2.13.0'
 mod 'puppetlabs-java', '9.0.1'
 mod 'puppetlabs-ruby_task_helper', '0.6.1'
 
