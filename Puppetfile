@@ -52,10 +52,7 @@ mod 'WhatsARanjit-node_manager',
 mod 'puppet-windows_firewall', '4.0.0'
 mod 'puppetlabs-sqlserver', '3.0.0'
 mod 'puppetlabs-wsus_client', '4.0.0'
-#mod 'geoffwilliams-safe_roles', '1.2.3'
-mod 'geoffwilliams-safe_roles',
-  git:     'https://github.com/benjamin-robertson/puppet-safe_roles.git',
-  branch:  'issue_12'
+mod 'geoffwilliams-safe_roles', '1.3.1'
 
 
 # Modules from Git
