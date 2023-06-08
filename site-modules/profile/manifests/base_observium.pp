@@ -2,8 +2,9 @@
 #
 class profile::base_observium {
   # Include observium module class
-  class { 'observium':
-    additional_mib_location      => ['/blah/hello','/ho/ho'],
-    additional_snmp_conf_options => ['extra','stuff'],
-  }
+  include observium
+  # class { 'observium':
+  #   additional_mib_location      => ['/blah/hello','/ho/ho'],
+  #   additional_snmp_conf_options => ['extra','stuff'],
+  # }
 }
