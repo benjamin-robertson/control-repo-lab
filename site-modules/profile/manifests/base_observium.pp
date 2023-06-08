@@ -2,5 +2,7 @@
 #
 class profile::base_observium {
   # Include observium module class
-  include observium
+  class { 'observium':
+    additional_mib_location => '/blah/hello',
+  }
 }
