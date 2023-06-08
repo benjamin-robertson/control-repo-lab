@@ -43,7 +43,7 @@ mod 'puppetlabs-pwshlib', '0.10.2'
 mod 'puppetlabs-reboot', '3.1.0'
 mod 'puppetlabs-registry', '3.2.0'
 mod 'puppetlabs-sshkeys_core', '2.2.0'
-mod 'puppetlabs-stdlib', '9.0.0'
+mod 'puppetlabs-stdlib', '8.6.0'
 #mod 'WhatsARanjit-node_manager', '0.7.4'
 mod 'WhatsARanjit-node_manager',
   git:      'git@github.com:benjamin-robertson/puppet-node_manager.git',
