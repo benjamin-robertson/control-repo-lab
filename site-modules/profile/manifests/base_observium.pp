@@ -3,6 +3,6 @@
 class profile::base_observium {
   # Include observium module class
   class { 'observium':
-    additional_mib_location => '/blah/hello',
+    additional_mib_location => ['/blah/hello','/ho/ho'],
   }
 }
