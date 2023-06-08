@@ -76,11 +76,11 @@ mod 'mco_plugin',
   branch:           :control_branch,
   default_branch:   'main'
 
-# mod 'benjaminrobertson-observium', '1.0.0'
-mod 'benjaminrobertson-observium',
-  git:              'https://github.com/benjamin-robertson/observium.git',
-  branch:           :control_branch,
-  default_branch:   'devmain'
+mod 'benjaminrobertson-observium', '2.0.0'
+# mod 'benjaminrobertson-observium',
+#   git:              'https://github.com/benjamin-robertson/observium.git',
+#   branch:           :control_branch,
+#   default_branch:   'devmain'
 # deps for observium
 mod 'puppetlabs-yumrepo_core', '2.0.0'
 mod 'puppetlabs-mysql', '14.0.0'
@@ -223,7 +223,8 @@ mod 'platform_module',
 
 mod 'update_trusted_facts',
   git:            'git@github.com:benjamin-robertson/update_trusted_facts.git',
-  branch:         '0.2.0'
+  branch:         :control_branch,
+  default_branch: 'devmain'
 
 mod 'trlinkin-noop', '1.1.1'
 
