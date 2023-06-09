@@ -222,7 +222,7 @@ mod 'platform_module',
 #   git:            'git@github.com:benjamin-robertson/update_trusted_facts.git',
 #   branch:         :control_branch,
 #   default_branch: 'devmain'
-mod 'update_trusted_facts', '1.0.0'
+mod 'benjaminrobertson-update_trusted_facts', '1.0.0'
 
 mod 'trlinkin-noop', '1.1.1'
 
