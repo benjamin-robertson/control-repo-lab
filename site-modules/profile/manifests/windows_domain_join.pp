@@ -5,7 +5,7 @@
 class profile::windows_domain_join (
   String $domain_name,
   String $domain_bind_user,
-  Array $dns_server_addresses,
+  Array  $dns_server_addresses,
 ) {
   $domain_bind_password = Sensitive(lookup('profile::windows_domain_join::domain_bind_password'))
   # Setup DNS servers
@@ -28,7 +28,7 @@ class profile::windows_domain_join (
     validation_mode => 'resource',
   }
 
-  reboot {'reboot after join':
+  reboot { 'reboot after join' :
     apply     => 'finished',
     subscribe => Dsc_computer['domain join'],
   }
