@@ -232,5 +232,5 @@ mod 'bootstrap',
 
 mod 'pe_patch_data',
   git:            'git@github.com:benjamin-robertson/pe_patch_data.git',
-  branch:         'main',
+  branch:         'control_branch',
   install_path:   '.'
