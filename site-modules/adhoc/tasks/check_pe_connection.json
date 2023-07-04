@@ -13,6 +13,10 @@
         "bypass_connectivity_check": {
             "description": "Bypass connectivity check, still checks for PE server",
             "type": "Boolean"
+        },
+        "test_enum": {
+            "description": "testing enum",
+            "type": "Enum['choice1','choice2']"
         }
     }
   }
