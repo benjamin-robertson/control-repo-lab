@@ -14,10 +14,15 @@ class profile::patching {
   }
 
   if $result.length == 1 {
+    # check if the host has options defined. Otherwise return emtpy hash
+    $host_patch_options = $patch_options.dig($trusted['certname']) ? {
+      true    => $patch_options[$trusted['certname']],
+      default => {},
+    }
     # node is a member of a single patch group, classify it with PE_patch
     class { 'pe_patch':
       patch_group => $result.keys['0'],
-      *           => $patch_options.dig($trusted['certname']),
+      *           => $host_patch_options,
     }
   } elsif $result.length == 0 {
     notify { 'No patch group defined for host': }
