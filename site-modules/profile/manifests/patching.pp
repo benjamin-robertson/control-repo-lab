@@ -17,7 +17,7 @@ class profile::patching {
     # node is a member of a single patch group, classify it with PE_patch
     class { 'pe_patch':
       patch_group => $result.keys['0'],
-      *           => $patch_options[$trusted['certname']],
+      *           => $patch_options.dig($trusted['certname']),
     }
   } elsif $result.length == 0 {
     notify { 'No patch group defined for host': }
