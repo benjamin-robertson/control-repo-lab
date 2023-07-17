@@ -16,7 +16,7 @@ class profile::patching {
   }
 
   if $result.length == 1 {
-    # check if the host has options defined. Otherwise return emtpy hash
+    # check if the host has options defined. Otherwise return empty hash
     $host_patch_options = $patch_options.dig($trusted['certname']) ? {
       undef   => {},
       default => $patch_options[$trusted['certname']],
