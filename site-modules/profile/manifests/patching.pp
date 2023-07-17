@@ -10,7 +10,9 @@ class profile::patching {
   $patch_options = lookup('patching_options_as_a_hash', { 'default_value' => {} })
 
   $result = $patch_groups.filter | $key, $value | {
-    $value.member($trusted['certname'])
+    if $value =~ Array {
+      $value.member($trusted['certname'])
+    }
   }
 
   if $result.length == 1 {
