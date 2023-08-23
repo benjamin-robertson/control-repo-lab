@@ -1,6 +1,6 @@
 # Class: profile::ssh_keys
 #
-class profile::ssh_keys {
+class profile::linux::ssh_keys {
   ssh_authorized_key { 'ben@louie.com':
     ensure => present,
     user   => 'louie',
