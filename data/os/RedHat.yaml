@@ -13,3 +13,7 @@ cem_linux::config:
 
 secure_linux_cis::rules::ensure_bootloader_password_is_set::grub_username: 'root'
 secure_linux_cis::rules::ensure_bootloader_password_is_set::grub_pbkdf2_password_hash: 'lkQIani5W0vHEGrMccnoH5MUYzMAZX4+XsJ2/pVx6fw='
+
+
+doge::settings::hi:
+  jay: yay

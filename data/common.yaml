@@ -1,4 +1,12 @@
 ---
+lookup_options:
+  doge::settings:
+    merge:
+      strategy: hash
+
+doge::settings::hi:
+  bee: yay
+
 # to be merged, but not promoted. 
 bensecret: ENC[PKCS7,MIIBeQYJKoZIhvcNAQcDoIIBajCCAWYCAQAxggEhMIIBHQIBADAFMAACAQEwDQYJKoZIhvcNAQEBBQAEggEALfow6pXIPLA78VY+X8+f9DilnMf2BC6j1S36obqwKip8uVvNwRZra/CzM2q23Td8ylE/DJK38Ojz/fHGgRInTBaUeJghHzlhFKfPf7A3np86alSAcmQPo3vZ3ni6iEqt5XifaQpt+ruX8wDFfn2ugMJ9o1QlbMh/4cozTr59kX+epr3ZO5No96ojdyCdXBk/0qrV8+/h9CCsaI1OmwS5drShQsZfiXH+cCTFl23bQschkw5r/GSEU2FxUROg3F3FBi53SKEVHhLeNX7C2eJdRrfE4DTrFtuiUe03az1QTNUQFK5rzpshrId+CSZupVu4X7xNEArxkOZnCqxikT6NwDA8BgkqhkiG9w0BBwEwHQYJYIZIAWUDBAEqBBA7ga4Pt5yJTP2V45B3LVjXgBCmYxxTGfGmQ7/sA4cQ37vK]
 message: "This node is using common data"
