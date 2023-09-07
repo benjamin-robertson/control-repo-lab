@@ -1,6 +1,6 @@
 ---
 lookup_options:
-  doge::settings:
+  doge::settings::hi:
     merge:
       strategy: hash
 
