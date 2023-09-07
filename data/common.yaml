@@ -2,7 +2,7 @@
 lookup_options:
   cem_windows::config:
     merge: hash
-  doge::settings:
+  doge::settings::hi:
     merge:
       strategy: hash
 
