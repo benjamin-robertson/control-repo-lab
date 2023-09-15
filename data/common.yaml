@@ -142,3 +142,7 @@ sudo::config:
       - 'such content'
       - 'from common'
       - 'very common'
+  extra_user:
+    content:
+      - 'extra user'
+      - 'common only'

@@ -34,3 +34,8 @@ sudo::config:
       - 'such content'
       - 'from rhel8'
       - 'not common'
+  rhel8_user:
+    content:
+      - 'content is here'
+      - 'from rhel8'
+      - 'very specific'
