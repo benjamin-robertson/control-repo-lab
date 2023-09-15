@@ -26,3 +26,11 @@ mysql::server::restart: true
 mysql::server::override_options:
   mysqld:
     max_allowed_packet: "128m"
+
+
+sudo::config:
+  blah_user:
+    content:
+      - 'such content'
+      - 'from rhel8'
+      - 'not common'
