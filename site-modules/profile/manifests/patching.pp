@@ -1,4 +1,4 @@
-# Class: profile::patching
+# Class: profile::patching.
 #
 # Wrapper class for pe_patch, reads hiera for the following hashes
 #  - patch_groups_as_a_hash
