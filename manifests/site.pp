@@ -32,7 +32,7 @@ node default {
   # Example:
   #   class { 'my_class': }
   noop(false)
-  include puppet_enterprise::profile::agent
+  # include puppet_enterprise::profile::agent
 }
 
 # if $trusted.dig('extensions', 'pp_role') == 'base_linux' {
