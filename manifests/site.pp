@@ -31,7 +31,8 @@ node default {
   # This is where you can declare classes for all nodes.
   # Example:
   #   class { 'my_class': }
-  $ben = 'set in site.pp not in tag'
+  noop(false)
+  include puppet_enterprise::profile::agent
 }
 
 # if $trusted.dig('extensions', 'pp_role') == 'base_linux' {
