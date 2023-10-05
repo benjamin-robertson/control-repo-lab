@@ -4,4 +4,5 @@
 class profile::puppet::noop_things {
   # noop(false)
   # include puppet_enterprise::profile::agent
+  include puppet_enterprise
 }
