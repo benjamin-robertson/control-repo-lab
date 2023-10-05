@@ -34,6 +34,7 @@ node default {
 }
 
 node 'ip-172-31-18-43.ap-southeast-2.compute.internal' {
+  include profile::puppet::noop_things
   include role::generic_linux
 }
 
