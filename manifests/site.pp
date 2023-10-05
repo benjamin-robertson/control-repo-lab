@@ -28,13 +28,13 @@ File {
 #
 # For more on node definitions, see: https://puppet.com/docs/puppet/latest/lang_node_definitions.html
 node default {
+  include puppet_enterprise
   # include profile::puppet::noop_things
   # include puppet_enterprise::profile::agent
 }
 
 node 'ip-172-31-18-43.ap-southeast-2.compute.internal' {
   include role::generic_linux
-  noop(false)
 }
 
 # if $trusted.dig('extensions', 'pp_role') == 'base_linux' {
