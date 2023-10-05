@@ -1,3 +1,7 @@
+def get_datacentre_regex(hostname)
+    "none-set #{hostname}"
+  end
+
 Facter.add(:datacentre) do
   setcode do
     begin
@@ -8,10 +12,6 @@ Facter.add(:datacentre) do
       end
     rescue
         get_datacentre_regex(Facter.value(:hostname).downcase)
-    end
-
-    def get_datacentre_regex(hostname)
-      "none-set #{hostname}"
     end
   end
 end
