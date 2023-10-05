@@ -28,7 +28,7 @@ File {
 #
 # For more on node definitions, see: https://puppet.com/docs/puppet/latest/lang_node_definitions.html
 node default {
-  include profile::puppet::noop_things
+  # include profile::puppet::noop_things
   # include puppet_enterprise::profile::agent
 }
 
