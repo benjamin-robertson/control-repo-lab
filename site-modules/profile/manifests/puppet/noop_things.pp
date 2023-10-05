@@ -2,6 +2,6 @@
 
 #
 class profile::puppet::noop_things {
-  noop(false)
-  # include puppet_enterprise::profile::agent
+  # noop(false)
+  include puppet_enterprise::profile::agent
 }
