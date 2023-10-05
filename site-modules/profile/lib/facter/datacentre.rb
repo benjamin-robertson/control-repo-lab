@@ -4,10 +4,14 @@ Facter.add(:datacentre) do
       if Facter.value(:trusted)['extensions']['pp_datacenter'] != nil
        datacentre = Facter.value(:trusted)['extensions']['pp_datacenter'].downcase
       else
-       'none-set'
+        get_datacentre_regex(Facter.value(:hostname).downcase)
       end
     rescue
-      'none-set'
+        get_datacentre_regex(Facter.value(:hostname).downcase)
+    end
+
+    def get_datacentre_regex(hostname)
+      "none-set #{hostname}"
     end
   end
 end
