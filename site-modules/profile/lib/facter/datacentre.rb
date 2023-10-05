@@ -8,5 +8,6 @@ Facter.add(:datacentre) do
       end
     rescue
       'none-set'
+    end
   end
 end
