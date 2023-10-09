@@ -21,6 +21,14 @@ class profile::patching {
     }
   }
 
+  # Create fact directory, only req in lab
+  file { ['/etc/puppetlabs/facter', '/etc/puppetlabs/facter/facts.d']:
+    ensure => directory,
+    owner  => root,
+    group  => root,
+    mode   => '0700',
+  }
+
   if $result.length == 1 {
     # check if the host has options defined. Otherwise return empty hash
     $host_patch_options = $patch_options.dig($trusted['certname']) ? {
