@@ -38,7 +38,7 @@ class profile::patching {
 
   $patch_group_options = $patch_groups.reduce({}) | $memo, $value | {
     # Confirm we have the correct data types
-    if $value['1'] =~ Hash and $value['1'].dig('options') =~ Array {
+    if $value['1'] =~ Hash and $value['1'].dig('options') =~ Hash {
       # Confirm if the host is a member of this patch group
       $memo + { $value['0'] => $value['1']['options'] }
     } else {
