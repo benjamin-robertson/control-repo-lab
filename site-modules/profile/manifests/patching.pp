@@ -67,7 +67,7 @@ class profile::patching {
     # node is a member of a single patch group, classify it with PE_patch.
     class { 'pe_patch':
       patch_group => $result.keys['0'],
-      *           => $host_patch_options,
+      *           => $combined_patch_options,
     }
     # Create fact status
     $file_content = @("EOT")
