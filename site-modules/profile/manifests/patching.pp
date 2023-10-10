@@ -16,8 +16,8 @@ class profile::patching {
   noop(false)
 
   $result = $patch_groups.filter | $key, $value | {
-    if $value =~ Array {
-      $value.member($trusted['certname'])
+    if $value =~ Hash and $value.key == 'hosts' {
+      $value['hosts'].member($trusted['certname'])
     }
   }
 
