@@ -15,11 +15,21 @@ class profile::patching {
   # Set noop false
   noop(false)
 
-  $result = $patch_groups.filter | $key, $value | {
-    if $value =~ Hash and $value.key == 'hosts' {
-      $value['hosts'].member($trusted['certname'])
+  $result = $patch_groups.reduce({}) | $memo, $value | {
+    if $value['1'] =~ Hash and $value['1']['hosts'].member($trusted['certname']) {
+      $memo = $memo + { $value['0'] => $trusted['certname'] }
+    } else {
+      $memo
     }
   }
+
+  notify("Result is ${result}")
+
+  # $result = $patch_groups.filter | $key, $value | {
+  #   if $value =~ Array {
+  #     $value.member($trusted['certname'])
+  #   }
+  # }
 
   # Create fact directory, only req in lab
   file { ['/etc/puppetlabs/facter', '/etc/puppetlabs/facter/facts.d']:
