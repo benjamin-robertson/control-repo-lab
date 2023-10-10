@@ -74,6 +74,8 @@ class profile::patching {
       patching_group=${result.keys['0']}
       patching_status=okay
       patching_description="okay, passing settings to pe_patch"
+      patching_group_options=${patch_group_options}
+      patching_combined_options=${combined_patch_options}
       | EOT
     file { '/etc/puppetlabs/facter/facts.d/patching.txt':
       ensure  => file,
