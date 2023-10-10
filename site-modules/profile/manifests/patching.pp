@@ -12,7 +12,7 @@ class profile::patching {
   $patch_groups_and_options = lookup('patch_groups_as_a_hash', { 'default_value' => {} })
   $node_options_override = lookup('patching_options_node_override', { 'default_value' => {} })
 
-  # Set varible to {} if its undef
+  # Set varible to {} if its undef.
   $final_patch_groups_and_options = $patch_groups_and_options ? {
     undef   => {},
     default => $patch_groups_and_options,
