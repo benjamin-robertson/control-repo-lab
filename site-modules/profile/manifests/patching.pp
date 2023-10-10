@@ -15,6 +15,7 @@ class profile::patching {
   # Set noop false
   noop(false)
 
+  # Get patch groups for host
   $result = $patch_groups.reduce({}) | $memo, $value | {
     # Confirm we have the correct data types
     if $value['1'] =~ Hash and $value['1'].dig('hosts') =~ Array {
@@ -29,7 +30,23 @@ class profile::patching {
     }
   }
 
+  $defualt_options = {
+    'reboot_override' => 'never',
+  }
+
   notify { "Result is ${result}": }
+
+  $patch_group_options = $patch_groups.reduce({}) | $memo, $value | {
+    # Confirm we have the correct data types
+    if $value['1'] =~ Hash and $value['1'].dig('options') =~ Array {
+      # Confirm if the host is a member of this patch group
+      $memo + { $value['0'] => $value['1']['options'] }
+    } else {
+      $memo
+    }
+  }
+
+  notify { "Options are ${patch_group_options}": }
 
   # $result = $patch_groups.filter | $key, $value | {
   #   if $value =~ Array {
