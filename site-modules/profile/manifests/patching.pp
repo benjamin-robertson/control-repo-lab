@@ -62,7 +62,11 @@ class profile::patching {
       undef   => {},
       default => $patch_options[$trusted['certname']],
     }
-    $combined_patch_options = $default_options + $patch_group_options[$result.keys['0']] + $host_patch_options
+    $final_patch_group_options = $patch_group_options[$result.keys['0']] ? {
+      undef   => {},
+      default => $patch_group_options[$result.keys['0']]
+    }
+    $combined_patch_options = $default_options + $final_patch_group_options + $host_patch_options
     notify { "Combined patch options ${combined_patch_options}": }
     # node is a member of a single patch group, classify it with PE_patch.
     class { 'pe_patch':
