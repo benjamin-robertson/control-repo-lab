@@ -17,7 +17,7 @@ class profile::patching {
 
   $result = $patch_groups.reduce({}) | $memo, $value | {
     if $value['1'] =~ Hash and $value['1']['hosts'].member($trusted['certname']) {
-      $memo = $memo + { $value['0'] => $trusted['certname'] }
+      $memo + { $value['0'] => $trusted['certname'] }
     } else {
       $memo
     }
