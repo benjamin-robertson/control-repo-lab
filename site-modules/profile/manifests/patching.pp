@@ -30,7 +30,7 @@ class profile::patching {
     }
   }
 
-  $defualt_options = {
+  $default_options = {
     'reboot_override' => 'never',
   }
 
@@ -48,12 +48,6 @@ class profile::patching {
 
   notify { "Options are ${patch_group_options}": }
 
-  # $result = $patch_groups.filter | $key, $value | {
-  #   if $value =~ Array {
-  #     $value.member($trusted['certname'])
-  #   }
-  # }
-
   # Create fact directory, only req in lab
   file { ['/etc/puppetlabs/facter', '/etc/puppetlabs/facter/facts.d']:
     ensure => directory,
@@ -68,6 +62,8 @@ class profile::patching {
       undef   => {},
       default => $patch_options[$trusted['certname']],
     }
+    $combined_patch_options = $default_options + $patch_group_options + $host_patch_options
+    notify { "Combined patch options ${combined_patch_options}": }
     # node is a member of a single patch group, classify it with PE_patch.
     class { 'pe_patch':
       patch_group => $result.keys['0'],
