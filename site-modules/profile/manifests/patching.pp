@@ -9,14 +9,14 @@
 # lint:ignore:variables_not_enclosed
 #
 class profile::patching {
-  $patch_groups_options = lookup('patch_groups_as_a_hash', { 'default_value' => {} })
+  $patch_groups_and_options = lookup('patch_groups_as_a_hash', { 'default_value' => {} })
   $node_options_override = lookup('patching_options_node_override', { 'default_value' => {} })
 
   # Set noop false
   noop(false)
 
   # Get patch groups for host
-  $result = $patch_groups.reduce({}) | $memo, $value | {
+  $result = $patch_groups_and_options.reduce({}) | $memo, $value | {
     # Confirm we have the correct data types
     if $value['1'] =~ Hash and $value['1'].dig('hosts') =~ Array {
       # Confirm if the host is a member of this patch group
@@ -36,6 +36,7 @@ class profile::patching {
 
   notify { "Result is ${result}": }
 
+  # Get patch group options
   $patch_group_options = $node_options_override.reduce({}) | $memo, $value | {
     # Confirm we have the correct data types
     if $value['1'] =~ Hash and $value['1'].dig('options') =~ Hash {
