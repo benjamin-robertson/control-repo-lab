@@ -16,14 +16,15 @@ class profile::patching {
   noop(false)
 
   $result = $patch_groups.reduce({}) | $memo, $value | {
-    if $value['1'] =~ Hash and $value['1']['hosts'].member($trusted['certname']) {
+    # if $value['1'] =~ Hash and $value['1']['hosts'].member($trusted['certname']) {
+    if $value['1'] =~ Hash and $value['1'].dig('hosts').member($trusted['certname']) {
       $memo + { $value['0'] => $trusted['certname'] }
     } else {
       $memo
     }
   }
 
-  notify{ "Result is ${result}": }
+  notify { "Result is ${result}": }
 
   # $result = $patch_groups.filter | $key, $value | {
   #   if $value =~ Array {
