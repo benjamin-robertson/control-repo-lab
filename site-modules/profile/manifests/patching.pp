@@ -9,8 +9,8 @@
 # lint:ignore:variables_not_enclosed
 #
 class profile::patching {
-  $patch_groups = lookup('patch_groups_as_a_hash', { 'default_value' => {} })
-  $patch_options = lookup('patching_options_as_a_hash', { 'default_value' => {} })
+  $patch_groups_options = lookup('patch_groups_as_a_hash', { 'default_value' => {} })
+  $node_options_override = lookup('patching_options_node_override', { 'default_value' => {} })
 
   # Set noop false
   noop(false)
