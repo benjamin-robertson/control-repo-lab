@@ -21,10 +21,12 @@ class profile::patching {
       # Confirm if the host is a member of this patch group
       if $value['1']['hosts'].member($trusted['certname']) {
         $memo + { $value['0'] => $trusted['certname'] }
-        next()
+      } else {
+        $memo
       }
+    } else {
+      $memo
     }
-    $memo
   }
 
   notify { "Result is ${result}": }
