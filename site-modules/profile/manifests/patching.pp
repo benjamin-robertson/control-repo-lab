@@ -1,10 +1,10 @@
 # Class: profile::patching
 #
 # @summary Wrapper class for pe_patch, reads hiera for the following hashes
-# @param patch_groups_as_a_hash
-#   Feeds patch_group as hashes to pe_patch.
-# @param patching_options_as_a_hash
-#   Feeds host_patch_options hashes to pe_patch.
+# @param patch_groups_and_options
+#   Hash containing the patch groups and servers along with the patch groups options.
+# @param node_options_override
+#   Hash containing patch options overrides per node. These options will override the options set in the patch group.
 #
 # lint:ignore:variables_not_enclosed
 #
@@ -16,7 +16,7 @@ class profile::patching {
   noop(false)
 
   # Get patch groups for host
-  $result = $patch_groups_and_options.reduce({}) | $memo, $value | {
+  $result_patch_groups = $patch_groups_and_options.reduce({}) | $memo, $value | {
     # Confirm we have the correct data types
     if $value['1'] =~ Hash and $value['1'].dig('hosts') =~ Array {
       # Confirm if the host is a member of this patch group
@@ -34,10 +34,10 @@ class profile::patching {
     'reboot_override' => 'never',
   }
 
-  notify { "Result is ${result}": }
+  notify { "Result is ${result_patch_groups}": }
 
   # Get patch group options
-  $patch_group_options = $node_options_override.reduce({}) | $memo, $value | {
+  $patch_group_options = $patch_groups_and_options.reduce({}) | $memo, $value | {
     # Confirm we have the correct data types
     if $value['1'] =~ Hash and $value['1'].dig('options') =~ Hash {
       # Confirm if the host is a member of this patch group
@@ -57,26 +57,26 @@ class profile::patching {
     mode   => '0700',
   }
 
-  if $result.length == 1 {
+  if $result_patch_groups.length == 1 {
     # check if the host has options defined. Otherwise return empty hash
-    $host_patch_options = $patch_options.dig($trusted['certname']) ? {
+    $host_patch_options = $node_options_override.dig($trusted['certname']) ? {
       undef   => {},
-      default => $patch_options[$trusted['certname']],
+      default => $node_options_override[$trusted['certname']],
     }
-    $final_patch_group_options = $patch_group_options[$result.keys['0']] ? {
+    $final_patch_group_options = $patch_group_options[$result_patch_groups.keys['0']] ? {
       undef   => {},
-      default => $patch_group_options[$result.keys['0']]
+      default => $patch_group_options[$result_patch_groups.keys['0']]
     }
     $combined_patch_options = $default_options + $final_patch_group_options + $host_patch_options
     notify { "Combined patch options ${combined_patch_options}": }
     # node is a member of a single patch group, classify it with PE_patch.
     class { 'pe_patch':
-      patch_group => $result.keys['0'],
+      patch_group => $result_patch_groups.keys['0'],
       *           => $combined_patch_options,
     }
     # Create fact status
     $file_content = @("EOT")
-      patching_group=${result.keys['0']}
+      patching_group=${result_patch_groups.keys['0']}
       patching_status=okay
       patching_description="okay, passing settings to pe_patch"
       patching_group_options=${patch_group_options}
@@ -91,7 +91,7 @@ class profile::patching {
       group   => 'root',
       noop    => false,
     }
-  } elsif $result.length == 0 {
+  } elsif $result_patch_groups.length == 0 {
     $file_content = @("EOT")
       patching_status=no_patch_group
       patching_description="No patch group defined for host"
