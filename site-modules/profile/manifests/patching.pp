@@ -23,7 +23,7 @@ class profile::patching {
     }
   }
 
-  notify("Result is ${result}")
+  notify{ "Result is ${result}": }
 
   # $result = $patch_groups.filter | $key, $value | {
   #   if $value =~ Array {
