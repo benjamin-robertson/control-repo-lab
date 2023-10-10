@@ -62,7 +62,7 @@ class profile::patching {
       undef   => {},
       default => $patch_options[$trusted['certname']],
     }
-    $combined_patch_options = $default_options + $patch_group_options + $host_patch_options
+    $combined_patch_options = $default_options + $patch_group_options[$result.keys['0']] + $host_patch_options
     notify { "Combined patch options ${combined_patch_options}": }
     # node is a member of a single patch group, classify it with PE_patch.
     class { 'pe_patch':
@@ -75,6 +75,7 @@ class profile::patching {
       patching_status=okay
       patching_description="okay, passing settings to pe_patch"
       patching_group_options=${patch_group_options}
+      patching_host_options=${host_patch_options}
       patching_combined_options=${combined_patch_options}
       | EOT
     file { '/etc/puppetlabs/facter/facts.d/patching.txt':
