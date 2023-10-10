@@ -12,11 +12,17 @@ class profile::patching {
   $patch_groups_and_options = lookup('patch_groups_as_a_hash', { 'default_value' => {} })
   $node_options_override = lookup('patching_options_node_override', { 'default_value' => {} })
 
+  # Set varible to {} if its undef
+  $final_patch_groups_and_options = $patch_groups_and_options ? {
+    undef   => {},
+    default => $patch_groups_and_options,
+  }
+
   # Set noop false
   noop(false)
 
   # Get patch groups for host
-  $result_patch_groups = $patch_groups_and_options.reduce({}) | $memo, $value | {
+  $result_patch_groups = $final_patch_groups_and_options.reduce({}) | $memo, $value | {
     # Confirm we have the correct data types
     if $value['1'] =~ Hash and $value['1'].dig('hosts') =~ Array {
       # Confirm if the host is a member of this patch group
@@ -37,7 +43,7 @@ class profile::patching {
   notify { "Result is ${result_patch_groups}": }
 
   # Get patch group options
-  $patch_group_options = $patch_groups_and_options.reduce({}) | $memo, $value | {
+  $patch_group_options = $final_patch_groups_and_options.reduce({}) | $memo, $value | {
     # Confirm we have the correct data types
     if $value['1'] =~ Hash and $value['1'].dig('options') =~ Hash {
       # Confirm if the host is a member of this patch group
