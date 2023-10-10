@@ -36,7 +36,7 @@ class profile::patching {
 
   notify { "Result is ${result}": }
 
-  $patch_group_options = $patch_groups.reduce({}) | $memo, $value | {
+  $patch_group_options = $node_options_override.reduce({}) | $memo, $value | {
     # Confirm we have the correct data types
     if $value['1'] =~ Hash and $value['1'].dig('options') =~ Hash {
       # Confirm if the host is a member of this patch group
