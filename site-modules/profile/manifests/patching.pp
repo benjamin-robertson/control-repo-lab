@@ -1,5 +1,8 @@
 # Class: profile::patching
 #
+# DO NOT include any other classes from this patching class as noop has been set to false. 
+# If any classes are included all changes these classes make will be enforce regardless of agent noop mode.
+#
 # @summary Wrapper class for pe_patch, reads hiera for the following hashes
 # @param patch_groups_and_options
 #   Hash containing the patch groups and servers along with the patch groups options.
