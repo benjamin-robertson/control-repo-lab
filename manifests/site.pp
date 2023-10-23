@@ -28,7 +28,7 @@ File {
 #
 # For more on node definitions, see: https://puppet.com/docs/puppet/latest/lang_node_definitions.html
 node default {
-  include profile::puppet::no_noop
+  include profile::puppet::enforced
   include profile::patching
 }
 
