@@ -1,4 +1,4 @@
-# Class: profile::puppet::enforced
+# Class: profile::puppet::enforced.
 # 
 # @summary Class which sets noop = false for the puppet_enterprise::profile::agent class
 #
