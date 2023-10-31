@@ -8,6 +8,6 @@ class profile::base_linux {
 
   file { '/tmp/random.txt':
     ensure  => file,
-    content => 'so random',
+    content => 'so random. poo',
   }
 }
