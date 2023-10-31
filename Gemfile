@@ -29,3 +29,4 @@ gem "rake", '13.1.0'
 gem "puppet", '7.26.0'
 gem "facter"
 gem 'hiera-eyaml'
+gem 'rspec-puppet', '~> 3.0'
