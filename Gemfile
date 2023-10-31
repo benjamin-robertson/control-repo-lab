@@ -23,7 +23,7 @@ source "https://rubygems.org"
 
 gem "onceover"
 # gem 'onceover-octocatalog-diff', :git => 'https://github.com/benjamin-robertson/onceover-octocatalog-diff.git', :ref => 'master'
-gem 'onceover-octocatalog-diff', :git => 'https://github.com/chambersmp/onceover-octocatalog-diff', :ref => 'feature_pre_pr'
+gem 'onceover-octocatalog-diff', :git => 'https://github.com/chambersmp/onceover-octocatalog-diff', :ref => 'feature_prep_pr'
 gem 'octocatalog-diff'
 gem "rake", '13.0.6'
 gem "puppet", '7.23.0'
