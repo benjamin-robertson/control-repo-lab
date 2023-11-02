@@ -77,21 +77,6 @@ pipelines:
         concurrent_compilations: 0
         all_deployments: false
       auto_promote: false
-    - name: "Post prod"
-      steps:
-      - type: "DEPLOYMENT"
-        name: "Deployment to post_prod on lab"
-        policy:
-          name: "cd4pe_deployments::eventual_consistency"
-        timeout: 3600000
-        concurrent_compilations: 0
-        all_deployments: false
-        pe_server: "lab"
-        target:
-          type: "NODE_GROUP"
-          node_group_id: "059002c1-9deb-4adb-943e-4e85300452ed"
-          environment_prefix: "app_"
-      auto_promote: false
     - name: "prod deploy"
       steps:
       - type: "DEPLOYMENT"
@@ -105,6 +90,21 @@ pipelines:
         target:
           type: "NODE_GROUP"
           node_group_id: "5ee6e69e-745c-42f1-ae23-acaee09e4c1b"
+          environment_prefix: "app_"
+      auto_promote: false
+    - name: "Post prod"
+      steps:
+      - type: "DEPLOYMENT"
+        name: "Deployment to post_prod on lab"
+        policy:
+          name: "cd4pe_deployments::eventual_consistency"
+        timeout: 3600000
+        concurrent_compilations: 0
+        all_deployments: false
+        pe_server: "lab"
+        target:
+          type: "NODE_GROUP"
+          node_group_id: "059002c1-9deb-4adb-943e-4e85300452ed"
           environment_prefix: "app_"
       auto_promote: false
 spec_version: "V1"
