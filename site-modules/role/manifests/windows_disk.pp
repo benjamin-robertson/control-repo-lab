@@ -1,4 +1,4 @@
-# Class: role::windows_disk.
+# Class: role::windows_disk
 #
 #
 class role::windows_disk {
