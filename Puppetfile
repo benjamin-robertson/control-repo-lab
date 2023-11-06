@@ -235,3 +235,8 @@ mod 'pe_patch_data',
   branch:         :control_branch,
   default_branch: 'main',
   install_path:   '.'
+
+mod 'shared_module',
+  git:            'git@github.com:benjamin-robertson/shared_module.git',
+  branch:         :control_branch,
+  default_branch: 'main'
