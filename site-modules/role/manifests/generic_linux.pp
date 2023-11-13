@@ -3,4 +3,5 @@
 class role::generic_linux {
   include profile::base_linux
   include shared_module
+  include profile::puppet::enforced
 }
