@@ -49,3 +49,6 @@ test_matrix:
   - rhel8_nodes:
      classes: 'all_classes'
      tests: 'spec'
+
+opts:
+  :manifest: 'manifests/site.pp' 
