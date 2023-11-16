@@ -1,4 +1,4 @@
-forge 'https://forge.puppet.com'
+forge 'https://untrusted-root.badssl.com/'
 
 # Hiera data
 # mod 'hieradata',
