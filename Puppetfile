@@ -1,4 +1,4 @@
-forge 'https://untrusted-root.badssl.com/'
+forge 'https://forge.puppet.com'
 
 # Hiera data
 # mod 'hieradata',
@@ -240,3 +240,4 @@ mod 'shared_module',
   git:            'git@github.com:benjamin-robertson/shared_module.git',
   branch:         :control_branch,
   default_branch: 'main'
+
