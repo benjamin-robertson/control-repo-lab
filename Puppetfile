@@ -153,7 +153,6 @@ mod 'puppet-chrony', '2.0.0'
 mod 'camptocamp-augeas', '1.9.0'
 mod 'puppet-kmod', '3.0.0'
 mod 'camptocamp-postfix', '1.12.0'
-mod 'kemra102-auditd', '2.2.0'
 mod 'puppet-alternatives', '3.0.0'
 mod 'puppet-cron', '2.0.0'
 mod 'puppetlabs-mailalias_core', '1.0.6'
@@ -241,3 +240,6 @@ mod 'shared_module',
   branch:         :control_branch,
   default_branch: 'main'
 
+mod 'simp-auditd',
+  git:            'git@github.com:benjamin-robertson/pupmod-simp-auditd.git',
+  branch:         'feature_simp_10744_purge_behaviour'
