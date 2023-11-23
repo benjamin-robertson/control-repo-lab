@@ -8,6 +8,7 @@ class profile::base_linux {
 
   class { 'auditd':
     default_audit_profiles => ['simp'],
+    purge_auditd_rules     => false,
   }
 
   file { '/tmp/random.txt':
