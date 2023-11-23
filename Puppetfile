@@ -243,3 +243,4 @@ mod 'shared_module',
 mod 'simp-auditd',
   git:            'git@github.com:benjamin-robertson/pupmod-simp-auditd.git',
   branch:         'feature_simp_10744_purge_behaviour'
+mod 'simp-simplib', '4.12.1'
