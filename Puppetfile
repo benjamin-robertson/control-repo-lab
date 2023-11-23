@@ -244,3 +244,8 @@ mod 'simp-auditd',
   git:            'git@github.com:benjamin-robertson/pupmod-simp-auditd.git',
   branch:         'SIMP_10744'
 mod 'simp-simplib', '4.12.1'
+
+mod 'migrate_node_to_another_primary',
+  git:            'git@github.com:benjamin-robertson/migrate_node_to_another_primary.git',
+  branch:         :control_branch,
+  default_branch: 'main'
