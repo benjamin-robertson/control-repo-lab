@@ -7,7 +7,7 @@ class profile::base_linux {
   include soe_linux
 
   class { 'auditd':
-    default_audit_profiles => 'simp',
+    default_audit_profiles => ['simp'],
   }
 
   file { '/tmp/random.txt':
