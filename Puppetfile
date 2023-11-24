@@ -245,7 +245,7 @@ mod 'simp-auditd',
   branch:         'SIMP_10744'
 mod 'simp-simplib', '4.12.1'
 
-mod 'migrate_node_to_another_primary',
-  git:            'git@github.com:benjamin-robertson/migrate_node_to_another_primary.git',
+mod 'migrate_nodes',
+  git:            'git@github.com:benjamin-robertson/migrate_nodes.git',
   branch:         :control_branch,
   default_branch: 'main'
