@@ -5,6 +5,6 @@
 class profile::puppet::enforced {
   if $facts['is_pe'] == false {
     noop(false)
-    include puppet_enterprise::profile::agent
+    # include puppet_enterprise::profile::agent
   }
 }
