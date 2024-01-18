@@ -54,6 +54,9 @@ mod 'puppetlabs-sqlserver', '3.0.0'
 mod 'puppetlabs-wsus_client', '4.0.0'
 mod 'geoffwilliams-safe_roles', '1.3.1'
 
+mod 'simp-crypto_policy', '0.5.0'
+mod 'simp-simplib', '4.12.1'
+
 
 # Modules from Git
 # Examples: https://github.com/puppetlabs/r10k/blob/master/doc/puppetfile.mkd#examples
@@ -243,7 +246,7 @@ mod 'shared_module',
 mod 'simp-auditd',
   git:            'git@github.com:benjamin-robertson/pupmod-simp-auditd.git',
   branch:         'SIMP_10744'
-mod 'simp-simplib', '4.12.1'
+
 
 mod 'migrate_nodes',
   git:            'git@github.com:benjamin-robertson/migrate_nodes.git',
