@@ -55,8 +55,10 @@ mod 'puppetlabs-wsus_client', '4.0.0'
 mod 'geoffwilliams-safe_roles', '1.3.1'
 
 mod 'simp-crypto_policy', '0.5.0'
-mod 'simp-simplib', '4.12.1'
-
+# mod 'simp-simplib', '4.12.1'
+mod 'simp-simplib',
+  git:     'git@github.com:benjamin-robertson/pupmod-simp-simplib.git',
+  branch:  'SIMP-10745'
 
 # Modules from Git
 # Examples: https://github.com/puppetlabs/r10k/blob/master/doc/puppetfile.mkd#examples
