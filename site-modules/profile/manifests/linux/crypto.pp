@@ -3,6 +3,6 @@
 #
 class profile::linux::crypto {
   class { 'crypto_policy':
-    ensure => 'DEFAULT',
+    ensure => 'LOUIE',
   }
 }
