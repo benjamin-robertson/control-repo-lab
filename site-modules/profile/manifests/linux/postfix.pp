@@ -6,7 +6,7 @@ class profile::linux::postfix (
 ) {
   # create postfix
   class { 'postfix':
-    relayhost => 'test.mail.com',
+    relayhost => 'test.dog.com',
     # * => $options,
   }
 }
