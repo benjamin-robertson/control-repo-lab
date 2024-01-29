@@ -31,6 +31,6 @@ profile::linux::postfix::options:
     debugger_command:
       value: |
         PATH=/bin:/usr/bin:/usr/local/bin:/usr/X11R6/bin
-        xxgdb / & sleep 5
       ensure: present
 
+# xxgdb / & sleep 5
