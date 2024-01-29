@@ -25,6 +25,7 @@ profile::linux::postfix::options:
   mydestination: dog.com
   alias_maps: hash:/etc/aliases
   configs:
-    poodle:
-      relayhost: test.mail.com
+    relayhost:
+      value: test.mail.com
+      ensure: present
 
