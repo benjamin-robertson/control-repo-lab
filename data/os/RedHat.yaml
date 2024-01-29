@@ -29,8 +29,7 @@ profile::linux::postfix::options:
       value: test.mail.com
       ensure: present
     debugger_command:
-      value: |
-        PATH=/bin:/usr/bin:/usr/local/bin:/usr/X11R6/bin
+      value: PATH=/bin:/usr/bin:/usr/local/bin:/usr/X11R6/bin
       ensure: present
 
 # xxgdb / & sleep 5
