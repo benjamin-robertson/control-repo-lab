@@ -20,9 +20,10 @@ doge::settings::hi:
 
 
 profile::linux::postfix::options:
-  relayhost: test.mail.com
   inet_interfaces: loopback-only
   inet_protocols: ipv4
   mydestination: dog.com
   alias_maps: hash:/etc/aliases
-  
+  configs:
+    relayhost: test.mail.com
+
