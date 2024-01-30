@@ -35,13 +35,13 @@ profile::linux::postfix::options:
       value: '3'
       ensure: present
     smtp_sasl_auth_enable:
-      value: yes
+      value: "yes"
       ensure: present
     smtp_use_tls:
-      value: yes
+      value: "yes"
       ensure: present
     smtp_tls_note_starttls_offer:
-      value: yes
+      value: "yes"
       ensure: present
     smtp_sasl_mechanism_filter:
       value: login
@@ -59,7 +59,7 @@ profile::linux::postfix::options:
       value: noanonymous
       ensure: present
     smtp_always_send_ehlo:
-      value: yes
+      value: "yes"
       ensure: present
     smtp_pix_workarounds:
       value: ''
