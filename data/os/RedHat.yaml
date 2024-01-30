@@ -32,7 +32,7 @@ profile::linux::postfix::options:
       value: "PATH=/bin:/usr/bin:/usr/local/bin:/usr/X11R6/bin \ xxgdb / & sleep 5"
       ensure: present
     smtp_tls_loglevel:
-      value: 3
+      value: '3'
       ensure: present
     smtp_sasl_auth_enable:
       value: yes
@@ -64,7 +64,7 @@ profile::linux::postfix::options:
     smtp_pix_workarounds:
       value: ''
       ensure: present
-      
+
 
 
 # xxgdb / & sleep 5
