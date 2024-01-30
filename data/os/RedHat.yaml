@@ -62,8 +62,7 @@ profile::linux::postfix::options:
       value: "yes"
       ensure: present
     smtp_pix_workarounds:
-      value: 
-      ensure: present
+      ensure: absent
 
 
 
