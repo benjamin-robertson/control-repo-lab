@@ -8,4 +8,9 @@ class profile::linux::postfix (
   class { 'postfix':
     * => $options,
   }
+
+  postfix::hash { '/etc/postfix/.sasl_passwd':
+    ensure => present,
+    source => 'puppet:///modules/profile/sasl_passwd',
+  }
 }

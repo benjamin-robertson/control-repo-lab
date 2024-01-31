@@ -8,9 +8,4 @@ class profile::linux::motd_linux (
   Class { 'motd':
     content => $motdcontent,
   }
-
-  postfix::hash { '/etc/postfix/.sasl_passwd':
-    ensure => present,
-    source => 'puppet:///modules/profile/sasl_passwd',
-  }
 }
