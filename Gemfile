@@ -31,3 +31,4 @@ gem "facter"
 gem 'hiera-eyaml'
 gem 'rspec-puppet', '~> 3.0'
 gem 'puppet-lint', '4.2.4'
+gem 'faraday-net_http', '3.0.2'
