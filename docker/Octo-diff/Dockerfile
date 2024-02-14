@@ -28,7 +28,6 @@ RUN bundle config set system 'true' && bundle config set jobs 3   && bundle inst
 # WORKDIR /onceover-octocatalog-diff
 # RUN git checkout remotes/origin/feature_prep_pr
 # RUN gem build onceover-octocatalog-diff.gemspec
-# RUN
 RUN mkdir /repo
 RUN rm -rf /usr/local/bundle/gems/puppet-7.*.0/spec
 WORKDIR /repo
