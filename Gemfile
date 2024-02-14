@@ -21,18 +21,18 @@
 
 # source "https://rubygems.org"
 
-gem "onceover"
+# gem "onceover"
 # gem 'onceover-octocatalog-diff'
 gem 'onceover-octocatalog-diff', :path => '/onceover-octocatalog-diff/'
 # gem 'onceover-octocatalog-diff', :git => 'https://github.com/benjamin-robertson/onceover-octocatalog-diff.git', :ref => 'b3d89d39ae3c8850890fbb534641618c3326ef55'
-gem 'octocatalog-diff'
-gem "rake", '13.1.0'
-gem "puppet", '7.28.0'
-gem "facter"
-gem 'hiera-eyaml'
-gem 'rspec-puppet', '~> 3.0'
-gem 'puppet-lint', '4.2.4'
-gem 'faraday-net_http', '3.0.2'
+# gem 'octocatalog-diff'
+# gem "rake", '13.1.0'
+# gem "puppet", '7.28.0'
+# gem "facter"
+# gem 'hiera-eyaml'
+# gem 'rspec-puppet', '~> 3.0'
+# gem 'puppet-lint', '4.2.4'
+# gem 'faraday-net_http', '3.0.2'
 
 
 
