@@ -5,7 +5,7 @@ defaults:
   data_hash: yaml_data
 
 hierarchy:
-  - name: "pe_patch"
+  - name: "mock"
     data_hash: yaml_data
     datadir: "data"
     paths:
