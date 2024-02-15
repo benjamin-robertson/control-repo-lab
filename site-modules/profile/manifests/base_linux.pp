@@ -1,7 +1,10 @@
 # Class: profile::base_linux
 #
+# @param blah Not a real parameter
 #
-class profile::base_linux {
+class profile::base_linux (
+  String $blah,
+) {
   include profile::linux::motd_linux
   include profile::linux::files
   include soe_linux
