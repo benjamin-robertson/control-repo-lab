@@ -12,7 +12,6 @@ hierarchy:
       - "common.yaml"
   - name: "Yaml backend"
     #data_hash: yaml_data
-    lookup_key: eyaml_lookup_key
     paths:
       - "nodes/%{trusted.certname}.yaml"
       - "os/%{os.name}/%{os.release.major}.yaml"
