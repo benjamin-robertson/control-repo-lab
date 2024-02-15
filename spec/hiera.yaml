@@ -3,3 +3,21 @@ version: 5
 defaults:
   datadir: "../data"
   data_hash: yaml_data
+
+hierarchy:
+  - name: "pe_patch"
+    data_hash: yaml_data
+    datadir: "data"
+    paths:
+      - "common.yaml"
+  - name: "Yaml backend"
+    #data_hash: yaml_data
+    lookup_key: eyaml_lookup_key
+    paths:
+      - "nodes/%{trusted.certname}.yaml"
+      - "os/%{os.name}/%{os.release.major}.yaml"
+      - "os/%{os.name}.yaml"
+      - "%{facts.poodle}/common.yaml"
+      - "node_env/%{facts.node_env}.yaml"
+      - "ben.eyaml"
+      - "common.yaml"
