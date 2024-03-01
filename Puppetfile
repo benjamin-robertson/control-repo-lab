@@ -260,4 +260,4 @@ mod 'migrate_nodes',
 #   branch:         :control_branch,
 #   default_branch: 'main'
 
-mod 'benjaminrobertson-enterprise_toolbox', '0.2.0'
+mod 'benjaminrobertson-enterprise_toolbox', '0.3.0'
