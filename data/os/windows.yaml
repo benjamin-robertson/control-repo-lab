@@ -168,17 +168,17 @@ applocker::exec_applocker_rules:
     rule_type: "path"
     type: "Exe"
     user_or_group_sid: "S-1-1-0"
-  Exec putty hash:
-    # ensure: "present"
-    action: "Allow"
-    conditions:
-      - type: "SHA256"
-        length: "1647912"
-        file_name: "putty.exe"
-        hash: "0x7537EBDECCA5F65EA98216C23E9441B72269A546B3234F6CF4069C60269FE18F"
-    rule_type: "hash"
-    type: "Exe"
-    user_or_group_sid: "S-1-1-0"
+  # Exec putty hash:
+  #   # ensure: "present"
+  #   action: "Allow"
+  #   conditions:
+  #     - type: "SHA256"
+  #       length: "1647912"
+  #       file_name: "putty.exe"
+  #       hash: "0x7537EBDECCA5F65EA98216C23E9441B72269A546B3234F6CF4069C60269FE18F"
+  #   rule_type: "hash"
+  #   type: "Exe"
+  #   user_or_group_sid: "S-1-1-0"
 
 applocker::script_applocker_rules:
   Script %WINDIR/%:
