@@ -2,5 +2,7 @@
 #
 #
 class role::acsc_appwhitelisting {
-  include acsc_e8_application_control
+  class { 'acsc_e8_application_control':
+    executable_rules => 'Enabled',
+  }
 }
