@@ -165,7 +165,7 @@ mod 'puppetlabs-mount_core', '1.0.4'
 mod 'puppet-nftables', '2.0.0'
 mod 'puppetlabs-ntp', '9.0.1'
 
-# Applockler work
+# Applocker work
 mod 'acsc_e8_application_control',
  git:             'git@github.com:benjamin-robertson/acsc_e8_application_control.git',
  branch:          :control_branch,
