@@ -16,7 +16,7 @@ class role::acsc_appwhitelisting {
     #     'user_or_group_sid' => 'S-1-1-0',
     #   },
     # },
-    executable_rules   => 'Enabled',
+    executable_rules   => 'AuditOnly',
     msi_rules          => 'Enabled',
     dll_rules          => 'Enabled',
     script_rules       => 'Enabled',
