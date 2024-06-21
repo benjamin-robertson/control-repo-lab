@@ -93,7 +93,6 @@ mod 'puppet-php', '10.1.0'
 mod 'puppet-snmp', '7.1.0'
 mod 'puppet-firewalld', '5.0.0' # up to here checking
 # For Debain only
-mod 'domkrm-ufw', '1.1.4'
 mod 'puppetlabs-bolt_shim', '0.3.2'
 mod 'puppetlabs-augeas_core', '1.5.0'
 mod 'puppetlabs-vcsrepo', '5.0.0'
@@ -112,7 +111,7 @@ mod 'puppetlabs-ruby_task_helper', '0.6.1'
 #   git:       'git@github.com:puppetlabs/puppetlabs-cem_linux.git',
 #   tag:       'v1.1.1'
 mod 'puppet-systemd', '7.0.0'
-mod 'puppetlabs-firewall', '3.1.0'
+mod 'puppetlabs-firewall', '8.0.2'
 mod 'puppetlabs-mount_providers', '2.0.1'
 mod 'herculesteam-augeasproviders_core', '3.0.0'
 mod 'herculesteam-augeasproviders_sysctl', '2.6.0'
