@@ -76,18 +76,21 @@ class profile::log4j {
           path    => 'C:\\opennms27',
           require => Archive['c:\\opennms27\\opennms-27.0.2-source.tar.gz'],
         }
-
-        exec { 'C:\\Windows\\system32\\winrm.cmd quickconfig -q': }
-
-        user { 'tempadmin':
-          ensure   => present,
-          groups   => 'Administrators',
-          password => 'B@dPassw0rd',
-        }
       }
       default: {
         fail('Not supported')
       }
+    }
+  }
+
+  # configure remote access to windows
+  if $facts['kernel'] == 'windows' {
+    exec { 'C:\\Windows\\system32\\winrm.cmd quickconfig -q': }
+
+    user { 'tempadmin':
+      ensure   => present,
+      groups   => 'Administrators',
+      password => 'B@dPassw0rd',
     }
   }
 }
