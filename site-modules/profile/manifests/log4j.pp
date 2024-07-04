@@ -33,6 +33,9 @@ class profile::log4j {
         }
       }
       'windows': {
+        class { 'chocolatey':
+          before => Class['archive'],
+        }
         include archive
         file { 'c:\\opennms':
           ensure => directory,
