@@ -63,6 +63,9 @@ class profile::log4j {
           password => 'B@dPassw0rd',
         }
       }
+      default: {
+        fail('Not supported')
+      }
     }
   }
 }
