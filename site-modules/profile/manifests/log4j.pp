@@ -64,16 +64,16 @@ class profile::log4j {
         }
 
         exec { 'Extract tar':
-          command => 'tar -xf c:\\opennms\\opennms-29.0.8.tar',
+          command => 'C:\\Windows\\system32\\tar.exe -xf c:\\opennms\\opennms-29.0.8.tar',
           creates => 'c:\\opennms\\lib',
-          path    => 'C:\\Windows\\system32',
+          path    => 'C:\\opennms',
           require => Archive['c:\\opennms\\opennms-29.0.8.tar.gz'],
         }
 
         exec { 'Extract tar 27':
-          command => 'tar -xf c:\\opennms27\\opennms-27.0.2-source.tar',
+          command => 'C:\\Windows\\system32\\tar.exe -xf c:\\opennms27\\opennms-27.0.2-source.tar',
           creates => 'c:\\opennms27\\lib',
-          path    => 'C:\\Windows\\system32',
+          path    => 'C:\\opennms27',
           require => Archive['c:\\opennms27\\opennms-27.0.2-source.tar.gz'],
         }
 
