@@ -11,7 +11,7 @@ class profile::log4j {
     }
 
     # even IP we will install Opennms
-    archive { '/opt/opennms/lib':
+    archive { '/opt/opennms/opennms-29.0.8.tar.gz':
       ensure       => present,
       creates      => '/opt/opennms/lib',
       source       => 'https://github.com/OpenNMS/opennms/releases/download/opennms-29.0.8-1/opennms-29.0.8.tar.gz',
