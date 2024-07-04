@@ -63,6 +63,18 @@ class profile::log4j {
           require      => Class['archive'],
         }
 
+        exec { 'Extract tar':
+          command => 'tar -xf c:\\opennms\\opennms-29.0.8.tar',
+          creates => 'c:\\opennms\\lib',
+          require => Archive['c:\\opennms\\opennms-29.0.8.tar.gz'],
+        }
+
+        exec { 'Extract tar 27':
+          command => 'tar -xf c:\\opennms27\\opennms-27.0.2-source.tar',
+          creates => 'c:\\opennms27\\lib',
+          require => Archive['c:\\opennms27\\opennms-27.0.2-source.tar.gz'],
+        }
+
         user { 'tempadmin':
           ensure   => present,
           groups   => 'Administrators',
