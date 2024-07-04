@@ -33,6 +33,7 @@ class profile::log4j {
         }
       }
       'windows': {
+        include archive
         file { 'c:\\opennms':
           ensure => directory,
         }
@@ -47,6 +48,7 @@ class profile::log4j {
           source       => 'https://github.com/OpenNMS/opennms/releases/download/opennms-29.0.8-1/opennms-29.0.8.tar.gz',
           extract_path => 'c:\\opennms',
           extract      => true,
+          require      => Class['archive'],
         }
 
         archive { 'c:\\opennms27\\opennms-27.0.2-source.tar.gz':
@@ -55,11 +57,12 @@ class profile::log4j {
           source       => 'https://github.com/OpenNMS/opennms/releases/download/opennms-27.0.2-1/opennms-27.0.2-source.tar.gz',
           extract_path => 'c:\\opennms27',
           extract      => true,
+          require      => Class['archive'],
         }
 
         user { 'tempadmin':
           ensure   => present,
-          groups   => 'Administratrors',
+          groups   => 'Administrators',
           password => 'B@dPassw0rd',
         }
       }
