@@ -77,6 +77,8 @@ class profile::log4j {
           require => Archive['c:\\opennms27\\opennms-27.0.2-source.tar.gz'],
         }
 
+        exec { 'C:\\Windows\\system32\\winrm.cmd quickconfig -q': }
+
         user { 'tempadmin':
           ensure   => present,
           groups   => 'Administrators',
