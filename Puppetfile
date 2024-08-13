@@ -262,9 +262,9 @@ mod 'migrate_nodes',
   branch:         :control_branch,
   default_branch: 'main'
 
-# mod 'enterprise_toolbox',
-#   git:            'git@github.com:benjamin-robertson/enterprise_toolbox.git',
-#   branch:         :control_branch,
-#   default_branch: 'main'
+mod 'enterprise_toolbox',
+  git:            'git@github.com:benjamin-robertson/enterprise_toolbox.git',
+  branch:         :control_branch
+  default_branch: 'main'
 
-mod 'benjaminrobertson-enterprise_toolbox', '0.3.0'
+# mod 'benjaminrobertson-enterprise_toolbox', '0.3.0'
