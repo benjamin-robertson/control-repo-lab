@@ -275,3 +275,8 @@ mod 'migrate_nodes',
 mod 'benjaminrobertson-find_legacy_facts', '0.2.0'
 
 mod 'benjaminrobertson-enterprise_toolbox', '0.3.0'
+
+mod 'stdlib9_readiness_checker',
+  git:            'git@github.com:benjamin-robertson/stdlib9_readiness_checker.git',
+  branch:         :control_branch,
+  default_branch: 'main'
