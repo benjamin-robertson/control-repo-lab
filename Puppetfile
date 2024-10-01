@@ -238,8 +238,8 @@ mod 'benjaminrobertson-update_trusted_facts', '2.0.0'
 mod 'trlinkin-noop', '1.1.1'
 
 mod 'bootstrap',
-  git:            'https://github.com/benjamin-robertson/puppetlabs-bootstrap.git',
-  branch:         'feature_integration_tests'
+  git:            'https://github.com/puppetlabs/puppetlabs-bootstrap.git',
+  branch:         'main'
 
 mod 'pe_patch_data',
   git:            'git@github.com:benjamin-robertson/pe_patch_data.git',
