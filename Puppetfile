@@ -100,7 +100,7 @@ mod 'puppetlabs-vcsrepo', '5.0.0'
 mod 'puppet-gitlab', '8.0.0'
 
 # Comply module and dependcies
-mod 'puppetlabs-comply', '2.13.0'
+mod 'puppetlabs-comply', '3.2.0'
 mod 'puppetlabs-java', '9.0.1'
 mod 'puppetlabs-ruby_task_helper', '0.6.1'
 
