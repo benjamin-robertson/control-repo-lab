@@ -136,8 +136,12 @@ gitlab::letsencrypt:
 ## profile stuff
 profile::linux::motd_linux::motdcontent: 'I am using some commond data. This will apply to all hosts.'
 
-profile::linux::tmp_file::louis: ENC[PKCS7,MIIBiQYJKoZIhvcNAQcDoIIBejCCAXYCAQAxggEhMIIBHQIBADAFMAACAQEwDQYJKoZIhvcNAQEBBQAEggEAQ5Ztfa5rM+v5jizRkLMlEPWcqrxMOXyKE9t7IIbuSl8OuHGgGpYRl4+d5eAdidRL49XLykOgGW+IFvEeR1VhNTOJs7h/k6fL4S8nL6Ft2h6dOH9iO+Jlx44ykWT09VnwN+yrubAPF5odW4apn+Yee3UQh+fIGpaCMjkL5dmYVIWb5wxo7vv/gnpeKuGeZ2TTvAb9r6L+PR0JQnp7r0UWmY/rWBsaHBdZx3nRGlUnqOqRvgBA5f2MVoz8GmDEkxq8RfatsJmUbsok6mn9Tp1ydIm7Gwc75AuIxOW3peLHOTLqVrFcSLBHFpPmsrygceqeJdrHya7ri0xgZF7HW/17HjBMBgkqhkiG9w0BBwEwHQYJYIZIAWUDBAEqBBD6qYLlJ3fy0P1abWhy7177gCDRLHL+y52uav9lML8KEp+awJhL3lOTuPo2unZxp/uCdg==]
+# profile::linux::tmp_file::louis: ENC[PKCS7,MIIBiQYJKoZIhvcNAQcDoIIBejCCAXYCAQAxggEhMIIBHQIBADAFMAACAQEwDQYJKoZIhvcNAQEBBQAEggEAQ5Ztfa5rM+v5jizRkLMlEPWcqrxMOXyKE9t7IIbuSl8OuHGgGpYRl4+d5eAdidRL49XLykOgGW+IFvEeR1VhNTOJs7h/k6fL4S8nL6Ft2h6dOH9iO+Jlx44ykWT09VnwN+yrubAPF5odW4apn+Yee3UQh+fIGpaCMjkL5dmYVIWb5wxo7vv/gnpeKuGeZ2TTvAb9r6L+PR0JQnp7r0UWmY/rWBsaHBdZx3nRGlUnqOqRvgBA5f2MVoz8GmDEkxq8RfatsJmUbsok6mn9Tp1ydIm7Gwc75AuIxOW3peLHOTLqVrFcSLBHFpPmsrygceqeJdrHya7ri0xgZF7HW/17HjBMBgkqhkiG9w0BBwEwHQYJYIZIAWUDBAEqBBD6qYLlJ3fy0P1abWhy7177gCDRLHL+y52uav9lML8KEp+awJhL3lOTuPo2unZxp/uCdg==]
 
+profile::linux::tmp_file::louis: |
+  This is some content for my file.
+  I hope it works better.
+  I lost the old private key.
 
 sudo::config:
   blah_user:
