@@ -9,4 +9,9 @@ class profile::linux::tmp_file (
     ensure  => file,
     content => $louis,
   }
+
+  file { '/tmp/ben.txt':
+    ensure  => file,
+    content => 'bens file',
+  }
 }
