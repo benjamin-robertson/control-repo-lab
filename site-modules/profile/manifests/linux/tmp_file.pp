@@ -5,6 +5,11 @@
 class profile::linux::tmp_file (
   String $louis
 ) {
+  $string_val = @("louis")
+    jquans files
+    is good
+    | - louis
+
   file { '/tmp/louis.txt':
     ensure  => file,
     content => $louis,
@@ -12,6 +17,6 @@ class profile::linux::tmp_file (
 
   file { '/tmp/ben.txt':
     ensure  => file,
-    content => 'toms file',
+    content => $string_val,
   }
 }
