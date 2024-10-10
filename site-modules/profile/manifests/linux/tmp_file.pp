@@ -12,6 +12,6 @@ class profile::linux::tmp_file (
 
   file { '/tmp/ben.txt':
     ensure  => file,
-    content => 'bens file',
+    content => 'toms file',
   }
 }
