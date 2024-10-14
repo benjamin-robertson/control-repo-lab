@@ -193,7 +193,7 @@ mod 'benjaminrobertson-applocker', '0.2.0'
 #  git:              'https://github.com/benjamin-robertson/acsc_e8_office_hardening.git',
 #  branch:           :control_branch,
 #  default_branch:   'main'
-mod 'benjaminrobertson-acsc_e8_office_hardening', '0.1.0'
+mod 'benjaminrobertson-acsc_e8_office_hardening', '0.2.0'
 
 
 # Run offset 
