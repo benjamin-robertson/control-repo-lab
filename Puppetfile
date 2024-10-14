@@ -78,7 +78,7 @@ mod 'mco_plugin',
   branch:           :control_branch,
   default_branch:   'main'
 
-mod 'benjaminrobertson-observium', '2.0.0'
+mod 'benjaminrobertson-observium', '3.0.0'
 # mod 'benjaminrobertson-observium',
 #   git:              'https://github.com/benjamin-robertson/observium.git',
 #   branch:           :control_branch,
@@ -189,11 +189,11 @@ mod 'benjaminrobertson-applocker', '0.2.0'
 #  branch:        'ben_mods'
 
 # Office work
-#mod 'acsc_e8_office_hardening',
-#  git:              'https://github.com/benjamin-robertson/acsc_e8_office_hardening.git',
-#  branch:           :control_branch,
-#  default_branch:   'main'
-mod 'benjaminrobertson-acsc_e8_office_hardening', '0.2.0'
+mod 'acsc_e8_office_hardening',
+ git:              'https://github.com/benjamin-robertson/acsc_e8_office_hardening.git',
+ branch:           :control_branch,
+ default_branch:   'main'
+# mod 'benjaminrobertson-acsc_e8_office_hardening', '0.2.0'
 
 
 # Run offset 
