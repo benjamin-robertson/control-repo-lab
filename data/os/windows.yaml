@@ -125,60 +125,60 @@ profile::windows::demo::certs:
 # acsc_e8_application_control::script_rules: Audit
 # acsc_e8_application_control::packaged_app_rules: Audit
 
-applocker::executable_rules: Enabled
-applocker::script_rules: Enabled
+# applocker::executable_rules: Enabled
+# applocker::script_rules: Enabled
 
-# applocker::exec_applocker_rules:
-#   Exec %windir/%:
-#     ensure: "present" # No longer required. We can leave option in for backwards support
-#     action: "Allow"
-#     conditions:
-#       path: "%WINDIR%\\*"
-#     exceptions:
-#       - '%System32%\Microsoft\Crypto\RSA\MachineKeys\*'
-#       - '%SYSTEM32%\spool\drivers\color\*'
-#       - '%SYSTEM32%\Tasks\*'
-#       - '%WINDIR%\Tasks\*'
-#       - '%WINDIR%\Temp\*'
-#     description: "Allow all users to run apps in windir"
-#     rule_type: "path"
-#     type: "Exe" # Not required, we know its a exe rule. We can leave option in for backwards support
-#     user_or_group_sid: "S-1-1-0"
-#   Exec %%PROGRAMFILES/%:
-#     action: "Allow"
-#     conditions:
-#       path: "%PROGRAMFILES%\\*"
-#     description: "Allow all users to run apps in programfiles"
-#     rule_type: "path"
-#     type: "Exe"
-#     user_or_group_sid: "S-1-1-0"
-#   Exec %OSDRIVE/CHOCO/%:
-#     action: "Allow"
-#     conditions:
-#       path: "%OSDRIVE%\\CHOCO\\*"
-#     description: "Allow all users to run apps in osdrive choco"
-#     rule_type: "path"
-#     type: "Exe"
-#     user_or_group_sid: "S-1-1-0"
-#   Exec %OSDRIVE/temp/%:
-#     action: "Allow"
-#     conditions:
-#       path: "%OSDRIVE%\\temp\\doge\\*"
-#     description: "Allow all users to run apps in osdrive temp"
-#     rule_type: "path"
-#     type: "Exe"
-#     user_or_group_sid: "S-1-1-0"
-  # Exec putty hash:
-  #   # ensure: "present"
-  #   action: "Allow"
-  #   conditions:
-  #     - type: "SHA256"
-  #       length: "1647912"
-  #       file_name: "putty.exe"
-  #       hash: "0x7537EBDECCA5F65EA98216C23E9441B72269A546B3234F6CF4069C60269FE18F"
-  #   rule_type: "hash"
-  #   type: "Exe"
-  #   user_or_group_sid: "S-1-1-0"
+applocker::exec_applocker_rules:
+  Exec %windir/%:
+    ensure: "present" # No longer required. We can leave option in for backwards support
+    action: "Allow"
+    conditions:
+      path: "%WINDIR%\\*"
+    exceptions:
+      - '%System32%\Microsoft\Crypto\RSA\MachineKeys\*'
+      - '%SYSTEM32%\spool\drivers\color\*'
+      - '%SYSTEM32%\Tasks\*'
+      - '%WINDIR%\Tasks\*'
+      - '%WINDIR%\Temp\*'
+    description: "Allow all users to run apps in windir"
+    rule_type: "path"
+    type: "Exe" # Not required, we know its a exe rule. We can leave option in for backwards support
+    user_or_group_sid: "S-1-1-0"
+  Exec %%PROGRAMFILES/%:
+    action: "Allow"
+    conditions:
+      path: "%PROGRAMFILES%\\*"
+    description: "Allow all users to run apps in programfiles"
+    rule_type: "path"
+    type: "Exe"
+    user_or_group_sid: "S-1-1-0"
+  Exec %OSDRIVE/CHOCO/%:
+    action: "Allow"
+    conditions:
+      path: "%OSDRIVE%\\CHOCO\\*"
+    description: "Allow all users to run apps in osdrive choco"
+    rule_type: "path"
+    type: "Exe"
+    user_or_group_sid: "S-1-1-0"
+  Exec %OSDRIVE/temp/%:
+    action: "Allow"
+    conditions:
+      path: "%OSDRIVE%\\temp\\doge\\*"
+    description: "Allow all users to run apps in osdrive temp"
+    rule_type: "path"
+    type: "Exe"
+    user_or_group_sid: "S-1-1-0"
+  Exec putty hash:
+    # ensure: "present"
+    action: "Allow"
+    conditions:
+      - type: "SHA256"
+        length: "1647912"
+        file_name: "putty.exe"
+        hash: "0x7537EBDECCA5F65EA98216C23E9441B72269A546B3234F6CF4069C60269FE18F"
+    rule_type: "hash"
+    type: "Exe"
+    user_or_group_sid: "S-1-1-0"
 
 applocker::script_applocker_rules:
   Script %WINDIR/%:
