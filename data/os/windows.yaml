@@ -125,8 +125,8 @@ profile::windows::demo::certs:
 # acsc_e8_application_control::script_rules: Audit
 # acsc_e8_application_control::packaged_app_rules: Audit
 
-# applocker::executable_rules: Enabled
-# applocker::script_rules: Enabled
+applocker::executable_rules: Enabled
+applocker::script_rules: Enabled
 
 applocker::exec_applocker_rules:
   Exec %windir/%:
