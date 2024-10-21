@@ -174,8 +174,8 @@ mod 'benjaminrobertson-acsc_e8_application_control', '1.0.0'
 
 mod 'applocker',
   git:            'git@github.com:benjamin-robertson/applocker.git',
-  branch:          'feature_primary_installer'
-  # default_branch:  'main'
+  branch:         :control_branch,
+  default_branch:  'main'
 
 # mod 'benjaminrobertson-applocker', '0.2.0'
 
