@@ -7,7 +7,7 @@ class profile::windows_applocker {
   #   purge => true,
   # }
 
-  include applocker
+  # include applocker
   # class { 'acsc_e8_application_control':
   #   additional_exec_applocker_rules => {
   #     'Exec c:\\temp'    => {
@@ -30,13 +30,13 @@ class profile::windows_applocker {
   #     start_service      => true,
   # }
 
-  #class { 'acsc_e8_application_control':
-  #  executable_rules   => 'Enabled',
-  #  msi_rules          => 'Enabled',
-  #  dll_rules          => 'Enabled',
-  #  script_rules       => 'Enabled',
-  #  packaged_app_rules => 'Enabled',
-  #  start_service      => true,
-  #}
+  class { 'acsc_e8_application_control':
+    executable_rules   => 'AuditOnly',
+    msi_rules          => 'AuditOnly',
+    dll_rules          => 'AuditOnly',
+    script_rules       => 'AuditOnly',
+    packaged_app_rules => 'AuditOnly',
+    start_service      => true,
+  }
 
 }
