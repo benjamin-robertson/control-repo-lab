@@ -251,8 +251,8 @@ mod 'simp-auditd',
 
 mod 'migrate_nodes',
   git:            'git@github.com:benjamin-robertson/migrate_nodes.git',
-  branch:         :control_branch,
-  default_branch: 'main'
+  branch:         'feature_uplift_puppet8'
+  # default_branch: 'main'
 
 # mod 'enterprise_toolbox',
 #   git:            'git@github.com:benjamin-robertson/enterprise_toolbox.git',
