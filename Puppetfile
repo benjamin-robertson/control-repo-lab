@@ -262,8 +262,9 @@ mod 'migrate_nodes',
 
 mod 'find_legacy_facts',
   git:            'git@github.com:benjamin-robertson/find_legacy_facts.git',
-  branch:         :control_branch,
-  default_branch: 'main'
+  ref:            '1.0.0'
+  # branch:         :control_branch,
+  # default_branch: 'main'
 
 # mod 'benjaminrobertson-find_legacy_facts', '0.2.0'
 
