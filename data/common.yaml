@@ -142,6 +142,7 @@ profile::linux::tmp_file::louis: |
   This is some content for my file.
   I hope it works better.
   I lost the old private key.
+  Some extra content for testing
 
 sudo::config:
   blah_user:

@@ -8,6 +8,7 @@ class profile::linux::tmp_file (
   $string_val = @("louis")
     test files
     is good
+    hello Geoff
     | - louis
 
   file { '/tmp/louis.txt':
