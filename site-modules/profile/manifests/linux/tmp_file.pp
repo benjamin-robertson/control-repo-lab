@@ -6,7 +6,7 @@ class profile::linux::tmp_file (
   String $louis
 ) {
   $string_val = @("louis")
-    jquans files
+    test files
     is good
     | - louis
 
