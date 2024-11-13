@@ -107,7 +107,7 @@ mod 'puppetlabs-ruby_task_helper', '0.6.1'
 # Abide and not already included dependices.
 mod 'sce_linux',
   git: 'git@github.com:puppetlabs/puppetlabs-sce_linux.git',
-  ref: 'v2.2.0'
+  ref: 'v2.2.1'
 
 mod 'puppet-systemd', '7.1.0'
 mod 'puppetlabs-firewall', '8.1.1'
