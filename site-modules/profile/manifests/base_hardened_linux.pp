@@ -16,4 +16,16 @@ class profile::base_hardened_linux {
     match  => '^ListenAdddress ',
     notify => Exec['sce_reload_sshd'], # reload in the sce file
   }
+  file_line { 'remove_old_time_server':
+    ensure            => 'absent',
+    path              => '/etc/chrony/chrony.conf',
+    match             => '^pool ',
+    match_for_absence => true,
+  }
+  file_line { 'remove_old_time_server':
+    ensure            => 'absent',
+    path              => '/etc/chrony/chrony.conf',
+    match             => '^server ',
+    match_for_absence => true,
+  }
 }
