@@ -20,12 +20,14 @@ class profile::base_hardened_linux {
     ensure            => 'absent',
     path              => '/etc/chrony/chrony.conf',
     match             => '^pool ',
+    multiple          => true,
     match_for_absence => true,
   }
   file_line { 'remove_old_time_server':
     ensure            => 'absent',
     path              => '/etc/chrony/chrony.conf',
     match             => '^server ',
+    multiple          => true,
     match_for_absence => true,
   }
 }
