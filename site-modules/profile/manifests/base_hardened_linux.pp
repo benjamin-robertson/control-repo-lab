@@ -9,7 +9,12 @@ class profile::base_hardened_linux {
     ensure => file,
   }
   include sce_linux
-  include ssh
+  # include ssh
+  file_line { 'listen_address':
+    path  => '/etc/ssh/sshd_config',
+    line  => "ListenAddress ${facts['networking']['ip']}",
+    match => '^ListenAdddress ',
+  }
     #$timeservers = { 'server 1.1.1.1' => 'iburst minpoll 4 maxpoll 4'}
     #Augeas {
     #  context => '/files/etc/chrony.conf'
