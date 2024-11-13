@@ -2,6 +2,9 @@
 #
 #
 class profile::base_hardened_linux {
+  file { '/etc/chrony/sources.d':
+    ensure => directory,
+  }
   file { '/etc/chrony/sources.d/sce_chrony.sources':
     ensure => file,
   }
