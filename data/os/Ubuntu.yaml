@@ -12,9 +12,9 @@ sce_linux::config:
     "Ensure chrony is configured with authorized timeserver":
       preferred_package: "chrony"
       manage_package: true
-      # timeservers:
-      #   - server time.google.com iburst
-      #   - server time2.google.com iburst
+      timeservers:
+        - server time.google.com iburst
+        - server time2.google.com iburst
 
 
 # Puppet agent config
