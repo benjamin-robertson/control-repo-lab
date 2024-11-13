@@ -2,6 +2,9 @@
 #
 #
 class profile::base_hardened_linux {
+  file { '/etc/chrony/sources.d/sce_chrony.sources':
+    ensure => file,
+  }
   include sce_linux
     #$timeservers = { 'server 1.1.1.1' => 'iburst minpoll 4 maxpoll 4'}
     #Augeas {
