@@ -22,7 +22,8 @@ mod 'initial_patch',
 # mod 'danieldreier/autosign'
 # mod 'ghoneycutt-common', '1.10.0'
 # mod 'ghoneycutt-rsyslog', '0.26.0'
-# mod 'ghoneycutt-sysklogd', '1.2.0'
+mod 'ghoneycutt-ssh', '5.0.0'
+
 mod 'puppet-archive', '7.1.0'
 mod 'puppetlabs-acl', '5.0.0'
 mod 'puppetlabs-apt', '9.4.0'
