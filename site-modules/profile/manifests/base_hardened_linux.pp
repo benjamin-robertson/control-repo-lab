@@ -2,7 +2,7 @@
 #
 #
 class profile::base_hardened_linux {
-  include cem_linux
+  include sce_linux
     #$timeservers = { 'server 1.1.1.1' => 'iburst minpoll 4 maxpoll 4'}
     #Augeas {
     #  context => '/files/etc/chrony.conf'

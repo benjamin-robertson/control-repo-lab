@@ -1,4 +1,22 @@
 ---
+
+# SCE linux config
+sce_linux::benchmark: 'cis'
+sce_linux::config:
+  profile: 'server'
+  level: '2'
+  firewall_type: 'unmanaged'
+  control_configs:
+    "manage apparmor":
+      manage_apparmor: false
+    "Ensure chrony is configured with authorized timeserver":
+      preferred_package: "chrony"
+      manage_package: true
+      timeservers:
+        - server time.google.com iburst
+        - server time2.google.com iburst
+
+
 # Puppet agent config
 profile::lab::proxy_setup::agent_config:
   - section: main

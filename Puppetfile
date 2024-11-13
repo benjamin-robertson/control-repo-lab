@@ -78,7 +78,7 @@ mod 'mco_plugin',
   branch:           :control_branch,
   default_branch:   'main'
 
-mod 'benjaminrobertson-observium', '3.0.0'
+# mod 'benjaminrobertson-observium', '3.0.0'
 # mod 'benjaminrobertson-observium',
 #   git:              'https://github.com/benjamin-robertson/observium.git',
 #   branch:           :control_branch,
@@ -105,14 +105,12 @@ mod 'puppetlabs-java', '9.0.1'
 mod 'puppetlabs-ruby_task_helper', '0.6.1'
 
 # Abide and not already included dependices.
-#mod 'cem_linux',
-#  git:      'git@github.com:benjamin-robertson/puppetlabs-cem_linux.git',
-#  branch:   'main'
-# mod 'cem_linux',
-#   git:       'git@github.com:puppetlabs/puppetlabs-cem_linux.git',
-#   tag:       'v1.1.1'
-mod 'puppet-systemd', '7.0.0'
-mod 'puppetlabs-firewall', '3.1.0'
+mod 'sce_linux',
+  git: 'git@github.com:puppetlabs/puppetlabs-sce_linux.git',
+  ref: 'v2.2.0'
+
+mod 'puppet-systemd', '7.1.0'
+mod 'puppetlabs-firewall', '8.1.1'
 mod 'puppetlabs-mount_providers', '2.0.1'
 mod 'herculesteam-augeasproviders_core', '3.0.0'
 mod 'herculesteam-augeasproviders_sysctl', '2.6.0'
@@ -121,7 +119,7 @@ mod 'herculesteam-augeasproviders_mounttab', '2.1.1'
 mod 'herculesteam-augeasproviders_pam', '2.2.1'
 mod 'herculesteam-augeasproviders_shellvar', '4.0.0'
 mod 'herculesteam-augeasproviders_ssh', '4.0.0'
-mod 'puppet-logrotate', '5.0.0'
+mod 'puppet-logrotate', '7.1.0'
 # Windows abide
 #mod 'cem_windows',
 #  git:      'git@github.com:benjamin-robertson/puppetlabs-cem_windows.git',
