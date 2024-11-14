@@ -18,8 +18,52 @@ sce_linux::config:
     "Ensure AIDE is installed":
       control_package: true
       conf_rules: ["PERM1S = p+u+g+acl+xattrs", "CONTENT_EX = sha256+ftype+p+u+g+n+acl+xattrs"]
-      conf_checks: ["/boot/   CONTENT_EX", "/bin/    CONTENT_EX", "/sbin/   CONTENT_EX", "/lib/    CONTENT_EX", "/lib64/  CONTENT_EX", "/opt/    CONTENT_EX", "/root/\\..* PERMS", "/root/   CONTENT_EX", "!/usr/src/", "!/usr/tmp/", "/usr/    CONTENT_EX", "!/etc/mtab$", "!/etc/.*~", "/etc/hosts$ CONTENT_EX", "/etc/passwd$   CONTENT_EX", "/etc/group$    CONTENT_EX", "/etc/gshadow$  CONTENT_EX", "/etc/shadow$   CONTENT_EX", "/etc/resolv.conf$ CONTENT_EX", "/etc/login.defs$ CONTENT_EX", "/etc/libuser.conf$ CONTENT_EX", "/var/log/faillog$ PERMS", "/var/log/lastlog$ PERMS", "/var/run/faillock/ PERMS", "/etc/pam.d/ CONTENT_EX", "/etc/security$ CONTENT_EX", "/etc/securetty$ CONTENT_EX", "/etc/polkit-1/ CONTENT_EX", "/etc/sudo.conf$ CONTENT_EX", "/etc/sudoers$ CONTENT_EX", "/etc/sudoers.d/ CONTENT_EX", "!/var/log/sa/", "!/var/log/aide.log", "/etc/    PERMS", "!/var/log/httpd/", "!/opt/puppetlabs/puppet/cache/", "!/opt/puppetlabs/puppet/public/last_run_summary.yaml"]
-
+      conf_checks: 
+        - '/boot/   CONTENT_EX'
+        - '/bin/    CONTENT_EX'
+        - '/sbin/   CONTENT_EX'
+        - '/lib/    CONTENT_EX'
+        - '/lib64/  CONTENT_EX'
+        - '/opt/    CONTENT_EX'
+        - '/root/\..* PERMS'
+        - '/root/   CONTENT_EX'
+        - '!/usr/src/'
+        - '!/usr/tmp/'
+        - '/usr/    CONTENT_EX'
+        - '!/etc/mtab$'
+        - '!/etc/.*~'
+        - '/etc/hosts$ CONTENT_EX'
+        - '/etc/passwd$   CONTENT_EX'
+        - '/etc/group$    CONTENT_EX'
+        - '/etc/gshadow$  CONTENT_EX'
+        - '/etc/shadow$   CONTENT_EX'
+        - '/etc/resolv.conf$ CONTENT_EX'
+        - '/etc/login.defs$ CONTENT_EX'
+        - '/etc/libuser.conf$ CONTENT_EX'
+        - '/var/log/faillog$ PERMS'
+        - '/var/log/lastlog$ PERMS'
+        - '/var/run/faillock/ PERMS'
+        - '/etc/pam.d/ CONTENT_EX'
+        - '/etc/security$ CONTENT_EX'
+        - '/etc/securetty$ CONTENT_EX'
+        - '/etc/polkit-1/ CONTENT_EX'
+        - '/etc/sudo.conf$ CONTENT_EX'
+        - '/etc/sudoers$ CONTENT_EX'
+        - '/etc/sudoers.d/ CONTENT_EX'
+        - '!/var/log/sa/'
+        - '!/var/log/aide.log'
+        - '/etc/    PERMS'
+        - '!/var/log/httpd/'
+        - '!/opt/puppetlabs/puppet/cache/'
+        - '!/opt/puppetlabs/puppet/public/last_run_summary.yaml'
+    'ensure_cryptographic_mechanisms_are_used_to_protect_the_integrity_of_audit_tools':
+        conf_checks:
+          - /sbin/auditctl p+i+n+u+g+s+b+acl+xattrs+sha512poo
+          - /sbin/auditd p+i+n+u+g+s+b+acl+xattrs+sha512
+          - /sbin/ausearch p+i+n+u+g+s+b+acl+xattrs+sha512
+          - /sbin/aureport p+i+n+u+g+s+b+acl+xattrs+sha512
+          - /sbin/autrace p+i+n+u+g+s+b+acl+xattrs+sha512
+          - /sbin/augenrules p+i+n+u+g+s+b+acl+xattrs+sha512
 
 # Puppet agent config
 profile::lab::proxy_setup::agent_config:
