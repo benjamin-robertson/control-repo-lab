@@ -10,6 +10,8 @@ sce_linux::config:
     ensure_bootloader_password_is_set:
       superuser: louie
       superuser_password: SuchAGoodP@ssword1
+      regenerate_config: true
+      replace_password_file: true
     "manage apparmor":
       manage_apparmor: false
     "Ensure chrony is configured with authorized timeserver":
