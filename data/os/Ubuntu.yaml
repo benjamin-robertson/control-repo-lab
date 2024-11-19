@@ -19,7 +19,9 @@ sce_linux::config:
   firewall_type: 'unmanaged'
   control_configs:
     "Ensure password expiration is 365 days or less":
-      pass_max_days: -1
+      pass_max_days: 30
+    "Ensure password expiration warning days is 7 or more":
+      pass_warn_age: 3
     "manage apparmor":
       manage_apparmor: false
     "Ensure chrony is configured with authorized timeserver":
