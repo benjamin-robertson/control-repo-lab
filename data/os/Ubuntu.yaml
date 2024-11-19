@@ -18,11 +18,8 @@ sce_linux::config:
   level: '2'
   firewall_type: 'unmanaged'
   control_configs:
-    # "Ensure bootloader password is set":
-    #   superuser: louie
-    #   superuser_password: SuchAGoodP@ssword1
-    #   regenerate_config: true
-    #   replace_password_file: true
+    "Ensure password expiration is 365 days or less":
+      pass_max_days: -1
     "manage apparmor":
       manage_apparmor: false
     "Ensure chrony is configured with authorized timeserver":
