@@ -7,6 +7,7 @@ sce_linux::utils::bootloader::grub2::password_protect: true
 sce_linux::utils::bootloader::grub2::superuser: louie
 sce_linux::utils::bootloader::grub2::superuser_password: SuchAGoodP@ssword1
 sce_linux::utils::bootloader::grub2::regenerate_config: true
+sce_linux::utils::bootloader::grub2::hash_superuser_password: true
 
 
 # SCE linux config
