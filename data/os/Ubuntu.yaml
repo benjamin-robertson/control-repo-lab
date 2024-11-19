@@ -1,4 +1,9 @@
 ---
+# SCE workarounds
+sce_linux::utils::bootloader::grub2::password_protect: true
+sce_linux::utils::bootloader::grub2::superuser: louie
+sce_linux::utils::bootloader::grub2::superuser_password: SuchAGoodP@ssword1
+
 
 # SCE linux config
 sce_linux::benchmark: 'cis'
