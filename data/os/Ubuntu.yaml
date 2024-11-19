@@ -1,4 +1,7 @@
 ---
+lookup_options:
+  sce_linux::utils::bootloader::grub2::superuser_password:
+    convert_to: Sensitive
 # SCE workarounds
 sce_linux::utils::bootloader::grub2::password_protect: true
 sce_linux::utils::bootloader::grub2::superuser: louie
