@@ -30,4 +30,13 @@ class profile::base_hardened_linux {
     multiple          => true,
     match_for_absence => true,
   }
+
+  sce_linux::utils::packages::linux::sudo::user_group { 'FULL_SUDO':
+    user_group   => 'FULL_SUDO',
+    host         => 'ALL',
+    target_users => ['ALL'],
+    priority     => 15,
+    commands     => ['ALL'],
+    file_name    => 'FULL_SUDO',
+  }
 }
