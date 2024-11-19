@@ -33,10 +33,10 @@ class profile::base_hardened_linux {
 
   sce_linux::utils::packages::linux::sudo::user_group { '%FULL_SUDO':
     user_group   => '%FULL_SUDO',
-    host         => 'ALL',
-    target_users => ['ALL'],
+    # host         => 'ALL',
+    # target_users => ['ALL'],
     priority     => 15,
-    commands     => 'ALL',
-    file_name    => 'FULL_SUDO',
+    # commands     => 'ALL',
+    # file_name    => 'FULL_SUDO',
   }
 }
