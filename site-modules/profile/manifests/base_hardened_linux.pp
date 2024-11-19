@@ -31,12 +31,12 @@ class profile::base_hardened_linux {
     match_for_absence => true,
   }
 
-  sce_linux::utils::packages::linux::sudo::user_group { 'FULL_SUDO':
-    user_group   => 'FULL_SUDO',
+  sce_linux::utils::packages::linux::sudo::user_group { '%FULL_SUDO':
+    user_group   => '%FULL_SUDO',
     host         => 'ALL',
     target_users => ['ALL'],
     priority     => 15,
-    commands     => ['ALL'],
+    commands     => 'ALL',
     file_name    => 'FULL_SUDO',
   }
 }
