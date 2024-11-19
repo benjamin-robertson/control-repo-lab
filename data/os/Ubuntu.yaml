@@ -7,7 +7,7 @@ sce_linux::config:
   level: '2'
   firewall_type: 'unmanaged'
   control_configs:
-    ensure_bootloader_password_is_set:
+    "Ensure bootloader password is set":
       superuser: louie
       superuser_password: SuchAGoodP@ssword1
       regenerate_config: true
