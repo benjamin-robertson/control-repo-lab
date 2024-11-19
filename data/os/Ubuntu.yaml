@@ -8,6 +8,7 @@ sce_linux::utils::bootloader::grub2::superuser: louie
 sce_linux::utils::bootloader::grub2::superuser_password: SuchAGoodP@ssword1
 sce_linux::utils::bootloader::grub2::regenerate_config: true
 sce_linux::utils::bootloader::grub2::hash_superuser_password: true
+sce_linux::utils::bootloader::grub2::replace_password_file: false
 
 
 # SCE linux config
@@ -17,11 +18,11 @@ sce_linux::config:
   level: '2'
   firewall_type: 'unmanaged'
   control_configs:
-    "Ensure bootloader password is set":
-      superuser: louie
-      superuser_password: SuchAGoodP@ssword1
-      regenerate_config: true
-      replace_password_file: true
+    # "Ensure bootloader password is set":
+    #   superuser: louie
+    #   superuser_password: SuchAGoodP@ssword1
+    #   regenerate_config: true
+    #   replace_password_file: true
     "manage apparmor":
       manage_apparmor: false
     "Ensure chrony is configured with authorized timeserver":
