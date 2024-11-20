@@ -231,3 +231,12 @@ lvm::volume_groups:
 
 # profile::linux::motd_linux::motdcontent: |
 #   For OS level hiera
+
+# dns config
+dns::logging_channels:
+  name_log_file:
+    log_type: 'file'
+    file_path: '/tmp/dns.log'
+    print_time: 'yes'
+    file_size: '100m'
+    file_version: 3

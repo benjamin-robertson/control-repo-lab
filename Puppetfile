@@ -274,3 +274,5 @@ mod 'benjaminrobertson-enterprise_toolbox', '0.3.0'
 #   default_branch: 'main'
 
 mod 'benjaminrobertson-stdlib9_readiness_checker', '1.0.0'
+
+mod 'theforeman-dns', '11.0.1'
