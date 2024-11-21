@@ -275,4 +275,7 @@ mod 'benjaminrobertson-enterprise_toolbox', '0.3.0'
 
 mod 'benjaminrobertson-stdlib9_readiness_checker', '1.0.0'
 
-mod 'theforeman-dns', '11.0.1'
+# mod 'theforeman-dns', '11.0.1'
+mod 'theforeman-dns',
+  git:        'git@github.com:benjamin-robertson/puppet-dns.git',
+  branch:     'feature_compulsory_version_size'
