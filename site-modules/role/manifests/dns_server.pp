@@ -3,5 +3,5 @@
 #
 class role::dns_server {
   # resources
-  include profile::dns
+  include profile::dns_server
 }
