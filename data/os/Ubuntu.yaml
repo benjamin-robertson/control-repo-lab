@@ -239,4 +239,4 @@ dns::logging_channels:
     file_path: '/tmp/dns.log'
     print_time: 'yes'
     file_size: '100m'
-    file_version: 3
+    file_versions: 3
