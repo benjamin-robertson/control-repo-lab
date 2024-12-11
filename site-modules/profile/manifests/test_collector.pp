@@ -10,5 +10,5 @@ class profile::test_collector {
   }
 
   # collect all exported resources and realize them on this host
-  Host <<||>>
+  # Host <<||>>
 }
