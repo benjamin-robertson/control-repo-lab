@@ -6,7 +6,7 @@ class profile::test_exporter {
 
   # This will create all the host entries which were collected in the 'test_collector' class with the tag bens_hosts.
   # Creating them on the host this exporter class is applied too. 
-  # Host <<| tag == 'bens_hosts' |>>
+  Host <<| tag == 'bens_hosts' |>>
 
   file { '/tmp/my_hosts':
     ensure => 'file',
@@ -22,7 +22,7 @@ class profile::test_exporter {
 
   $query_results.each | Hash $results | {
     # We want to check if the resource is exported before printing. Otherwise will also get the resources which have been exported 
-    # on the target system.
+    # on the target system (if we exported them to the target system).
     if $results['exported'] == true {
       notify { "Certname is ${results['certname']} IP is ${results['parameters']['ip']}": }
     }
