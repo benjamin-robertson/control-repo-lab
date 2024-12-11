@@ -7,6 +7,7 @@ class profile::test_collector {
   @@host { $facts['networking']['fqdn']:
     ip           => $facts['networking']['ip'],
     host_aliases => $facts['networking']['hostname'],
+    tag          => 'bens_hosts',
   }
 
   # collect all exported resources and realize them on this host
