@@ -13,6 +13,10 @@ class profile::test_collector {
   # collect all exported resources and realize them on this host
   # Host <<||>>
 
+  file { '/tmp/my_hosts':
+    ensure => 'file',
+  }
+
   file_line { "${facts['networking']['fqdn']}_line":
     ensure => 'present',
     path   => '/tmp/my_hosts',
