@@ -3,7 +3,6 @@
 # Collect all the resources
 #
 class profile::resource_collector {
-
   @@host { $facts['fqdn']:
     ip           => $facts['ipaddress'],
     host_aliases => $facts['hostname'],
