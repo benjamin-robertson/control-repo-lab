@@ -3,5 +3,5 @@
 #
 class profile::test_exporter {
   # resources
-  Host <<| tag == 'bens_hosts' |>>
+  Host <<| tag == 'bens_hdosts' |>>
 }
