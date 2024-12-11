@@ -14,7 +14,9 @@ class profile::test_exporter {
   $query_results = puppetdb_query('resources { tag = "bens_hosts" }')
 
   $query_results.each | Hash $results | {
-    notify { "Certname is ${results['certname']} IP is ${results['parameters']['ip']}": }
+    if $results['exported'] == true {
+      notify { "Certname is ${results['certname']} IP is ${results['parameters']['ip']}": }
+    }
   }
 
   # notify { "${query_results}": }
