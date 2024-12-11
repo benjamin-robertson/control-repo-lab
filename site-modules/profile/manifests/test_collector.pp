@@ -4,9 +4,9 @@
 class profile::test_collector {
   # Collect resources
 
-  @@host { $facts['network']['fqdn']:
-    ip           => $facts['network']['ip'],
-    host_aliases => $facts['network']['hostname'],
+  @@host { $facts['networking']['fqdn']:
+    ip           => $facts['networking']['ip'],
+    host_aliases => $facts['networking']['hostname'],
   }
 
   # collect all exported resources and realize them on this host
