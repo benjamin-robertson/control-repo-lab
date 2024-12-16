@@ -1,7 +1,10 @@
 # Class: profile::misp
 #
+# @param docker_token token for dockerhub
 #
-class profile::misp {
+class profile::misp (
+  Sensitive $docker_token,
+) {
   # Install docker compose
   class { 'docker::compose':
     ensure => present,
@@ -46,5 +49,11 @@ class profile::misp {
     ensure        => present,
     compose_files => ['/opt/misp/docker-compose.yml'],
     tmpdir        => '/opt/tmp',
+  }
+
+  docker::registry { 'https://registry-1.docker.io/v2/':
+    ensure   => present,
+    username => 'benrobertson9876',
+    password => $docker_token.unwrap,
   }
 }

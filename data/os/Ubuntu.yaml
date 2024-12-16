@@ -2,6 +2,8 @@
 lookup_options:
   sce_linux::utils::bootloader::grub2::superuser_password:
     convert_to: Sensitive
+  profile::misp::docker_token:
+    convert_to: Sensitive
 # SCE workarounds
 sce_linux::utils::bootloader::grub2::password_protect: true
 sce_linux::utils::bootloader::grub2::superuser: louie
@@ -243,3 +245,15 @@ dns::logging_channels:
 
 
 docker::use_upstream_package_source: false
+
+profile::misp::docker_token: >
+  ENC[PKCS7,MIIBmQYJKoZIhvcNAQcDoIIBijCCAYYCAQAxggEhMIIBHQIBAD
+  AFMAACAQAwDQYJKoZIhvcNAQEBBQAEggEAbsY2B5XpvN3rveKFIxHdTUS82O
+  fXIDypxYvypac6WOZLFUipKhEGgwm8jWfudwJXssqeVhaUfFtvmntJ+J/17M
+  j6iSUY9j3v8Enpet0mygMa0iTAJN9FDeFqAtBthrfmaHFTNFv6xNcHe8kFid
+  qbmo1TtvnzRh6WcwllVSnle/F2tx9HFbtrOGtwOAI3c1XWZJA6sSBaQouECe
+  wQdGzIO3a6oc6nr0zHMaCRmyOVGCOvqxqvOnPmB8ec/anAwwZu9C8WB0As8U
+  BDunPG7YTMrdhR5vhvv1Zv6gVJb44PHMr/lOY9HzAR4OVPAH5cR0V/69X7xv
+  dCxdFHXLLiZy1yIDBcBgkqhkiG9w0BBwEwHQYJYIZIAWUDBAEqBBCSHqSRIK
+  5aEFo5spE0KVm4gDA1bIeJRULbER3fYDzhaBYImXCRpBYeAcfushJtvoM1hF
+  dGtEp8c1NHas4EWR2RXB8=]
