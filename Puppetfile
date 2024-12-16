@@ -31,7 +31,7 @@ mod 'puppetlabs-cd4pe', '3.3.0'
 mod 'puppetlabs-cd4pe_jobs', '1.7.0'
 mod 'puppetlabs-chocolatey', '8.0.0'
 mod 'puppetlabs-concat', '9.0.2'
-mod 'puppetlabs-docker', '9.1.0'
+mod 'puppetlabs-docker', '10.0.1'
 mod 'dsc-xpsdesiredstateconfiguration', '9.1.0-0-8'
 mod 'puppetlabs-hocon', '2.0.0'
 mod 'puppetlabs-iis', '10.0.0'
@@ -97,7 +97,7 @@ mod 'puppet-firewalld', '5.0.0' # up to here checking
 mod 'domkrm-ufw', '1.1.4'
 mod 'puppetlabs-bolt_shim', '0.3.2'
 mod 'puppetlabs-augeas_core', '1.5.0'
-mod 'puppetlabs-vcsrepo', '5.0.0'
+mod 'puppetlabs-vcsrepo', '6.1.0'
 mod 'puppet-gitlab', '8.0.0'
 
 # Comply module and dependcies
