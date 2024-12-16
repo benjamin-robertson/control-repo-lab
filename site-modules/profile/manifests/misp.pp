@@ -17,6 +17,12 @@ class profile::misp {
     ensure => directory,
   }
 
+  # setup config file
+  file { '/opt/misp/.env':
+    ensure => file,
+    source => 'puppet:///modules/profile/misp/env',
+  }
+
   vcsrepo { '/opt/misp':
     ensure   => present,
     provider => git,
