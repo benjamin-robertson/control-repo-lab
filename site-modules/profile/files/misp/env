@@ -46,7 +46,7 @@ GPG_PASSPHRASE=
 # defaults to 1 (the admin user)
 CRON_USER_ID=
 # defaults to 'https://localhost'
-BASE_URL=
+BASE_URL=ec2-3-107-19-187.ap-southeast-2.compute.amazonaws.com
 # store settings in db except those that must stay in config.php. true/false, defaults to false
 ENABLE_DB_SETTINGS=
 # encryption key. defaults to empty string
