@@ -24,6 +24,7 @@ class profile::misp (
   file { '/opt/misp/.env':
     ensure => file,
     source => 'puppet:///modules/profile/misp/env',
+    notify => Docker_compose['misp'],
   }
 
   vcsrepo { '/opt/misp':
