@@ -13,6 +13,10 @@ class profile::misp {
     ensure => directory,
   }
 
+  file { '/opt/tmp':
+    ensure => directory,
+  }
+
   vcsrepo { '/opt/misp':
     ensure   => present,
     provider => git,
@@ -29,5 +33,12 @@ class profile::misp {
       'name'   => 'docker-archive-keyring.asc',
       'source' => 'https://download.docker.com/linux/ubuntu/gpg',
     },
+    before   => Class['docker'],
+  }
+
+  docker_compose { 'misp':
+    ensure        => present,
+    compose_files => ['/opt/misp/docker-compose.yml'],
+    tmpdir        => '/opt/tmp',
   }
 }
