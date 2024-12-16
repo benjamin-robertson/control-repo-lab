@@ -240,3 +240,6 @@ dns::logging_channels:
     print_time: 'yes'
     file_size: '100m'
     file_versions: 3
+
+
+docker::use_upstream_package_source: false
