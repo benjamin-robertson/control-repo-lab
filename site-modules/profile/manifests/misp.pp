@@ -25,6 +25,7 @@ class profile::misp (
     ensure  => file,
     content => epp('profile/misp/env'),
     notify  => Docker_compose['misp'],
+    require => vcsrepo['/opt/misp'],
   }
 
   vcsrepo { '/opt/misp':
