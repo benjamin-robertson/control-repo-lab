@@ -22,9 +22,9 @@ class profile::misp (
 
   # setup config file
   file { '/opt/misp/.env':
-    ensure => file,
-    source => epp('profile/misp/env'),
-    notify => Docker_compose['misp'],
+    ensure  => file,
+    content => epp('profile/misp/env'),
+    notify  => Docker_compose['misp'],
   }
 
   vcsrepo { '/opt/misp':
