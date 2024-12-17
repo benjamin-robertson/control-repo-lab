@@ -34,6 +34,7 @@ class profile::misp (
       'dog',
     '.env'],
     force    => true,
+    notify   => Docker_compose['misp'],
   }
 
   # setup config file
