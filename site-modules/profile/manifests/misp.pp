@@ -25,6 +25,13 @@ class profile::misp (
     provider => git,
     source   => 'https://github.com/benjamin-robertson/misp-docker.git',
     revision => '46076a0f77a7348d5d505705243a44d93a26edad',
+    exclude  => [
+      './configs',
+      './files',
+      './gnupg',
+      './logs',
+      './ssl',
+    '.env'],
     force    => true,
   }
 
