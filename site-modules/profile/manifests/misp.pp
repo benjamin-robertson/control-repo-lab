@@ -12,9 +12,9 @@ class profile::misp (
 
   include docker
 
-  # file { '/opt/misp':
-  #   ensure => directory,
-  # }
+  file { '/opt/misp':
+    ensure => directory,
+  }
 
   file { '/opt/tmp':
     ensure => directory,
