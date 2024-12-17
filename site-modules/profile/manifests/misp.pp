@@ -23,7 +23,7 @@ class profile::misp (
   # setup config file
   file { '/opt/misp/.env':
     ensure => file,
-    source => 'puppet:///modules/profile/misp/env',
+    source => epp('profile/misp/env'),
     notify => Docker_compose['misp'],
   }
 
