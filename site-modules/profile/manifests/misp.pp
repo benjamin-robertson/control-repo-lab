@@ -52,9 +52,9 @@ class profile::misp (
     tmpdir        => '/opt/tmp',
   }
 
-  docker::registry { 'https://registry-1.docker.io/v2/':
-    ensure   => present,
-    username => 'benrobertson9876',
-    password => $docker_token.unwrap,
-  }
+  # docker::registry { 'https://registry-1.docker.io/v2/':
+  #   ensure   => present,
+  #   username => 'benrobertson9876',
+  #   password => $docker_token.unwrap,
+  # }
 }
