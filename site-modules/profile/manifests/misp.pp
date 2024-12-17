@@ -20,19 +20,19 @@ class profile::misp (
     ensure => directory,
   }
 
-  # setup config file
-  file { '/opt/misp/.env':
-    ensure  => file,
-    content => epp('profile/misp/env'),
-    notify  => Docker_compose['misp'],
-    require => vcsrepo['/opt/misp'],
-  }
-
   vcsrepo { '/opt/misp':
     ensure   => present,
     provider => git,
     source   => 'https://github.com/MISP/misp-docker.git',
     revision => '9bb03eab0ac1ac442e73820328033983dee1f1d4',
+  }
+
+  # setup config file
+  file { '/opt/misp/.env':
+    ensure  => file,
+    content => epp('profile/misp/env'),
+    notify  => Docker_compose['misp'],
+    require => Vcsrepo['/opt/misp'],
   }
 
   apt::source { 'docker':
