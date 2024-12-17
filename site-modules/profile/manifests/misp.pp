@@ -31,6 +31,7 @@ class profile::misp (
       './gnupg',
       './logs',
       './ssl',
+      'dog',
     '.env'],
     force    => true,
   }
