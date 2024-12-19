@@ -188,15 +188,15 @@ profile::lab::gitlab_runner::ca_content: |
   1g==
   -----END CERTIFICATE-----
 
-#apt::proxy:
-#  ensure: present
-#  host: ip-172-31-11-63.ap-southeast-2.compute.internal
-#  port: 3128
-#apt::source_key_defaults:
-#  options: "http-proxy=http://ip-172-31-11-63.ap-southeast-2.compute.internal:3128"
+apt::proxy:
+ ensure: present
+ host: ip-10-1-131-215.ap-southeast-2.compute.internal
+ port: 3128
+apt::source_key_defaults:
+ options: "http-proxy=http://ip-10-1-131-215.ap-southeast-2.compute.internal:3128"
 
 # docker::docker_ce_key_source: "/tmp/docker.gpg"
-# docker::proxy: "http://ip-172-31-11-63.ap-southeast-2.compute.internal:3128"
+docker::proxy: "http://ip-10-1-131-215.ap-southeast-2.compute.internal:3128"
 
 comply::scanner_source: "https://ec2-54-79-56-92.ap-southeast-2.compute.amazonaws.com:30303/assessor"
 
