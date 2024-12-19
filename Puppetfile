@@ -54,6 +54,7 @@ mod 'puppet-windows_firewall', '5.0.0'
 mod 'puppetlabs-sqlserver', '5.0.1'
 mod 'puppetlabs-wsus_client', '6.1.0'
 mod 'geoffwilliams-safe_roles', '1.3.1'
+mod 'puppet-squid', '5.1.0'
 
 mod 'simp-crypto_policy', '0.6.0'
 # mod 'simp-simplib', '4.12.1'
