@@ -1,7 +1,7 @@
 # Class: profile::proxy_server
 #
 #
-class profile::proxy_server {
+class profile::linux::proxy_server {
   class { 'squid': }
 
   squid::acl { 'Safe_ports':
