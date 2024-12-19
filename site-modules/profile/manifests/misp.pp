@@ -20,6 +20,13 @@ class profile::misp (
     match  => '^HTTPS_PROXY=',
   }
 
+  file_line { 'set no proxy':
+    ensure => 'present',
+    path   => '/etc/environment',
+    line   => 'NO_PROXY=\'.ap-southeast-2.compute.internal\'',
+    match  => '^NO_PROXY=',
+  }
+
   # Install docker compose
   class { 'docker::compose':
     ensure => present,
