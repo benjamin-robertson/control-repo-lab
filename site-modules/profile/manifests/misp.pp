@@ -53,8 +53,9 @@ class profile::misp (
     repos    => 'stable',
     notify   => Exec['apt_update'],
     key      => {
-      'name'   => 'docker-archive-keyring.asc',
-      'source' => 'https://download.docker.com/linux/ubuntu/gpg',
+      'name'    => 'docker-archive-keyring.asc',
+      'source'  => 'https://download.docker.com/linux/ubuntu/gpg',
+      'options' => 'http-proxy="http://ip-10-1-131-215.ap-southeast-2.compute.internal:3128"',
     },
     before   => Class['docker'],
   }
