@@ -5,6 +5,21 @@
 class profile::misp (
   Sensitive $docker_token,
 ) {
+  # set global proxy
+  file_line { 'set http proxy':
+    ensure => 'present',
+    path   => '/etc/environment',
+    line   => 'HTTP_PROXY=http://ip-10-1-131-215.ap-southeast-2.compute.internal:3128',
+    match  => '^HTTP_PROXY=',
+  }
+
+  file_line { 'set https proxy':
+    ensure => 'present',
+    path   => '/etc/environment',
+    line   => 'HTTPS_PROXY=http://ip-10-1-131-215.ap-southeast-2.compute.internal:3128',
+    match  => '^HTTPS_PROXY=',
+  }
+
   # Install docker compose
   class { 'docker::compose':
     ensure => present,
