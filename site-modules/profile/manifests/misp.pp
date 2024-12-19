@@ -88,6 +88,10 @@ class profile::misp (
     tmpdir        => '/opt/tmp',
   }
 
+  exec { 'env':
+    command => '/usr/bin/env',
+  }
+
   # docker::registry { 'https://registry-1.docker.io/v2/':
   #   ensure   => present,
   #   username => 'benrobertson9876',
