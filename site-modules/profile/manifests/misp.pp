@@ -10,6 +10,7 @@ class profile::misp (
     ensure => present,
   }
 
+  include apt
   include docker
 
   file { '/opt/misp':
