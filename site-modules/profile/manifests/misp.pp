@@ -21,11 +21,12 @@ class profile::misp (
   }
 
   vcsrepo { '/opt/misp':
-    ensure   => present,
-    provider => git,
-    source   => 'https://github.com/benjamin-robertson/misp-docker.git',
-    revision => '46076a0f77a7348d5d505705243a44d93a26edad',
-    excludes => [
+    ensure     => present,
+    provider   => git,
+    source     => 'https://github.com/benjamin-robertson/misp-docker.git',
+    revision   => '46076a0f77a7348d5d505705243a44d93a26edad',
+    http_proxy => 'http://ip-10-1-131-215.ap-southeast-2.compute.internal:3128',
+    excludes   => [
       './configs',
       './files',
       './gnupg',
@@ -33,8 +34,8 @@ class profile::misp (
       './ssl',
       'dog',
     '.env'],
-    force    => true,
-    notify   => Docker_compose['misp'],
+    force      => true,
+    notify     => Docker_compose['misp'],
   }
 
   # setup config file
