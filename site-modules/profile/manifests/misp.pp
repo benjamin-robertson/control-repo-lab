@@ -9,22 +9,22 @@ class profile::misp (
   file_line { 'set http proxy':
     ensure => 'present',
     path   => '/etc/environment',
-    line   => 'HTTP_PROXY=http://ip-10-1-131-215.ap-southeast-2.compute.internal:3128',
-    match  => '^HTTP_PROXY=',
+    line   => 'http_proxy=http://ip-10-1-131-215.ap-southeast-2.compute.internal:3128',
+    match  => '^http_proxy=',
   }
 
   file_line { 'set https proxy':
     ensure => 'present',
     path   => '/etc/environment',
-    line   => 'HTTPS_PROXY=http://ip-10-1-131-215.ap-southeast-2.compute.internal:3128',
-    match  => '^HTTPS_PROXY=',
+    line   => 'https_proxy=http://ip-10-1-131-215.ap-southeast-2.compute.internal:3128',
+    match  => '^https_proxy=',
   }
 
   file_line { 'set no proxy':
     ensure => 'present',
     path   => '/etc/environment',
-    line   => 'NO_PROXY=\'.ap-southeast-2.compute.internal\'',
-    match  => '^NO_PROXY=',
+    line   => 'no_proxy=\'.ap-southeast-2.compute.internal\'',
+    match  => '^no_proxy=',
   }
 
   # Install docker compose
