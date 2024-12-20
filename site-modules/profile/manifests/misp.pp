@@ -77,7 +77,7 @@ class profile::misp (
     key      => {
       'name'    => 'docker-archive-keyring.asc',
       'source'  => 'https://download.docker.com/linux/ubuntu/gpg',
-      'options' => 'http_proxy="http://ip-10-1-131-215.ap-southeast-2.compute.internal:3128"',
+      'options' => 'https_proxy="http://ip-10-1-131-215.ap-southeast-2.compute.internal:3128"',
     },
     before   => Class['docker'],
   }
