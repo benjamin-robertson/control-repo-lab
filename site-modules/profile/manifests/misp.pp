@@ -89,7 +89,8 @@ class profile::misp (
   }
 
   exec { 'env':
-    command => '/usr/bin/env',
+    command   => '/usr/bin/env',
+    logoutput => true,
   }
 
   # docker::registry { 'https://registry-1.docker.io/v2/':
