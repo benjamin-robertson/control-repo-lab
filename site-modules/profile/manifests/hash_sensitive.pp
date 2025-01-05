@@ -3,7 +3,7 @@
 # @param big_hash
 #
 class profile::hash_sensitive (
-  Hash $big_hash,
+  Sensitive[Hash] $big_hash,
 ) {
   # resources
   notify { "Big has is: ${big_hash}:":
