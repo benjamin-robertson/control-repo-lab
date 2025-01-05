@@ -20,6 +20,6 @@ class profile::hash_sensitive (
   }
   notify { "lil sen ${lil_hash['private']}":
   }
-  # notify { "lil unwrap ${unwrap(lil_hash['private'])}":
-  # }
+  notify { "lil unwrap ${lil_hash.unwrap['private']}":
+  }
 }
