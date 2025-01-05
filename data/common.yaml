@@ -9,6 +9,8 @@ lookup_options:
     convert_to: Sensitive
   profile::hash_sensitive::so_private:
     convert_to: Sensitive
+  profile::hash_sensitive::sen_hash::private:
+    convert_to: Sensitive
 
 doge::settings::hi:
   bee: yay
@@ -166,6 +168,10 @@ tempadmin::password: ENC[PKCS7,MIIBiQYJKoZIhvcNAQcDoIIBejCCAXYCAQAxggEhMIIBHQIBA
 
 profile::hash_sensitive::big_hash:
   louie: blah
+
+profile::hash_sensitive::sen_hash:
+  public: 'omg you can see me!!'
+  private: 'omg, you should not be able to see me!!'
 
 profile::hash_sensitive::so_private: 'omg, you should not be able to see me!!'
 
