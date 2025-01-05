@@ -12,6 +12,8 @@ class profile::hash_sensitive (
   # resources
   notify { "Big hash is: ${unwrap(big_hash)}:":
   }
+  notify { "Big hash louie is: ${unwrap(big_hash['louie'])}:":
+  }
   notify { "sen hash is: ${sen_hash}:":
   }
   notify { "lil hash is: ${lil_hash}:":
