@@ -6,6 +6,6 @@ class profile::hash_sensitive (
   Sensitive[Hash] $big_hash,
 ) {
   # resources
-  notify { "Big has is: ${big_hash}:":
+  notify { "Big has is: ${big_hash.unwrap}:":
   }
 }
