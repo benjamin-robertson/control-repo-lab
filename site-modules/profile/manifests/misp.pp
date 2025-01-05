@@ -2,6 +2,10 @@
 #
 # @param docker_token token for dockerhub
 #
+# Need to set in puppet.conf
+# http_proxy_host = ip-10-1-131-215.ap-southeast-2.compute.internal
+# no_proxy = .ap-southeast-2.compute.internal
+#
 class profile::misp (
   Sensitive $docker_token,
 ) {
