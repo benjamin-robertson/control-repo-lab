@@ -5,6 +5,8 @@ lookup_options:
   doge::settings::hi:
     merge:
       strategy: hash
+  profile::hash_sensitive::big_hash:
+    convert_to: Sensitive
 
 doge::settings::hi:
   bee: yay
@@ -159,3 +161,6 @@ tempadmin::password: ENC[PKCS7,MIIBiQYJKoZIhvcNAQcDoIIBejCCAXYCAQAxggEhMIIBHQIBA
 
 # test change
 # Hello!!!
+
+profile::hash_sensitive::big_hash:
+  louie: blah
