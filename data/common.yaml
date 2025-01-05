@@ -167,7 +167,7 @@ tempadmin::password: ENC[PKCS7,MIIBiQYJKoZIhvcNAQcDoIIBejCCAXYCAQAxggEhMIIBHQIBA
 # Hello!!!
 
 profile::hash_sensitive::big_hash:
-  louie: blah
+  private: blah
 
 profile::hash_sensitive::sen_hash:
   public: 'omg you can see me!!'

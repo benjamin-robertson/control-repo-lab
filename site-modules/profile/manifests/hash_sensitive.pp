@@ -10,9 +10,9 @@ class profile::hash_sensitive (
   Hash $lil_hash,
 ) {
   # resources
-  notify { "Big hash is: ${unwrap(big_hash)}:":
+  notify { "Big hash is: ${big_hash}:":
   }
-  notify { "Big hash louie is: ${big_hash.unwrap['louie']}:":
+  notify { "Big hash private is: ${big_hash.unwrap['private']}:":
   }
   notify { "sen hash is: ${sen_hash}:":
   }
