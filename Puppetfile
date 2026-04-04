@@ -85,6 +85,7 @@ mod 'benjaminrobertson-observium',
   git:              'https://github.com/benjamin-robertson/observium.git',
   branch:           'staging'
 # deps for observium
+mod 'puppet-yum', '7.3.0'
 mod 'puppetlabs-yumrepo_core', '2.1.0'
 mod 'puppetlabs-mysql', '15.0.0'
 mod 'puppetlabs-cron_core', '1.3.0'
