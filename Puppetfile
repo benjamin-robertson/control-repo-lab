@@ -81,10 +81,9 @@ mod 'mco_plugin',
   default_branch:   'main'
 
 # mod 'benjaminrobertson-observium', '3.0.0'
-# mod 'benjaminrobertson-observium',
-#   git:              'https://github.com/benjamin-robertson/observium.git',
-#   branch:           :control_branch,
-#   default_branch:   'devmain'
+mod 'benjaminrobertson-observium',
+  git:              'https://github.com/benjamin-robertson/observium.git',
+  branch:           'staging'
 # deps for observium
 mod 'puppetlabs-yumrepo_core', '2.1.0'
 mod 'puppetlabs-mysql', '15.0.0'
@@ -96,7 +95,6 @@ mod 'puppet-snmp', '7.1.0'
 mod 'puppet-firewalld', '5.0.0' # up to here checking
 # For Debain only
 mod 'domkrm-ufw', '1.1.4'
-mod 'puppetlabs-bolt_shim', '0.3.2'
 mod 'puppetlabs-augeas_core', '1.5.0'
 mod 'puppetlabs-vcsrepo', '6.1.0'
 mod 'puppet-gitlab', '8.0.0'
@@ -106,21 +104,17 @@ mod 'puppetlabs-comply', '3.2.0'
 mod 'puppetlabs-java', '9.0.1'
 mod 'puppetlabs-ruby_task_helper', '0.6.1'
 
-# Abide and not already included dependices.
-mod 'sce_linux',
-  git: 'git@github.com:puppetlabs/puppetlabs-sce_linux.git',
-  ref: 'v2.2.1'
 
 mod 'puppet-systemd', '7.1.0'
 mod 'puppetlabs-firewall', '8.1.1'
 mod 'puppetlabs-mount_providers', '2.0.1'
-mod 'herculesteam-augeasproviders_core', '3.0.0'
-mod 'herculesteam-augeasproviders_sysctl', '2.6.0'
-mod 'herculesteam-augeasproviders_grub', '3.2.0'
+# mod 'herculesteam-augeasproviders_core', '3.0.0'
+# mod 'herculesteam-augeasproviders_sysctl', '2.6.0'
+# mod 'herculesteam-augeasproviders_grub', '3.2.0'
 mod 'herculesteam-augeasproviders_mounttab', '2.1.1'
-mod 'herculesteam-augeasproviders_pam', '2.2.1'
-mod 'herculesteam-augeasproviders_shellvar', '4.0.0'
-mod 'herculesteam-augeasproviders_ssh', '4.0.0'
+# mod 'herculesteam-augeasproviders_pam', '2.2.1'
+# mod 'herculesteam-augeasproviders_shellvar', '4.0.0'
+# mod 'herculesteam-augeasproviders_ssh', '4.0.0'
 mod 'puppet-logrotate', '7.1.0'
 # Windows abide
 #mod 'cem_windows',
