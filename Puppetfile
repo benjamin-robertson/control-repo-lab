@@ -24,13 +24,13 @@ mod 'initial_patch',
 # mod 'ghoneycutt-rsyslog', '0.26.0'
 mod 'ghoneycutt-ssh', '5.0.0'
 
-mod 'puppet-archive', '7.1.0'
+mod 'puppet-archive', '8.1.0'
 mod 'puppetlabs-acl', '5.0.0'
 mod 'puppetlabs-apt', '9.4.0'
 mod 'puppetlabs-cd4pe', '3.3.0'
 mod 'puppetlabs-cd4pe_jobs', '1.7.0'
 mod 'puppetlabs-chocolatey', '8.0.0'
-mod 'puppetlabs-concat', '9.0.2'
+mod 'puppetlabs-concat', '9.1.0'
 mod 'puppetlabs-docker', '10.0.1'
 mod 'dsc-xpsdesiredstateconfiguration', '9.1.0-0-8'
 mod 'puppetlabs-hocon', '2.0.0'
@@ -85,17 +85,17 @@ mod 'benjaminrobertson-observium',
   git:              'https://github.com/benjamin-robertson/observium.git',
   branch:           'staging'
 # deps for observium
-mod 'puppetlabs-yumrepo_core', '2.1.0'
-mod 'puppetlabs-mysql', '15.0.0'
-mod 'puppetlabs-cron_core', '1.3.0'
-mod 'puppet-selinux', '4.1.0'
-mod 'puppetlabs-apache', '12.1.0'
+mod 'puppetlabs-yumrepo_core', '3.0.1'
+mod 'puppetlabs-mysql', '16.3.0'
+mod 'puppetlabs-cron_core', '2.0.2'
+mod 'puppet-selinux', '5.0.0'
+mod 'puppetlabs-apache', '13.1.0'
 mod 'puppet-php', '10.1.0'
-mod 'puppet-snmp', '7.1.0'
-mod 'puppet-firewalld', '5.0.0' # up to here checking
+mod 'puppet-snmp', '7.3.0'
+mod 'puppet-firewalld', '5.1.0' # up to here checking
 # For Debain only
 mod 'domkrm-ufw', '1.1.4'
-mod 'puppetlabs-augeas_core', '1.5.0'
+mod 'puppetlabs-augeas_core', '2.0.1'
 mod 'puppetlabs-vcsrepo', '6.1.0'
 mod 'puppet-gitlab', '8.0.0'
 
@@ -105,8 +105,8 @@ mod 'puppetlabs-java', '9.0.1'
 mod 'puppetlabs-ruby_task_helper', '0.6.1'
 
 
-mod 'puppet-systemd', '7.1.0'
-mod 'puppetlabs-firewall', '8.1.1'
+mod 'puppet-systemd', '9.4.0'
+mod 'puppetlabs-firewall', '8.3.0'
 mod 'puppetlabs-mount_providers', '2.0.1'
 # mod 'herculesteam-augeasproviders_core', '3.0.0'
 # mod 'herculesteam-augeasproviders_sysctl', '2.6.0'
