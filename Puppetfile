@@ -38,7 +38,7 @@ mod 'puppetlabs-iis', '10.0.0'
 mod 'puppetlabs-inifile', '6.1.1'
 
 mod 'puppetlabs-powershell', '6.0.0'
-mod 'puppetlabs-puppet_agent', '4.19.0'
+mod 'puppetlabs-puppet_agent', '4.27.0'
 mod 'puppetlabs-puppet_authorization', '1.0.0'
 mod 'puppetlabs-pwshlib', '1.1.1'
 mod 'puppetlabs-reboot', '5.0.0'
